@@ -17,6 +17,7 @@
        PROCEDURE DIVISION.
        
        000-MAIN.
+       DISPLAY 'TEST'.
        STOP RUN.
        
 

@@ -4,10 +4,12 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT IN-FILE      ASSIGN        TO 'COURSE-MASTER-S.TXT'
+           SELECT IN-FILE      ASSIGN        TO
+                                       '../FILES/COURSE-MASTER-S.TXT'
                                ORGANIZATION  IS LINE SEQUENTIAL.
            SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
-           SELECT OUT-FILE     ASSIGN        TO 'COURSE-MASTER-SORT.TXT'
+           SELECT OUT-FILE     ASSIGN        TO
+                                       '../FILES/COURSE-MASTER-SORT.DAT'
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS SEQUENTIAL
                                RECORD KEY    IS O-COURSE-ID
