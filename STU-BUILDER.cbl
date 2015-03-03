@@ -69,8 +69,9 @@
        
            01  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
-           01  WS-STATUS                   PIC X       VALUE 'A'.
-           01  WS-CURR-ID                  PIC 9999    VALUE 0000.
+           01  WS-STATUS           PIC X       VALUE 'A'.
+           01  WS-CURR-ID          PIC 9999    VALUE 0000.
+           01  WS-RSP              PIC X.
 
        PROCEDURE DIVISION.
        
@@ -79,10 +80,13 @@
            OPEN OUTPUT OUT-FILE.
            
            SORT SORT-WORK
-                    ON ASCENDING KEY SRT-L-NAME
-                    ON ASCENDING KEY SRT-F-NAME
-                    INPUT  PROCEDURE 100-FILE-IN
-                    OUTPUT PROCEDURE 200-FILE-OUT.
+               ON ASCENDING KEY SRT-L-NAME
+               ON ASCENDING KEY SRT-F-NAME
+               INPUT  PROCEDURE 100-FILE-IN
+               OUTPUT PROCEDURE 200-FILE-OUT.
+           CLOSE IN-FILE,
+               OUT-FILE.
+           ACCEPT WS-RSP.
            EXIT PROGRAM.
            
        100-FILE-IN.
@@ -112,7 +116,8 @@
                        MOVE WS-STATUS  TO OUT-STATUS
                        ADD 1           TO WS-CURR-ID
                        WRITE OUT-REC
-                       DISPLAY OUT-REC
+                       DISPLAY OUT-STU-ID, " ", OUT-NAME, " ", 
+                           OUT-STATUS
                END-RETURN
            END-PERFORM.
        
