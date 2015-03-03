@@ -72,13 +72,19 @@
            01  WS-STATUS           PIC X       VALUE 'A'.
            01  WS-CURR-ID          PIC 9999    VALUE 0000.
            01  WS-RSP              PIC X.
+       
+       SCREEN SECTION.
+           01  CLEAR.
+               03  BLANK SCREEN.
 
        PROCEDURE DIVISION.
        
        000-MAIN.
+           
            OPEN INPUT IN-FILE.
            OPEN OUTPUT OUT-FILE.
-           
+           MOVE    'N'    TO WS-EOF.
+           DISPLAY CLEAR.
            SORT SORT-WORK
                ON ASCENDING KEY SRT-L-NAME
                ON ASCENDING KEY SRT-F-NAME
@@ -86,6 +92,8 @@
                OUTPUT PROCEDURE 200-FILE-OUT.
            CLOSE IN-FILE,
                OUT-FILE.
+           DISPLAY SPACES.
+           DISPLAY "PRESS ANY KEY TO CONTINUE" WITH NO ADVANCING.
            ACCEPT WS-RSP.
            EXIT PROGRAM.
            
