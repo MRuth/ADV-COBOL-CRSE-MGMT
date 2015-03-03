@@ -148,31 +148,36 @@
            ACCEPT MAIN.
            EVALUATE WS-SEL
                        WHEN '1' PERFORM 210-STUDENT
+                       WHEN '2' PERFORM 220-COURSE
+                       WHEN '3' PERFORM 230-SCHEDULE
+                       WHEN '4' PERFORM 240-BUILDING
+                       WHEN '5' PERFORM 250-INSTRUCTOR
+                       WHEN '6' PERFORM 260-REPORTS
                        WHEN 'X' MOVE 'Y' TO WS-EXIT
            END-EVALUATE.
                    
                    
-       210-STUDENT.
-           ACCEPT WS-DATE FROM DATE.
-           ACCEPT WS-TIME FROM TIME.
-           PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, STU-MENU
-               ACCEPT STU-MENU
-               EVALUATE WS-SEL
-                       WHEN '1' PERFORM 210-STUDENT
-                       WHEN 'X' MOVE 'Y' TO WS-EXIT
-           END-PERFORM.
+           210-STUDENT.
+               ACCEPT WS-DATE FROM DATE.
+               ACCEPT WS-TIME FROM TIME.
+               PERFORM UNTIL WS-SEL = "R"
+                   DISPLAY HEADER, STU-MENU
+                   ACCEPT STU-MENU
+                   EVALUATE WS-SEL
+                       WHEN '1' CALL 'STU-BUILDER'
+                   END-EVALUATE
+              END-PERFORM.
            
            
        220-COURSE.
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, STU-MENU
-               ACCEPT STU-MENU
+               DISPLAY HEADER, CRS-MENU
+               ACCEPT CRS-MENU
                EVALUATE WS-SEL
-                       WHEN '1' PERFORM 210-STUDENT
-                       WHEN 'X' MOVE 'Y' TO WS-EXIT
+                       WHEN '1' CALL 'COURSE-MASTER.CBL'
+               END-EVALUATE
            END-PERFORM.
                  
                  
@@ -180,36 +185,46 @@
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, STU-MENU
-               ACCEPT STU-MENU
+               DISPLAY HEADER, SCHED-MENU
+               ACCEPT SCHED-MENU
                EVALUATE WS-SEL
                        WHEN '1' PERFORM 210-STUDENT
-                       WHEN 'X' MOVE 'Y' TO WS-EXIT
+               END-EVALUATE
            END-PERFORM.
                  
-       240-INSTRUCTOR.
+       240-BUILDING.
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, STU-MENU
-               ACCEPT STU-MENU
+               DISPLAY HEADER, BLD-MENU
+               ACCEPT BLD-MENU
                EVALUATE WS-SEL
                        WHEN '1' PERFORM 210-STUDENT
-                       WHEN 'X' MOVE 'Y' TO WS-EXIT
+               END-EVALUATE
            END-PERFORM.
                  
-       250-STUDENT.
+       250-INSTRUCTOR.
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, STU-MENU
-               ACCEPT STU-MENU
+               DISPLAY HEADER, INST-MENU
+               ACCEPT INST-MENU
                EVALUATE WS-SEL
                        WHEN '1' PERFORM 210-STUDENT
-                       WHEN 'X' MOVE 'Y' TO WS-EXIT
+               END-EVALUATE
            END-PERFORM.
                  
-                 
+        260-REPORTS.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
+           PERFORM UNTIL WS-SEL = "R"
+               DISPLAY HEADER, RPT-MENU
+               ACCEPT RPT-MENU
+               EVALUATE WS-SEL
+                       WHEN '1' PERFORM 210-STUDENT
+               END-EVALUATE
+           END-PERFORM.
+                           
                  
                  
        
