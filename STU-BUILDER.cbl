@@ -15,13 +15,13 @@
        SELECT IN-FILE ASSIGN TO '../FILES/STUDENT-STARTER.TXT'
            ORGANIZATION IS LINE SEQUENTIAL.
            
-       SELECT SORT-WORK ASSIGN TO 'SORTWORK.TXT'.
-       
        SELECT OUT-FILE ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
            ORGANIZATION IS INDEXED
            ACCESS IS SEQUENTIAL
            RECORD KEY IS OUT-STU-ID.
            
+       SELECT SORT-WORK ASSIGN TO 'SORTWORK.TXT'.
+       
        DATA DIVISION.
        
        FILE SECTION.
@@ -39,18 +39,6 @@
                03 IN-PHONE                     PIC X(10).
                03 FILLER                       PIC X(21).
        
-       SD  SORT-WORK.
-           01  SRT-REC.
-               03  SRT-NAME.
-                   05  SRT-L-NAME      PIC X(15).
-                   05  SRT-F-NAME      PIC X(15).
-               03  SRT-ADDR.
-                   05  SRT-STREET      PIC X(25).
-                   05  SRT-CITY        PIC X(20).
-                   05  SRT-ST          PIC XX.
-                   05  SRT-ZIP         PIC XXXXX.
-               03  SRT-PHONE           PIC X(10).
-               
        FD  OUT-FILE.
            01  OUT-REC.
                03  OUT-STU-ID          PIC 9999.
@@ -65,28 +53,39 @@
                03  OUT-PHONE           PIC X(10).
                03  OUT-STATUS          PIC X.
                
+       SD  SORT-WORK.
+           01  SRT-REC.
+               03  SRT-NAME.
+                   05  SRT-L-NAME      PIC X(15).
+                   05  SRT-F-NAME      PIC X(15).
+               03  SRT-ADDR.
+                   05  SRT-STREET      PIC X(25).
+                   05  SRT-CITY        PIC X(20).
+                   05  SRT-ST          PIC XX.
+                   05  SRT-ZIP         PIC XXXXX.
+               03  SRT-PHONE           PIC X(10).
+               
        WORKING-STORAGE SECTION.
        
-       01  WS-EOF              PIC X   VALUE 'N'.
-           88  EOF                     VALUE 'Y'.
-       01  WS-STATUS                   PIC X       VALUE 'A'.
-       01  WS-CURR-ID                  PIC 9999    VALUE 0000.
+           01  WS-EOF              PIC X   VALUE 'N'.
+               88  EOF                     VALUE 'Y'.
+           01  WS-STATUS                   PIC X       VALUE 'A'.
+           01  WS-CURR-ID                  PIC 9999    VALUE 0000.
 
        PROCEDURE DIVISION.
        
        000-MAIN.
-       
-       OPEN INPUT IN-FILE.
-       OPEN OUTPUT OUT-FILE.
-       
-       SORT SORT-WORK
-                ON ASCENDING KEY SRT-L-NAME
-                ON ASCENDING KEY SRT-F-NAME
-                INPUT  PROCEDURE 100-FILE-IN
-                OUTPUT PROCEDURE 200-FILE-OUT.
-       
+           OPEN INPUT IN-FILE.
+           OPEN OUTPUT OUT-FILE.
+           
+           SORT SORT-WORK
+                    ON ASCENDING KEY SRT-L-NAME
+                    ON ASCENDING KEY SRT-F-NAME
+                    INPUT  PROCEDURE 100-FILE-IN
+                    OUTPUT PROCEDURE 200-FILE-OUT.
+           EXIT PROGRAM.
+           
        100-FILE-IN.
-       
            PERFORM UNTIL EOF
                READ IN-FILE 
                    AT END
@@ -100,8 +99,7 @@
            END-PERFORM.
            
        200-FILE-OUT.
-       
-       MOVE 'N' TO WS-EOF.
+           MOVE 'N' TO WS-EOF.
            PERFORM UNTIL EOF
                RETURN SORT-WORK 
                    AT END 
@@ -117,7 +115,5 @@
                        DISPLAY OUT-REC
                END-RETURN
            END-PERFORM.
-       
-       STOP RUN.
        
 
