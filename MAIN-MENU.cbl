@@ -165,7 +165,7 @@
                    DISPLAY HEADER, STU-MENU
                    ACCEPT STU-MENU
                    EVALUATE WS-SEL
-                       WHEN '1' CALL 'STU-BUILDER.CBL'
+                       WHEN '1' CALL 'STU-BUILDER'
                    END-EVALUATE
               END-PERFORM.
            
@@ -177,10 +177,10 @@
                DISPLAY HEADER, CRS-MENU
                ACCEPT CRS-MENU
                EVALUATE WS-SEL
-                       WHEN '1' CALL 'COURSE-MASTER.CBL'
-                       WHEN '2' CALL 'COURSE-ADD.CBL'
-                       WHEN '3' CALL 'COURSE-UPDATE.CBL'
-                       WHEN '5' CALL 'COURSE-INQUIRY.CBL'
+                       WHEN '1' CALL 'COURSE-MASTER'
+                       WHEN '2' CALL 'COURSE-ADD'
+                       WHEN '3' CALL 'COURSE-UPDATE'
+                       WHEN '5' CALL 'COURSE-INQUIRY'
                        
                END-EVALUATE
            END-PERFORM.
