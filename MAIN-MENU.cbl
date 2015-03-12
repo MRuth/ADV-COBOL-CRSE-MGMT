@@ -75,8 +75,9 @@
                05  LINE 08 COL 32 VALUE " 2) ADD COURSE".
                05  LINE 10 COL 32 VALUE " 3) UPDATE COURSE".
                05  LINE 12 COL 32 VALUE " 4) INQUIRE BY CRN".
-               05  LINE 14 COL 32 VALUE " 5) LIST COURSES".
-               05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 14 COL 32 VALUE " 5) INQUIRE BY COURSE".
+               05  LINE 16 COL 32 VALUE " 6) LIST COURSES".
+               05  LINE 18 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 20 COL 37 VALUE "Selection".
                05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
                
@@ -164,7 +165,7 @@
                    DISPLAY HEADER, STU-MENU
                    ACCEPT STU-MENU
                    EVALUATE WS-SEL
-                       WHEN '1' CALL 'STU-BUILDER'
+                       WHEN '1' CALL 'STU-BUILDER.CBL'
                    END-EVALUATE
               END-PERFORM.
            
@@ -177,6 +178,8 @@
                ACCEPT CRS-MENU
                EVALUATE WS-SEL
                        WHEN '1' CALL 'COURSE-MASTER.CBL'
+                       WHEN '5' CALL 'COURSE-INQUIRY.CBL'
+                       
                END-EVALUATE
            END-PERFORM.
                  
