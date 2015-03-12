@@ -69,22 +69,22 @@
            CLOSE IN-FILE.
            CLOSE OUT-FILE.
            
-           OPEN INPUT OUT-FILE.
+      *     OPEN INPUT OUT-FILE.
            
-           MOVE 'N' TO WS-EOF.
-           PERFORM UNTIL EOF
-               READ OUT-FILE 
-                   AT END
-                       MOVE 'Y' TO WS-EOF
-                   NOT AT END
-                       MOVE O-COURSE-ID     TO WS-COURSE-ID
-                       MOVE O-COURSE-NAME   TO WS-COURSE-NAME
-                       MOVE O-COURSE-CREDIT TO WS-COURSE-CREDIT
-                       MOVE O-COURSE-STAT   TO WS-COURSE-STAT
-                       DISPLAY WS-DTL-LN
-               END-READ
-           END-PERFORM.
-           CLOSE OUT-FILE.
+      *     MOVE 'N' TO WS-EOF.
+      *     PERFORM UNTIL EOF
+      *         READ OUT-FILE 
+      *             AT END
+      *                 MOVE 'Y' TO WS-EOF
+      *             NOT AT END
+      *                 MOVE O-COURSE-ID     TO WS-COURSE-ID
+      *                 MOVE O-COURSE-NAME   TO WS-COURSE-NAME
+      *                 MOVE O-COURSE-CREDIT TO WS-COURSE-CREDIT
+      *                 MOVE O-COURSE-STAT   TO WS-COURSE-STAT
+      *                 DISPLAY WS-DTL-LN
+      *         END-READ
+      *     END-PERFORM.
+      *     CLOSE OUT-FILE.
            
            STOP RUN.
       *-----------------------------------------------------------------
