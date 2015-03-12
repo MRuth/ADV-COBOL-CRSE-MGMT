@@ -178,6 +178,8 @@
                ACCEPT CRS-MENU
                EVALUATE WS-SEL
                        WHEN '1' CALL 'COURSE-MASTER.CBL'
+                       WHEN '2' CALL 'COURSE-ADD.CBL'
+                       WHEN '3' CALL 'COURSE-UPDATE.CBL'
                        WHEN '5' CALL 'COURSE-INQUIRY.CBL'
                        
                END-EVALUATE
