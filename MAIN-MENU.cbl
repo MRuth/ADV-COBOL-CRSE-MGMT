@@ -176,7 +176,7 @@
                DISPLAY HEADER, CRS-MENU
                ACCEPT CRS-MENU
                EVALUATE WS-SEL
-                       WHEN '1' CALL 'COURSE-MASTER.CBL'
+                       WHEN '1' CALL 'COURSE-MASTER'
                END-EVALUATE
            END-PERFORM.
                  
