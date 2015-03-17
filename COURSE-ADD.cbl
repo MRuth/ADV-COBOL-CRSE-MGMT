@@ -5,7 +5,8 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT CRSE-MASTER  ASSIGN        TO 'COURSE-MASTER-SORT.DAT'
+           SELECT CRSE-MASTER  ASSIGN        TO 
+                                       '../FILES/COURSE-MASTER-SORT.DAT'
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS RANDOM
                                RECORD KEY    IS CRSE-ID
@@ -112,5 +113,5 @@
            
            CLOSE CRSE-MASTER.
            
-           STOP RUN.
+           EXIT PROGRAM.
            

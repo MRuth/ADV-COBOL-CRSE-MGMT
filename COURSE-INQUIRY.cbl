@@ -87,5 +87,5 @@
            END-PERFORM.
            
            CLOSE CRSE-MASTER.
-           STOP RUN.
+           EXIT PROGRAM.
            
