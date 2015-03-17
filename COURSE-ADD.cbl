@@ -5,8 +5,7 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT CRSE-MASTER  ASSIGN  TO 
-                                       '../FILES/COURSE-MASTER-SORT.DAT'
+           SELECT CRSE-MASTER  ASSIGN        TO 'COURSE-MASTER-SORT.DAT'
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS RANDOM
                                RECORD KEY    IS CRSE-ID
@@ -60,9 +59,11 @@
                05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
                05          COL 30  PIC X     TO WS-SAVE.
        01  SCRN-WRITE-ERR.
-           03  LINE 1  COL 30  VALUE 'WRITE ERROR'.
+           03  LINE 1  COL 30  VALUE 'COURSE IS ALREADY EXIST'.
        01  SCRN-WRITE-SUC.
            03  LINE 1  COL 30  VALUE 'COURSE IS ADDED'.
+       01  SCRN-WRITE-NOT-SAVE.
+           03  LINE 1  COL 30  VALUE 'COURSE IS NOT ADDED'.           
        01  SCRN-ANOTHER.
            03  LINE 3  COL 32  VALUE 'ENTER ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
@@ -101,6 +102,11 @@
                                    DISPLAY SCRN-WRITE-SUC
                                    DISPLAY SCRN-ANOTHER
                                    ACCEPT  SCRN-ANOTHER
+                   ELSE 
+                       DISPLAY BLNK-SCRN
+                       DISPLAY SCRN-WRITE-NOT-SAVE
+                       DISPLAY SCRN-ANOTHER
+                       ACCEPT SCRN-ANOTHER
                    END-IF
            END-PERFORM.
            
