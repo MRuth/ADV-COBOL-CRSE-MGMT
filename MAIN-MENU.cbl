@@ -170,18 +170,17 @@
               END-PERFORM.
            
            
-       220-COURSE.
-           ACCEPT WS-DATE FROM DATE.
-           ACCEPT WS-TIME FROM TIME.
-           PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, CRS-MENU
-               ACCEPT CRS-MENU
-               EVALUATE WS-SEL
+       220-COURSE.                                                      
+           ACCEPT WS-DATE FROM DATE.                                    
+           ACCEPT WS-TIME FROM TIME.                                    
+           PERFORM UNTIL WS-SEL = "R"                                   
+               DISPLAY HEADER, CRS-MENU                                 
+               ACCEPT CRS-MENU                                          
+               EVALUATE WS-SEL                                          
                        WHEN '1' CALL 'COURSE-MASTER'
-                       WHEN '2' CALL 'COURSE-ADD'
-                       WHEN '3' CALL 'COURSE-UPDATE'
+                       WHEN '2' CALL 'COURSE-ADD'                       
+                       WHEN '3' CALL 'COURSE-UPDATE'                    
                        WHEN '5' CALL 'COURSE-INQUIRY'
-                       
                END-EVALUATE
            END-PERFORM.
                  
