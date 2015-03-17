@@ -75,8 +75,9 @@
                05  LINE 08 COL 32 VALUE " 2) ADD COURSE".
                05  LINE 10 COL 32 VALUE " 3) UPDATE COURSE".
                05  LINE 12 COL 32 VALUE " 4) INQUIRE BY CRN".
-               05  LINE 14 COL 32 VALUE " 5) LIST COURSES".
-               05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 14 COL 32 VALUE " 5) INQUIRE BY COURSE".
+               05  LINE 16 COL 32 VALUE " 6) LIST COURSES".
+               05  LINE 18 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 20 COL 37 VALUE "Selection".
                05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
                
@@ -169,14 +170,17 @@
               END-PERFORM.
            
            
-       220-COURSE.
-           ACCEPT WS-DATE FROM DATE.
-           ACCEPT WS-TIME FROM TIME.
-           PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, CRS-MENU
-               ACCEPT CRS-MENU
-               EVALUATE WS-SEL
+       220-COURSE.                                                      
+           ACCEPT WS-DATE FROM DATE.                                    
+           ACCEPT WS-TIME FROM TIME.                                    
+           PERFORM UNTIL WS-SEL = "R"                                   
+               DISPLAY HEADER, CRS-MENU                                 
+               ACCEPT CRS-MENU                                          
+               EVALUATE WS-SEL                                          
                        WHEN '1' CALL 'COURSE-MASTER'
+                       WHEN '2' CALL 'COURSE-ADD'                       
+                       WHEN '3' CALL 'COURSE-UPDATE'                    
+                       WHEN '5' CALL 'COURSE-INQUIRY'
                END-EVALUATE
            END-PERFORM.
                  
