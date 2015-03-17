@@ -73,7 +73,8 @@
        000-MAIN.
        
            OPEN I-O CRSE-MASTER.
-
+           
+           MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
                    DISPLAY BLNK-SCRN
                    DISPLAY SCRN-TITLE

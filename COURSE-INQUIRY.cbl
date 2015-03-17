@@ -60,7 +60,8 @@
        PROCEDURE DIVISION.
        000-MAIN. 
            OPEN INPUT CRSE-MASTER.
-
+           
+           MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
            
                DISPLAY BLNK-SCRN
