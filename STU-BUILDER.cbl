@@ -25,7 +25,7 @@
                                        ORGANIZATION IS RELATIVE
                                        ACCESS IS RANDOM
                                        RELATIVE KEY IS WS-MST-REC-KEY
-                                       FILE STATUS IS WS-STAT.
+                                       FILE STATUS IS WS-MST-STAT.
            
        SELECT SORT-WORK ASSIGN TO 'SORTWORK.TXT'.
        
@@ -79,10 +79,11 @@
            01  WS-EOF                  PIC X       VALUE 'N'.
                88  EOF                             VALUE 'Y'.
            01  WS-STATUS               PIC X       VALUE 'A'.
-           01  WS-CURR-ID              PIC 9999    VALUE 0000.
+           01  WS-CURR-ID              PIC 9999    VALUE 0.
            01  WS-RSP                  PIC X.
            01  WS-MST-REC-KEY          PIC 9999.
-           01  WS-STAT                 PIC XX.             
+           01  WS-MST-STAT             PIC XX.
+           01  WS-DSP-CTR              PIC 99      VALUE 0.
        
        SCREEN SECTION.
            01  CLEAR.
@@ -94,7 +95,7 @@
            
            OPEN INPUT IN-FILE.
            OPEN OUTPUT OUT-FILE.
-           OPEN OUTPUT MST-CTRL-LIST.
+           OPEN I-O MST-CTRL-LIST.
            
            MOVE    'N'    TO WS-EOF.
            DISPLAY CLEAR.
@@ -114,7 +115,7 @@
                MST-CTRL-LIST.
                
            DISPLAY SPACES.
-           DISPLAY "PRESS ANY KEY TO CONTINUE" WITH NO ADVANCING.
+           DISPLAY "PRESS ENTER TO EXIT" WITH NO ADVANCING.
            ACCEPT WS-RSP.
            EXIT PROGRAM.
            
@@ -145,9 +146,19 @@
                        MOVE WS-STATUS  TO OUT-STATUS
                        ADD 1           TO WS-CURR-ID
                        WRITE OUT-REC
-                       DISPLAY OUT-STU-ID, " ", OUT-NAME, " ", 
-                           OUT-STATUS
+                       PERFORM 300-DISPLAY
                END-RETURN
            END-PERFORM.
+           
+       300-DISPLAY.
+           ADD 1 TO WS-DSP-CTR.
        
-
+           IF WS-DSP-CTR GREATER THAN 10
+               DISPLAY SPACES
+               DISPLAY 'PRESS ENTER TO CONTINUE'
+               ACCEPT WS-RSP
+               DISPLAY CLEAR
+               MOVE 1 TO WS-DSP-CTR.
+               
+           DISPLAY OUT-STU-ID, " ", OUT-NAME, " ", 
+                           OUT-STATUS
