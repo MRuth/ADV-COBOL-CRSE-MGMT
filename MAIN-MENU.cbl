@@ -215,7 +215,7 @@
                DISPLAY HEADER, INST-MENU
                ACCEPT INST-MENU
                EVALUATE WS-SEL
-                       WHEN '1' PERFORM 210-STUDENT
+                       WHEN '1' CALL 'INSTRUCTOR-MASTER'
                END-EVALUATE
            END-PERFORM.
                  
