@@ -53,6 +53,8 @@
        000-MAIN.
            OPEN INPUT IN-FILE.
            
+           MOVE 'N' TO WS-EOF.
+           MOVE 0 TO WS-COUNTER.
            DISPLAY BLNK-SCREEN.
            DISPLAY WS-HEADER.
            DISPLAY WS-BLNK-LN.
@@ -66,7 +68,6 @@
                            MOVE I-COURSE-CREDIT TO WS-COURSE-CREDIT
                            MOVE I-COURSE-STAT   TO WS-COURSE-STAT
                            DISPLAY WS-DTL-LN
-                           DISPLAY WS-BLNK-LN
                            ADD 1 TO WS-COUNTER
                            IF WS-COUNTER = 10
                                THEN
@@ -80,10 +81,9 @@
                END-READ
            END-PERFORM.
            
-           DISPLAY "PROGRAM TERMINATED".
+           DISPLAY 'PRESS ENTER TO GO BACK TO MENU'
            ACCEPT WS-RESP.
-           DISPLAY "PRESS ENTER TO CLOSE".
-           
            CLOSE IN-FILE.
+           EXIT PROGRAM.
            
            STOP RUN.
