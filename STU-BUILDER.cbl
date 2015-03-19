@@ -94,7 +94,7 @@
            
            OPEN INPUT IN-FILE.
            OPEN OUTPUT OUT-FILE.
-           OPEN OUTPUT MST-CTRL-LIST.
+           OPEN I-O MST-CTRL-LIST.
            
            MOVE    'N'    TO WS-EOF.
            DISPLAY CLEAR.

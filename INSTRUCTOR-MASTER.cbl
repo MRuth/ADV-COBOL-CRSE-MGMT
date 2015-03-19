@@ -17,11 +17,18 @@
                                 ORGANIZATION  IS INDEXED
                                 ACCESS        IS SEQUENTIAL
                                 RECORD KEY    IS OF-INSTRUCTOR-ID
-                                FILE STATUS   IS WS-STAT.                              
+                                FILE STATUS   IS WS-STAT.
+           SELECT MST-CTRL-LIST    ASSIGN TO 
+                                       "../Files/MST-CTRL-LST.DAT"
+                                       ORGANIZATION IS RELATIVE
+                                       ACCESS IS RANDOM
+                                       RELATIVE KEY IS WS-MST-REC-KEY
+                                       FILE STATUS IS WS-MST-STAT.                                                                        
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
        FILE SECTION.
+       COPY MST-CTRL-LIST-RECS.
        FD  IN-FILE.
        01  IN-REC.
            03  I-COURSE-ID         PIC X(9).
@@ -62,6 +69,9 @@
            03  WS-STAT             PIC 99.
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
+           03  WS-MST-REC-KEY      PIC 9999.
+           03  WS-MST-STAT         PIC XX.
+           03  WS-CURR-ID          PIC 9999 VALUE 7000.
        01  WS-DTL-LN.
            03  WS-INSTRUCTOR-ID     PIC 9999.
            03  FILLER               PIC XX.
@@ -71,13 +81,12 @@
        000-MAIN.
            OPEN INPUT IN-FILE.
            OPEN OUTPUT OUT-FILE.
+           OPEN I-O MST-CTRL-LIST.
            
            SORT SORT-WORK
                 ON ASCENDING KEY S-INSTRUCTOR
                 INPUT  PROCEDURE 100-FILE-IN
                 OUTPUT PROCEDURE 200-FILE-OUT.
-           DISPLAY "PROGRAM TERMINATED".
-           DISPLAY "PRESS ENTER TO CLOSE".
            
            CLOSE IN-FILE.
            CLOSE OUT-FILE.
@@ -91,10 +100,10 @@
                    AT END
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
-                       MOVE WS-COUNTER           TO OF-INSTRUCTOR-ID
+                       MOVE WS-CURR-ID           TO OF-INSTRUCTOR-ID
                        MOVE O-INSTRUCTOR-NAME    TO OF-INSTRUCTOR-NAME
                        WRITE OUT-FREC
-                       ADD 1 TO WS-COUNTER
+                       ADD 1 TO WS-CURR-ID
                END-READ
            END-PERFORM.
            CLOSE OUT-FILE.
@@ -113,9 +122,16 @@
                        DISPLAY WS-DTL-LN
                END-READ
            END-PERFORM.
-           CLOSE OUT-FILEF.           
+           CLOSE OUT-FILEF.
            
-           STOP RUN.
+           MOVE 5 TO WS-MST-REC-KEY.
+           MOVE WS-CURR-ID TO MST-INST-ID.
+           WRITE MST-NEXT-INST.     
+           
+           CLOSE MST-CTRL-LIST.
+           DISPLAY 'PRESS ENTER TO GET BACK TO MENU'.
+           ACCEPT WS-RESP.
+           EXIT PROGRAM.
       *-----------------------------------------------------------------
        100-FILE-IN.
            PERFORM UNTIL EOF
