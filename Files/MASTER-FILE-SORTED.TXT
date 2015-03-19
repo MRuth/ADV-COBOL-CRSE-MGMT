@@ -1,0 +1,1499 @@
+ACCT 2803  Prin of Financial Acct HYBRID         3.0  FL      100     A.  Baldwin             40
+ACCT 3023  Cost Accounting FULL ONLINE           3.0  TBA     TBA     A.  Baldwin             35
+LEGL 2643  Commercial Law                        3.0  BALDOR  122     A.  Barr                24
+CGT  1234  Engineering Graphics I                4.0  BALDOR  245     A.  Bergquist
+PHSC 3103  Paleoclimatology                      3.0  MS-UC   306     A.  Boyd                32
+PHSC 2653  Earth Science                         3.0  MS-UC   104     A.  Boyd                64
+PHSC 2653  Earth Science                         3.0  MS-UC   311     A.  Boyd                34
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     A.  Boyd                32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     A.  Boyd                32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     A.  Boyd                32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     A.  Boyd                32
+ISS  4402  Spec Apps Pathological Cnsdrt         2.0  HLTHSC  321     A.  Cole                8
+ISS  4413  Abdominal Sonography II               3.0  HLTHSC  321     A.  Cole                8
+ISS  4434  Clinical Practice III                 4.0  HOSP    SPARK   A.  Cole                4
+MUSI 1201  Sight Singing Ear Training I          1.0  BREDLV  201     A.  DeBoer              32
+MUSI 2781  Sight Singing Ear Trng III            1.0  BREDLV  201     A.  DeBoer              35
+MUSI 3851  Woodwinds II                          1.0  BREDLV  106B    A.  DeBoer              15
+MUSI 4443  Survey of American Music              3.0  BREDLV  105     A.  DeBoer              35
+MUSI 4853  Secndry Instrmntl Mthds Matrls        3.0  BREDLV  105     A.  DeBoer              20
+MUSR 1351  Instrml Ensemble CLARINET             1.0  BREDLV  206C    A.  DeBoer              10
+MUSR 3351  Instrmtl Ensemble CLARINET            1.0  BREDLV  206C    A.  DeBoer              20
+MUSW 1252  Private Woodwinds CLARINET            2.0  BREDLV  203     A.  DeBoer              10
+MUSW 3252  Private Woodwinds CLARINET            2.0  BREDLV  203     A.  DeBoer              10
+SUR  153A  Surgical Tech Practicum I            10.0  HOSP    MERCY   A.  Dill                9
+RADT 1112  Radiographic Procedures I             2.0  HLTHSC  325     A.  Elmore              20
+RADT 2412  Radiographic Procedures IV            2.0  HLTHSC  325     A.  Elmore              20
+RADT 1124  Clinical Education I                  4.0  HOSP    SPARK   A.  Elmore
+RADT 2424  Clinical Education IV                 4.0  HOSP    SPARK   A.  Elmore
+HUMN 2563  Humanities Through the Arts           3.0  BREDLV  207     A.  Embry               32
+HUMN 2563  Humanities Through the Arts           3.0  BREDLV  207     A.  Embry               32
+HUMN 2563  Humanities Through the Arts           3.0  BREDLV  207     A.  Embry               32
+HLTH 1004  Intro to Health Occupations           4.0  HLTHSC  223     A.  Goodson             20
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  318     A.  Goodson             20
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  321     A.  Goodson             25
+LEGL 2382  Legal Ethics                          2.0  BALDOR  122     A.  Grimes              24
+ENGL 1213  Composition II                        3.0  HOLT    111     A.  Lee                 28
+ENGL 3443  Lit Divrs Cultures Asian Amer         3.0  HOLT    102     A.  Lee                 25
+RHET 493V  Writing Independent Project           3.0  HOLT    TBA     A.  Lee                 1
+ENGL 1213  Composition II                        3.0  HOLT    111     A.  Lee                 28
+RHET 4503  Arguing Public Issues                 3.0  HOLT    115     A.  Lee                 25
+ITD  3113  Advanced SQL                          3.0  BALDOR  144     A.  Mackey              28
+ENGL 1213  Composition II                        3.0  HOLT    110     A.  Newman              28
+ENGL 1213  Composition II                        3.0  HOLT    110     A.  Newman              28
+APRO 290V  Spec Topics Personal Finance          3.0  BALDOR  210     A.  Nichols             24
+NURS 3164  Health Assessment LAB                  .0  HLTHSC  237     A.  Nitsche             8
+NURS 3236  Nursing Women Children PEDS           6.0  HLTHSC  227     A.  Nitsche
+NURS 3236  Nurs Women Child PEDS LAB              .0  HLTHSC  309     A.  Nitsche
+ITW  4263  Server Side Web Applications          3.0  BALDOR  147     A.  Potts               28
+MGMT 3523  Operations Management                 3.0  FL      108     A.  Rahal               30
+MGMT 3913  Decision Support Systems              3.0  FL      201     A.  Rahal               40
+MGMT 3913  Decision Support Systems              3.0  FL      201     A.  Rahal               40
+MGMT 3523  Operations Management                 3.0  LBRARY  224     A.  Rahal               44
+MUSP 1252  Private Piano                         2.0  BREDLV  TBA     A.  Sanders             10
+MUSP 3251  Private Piano                         1.0  BREDLV  TBA     A.  Sanders             10
+MUSP 3252  Private Piano                         2.0  BREDLV  TBA     A.  Sanders             10
+ENGL 1213  Composition II                        3.0  FL      113     A.  Schafer             28
+ENGL 1213  Composition II                        3.0  FL      216     A.  Schafer             28
+ENGL 2023  Intro to American Literature          3.0  HOLT    115     A.  Schafer             35
+BIOL 1153  Biological Science                    3.0  MS-UC   304     A.  Skypala             80
+BIOL 2701  General Zoology Laboratory            1.0  MS-UC   120     A.  Skypala             28
+BIOL 2701  General Zoology Laboratory            1.0  MS-UC   120     A.  Skypala             28
+BIOL 2701  General Zoology Laboratory            1.0  MS-UC   120     A.  Skypala             28
+BIOL 2703  General Zoology                       3.0  MS-UC   104     A.  Skypala             87
+PRFS 4033  Consensus Bldg FULL ONLINE            3.0  TBA     TBA     A.  Thomas              20
+PRFS 4033  Consen Bldg FULL ONLINE UNICTR        3.0  TBA     TBA     A.  Thomas              15
+PRFS 4633  Dec Making in Org FULL ONLINE         3.0  TBA     TBA     A.  Thomas              20
+PRFS 4633  Dec Mak Org FULL ONLINE UNICTR        3.0  TBA     TBA     A.  Thomas              15
+SPAN 3003  Phonetics and Pronunciation           3.0  FL      217     A.  Wendorf             24
+EDUC 490A  Teaching in Secondary School         10.0  MS-UC   TBA     A.  Wendorf             1
+SPAN 1304  Beginning Spanish I                   4.0  VINES   236     A.  Wendorf             24
+SPAN 1304  Beginning Spanish I                   4.0  VINES   236     A.  Wendorf             24
+ENGL 1203  Composition I                         3.0  FL      102     A.  Winters             25
+ENGL 1203  Composition I                         3.0  FL      102     A.  Winters             25
+MUSB 1251  Private Brass TROMBONE                1.0  BREDLV  TBA     A.  Zacharella          10
+MUSB 1252  Private Brass TUBA                    2.0  BREDLV  106B    A.  Zacharella          10
+MUSB 1252  Private Brass TROMBONE                2.0  BREDLV  106B    A.  Zacharella          10
+MUSB 1252  Private Brass EUPHONIUM               2.0  BREDLV  106B    A.  Zacharella          10
+MUSB 3252  Private Brass TUBA                    2.0  BREDLV  106B    A.  Zacharella          10
+MUSB 3252  Private Brass TROMBONE                2.0  BREDLV  106B    A.  Zacharella          10
+MUSB 3252  Private Brass EUPHONIUM               2.0  BREDLV  106B    A.  Zacharella          10
+MUSR 1010  Athletic Band                          .0  BREDLV  TBA     A.  Zacharella          75
+MUSR 1441  Symphonic Band                        1.0  BREDLV  105     A.  Zacharella          10
+MUSR 3441  Symphonic Band                        1.0  BREDLV  105     A.  Zacharella          10
+EDUC 480A  Tching Elem and Secndry School       10.0  MS-UC   TBA     A.  Zacharella          5
+PHYS 2811  College Physics Laboratory I          1.0  MS-UC   334     B.  Abbott              32
+CHEM 1303  Chemical Principles                   3.0  MS-UC   101     B.  Abbott              60
+CHEM 1303  Chemical Principles                   3.0  MS-UC   311     B.  Abbott              32
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     B.  Abbott              24
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     B.  Abbott              32
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     B.  Abbott              24
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     B.  Abbott              32
+ART  1123  Digital Imaging                       3.0  BALDOR  207     B.  Alexis              20
+GRDS 3273  Motion Design                         3.0  BALDOR  207     B.  Alexis              20
+GRDS 4313  Identity Design                       3.0  BALDOR  207     B.  Alexis              20
+PHIL 2753  Introduction to Philosophy            3.0  GARDNR  LHALL   B.  Anderson            50
+PHIL 2753  Introduction to Philosophy            3.0  GARDNR  LHALL   B.  Anderson            50
+PHIL 2753  Introduction to Philosophy            3.0  GARDNR  LHALL   B.  Anderson            50
+MGMT 2203  Intro International Business          3.0  FL      217     B.  Bhasin              35
+MGMT 2203  Intro International Business          3.0  FL      217     B.  Bhasin              35
+MGMT 4203  International Management              3.0  FL      216     B.  Bhasin              35
+COMM 4643  Writing for the Media                 3.0  HOLT    111     B.  Bowers              12
+ENGL 1203  Composition I                         3.0  HOLT    115     B.  Bowers              28
+ENGL 1203  Composition I                         3.0  HOLT    109     B.  Bowers              28
+RHET 3203  Textual Research Methods HS           3.0  HOLT    111     B.  Bowers              25
+RHET 4643  Writing for the Media                 3.0  HOLT    111     B.  Bowers              13
+ITC  2624  Network Client Support                4.0  BALDOR  108     B.  Cloninger           12
+CS   1033  Foundtns of Operating Systems         3.0  BALDOR  144     B.  Cloninger           24
+ITA  1251  Computer Spreadsheets                 1.0  BALDOR  124     B.  Cloninger           24
+APRO 1703  Electronic Office Apps HYBRID         3.0  BALDOR  124     B.  Cloninger           24
+ITA  1051  Computer Word Processing              1.0  BALDOR  123     B.  Cloninger           30
+ITA  1101  Computer Presentation Graphics        1.0  BALDOR  124     B.  Cloninger           30
+ITA  1201  Computer Database                     1.0  BALDOR  124     B.  Cloninger           30
+ITA  1251  Computer Spreadsheets                 1.0  BALDOR  124     B.  Cloninger           30
+ITF  4104  Systems Analysis and Design           4.0  BALDOR  144     B.  Henehan             24
+ITF  4114  Capstone Project                      4.0  BALDOR  145A    B.  Henehan             24
+ITF  2114  Capstone Project                      4.0  BALDOR  145A    B.  Henehan             24
+ITN  4353  Network Analysis and Design           3.0  BALDOR  145A    B.  Henehan             24
+ITN  3113  Windows System Admin                  3.0  BALDOR  145A    B.  Henehan             18
+HIST 3803  Methods of Historical Research        3.0  GARDNR  139     B.  Higgins             16
+HIST 493V  History Independent Study             3.0  GARDNR  TBA     B.  Higgins             4
+HIST 4143  Southwest Frontier Seminar            3.0  GARDNR  231     B.  Higgins             25
+HIST 4153  History of Arkansas                   3.0  GARDNR  204     B.  Higgins             25
+HIST 4153  History of Ark FULL ONLINE            3.0  GARDNR  TBA     B.  Higgins             32
+SPED 4213  Inst Planning P-4 FULL ONLINE         3.0  MS-UC   TBA     B.  Humphries           30
+SPED 4223  Inst Planning 4-12 FULL ONLINE        3.0  MS-UC   TBA     B.  Humphries           30
+ECED 3003  Science in the Classroom              3.0  MS-UC   308     B.  Hunt                25
+EDUC 4211  Practicum II                          1.0  MS-UC   209     B.  Hunt
+ECED 3003  Science in the Classroom              3.0  MS-UC   308     B.  Hunt                30
+MLED 3563  Middle School Concepts PDS            3.0  OTHER   BTTRF   B.  Hunt                12
+MATH 2804  Calculus I                            4.0  MS-UC   202     B.  Hutchison           33
+MATH 2904  Calculus III                          4.0  MS-UC   202     B.  Hutchison           27
+MATH 3214  Differential Equations                4.0  MS-UC   202     B.  Hutchison           25
+MATH 3203  Applied Linear Algebra                3.0  MS-UC   201     B.  Hutchison           24
+MGMT 1201  Planning for Success                  1.0  FL      108     B.  Jacobson            30
+MGMT 1201  Planning for Success                  1.0  FL      108     B.  Jacobson            30
+MGMT 1201  Planning for Success                  1.0  FL      108     B.  Jacobson            30
+MGMT 1201  Planning for Success                  1.0  FL      108     B.  Jacobson            30
+MGMT 1201  Planning for Success                  1.0  FL      102     B.  Jacobson            25
+LEAD 495V  Org Leadership Internship             3.0  BALDOR  TBA     B.  Jones               5
+PRFS 495V  Professionl Studies Internship        3.0  BALDOR  TBA     B.  Jones               5
+ISS  3113  Cross Sectnl Anatomy Snogrphrs        3.0  HLTHSC  321     B.  Jones               8
+ISS  4433  Vascular Sonography II                3.0  HLTHSC  321     B.  Jones               8
+ISS  4434  Clinical Practice III                 4.0  HOSP    MERCY   B.  Jones               4
+IS   4103  Persp Human Div FULL ONLINE           3.0  TBA     TBA     B.  Jones               24
+HIST 1123  Civilizations of World to 1500        3.0  GARDNR  201     B.  Kidder              50
+HIST 1123  Civilizations of World to 1500        3.0  GARDNR  201     B.  Kidder              50
+HIST 1123  Civilizations of World to 1500        3.0  GARDNR  231     B.  Kidder              50
+ECON 2803  Prin of Macroeconomics HYBRID         3.0  FL      100     B.  Lee                 40
+ECON 2813  Prin of Microeconomics HYBRID         3.0  FL      100     B.  Lee                 30
+ECON 2813  Prin of Microeconomics                3.0  FL      217     B.  Lee                 30
+ECON 2803  Prin of Macroecon FULL ONLINE         3.0  TBA     TBA     B.  Lee                 40
+APRO 290V  Spec Topics Personal Finance          3.0  BALDOR  133     B.  Lewis               24
+CS   1033  Foundtns of Operating Systems         3.0  BALDOR  147     B.  McLaughlan          28
+CS   1033  Foundtns of Operating Systems         3.0  BALDOR  147     B.  McLaughlan          28
+CS   1043  Foundations of Networking             3.0  BALDOR  145B    B.  McLaughlan          18
+ITC  2324  Introductory Programming              4.0  BALDOR  143     B.  McLaughlan          28
+MGMT 3133  Social Responsibility Ethics          3.0  FL      113     B.  Medlin              30
+MGMT 4813  Strategic Management                  3.0  FL      113     B.  Medlin              25
+MGMT 4813  Strategic Management                  3.0  FL      113     B.  Medlin              25
+NURS 434C  Nursing Care of the Adult II         12.0  HLTHSC  222     B.  Merkley             24
+NURS 3227  Foundations Nursing Care LAB           .0  HOSP    SPARK   B.  Merkley             8
+NURS 434C  Nursing Care Adult II LAB              .0  HOSP    MERCY   B.  Moore               8
+CJ   1013  Int Crimnl Justice FULL ONLINE        3.0  GARDNR  TBA     B.  Morrill             25
+CJ   3213  Crim Investigation FULL ONLINE        3.0  GARDNR  TBA     B.  Morrill             25
+BIOL 2203  Human Anatomy                         3.0  MS-UC   104     B.  Ree                 60
+BIOL 2211  Human Physiology Laboratory           1.0  MS-UC   240     B.  Ree                 28
+BIOL 2213  Human Physiology                      3.0  MS-UC   304     B.  Ree                 60
+BIOL 3801  Genetics Laboratory                   1.0  MS-UC   121     B.  Ree                 28
+BIOL 3801  Genetics Laboratory                   1.0  MS-UC   121     B.  Ree                 28
+SPAN 2833  Spanish Professions MEDICAL           3.0  FL      219     B.  Ross                24
+FORL 4313  Second Lang Teach Methods             3.0  FL      113     B.  Ross                24
+FORL 4343  Teaching People Other Cultures        3.0  FL      218     B.  Ross                24
+ART  1123  Digital Imaging                       3.0  BALDOR  110     B.  Sharp               16
+MATH 0233  Beginning Algebra                     3.0  VINES   233     B.  Showalter           25
+THEA 1203  Introduction to Theatre               3.0  BREDLV  114     B.  Stevenson           30
+THEA 1431  Theatre Practicum Performance         1.0  BREDLV  TBA     B.  Stevenson           25
+THEA 2313  Voice and Movement                    3.0  BREDLV  AUD     B.  Stevenson           20
+THEA 3323  Personal Performance                  3.0  BREDLV  AUD     B.  Stevenson           20
+ITC  2624  Network Client Support                4.0  BALDOR  145B    B.  Thigpen             18
+ITN  3214  Internetworking I                     4.0  BALDOR  145B    B.  Thigpen             18
+ITN  3234  Internetworking III                   4.0  BALDOR  145B    B.  Thigpen             18
+ITN  4344  Network Security and Firewalls        4.0  BALDOR  TBA     B.  Thigpen             1
+MATH 0233  Beginning Algebra                     3.0  VINES   234     B.  Webster             25
+MATH 1203  Intermediate Algebra                  3.0  VINES   234     B.  Webster             25
+COMM 493V  Independent Project                   2.0  BALLMN  TBA     B.  Wiggins             1
+COMM 2213  Media Production                      3.0  HOLT    111     B.  Wiggins             18
+COMM 3801  Publications Staff                    1.0  HOLT    111     B.  Wiggins             13
+COMM 4801  Senior Seminar                        1.0  HOLT    111     B.  Wiggins             25
+RHET 3801  Publications Staff CHRONICLE          1.0  HOLT    111     B.  Wiggins             12
+SPCH 4203  Culture and Communication             3.0  VINES   201     B.  Wiggins             5
+COMM 493V  Independent Project                   3.0  VINES   TBA     B.  Wiggins             1
+COMM 4203  Culture and Communication             3.0  VINES   201     B.  Wiggins             20
+BIOL 3824  Plant Physiology                      4.0  MS-UC   304     B.  Williamson          24
+BIOL 4801  Cell Molecular Biology Lab            1.0  MS-UC   121     B.  Williamson          24
+BIOL 4801  Cell Molecular Biology Lab            1.0  MS-UC   121     B.  Williamson          24
+BIOL 4803  Cell and Molecular Biology            3.0  MS-UC   304     B.  Williamson          50
+HIST 3403  Colonial American to 1763             3.0  GARDNR  137     B.  Willoughby          25
+HIST 3223  Tudor and Stuart England              3.0  GARDNR  LHALL   B.  Willoughby          40
+SAS  0201  Bridge to Success Seminar             1.0  MS-UC   100     B.  Yates               25
+SAS  0201  Bridge to Success Seminar             1.0  VINES   235     B.  Yates               25
+MATH 1403  College Algebra INTERSESSION          3.0  MS-UC   205     C.  Alexander           25
+MATH 1403  College Algebra                       3.0  MS-UC   206     C.  Alexander           35
+MATH 1333  Number Sense Data Analysis I          3.0  MS-UC   203     C.  Alexander           30
+MATH 1343  Number Sense Data Analysis II         3.0  MS-UC   203     C.  Alexander           30
+MATH 2333  Structures of Arithmetic              3.0  MS-UC   203     C.  Alexander           30
+MATH 2343  Informal Geometry                     3.0  MS-UC   203     C.  Alexander           30
+MUSI 4030  Senior Recital                         .0  BREDLV  TBA     C.  Barrick             10
+MUSR 1411  Jazz Band                             1.0  BREDLV  106B    C.  Barrick             30
+MUSR 3411  Jazz Band                             1.0  BREDLV  105     C.  Barrick             20
+MUSW 1252  Private Woodwinds SAXOPHONE           2.0  BREDLV  203     C.  Barrick             10
+LAW  2003  Legal Environment of Business         3.0  FL      220     C.  Conley              35
+GEOG 2753  World Regional Geography              3.0  GARDNR  231     C.  Flynn               40
+GEOG 2753  World Regional Geography              3.0  GARDNR  204     C.  Flynn               40
+GEOG 2753  World Regional Geography              3.0  GARDNR  204     C.  Flynn               40
+GEOG 2753  World Reg Geog FULL ONLINE            3.0  GARDNR  TBA     C.  Flynn               32
+GEOG 2753  World Reg Geog FULL ONLINE            3.0  GARDNR  TBA     C.  Flynn               32
+ECD  1103  Child Growth and Development          3.0  ECHOLS  119     C.  Foster              20
+ECD  1103  Child Growth and Development          3.0  ECHOLS  119     C.  Foster              5
+ECTC 2403  Math & Science Early Childhood        3.0  ECHOLS  119     C.  Foster              20
+ECTC 2403  Math & Science Early Childhood        3.0  ECHOLS  119     C.  Foster              5
+ENGL 1203  Composition I                         3.0  FL      220     C.  Gerard              28
+ENGL 1203  Composition I                         3.0  FL      216     C.  Gerard              28
+ENGL 2853  Imaginative Writing                   3.0  HOLT    102     C.  Gerard              20
+RHET 4153  Poetry Workshop                       3.0  HOLT    115     C.  Gerard              15
+CJ   4833  Admin Concepts Law Enfcmnt            3.0  GARDNR  138     C.  Hansen              30
+RADT 1104  Intro to Radiography                  4.0  HLTHSC  325     C.  Harmon              20
+RADT 2432  Prin Radiation Biol Protct            2.0  HLTHSC  325     C.  Harmon              20
+RADT 1124  Clinical Education I                  4.0  HOSP    MERCY   C.  Harmon
+RADT 2424  Clinical Education IV                 4.0  HOSP    MERCY   C.  Harmon
+ISM  4403  Indpt Stdy Img Sci FULL ONLINE        3.0  TBA     TBA     C.  Harmon              15
+APRO 2662  Law Office Technology                 2.0  BALDOR  124     C.  Hawkins             24
+CGT  1234  Engineering Graphics I                4.0  BALDOR  123     C.  Holt
+CGT  1234  Engineering Graphics I                4.0  BALDOR  245     C.  Holt
+CGT  2994  Capstone Project                      4.0  BALDOR  201     C.  Holt
+CGT  290V  CGT Sp Topics Particle Systems        3.0  BALDOR  213     C.  Holt                20
+PHSC 2653  Earth Science                         3.0  MS-UC   101     C.  Knubley             64
+PHSC 2653  Earth Science                         3.0  MS-UC   101     C.  Knubley             64
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     C.  Knubley             32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     C.  Knubley             32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     C.  Knubley             32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     C.  Knubley             32
+ECED 3122  Practicum I                           2.0  MS-UC   302     C.  Lehman              15
+ECED 3122  Practicum I                           2.0  MS-UC   TBA     C.  Lehman              1
+MLED 490A  Tching Middle Childhood School       10.0  MS-UC   TBA     C.  Lehman              5
+ECED 3122  Practicum I                           2.0  MS-UC   301     C.  Lehman              15
+MATH 1403  College Algebra                       3.0  MS-UC   206     C.  McEver              35
+MATH 0233  Beginning Algebra                     3.0  MS-UC   301     C.  McEver              30
+MATH 0233  Beginning Algebra                     3.0  VINES   235     C.  McEver              30
+MATH 0233  Beginning Algebra                     3.0  VINES   235     C.  McEver              30
+MATH 1203  Intermediate Algebra                  3.0  VINES   201     C.  McEver              24
+MATH 1203  Intermediate Algebra                  3.0  VINES   233     C.  McEver              25
+WFL  2853  Problem Solvng Decision Making        3.0  FL      110     C.  McKinney            25
+GRDS 2243  Digital Illustration                  3.0  BALDOR  206     C.  McLain              20
+GRDS 2303  Graphic Design                        3.0  BALDOR  206     C.  McLain              20
+GRDS 3403  Advertising Design I                  3.0  BALDOR  206     C.  McLain              20
+GRDS 372V  Graphic Design Internship             3.0  BALDOR  TBA     C.  McLain              10
+GRDS 372V  Graphic Design Internship             6.0  BALDOR  TBA     C.  McLain              10
+READ 0513  Critical Thinking and Reading         3.0  VINES   234     C.  Phillips
+READ 0513  Critical Thinking and Reading         3.0  VINES   233     C.  Phillips            25
+READ 0513  Critical Thinking and Reading         3.0  VINES   234     C.  Phillips            25
+SAS  0203  On Course for Success                 3.0  VINES   233     C.  Phillips            28
+EDUC 4222  Assessment                            2.0  MS-UC   209     C.  Ralston             30
+EDUC 4222  Assessment                            2.0  MS-UC   209     C.  Ralston             30
+ECED 3263  Early Childhood Assessment            3.0  MS-UC   303     C.  Ralston             30
+APRO 290V  Spc Tpcs Personal Finance             3.0  BALDOR  TBA     C.  Rink                2
+PHIL 2753  Introduction to Philosophy            3.0  GARDNR  LHALL   C.  Rogers              50
+PHIL 3203  Ethics Across the Disciplines         3.0  GARDNR  221     C.  Rogers              32
+PHIL 3103  Reasoning Across Disciplines          3.0  MS-UC   208     C.  Rogers              32
+LEGL 1103  Legal Research and Writing I          3.0  BALDOR  107     C.  Scott               12
+MKTG 3123  Consumer Behavior                     3.0  FL      218     C.  Scott               30
+MKTG 3133  Marketing Research                    3.0  FL      219     C.  Scott               30
+ART  1103  2-D Design                            3.0  BALLMN  101     C.  Steiner             22
+ART  1551  Admissions Portfolio                  1.0  BALLMN  101     C.  Steiner
+ART  4954  Studio Art Capstone                   4.0  BALLMN  TBA     C.  Steiner             20
+NURS 3337  Nurs Care Adult I LAB                  .0  HLTHSC  133     C.  Stewart             8
+NURS 3337  Nurs Care Adult I LAB                  .0  HLTHSC  133     C.  Stewart             8
+DHYG 2372  Dental Nutrition                      2.0  HLTHSC  147     C.  Stuteville          16
+POLS 2753  American National Government          3.0  GARDNR  138     C.  Sullivan            50
+POLS 2853  State and Local Government            3.0  GARDNR  LHALL   C.  Sullivan            50
+POLS 2853  State and Local Government            3.0  HLTHSC  318     C.  Sullivan            40
+SPCH 1203  Introduction Speech Comm SSS          3.0  FL      111     C.  Thompson
+SPCH 2203  Foundations Communication HS          3.0  FL      111     C.  Thompson
+SPCH 1203  Introduction to Speech Comm           3.0  FL      111     C.  Thompson
+SPCH 1203  Introduction to Speech Comm           3.0  FL      111     C.  Thompson
+COMM 2203  Intro to Mass Comm                    3.0  HLTHSC  223     C.  Thompson
+COMM 2203  Intro to Mass Comm                    3.0  HLTHSC  223     C.  Thompson
+COMM 495V  Communication Internship              1.0  HOLT    TBA     C.  Thompson            3
+SPCH 1203  Intro Speech Comm INTERSESSION        3.0  VINES   227     C.  Thompson            20
+COMM 495V  Communication Internship              3.0  VINES   TBA     C.  Thompson            6
+COMM 493V  Independent Project                   1.0  VINES   TBA     C.  Thompson            1
+ENGL 1203  Composition I                         3.0  HOLT    102     C.  West                28
+ENGL 1203  Composition I                         3.0  HOLT    109     C.  West                28
+ENGL 1203  Composition I                         3.0  HOLT    110     C.  West                28
+ENGL 4993  Capstone Grad Sch Professions         3.0  HOLT    111     C.  Westcamp            25
+RHET 3401  Publications Staff APPLAUSE           1.0  HOLT    111     C.  Westcamp            15
+ENGL 3223  The Short Story                       3.0  HOLT    109     C.  Westcamp            25
+ENGL 2023  Intro to Amer Lit FULL ONLINE         3.0  TBA     TBA     C.  Westcamp            25
+ENGL 1203  Composition I                         3.0  TBA     TBA     C.  Westcamp            25
+PHYE 1261  Walking Beginning Jogging             1.0  GYM     139     C.  Williams            30
+PHYE 1621  Total Fitness                         1.0  GYM     145     C.  Williams            25
+PHYE 1621  Total Fitness                         1.0  GYM     145     C.  Williams            25
+PHYE 1621  Total Fitness                         1.0  GYM     145     C.  Williams            25
+PHYE 1621  Total Fitness                         1.0  GYM     145     C.  Williams            25
+EDUC 2752  Introduction to Education             2.0  MS-UC   308     C.  Wood                34
+ECED 490C  Early Childhood Educ Internshp       12.0  MS-UC   TBA     C.  Wood                11
+MEEG 3013  Mechanics of Materials                3.0  BALDOR  216     D.  Albers              35
+MEEG 3010  Mechanics of Materials Drill           .0  BALDOR  141A    D.  Albers              35
+MEEG 3200  Mechanical Engineering Lab I           .0  BALDOR  141A    D.  Albers              15
+MEEG 3200  Mechanical Engineering Lab I           .0  BALDOR  141A    D.  Albers              14
+MEEG 3202  Mechanical Engineering Lab I          2.0  BALDOR  108     D.  Albers              29
+MEEG 4131  Creative Project Design               1.0  TBA     TBA     D.  Albers              24
+BIOL 400V  Undergraduate Research Biology        2.0  MS-UC   TBA     D.  Amos                6
+EDUC 490A  Teaching in Secondary School         10.0  MS-UC   TBA     D.  Amos                1
+BIOL 400V  Undergraduate Research Biology        1.0  MS-UC   TBA     D.  Amos                3
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     D.  Amos                24
+BIOL 1461  Microbiology Immunology Lab           1.0  MS-UC   234     D.  Amos                24
+BIOL 1461  Microbiology Immunology Lab           1.0  MS-UC   234     D.  Amos                24
+BIOL 1463  Microbiology and Immunology           3.0  MS-UC   104     D.  Amos                60
+BIOL 1463  Microbiology and Immunology           3.0  MS-UC   304     D.  Amos                60
+MLED 490A  Tching Middle Childhood School       10.0  MS-UC   TBA     D.  Amos                1
+MUSI 2763  Music Appreciation                    3.0  BREDLV  201     D.  Bailey              35
+MUSI 2763  Music Appreciation                    3.0  BREDLV  201     D.  Bailey              35
+MUSI 3102  Orchestration and Arranging           2.0  BREDLV  208     D.  Bailey              15
+MUSI 3663  Jazz History and Styles               3.0  BREDLV  106B    D.  Bailey              3
+MUSR 1201  Jazz Lab Ensemble                     1.0  BREDLV  TBA     D.  Bailey              20
+MUSR 1451  Vocal Jazz                            1.0  BREDLV  105     D.  Bailey              10
+MUSR 3451  Vocal Jazz                            1.0  BREDLV  105     D.  Bailey              10
+CJ   1013  Intro Criminal Justice System         3.0  GARDNR  137     D.  Balch               15
+CJ   1013  Intro Criminal Justice System         3.0  GARDNR  137     D.  Balch               25
+CJ   2373  Police Sys Pract FULL ONLINE          3.0  GARDNR  TBA     D.  Balch               25
+CJ   2402  Crime Scene Documentation             2.0  GARDNR  228     D.  Balch               24
+CJ   2373  Police Systems and Practices          3.0  HOLT    115     D.  Balch               15
+CJ   2373  Police Systems and Practices          3.0  HOLT    115     D.  Balch               15
+CJ   2403  Legal Aspects Law Enforcement         3.0  MS-UC   301     D.  Balch               15
+CJ   2403  Legal Aspects Law Enforcement         3.0  MS-UC   301     D.  Balch               25
+HIST 2753  United States History I               3.0  GARDNR  138     D.  Breitenberg         50
+HIST 2753  United States History I               3.0  GARDNR  138     D.  Breitenberg         50
+HIST 2763  US History II FULL ONLINE             3.0  GARDNR  TBA     D.  Breitenberg         32
+HIST 4153  History of Ark FULL ONLINE            3.0  GARDNR  TBA     D.  Breitenberg         32
+ENGL 0163  Introduction to Writing               3.0  VINES   234     D.  Brewer              24
+ENGL 0163  Introduction to Writing               3.0  VINES   234     D.  Brewer              24
+CHEM 400V  Chemistry Research                    1.0  MS-UC   TBA     D.  Bryhan              1
+PHYS 2811  College Physics Laboratory I          1.0  MS-UC   334     D.  Bryhan              32
+PHYS 2903  University Physics I                  3.0  MS-UC   304     D.  Bryhan              64
+PHYS 2911  University Physics I Lab              1.0  MS-UC   334     D.  Bryhan              32
+PHYS 2911  University Physics I Lab              1.0  MS-UC   334     D.  Bryhan              32
+CHEM 4504  Physical Chemistry I                  4.0  MS-UC   311     D.  Bryhan              20
+CS   1043  Foundations of Networking             3.0  BALDOR  144     D.  Burdick             28
+ITW  4213  ,Net Web Technologies                 3.0  BALDOR  147     D.  Burdick             28
+ITP  4113  .Net Application Programming          3.0  BALDOR  147     D.  Burdick             28
+CS   1013  Foundations of Programming I          3.0  BALDOR  144     D.  Burdick             28
+CHEM 1403  College Chemistry I                   3.0  MS-UC   101     D.  Burkey              60
+CHEM 1403  College Chemistry I                   3.0  MS-UC   101     D.  Burkey              60
+CHEM 1401  College Chemistry I Lab               1.0  MS-UC   340     D.  Burkey              24
+CHEM 1401  College Chemistry I Lab               1.0  MS-UC   340     D.  Burkey              24
+CHEM 1401  College Chemistry I Lab               1.0  MS-UC   340     D.  Burkey              24
+EDUC 3002  Intro to Educational Tech             2.0  MS-UC   212     D.  Cast                30
+EDUC 3002  Intro to Ed Tech HYBRID               2.0  MS-UC   212     D.  Cast                30
+EDUC 3002  Intro to Ed Tech HYBRID               2.0  MS-UC   212     D.  Cast                30
+CJ   2603  Courts and Criminal Procedure         3.0  GARDNR  201     D.  Dunagin             30
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  124     D.  Fulmer              20
+NURS 3164  Health Assessment                     4.0  HLTHSC  223     D.  Fulmer              60
+CGT  1001  CAD Concepts and Apps HYBRID          1.0  BALDOR  201     D.  Goodson             24
+BSAT 490V  Adv Animation Project                 3.0  BALDOR  TBA     D.  Goodson             2
+CGT  1234  Engineering Graphics I                4.0  BALDOR  245     D.  Goodson
+CGT  1302  Graphics for Engineers                2.0  BALDOR  210     D.  Goodson             10
+CGT  1302  Graphics for Engineers                2.0  BALDOR  210     D.  Goodson             14
+CGT  1302  Graphics for Engineers                2.0  BALDOR  210     D.  Goodson             24
+CGT  1644  3D Visualization                      4.0  BALDOR  201     D.  Goodson             24
+CGT  1302  Graphics for Engineers                2.0  BALDOR  210     D.  Goodson             16
+MUSW 1252  Private Woodwinds OBOE                2.0  BREDLV  TBA     D.  Hewett              10
+PHIL 3223  Medical Ethics                        3.0  GARDNR  204     D.  Hubbard             25
+PHIL 3213  Business Ethics                       3.0  GARDNR  137     D.  Hubbard             30
+ART  2223  Introduction to Painting              3.0  BALLMN  102     D.  Lee                 16
+ART  3773  Figure Painting                       3.0  BALLMN  102     D.  Lee                 15
+ANTH 2803  Cultural Anthropology                 3.0  FL      201     D.  Maher               50
+ANTH 2803  Cultural Anthropology                 3.0  GARDNR  137     D.  Maher               50
+ANTH 3213  World Prehistory FULL ONLINE          3.0  GARDNR  TBA     D.  Maher               25
+SOCI 2753  Introduction to Sociology             3.0  GARDNR  139     D.  Maher               40
+ANTH 3823  Anth Perspectives FULL ONLINE         3.0  VINES   TBA     D.  Maher               4
+PHSC 2653  Earth Science                         3.0  MS-UC   101     D.  Mayo                64
+PHSC 2653  Earth Science                         3.0  MS-UC   101     D.  Mayo                64
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     D.  Mayo                32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     D.  Mayo                32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     D.  Mayo                32
+PHSC 2651  Earth Science Laboratory              1.0  MS-UC   344     D.  Mayo                32
+BIOL 420V  Spc Tpc Marine Ecosystems             3.0  MS-UC   307     D.  McClellan           30
+BIOL 400V  Undergraduate Research Biology        3.0  MS-UC   TBA     D.  McClellan           2
+BIOL 400V  Undergraduate Research Biology        2.0  MS-UC   TBA     D.  McClellan           1
+BIOL 3803  Genetics                              3.0  MS-UC   304     D.  McClellan           75
+CHEM 1303  Chemical Principles                   3.0  MS-UC   101     D.  McGinnis            60
+CHEM 1303  Chemical Principles                   3.0  MS-UC   304     D.  McGinnis            50
+CHEM 1303  Chemical Principles                   3.0  MS-UC   304     D.  McGinnis            10
+CHEM 1403  College Chemistry I                   3.0  MS-UC   307     D.  McGinnis            32
+CHEM 3034  Descriptive Inorganic Chem            4.0  MS-UC   307     D.  McGinnis            20
+ECED 3213  Integrated Curriculum II              3.0  MS-UC   303     D.  Milford             30
+ECED 3222  Practicum II                          2.0  MS-UC   303     D.  Milford             15
+ECED 3222  Practicum II PDS                      2.0  MS-UC   303     D.  Milford             12
+ECED 3213  Integrated Curriculum II PDS          3.0  OTHER   CNTRL   D.  Milford             12
+ENGL 1213  Composition II                        3.0  FL      113     D.  Nickell             28
+ENGL 1213  Composition II                        3.0  FL      219     D.  Nickell             28
+ENGL 1203  Composition I                         3.0  MS-UC   307     D.  Nickell             28
+MEEG 4132  Prof Engineering Practices            2.0  BALDOR  247     D.  Nutter              24
+ENGN 2753  Engineering Statics                   3.0  BALDOR  246     D.  Paulus              15
+ENGN 2753  Engineering Statics                   3.0  BALDOR  246     D.  Paulus              15
+MEEG 2303  Intro to Materials HYBRID             3.0  BALDOR  216     D.  Paulus              15
+MEEG 2303  Intro to Materials HYBRID             3.0  BALDOR  246     D.  Paulus              15
+PHYE 2853  Health and Safety FULL ONLINE         3.0  HLTHSC  TBA     D.  Popp                30
+PHYE 2853  Health and Safety FULL ONLINE         3.0  TBA     TBA     D.  Popp                30
+HIST 1133  Civilizations World Since 1500        3.0  GARDNR  201     D.  Prentice            31
+HIST 2763  United States History II              3.0  GARDNR  139     D.  Prentice            40
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     D.  Pritchett           24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     D.  Pritchett           24
+BIOL 4213  Virology                              3.0  MS-UC   306     D.  Pritchett           20
+BIOL 467V  Internship in Biology                 1.0  MS-UC   TBA     D.  Pritchett           10
+BIOL 2003  Intro to Cell Biology                 3.0  MS-UC   304     D.  Pritchett           80
+BIOL 2003  Intro to Cell Biology                 3.0  MS-UC   304     D.  Pritchett           60
+HLTH 3103  Pathophysiology BSN                   3.0  HLTHSC  133     D.  Reeves              60
+NURS 3113  Nursing Skills LAB                     .0  HLTHSC  228     D.  Reeves              8
+NURS 3227  Foundations Nursing Care LAB           .0  HOSP    SPARK   D.  Reeves              8
+EDUC 3013  Human Developmnt and Learning         3.0  MS-UC   308     D.  Scoggins            41
+EDUC 3612  Classroom and Behavioral Mgmt         2.0  MS-UC   209     D.  Scoggins            30
+EDUC 4211  Practicum II                          1.0  MS-UC   209     D.  Scoggins            30
+ECON 2813  Prin of Microeconomics                3.0  FL      218     D.  Settlage            40
+ECON 2813  Prin of Microeconomics                3.0  FL      218     D.  Settlage            35
+ECON 2813  Prin of Microeconomics                3.0  FL      218     D.  Settlage            40
+FREN 1304  Beginning French I                    4.0  VINES   227     D.  Shaeffer            24
+FREN 1314  Beginning French II                   4.0  VINES   227     D.  Shaeffer            24
+ENGL 4213  Shakespeare                           3.0  HOLT    102     D.  Siler               25
+HONR 1101  Intro Honors Intl Studies             1.0  HOLT    102     D.  Siler               25
+HONR 1101  Intro Honors Intl Studies             1.0  HOLT    109     D.  Siler               25
+MEEG 491V  Spc Tpcs - Engineer Materials         3.0  BALDOR  246     D.  Spearot             24
+LAW  4033  Law of Commercial Transactions        3.0  FL      100     D.  Sprouse             43
+STAT 2503  Prob and Stats I INTERSESSION         3.0  MS-UC   206     D.  Uhm                 25
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     D.  Uhm                 35
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     D.  Uhm                 35
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     D.  Uhm                 35
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     D.  Uhm                 35
+STAT 3503  Applied Math Statistics I             3.0  MS-UC   201     D.  Uhm                 24
+CJ   3913  Drugs and Crime                       3.0  FL      201     D.  Williams            30
+CJ   390V  Special Topics Social Deviance        3.0  GARDNR  221     D.  Williams            15
+CJ   3923  Victimology                           3.0  GARDNR  228     D.  Williams            30
+SOCI 4203  Soc Spec Topic Social Deviance        3.0  GARDNR  221     D.  Williams            15
+CJ   1253  Criminology                           3.0  GARDNR  221     D.  Williams            30
+ITD  3133  Data Warehousing                      3.0  BALDOR  144     D.  Wright              24
+ITD  3113  Advanced SQL                          3.0  BALDOR  144     D.  Wright              24
+ITD  3113  Advanced SQL                          3.0  BALDOR  144     D.  Wright              24
+ITD  4223  Database Administration II            3.0  BALDOR  144     D.  Wright              24
+CGT  2674  Digital Layout Level I                4.0  BALDOR  201     D.  Yates               24
+PHYE 1011  Beginning Aerobic Fitness             1.0  GYM     139     D.  deCorrevont         25
+PHYE 1021  Intermediate Aerobic Fitness          1.0  GYM     139     D.  deCorrevont         5
+POLS 3123  The American Presidency               3.0  GARDNR  139     E.  Baker               25
+POLS 2753  American National Govt HONORS         3.0  HLTHSC  326     E.  Baker               25
+POLS 2753  American National Government          3.0  OTHER   VBHS    E.  Baker
+POLS 2753  Am Natl Govt FULL ONLINE              3.0  TBA     TBA     E.  Baker               32
+POLS 2853  St and Local Govt FULL ONLINE         3.0  TBA     TBA     E.  Baker               32
+POLS 4953  Political Science Internship          3.0  VINES   TBA     E.  Baker               1
+SPAN 1304  Beginning Spanish I                   4.0  VINES   227     E.  Berlanga-Thames     24
+READ 0513  Critical Thinking and Reading         3.0  HLTHSC  124     E.  Carlson
+ENGL 3003  Hist Dev English Lang                 3.0  HOLT    108     E.  Carlson             25
+ENGL 4903  Sp Tp Apocalyptic Lit                 3.0  HOLT    108     E.  Carlson             25
+ENGL 1203  Composition I                         3.0  HOLT    108     E.  Carlson             28
+ENGL 1203  Composition I                         3.0  HOLT    108     E.  Carlson             28
+ART  1113  Drawing                               3.0  BALLMN  103     E.  Cialone             20
+ART  1113  Drawing                               3.0  BALLMN  103     E.  Cialone             20
+ART  2213  Introduction to Printmaking           3.0  BALLMN  104     E.  Cialone             12
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  MS-UC   100     E.  Foss                32
+MATH 1403  College Algebra                       3.0  MS-UC   211     E.  Foss                30
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  MS-UC   100     E.  Foss                30
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  MS-UC   100     E.  Foss                32
+MATH 1303  Collg Mathematics FULL ONLINE         3.0  TBA     TBA     E.  Foss                25
+MUSB 1252  Private Brass HORN                    2.0  BREDLV  201     E.  Mino                10
+MUSC 1161  Class Piano I                         1.0  BREDLV  203     E.  Mino                14
+MUSI 2181  Diction for Singers I                 1.0  BREDLV  106B    E.  Momand              20
+MUSI 4843  Secondary Vocal Methds Matrls         3.0  BREDLV  106B    E.  Momand              20
+MUSV 1251  Private Voice                         1.0  BREDLV  TBA     E.  Momand              10
+MUSV 1252  Private Voice                         2.0  BREDLV  114     E.  Momand              10
+MUSV 3252  Private Voice                         2.0  BREDLV  114     E.  Momand              10
+MUSI 3372  Vocal Pedagogy                        2.0  BREDLV  106B    E.  Momand              15
+LEAD 4693  Dim Organiz Leadership HYBRID         3.0  FL      220     E.  Washburn            25
+LEAD 3603  Found Org Leadrshp FULL ONLINE        3.0  TBA     TBA     E.  Washburn            25
+LEAD 3623  Prof Communication FULL ONLINE        3.0  TBA     TBA     E.  Washburn            25
+HLTH 1004  Intro to Health Occupations           4.0  HLTHSC  222     F.  Allred              20
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  227     F.  Allred              20
+HLTH 1004  Intro to Health Occupations           4.0  HLTHSC  325     F.  DeMarco             20
+CJ   2373  Police Systems and Practices          3.0  GARDNR  228     F.  Dyke                30
+POLS 2753  American National Government          3.0  GARDNR  201     F.  Hansen              40
+POLS 2753  American National Government          3.0  GARDNR  231     F.  Hansen              50
+POLS 3143  The U S Supreme Court                 3.0  GARDNR  138     F.  Hansen              25
+SPAN 1314  Beginning Spanish II                  4.0  VINES   236     F.  Tarelli             24
+SPAN 1314  Beginning Spanish II                  4.0  VINES   227     F.  Tarelli             24
+SPAN 1314  Beginning Spanish II                  4.0  VINES   227     F.  Tarelli             24
+HLTH 2953  First Aid                             3.0  HLTHSC  314     G.  Bentley             20
+HLTH 2953  First Aid INTERSESSION                3.0  HLTHSC  314     G.  Bentley             20
+SPED 4903  Directed Internship P-4               3.0  MS-UC   TBA     G.  Ezell               5
+ART  1143  3-D Design                            3.0  BALLMN  105A    G.  Farris              15
+ITC  2753  E-Commerce Technologies               3.0  BALDOR  143     G.  Fulenwider          24
+ITC  2753  E-Commerce Technologies HYBRID        3.0  BALDOR  144     G.  Fulenwider          28
+ITW  4213  .Net Web Technologies                 3.0  BALDOR  147     G.  Fulenwider          4
+ITW  3123  Web Graphics                          3.0  BALDOR  144     G.  Fulenwider          28
+ITP  4113  .Net Application Programming          3.0  BALDOR  147     G.  Fulenwider          21
+MUSI 1000  Recital Attendance                     .0  BREDLV  AUD     G.  Hudson              50
+MUSI 1000  Recital Attendance FRSHMN ONLY         .0  BREDLV  105     G.  Hudson              40
+MUSI 2763  Music Appreciation                    3.0  BREDLV  105     G.  Hudson              35
+MUSI 2763  Music Appreciation                    3.0  BREDLV  201     G.  Hudson              35
+MUSI 2763  Music Appreciation                    3.0  BREDLV  201     G.  Hudson              35
+MUSI 3000  Recital Attendance                     .0  BREDLV  AUD     G.  Hudson              50
+MUSR 1351  Instrumental Ensemble FLUTE           1.0  BREDLV  TBA     G.  Hudson              10
+MUSR 3351  Instrumental Ensemble FLUTE           1.0  BREDLV  TBA     G.  Hudson              10
+MUSW 1252  Private Woodwinds FLUTE               2.0  BREDLV  TBA     G.  Hudson              10
+MUSW 3252  Private Woodwinds FLUTE               2.0  BREDLV  TBA     G.  Hudson              10
+MUSI 2841  Instrmntl Concepts Vocalists          1.0  BREDLV  TBA     G.  Hudson              1
+SPAN 1304  Beginning Spanish I                   4.0  VINES   236     G.  Langston            24
+SPAN 1304  Beginning Spanish I                   4.0  VINES   236     G.  Langston            24
+MUSI 2763  Music Appreciation                    3.0  BREDLV  201     G.  Mann                35
+MUSR 1361  Vocal Performance Workshop            1.0  BREDLV  105     G.  Mann                20
+MUSR 3361  Vocal Performance Workshop            1.0  BREDLV  105     G.  Mann                20
+MUSV 1251  Private Voice                         1.0  BREDLV  TBA     G.  Mann                10
+MUSV 1252  Private Voice                         2.0  BREDLV  114     G.  Mann                5
+ELEC 1863  Digital Fundamentals                  3.0  BALDOR  216     G.  Nishmuta            18
+ECED 3043  Devel Appr Practice HYBRID            3.0  MS-UC   303     G.  Osburn              30
+ECED 3043  Devel Appr Practice HYBRID            3.0  MS-UC   303     G.  Osburn              30
+ECED 3053  Childrn Families Divers HYBRID        3.0  MS-UC   303     G.  Osburn              30
+ECED 3053  Childrn Families Divers HYBRID        3.0  MS-UC   303     G.  Osburn              30
+PSYC 1163  General Psychology                    3.0  FL      100     G.  Roberts             70
+PSYC 4233  Psychology of Addictions              3.0  FL      217     G.  Roberts             40
+PSYC 2963  Dev Psy Life Sp INTERSESSION          3.0  GARDNR  137     G.  Roberts             25
+PSYC 2963  Developmental Psy A Life Span         3.0  HLTHSC  124     G.  Roberts             30
+PSYC 1163  General Psychology                    3.0  MS-UC   306     G.  Roberts             39
+ACCT 3013  Intermediate Accounting II            3.0  FL      220     G.  Schmidt             30
+ACCT 3053  Accounting Information Systems        3.0  FL      220     G.  Schmidt             25
+ACCT 4013  Tax Accounting I                      3.0  FL      217     G.  Schmidt             25
+ACCT 4013  Tax Accounting I                      3.0  FL      217     G.  Schmidt             25
+CGT  1644  3D Visualization                      4.0  BALDOR  210     H.  Cady                24
+CGT  1644  3D Visualization                      4.0  BALDOR  210     H.  Cady                14
+CGT  1644  3D Visualization                      4.0  BALDOR  210     H.  Cady                10
+CGT  2664  Digital Design Level I                4.0  BALDOR  201     H.  Cady                17
+CGT  2664  Digital Design Level I                4.0  BALDOR  201     H.  Cady                7
+EDUC 4802  Seminar in Education                  2.0  ECHOLS  TBA     H.  Holland             55
+NURS 3227  Foundations Nursing Care LAB           .0  HOSP    METHO   H.  Manchester          8
+NURS 3227  Foundations Nursing Care LAB           .0  HOSP    METHO   H.  Manchester          8
+MATH 1403  College Algebra                       3.0  MS-UC   204     J.  Adams               35
+CGT  295V  Computer Graph Tech Internship        4.0  BALDOR  TBA     J.  Arbaugh             10
+CGT  2634  Architectural Materials HYBRID        4.0  BALDOR  213     J.  Arbaugh             18
+APRO 1203  Administrative Office Procedrs        3.0  BALDOR  123     J.  Arbaugh             24
+APRO 2343  Professional Office Com HYBRID        3.0  BALDOR  123     J.  Arbaugh
+APRO 1653  Employee Benefits HYBRID              3.0  BALDOR  124     J.  Arbaugh             24
+APRO 286V  Academic Internship                   3.0  BALDOR  TBA     J.  Arbaugh             24
+APRO 290V  Spec Topics Personal Finance          3.0  BALDOR  123     J.  Arbaugh             24
+ITA  1251  Computer Spreadsheets                 1.0  BALDOR  123     J.  Arbaugh             24
+ITA  1003  Computer Apps Knowledge Worker        3.0  FL      112     J.  Arbaugh             24
+ELEG 4503  Electric Pwr Distribution Sys         3.0  BALDOR  247     J.  Balda               24
+MGMT 1203  Foundations of Business               3.0  FL      218     J.  Beard               42
+MGMT 1203  Foundations of Business               3.0  FL      218     J.  Beard               42
+MGMT 1203  Foundations of Business               3.0  FL      219     J.  Beard               42
+POLS 2753  American National Government          3.0  GARDNR  231     J.  Beaty               50
+POLS 2753  American National Government          3.0  GARDNR  137     J.  Beaty               50
+POLS 3603  Public Administration                 3.0  GARDNR  228     J.  Beaty               25
+PHYS 2803  College Physics I                     3.0  MS-UC   101     J.  Belcher             64
+PSYC 3613  Experimental Psychology               3.0  FL      112     J.  Benjamin            24
+PSYC 3133  Social Psychology                     3.0  GARDNR  137     J.  Benjamin            60
+PSYC 3133  Social Psychology FULL ONLINE         3.0  GARDNR  TBA     J.  Benjamin            25
+PSYC 494V  Psyc Internship FULL ONLINE           3.0  GARDNR  TBA     J.  Benjamin            10
+PSYC 1001  Psychology Orientation                1.0  HOLT    111     J.  Benjamin            25
+PSYC 2513  Intro to Behavioral Stats             3.0  MS-UC   212     J.  Benjamin            28
+HLTH 1024  Pharmacy Technology I                 4.0  MS-UC   302     J.  Black               20
+MILS 1001  Foundations of Officership            1.0  HLTHSC  223     J.  Blackston
+MILS 2002  Individual Leadership Studies         2.0  HOLT    109     J.  Blackston
+MILS 3004  Leadership and Problem Solving        4.0  MS-UC   208     J.  Blackston
+MILS 4004  Leadership and Management             4.0  MS-UC   208     J.  Blackston
+NURS 4458  Psyc Comm Health COMM LAB              .0  BALDOR  TBA     J.  Blankenship
+NURS 4458  Psyc Comm Health PSYC LAB              .0  BALDOR  TBA     J.  Blankenship
+NURS 4458  Psyc Community Health PSYC            8.0  HLTHSC  314     J.  Blankenship
+NURS 4458  Psyc Community Health COMM            8.0  HLTHSC  314     J.  Blankenship
+ISS  3102  Clinical Lab Practice                 2.0  HLTHSC  332     J.  Callahan
+ISS  3103  Acoustical Physics Instrmnt I         3.0  HLTHSC  321     J.  Callahan            8
+IS   3103  Legl Eth Cons Hlth FULL ONLINE        3.0  TBA     TBA     J.  Callahan            24
+NURS 4305  Leadrshp Mgmt Prof FULL ONLINE        5.0  TBA     TBA     J.  Calvery Carman      20
+NURS 4654  Community Client FULL ONLINE          4.0  TBA     TBA     J.  Calvery Carman      20
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     J.  Carson              30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     J.  Carson              30
+NURS 3236  Nurs Women Child OB LAB                .0  HLTHSC  TBA     J.  Cavner
+NURS 3164  Health Assessment LAB                  .0  HLTHSC  228     J.  Cavner              8
+NURS 3236  Nursing Women Children OB             6.0  HLTHSC  326     J.  Cavner
+PHIL 2753  Introduction to Philosophy            3.0  GARDNR  137     J.  Champlin            50
+PHIL 2753  Introduction to Philosophy            3.0  GARDNR  LHALL   J.  Champlin            50
+PHIL 2753  Introduction to Philosophy            3.0  GARDNR  139     J.  Champlin            40
+ENGL 3203  Young Adult Literature                3.0  HOLT    115     J.  Chitty              25
+ENGL 3403  Grammar Language Awareness            3.0  HOLT    108     J.  Chitty              25
+ENGL 1203  Composition I                         3.0  HOLT    102     J.  Chitty              28
+ENGL 2013  Intro to Global Literature            3.0  HOLT    115     J.  Chitty              35
+ENGL 1203  Composition I                         3.0  HOLT    102     J.  Chitty              28
+ENGL 3203  Young Adult Literature                3.0  VINES   TBA     J.  Chitty              1
+PHYS 2923  University Physics II                 3.0  MS-UC   311     J.  Christiansen        32
+PHYS 2931  University Physics II Lab             1.0  MS-UC   334     J.  Christiansen        32
+PHSC 2713  Physical Science                      3.0  MS-UC   101     J.  Christiansen        72
+PHSC 2711  Physical Science Laboratory           1.0  MS-UC   334     J.  Christiansen        24
+PHSC 2711  Physical Science Laboratory           1.0  MS-UC   334     J.  Christiansen        24
+PHSC 2711  Physical Science Laboratory           1.0  MS-UC   334     J.  Christiansen        24
+CGT  1001  CAD Concepts and Apps HYBRID          1.0  BALDOR  201     J.  Cloud               24
+CGT  1001  CAD Concepts and Applications         1.0  BALDOR  201     J.  Cloud               20
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     J.  Cornell             24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     J.  Cornell             24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     J.  Cornell             24
+BIOL 1153  Biological Science                    3.0  MS-UC   104     J.  Cornell             60
+BIOL 2201  Human Anatomy Laboratory              1.0  MS-UC   240     J.  Cornell             24
+BIOL 2201  Human Anatomy Laboratory              1.0  MS-UC   240     J.  Cornell             24
+BIOL 2201  Human Anatomy Laboratory              1.0  MS-UC   240     J.  Cornell             24
+BIOL 2203  Human Anatomy                         3.0  MS-UC   304     J.  Cornell             45
+WELD 1234  Welding Blue Print Reading            4.0  BALDOR  133     J.  Dugan               10
+WELD 1234  Welding Blue Print Reading            4.0  BALDOR  133     J.  Dugan               10
+WELD 1474  Layout Fabrication Strctr Pipe        4.0  BALDOR  133     J.  Dugan               10
+WELD 1474  Layout Fabrication Strctr Pipe        4.0  BALDOR  133     J.  Dugan               10
+WELD 1234  Welding Blue Print Reading            4.0  BALDOR  133     J.  Dugan               20
+CHEM 3403  Biochemistry I                        3.0  MS-UC   209     J.  Durchman            24
+CHEM 1401  College Chemistry I Lab               1.0  MS-UC   338     J.  Durchman            24
+CHEM 1403  College Chemistry I                   3.0  MS-UC   101     J.  Durchman            60
+CHEM 1401  College Chemistry I Lab               1.0  MS-UC   340     J.  Durchman            24
+CHEM 1401  College Chemistry I Lab               1.0  MS-UC   340     J.  Durchman            24
+MKTG 3013  Prin of Marketing Management          3.0  FL      220     J.  Encinas             30
+MKTG 3013  Prin of Marketing Management          3.0  FL      218     J.  Encinas             30
+MKTG 3013  Prin of Marketing Management          3.0  FL      200     J.  Encinas             30
+MKTG 3003  Intro to Professional Selling         3.0  FL      100     J.  Encinas             20
+MATH 1333  Number Sense Data Analysis I          3.0  MS-UC   236     J.  Engelhoven          30
+MATH 1343  Number Sense Data Analysis II         3.0  MS-UC   236     J.  Engelhoven          30
+MATH 2233  Geometry and Measurement I            3.0  MS-UC   236     J.  Engelhoven          30
+MATH 2243  Geometry and Measurement II           3.0  MS-UC   203     J.  Engelhoven          30
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     J.  Engelhoven          35
+MUSI 2763  Music Appreciation                    3.0  BREDLV  201     J.  Floyd               35
+MUSI 2763  Music Appreciation FILM MUSIC         3.0  BREDLV  105     J.  Floyd               35
+AUTO 290V  Auto Spc Tpcs Apprenticeship          4.0  BALDOR  TBA     J.  Grizzle             2
+ATDI 1334  Braking Systems                       4.0  BALDOR  107     J.  Grizzle             16
+ATDI 1334  Braking Systems                       4.0  BALDOR  107     J.  Grizzle             4
+ATDI 1334  Braking Systems                       4.0  BALDOR  107     J.  Grizzle             16
+ATDI 1334  Braking Systems                       4.0  BALDOR  107     J.  Grizzle             4
+ATDI 1334  Braking Systems                       4.0  BALDOR  107     J.  Grizzle             15
+ATDI 1334  Braking Systems                       4.0  BALDOR  107     J.  Grizzle             5
+MATH 4992  Senior Project                        2.0  MS-UC   TBA     J.  Guerra              1
+MATH 2403  Survey of Calculus                    3.0  MS-UC   208     J.  Guerra              33
+MATH 2804  Calculus I                            4.0  MS-UC   205     J.  Guerra              33
+MATH 3103  Foundations of Mathematics            3.0  MS-UC   201     J.  Guerra              24
+MATH 2804  Calculus I                            4.0  MS-UC   206     J.  Guerra              33
+MEEG 3503  Mechanics of Fluids                   3.0  BALDOR  246     J.  Hamilton            31
+MEEG 4200  Mechanical Engineering Lab III         .0  BALDOR  141A    J.  Hamilton            12
+MEEG 4200  Mechanical Engineering Lab III         .0  BALDOR  141A    J.  Hamilton            12
+MEEG 4202  Mechanical Engineering Lab III        2.0  BALDOR  110     J.  Hamilton            24
+MEEG 4131  Creative Project Design               1.0  TBA     TBA     J.  Hamilton            24
+ENGL 2023  Intro to American Literature          3.0  HOLT    102     J.  Hardin              35
+OSS  460V  Overseas Study Special Topics         6.0  OTHER   HONGK   J.  Hardin              5
+HIST 4153  History of Arkansas                   3.0  MS-UC   209     J.  Harvey              25
+CS   1013  Foundations of Programming I          3.0  BALDOR  147     J.  Hightower           28
+ITC  1374  Programming for Engineers             4.0  BALDOR  147     J.  Hightower           28
+ITF  3634  Enterprise Java Programming           4.0  BALDOR  147     J.  Hightower           28
+CS   1013  Foundations of Programming I          3.0  BALDOR  147     J.  Hightower           28
+HIST 2753  US History I FULL ONLINE              3.0  GARDNR  TBA     J.  Hinkson             32
+HIST 2763  US History II FULL ONLINE             3.0  GARDNR  TBA     J.  Hinkson             32
+LEGL 2723  Criminal Law and Procedure            3.0  BALDOR  122     J.  Hunter              24
+CJ   3063  Intro Cyber Crime FULL ONLINE         3.0  GARDNR  TBA     J.  Hunter              25
+NUTR 2523  Nutrition FULL ONLINE                 3.0  TBA     TBA     J.  Irgens              25
+MATH 4992  Senior Project                        2.0  MS-UC   TBA     J.  Jackson             1
+MATH 4992  Senior Project                        2.0  MS-UC   TBA     J.  Jackson             1
+MATH 2403  Survey of Calculus                    3.0  MS-UC   205     J.  Jackson             33
+MATH 2804  Calculus I                            4.0  MS-UC   205     J.  Jackson             33
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     J.  Jackson             35
+MATH 1403  College Algebra FULL ONLINE           3.0  TBA     TBA     J.  Jackson             25
+CHEM 3604  Analytical Chemistry                  4.0  MS-UC   306     J.  Jamison             24
+CHEM 1303  Chemical Principles                   3.0  MS-UC   101     J.  Jamison             60
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     J.  Jamison             32
+CHEM 1411  College Chemistry II Lab              1.0  MS-UC   340     J.  Jamison             24
+EDUC 2752  Introduction to Education             2.0  MS-UC   311     J.  Jennings Davis      40
+CS   2033  Web Systems                           3.0  BALDOR  143     J.  Jones               24
+CS   1033  Foundtns of Operating Systems         3.0  BALDOR  124     J.  Jones               24
+WELD 2284  ARC Welding Advanced                  4.0  BALDOR  140     J.  Keyes               10
+WELD 2284  ARC Welding Advanced                  4.0  BALDOR  140     J.  Keyes               10
+WELD 1284  ARC Welding Basic                     4.0  BALDOR  140     J.  Keyes               10
+WELD 1284  ARC Welding Basic                     4.0  BALDOR  140     J.  Keyes               10
+WELD 1454  Layout Fabrication Sht Metal          4.0  BALDOR  133     J.  Keyes               10
+ART  2863  Survey Art Hist I FULL ONLINE         3.0  BREDLV  TBA     J.  Knight              30
+ART  2873  Survey Art Hist II FULL ONLINE        3.0  BREDLV  TBA     J.  Knight              30
+MATH 4992  Senior Project                        2.0  MS-UC   TBA     J.  Lewallen            1
+MATH 1403  College Algebra                       3.0  MS-UC   206     J.  Lewallen            35
+MATH 1715  Pre Calculus Mathematics              5.0  MS-UC   202     J.  Lewallen            35
+MATH 2854  Calculus II                           4.0  MS-UC   211     J.  Lewallen            25
+ENGL 1213  Composition II FULL ONLINE            3.0  TBA     TBA     J.  Magee               25
+ENGL 1213  Composition II FULL ONLINE            3.0  TBA     TBA     J.  Magee               25
+PRFS 490V  Sp Top Intro to Robotics Tech         3.0  BALDOR  108     J.  Martini             5
+PRFS 490V  Sp Top Robot Op & Maintenance         3.0  BALDOR  108     J.  Martini             5
+ELEC 1403  Introduction to Robotics              3.0  BALDOR  108     J.  Martini             12
+ELEC 1413  Robot Operatns and Maintenance        3.0  BALDOR  108     J.  Martini             12
+ELEC 290V  Special Topics STEM Guitar            3.0  BALDOR  141A    J.  Martini             12
+ITN  3214  Intnetwrk I FULL ONLINE UNICTR        4.0  TBA     TBA     J.  McClurg             24
+ITN  3234  Intntwk III FULL ONLINE UNICTR        4.0  TBA     TBA     J.  McClurg             24
+ITN  4353  Network Analysis Design UNICTR        3.0  OTHER   MIDST   J.  McGinnis            28
+ITN  3113  Windows System Adm UNICTR             3.0  OTHER   MIDST   J.  McGinnis            28
+CS   4903  IT Spec Tp Secur Analy UNICTR         3.0  OTHER   MIDST   J.  McGinnis            24
+ITF  4114  Capstone Project UNICTR               4.0  OTHER   MIDST   J.  McGinnis            2
+ITC  2753  E-Comm Tech FULL ONLINE UNICTR        3.0  TBA     TBA     J.  McGinnis            28
+PHYE 1011  Beginning Aerobic Fitness             1.0  GYM     139     J.  McMullin            20
+PHYE 1021  Intermediate Aerobic Fitness          1.0  GYM     139     J.  McMullin            5
+PHYE 1011  Beginning Aerobic Fitness             1.0  GYM     139     J.  McMullin            25
+PHYE 1021  Intermediate Aerobic Fitness          1.0  GYM     139     J.  McMullin            10
+ELEC 1242  Intro Electronics Technology          2.0  BALDOR  248     J.  Merritt             18
+ELEC 2733  Advanced Electronic Circuits          3.0  BALDOR  214     J.  Merritt
+ELEC 1242  Intro Electronics Technology          2.0  BALDOR  248     J.  Merritt             18
+ELEC 1242  Intro Electronics Technology          2.0  BALDOR  248     J.  Merritt             18
+MATH 1403  College Algebra                       3.0  MS-UC   206     J.  Myers               35
+MATH 1403  College Algebra                       3.0  MS-UC   202     J.  Myers               35
+MATH 1453  Plane Trigonometry                    3.0  MS-UC   202     J.  Myers               27
+MATH 4303  Real Analysis I                       3.0  MS-UC   201     J.  Myers               24
+HLTH 1473  Medical Terminology                   3.0  BALDOR  108     J.  Neeley              20
+CHED 2023  Motor Dev Learning FULL ONLINE        3.0  MS-UC   TBA     J.  Newman              30
+WELD 1384  TIG Welding Basic                     4.0  BALDOR  133     J.  Nichols             10
+WELD 1404  MIG Welding Basic                     4.0  BALDOR  133     J.  Nichols             10
+WELD 2384  TIG Welding Advanced                  4.0  BALDOR  133     J.  Nichols             10
+WELD 2404  MIG Welding Advanced                  4.0  BALDOR  133     J.  Nichols             10
+HIST 493V  History Independent Study             3.0  GARDNR  TBA     J.  Oliver              1
+HIST 3473  United States 1945 to Present         3.0  GARDNR  221     J.  Oliver              25
+HIST 4823  Teaching Social Studies Sec Ed        3.0  GARDNR  221     J.  Oliver              25
+HIST 4903  Special Topics U.S.  Women            3.0  GARDNR  231     J.  Oliver              25
+EDUC 490A  Teaching in Secondary School         10.0  MS-UC   TBA     J.  Oliver              5
+PHIL 3103  Reason Across Disc FULL ONLINE        3.0  GARDNR  TBA     J.  Packwood            25
+PHIL 3103  Resn Acrs Disp ENG FULL ONLINE        3.0  GARDNR  TBA     J.  Packwood            15
+PHIL 3203  Ethics Across the Disciplines         3.0  GARDNR  221     J.  Packwood            32
+PHIL 3203  Ethics Across the Disciplines         3.0  GARDNR  221     J.  Packwood            32
+PHIL 3403  Philosophy of Religion                3.0  GARDNR  221     J.  Packwood            25
+PHIL 493V  Philosophy Independent Study          3.0  GARDNR  TBA     J.  Packwood            1
+MKTG 3043  E-Business Marketing HYBRID           3.0  FL      219     J.  Peerbolte           35
+MKTG 3003  Intro to Professional Selling         3.0  FL      100     J.  Peerbolte           20
+MKTG 3033  Integrated Mkt Com FULL ONLINE        3.0  TBA     TBA     J.  Peerbolte           30
+MKTG 3033  Integrated Mkt Com FULL ONLINE        3.0  TBA     TBA     J.  Peerbolte           30
+FIN  3713  Business Finance                      3.0  FL      108     J.  Peng                30
+FIN  4203  International Finance                 3.0  FL      102     J.  Peng                25
+FIN  4743  Advanced Financial Mgmt               3.0  FL      102     J.  Peng                25
+FIN  3713  Business Finance                      3.0  FL      108     J.  Peng                30
+ITC  2324  Introductry Programming UNICTR        4.0  OTHER   MIDST   J.  Qualls              28
+ITC  2524  Database Queries UNICTR               4.0  OTHER   MIDST   J.  Qualls              28
+ITC  2324  Introductory Programming              4.0  BALDOR  143     J.  Renwick             24
+ITC  2513  Data Modeling                         3.0  BALDOR  143     J.  Renwick             28
+ITC  2513  Data Modeling                         3.0  BALDOR  143     J.  Renwick             28
+ITD  3123  Stored Procedures                     3.0  BALDOR  143     J.  Renwick             24
+PHYE 1561  Martial Arts I                        1.0  GYM     FLOOR   J.  Sallee              20
+PHYE 1571  Martial Arts II                       1.0  GYM     FLOOR   J.  Sallee              20
+PHYE 2571  Martial Arts III                      1.0  GYM     FLOOR   J.  Sallee              10
+PSYC 3173  Ind Org Psyc BSOL FULL ONLINE         3.0  GARDNR  TBA     J.  Sanders             28
+PSYC 2963  Dev Psy Life Span FULL ONLINE         3.0  GARDNR  TBA     J.  Sanders             25
+PSYC 3133  Social Psychology FULL ONLINE         3.0  GARDNR  TBA     J.  Sanders             25
+PHYE 1261  Walking Beginning Jogging             1.0  STUBBL  TBA     J.  Sargent             30
+PSYC 1163  General Psychology                    3.0  GARDNR  201     J.  Scarborough         50
+PSYC 1163  General Psychology                    3.0  GARDNR  137     J.  Scarborough         55
+PSYC 1163  General Psychology                    3.0  GARDNR  137     J.  Scarborough         50
+HLTH 1004  Intro to Health Occupations           4.0  HLTHSC  326     J.  Scoggins            20
+HLTH 1004  Intro to Health Occupations           4.0  HLTHSC  124     J.  Scoggins            25
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  326     J.  Scoggins            25
+MGMT 2863  Business Communications               3.0  FL      219     J.  Scott               35
+MGMT 2863  Business Communications               3.0  FL      219     J.  Scott               35
+LEAD 3603  Foun Org Leadrship FULL ONLINE        3.0  BALDOR  TBA     J.  Spencer             15
+LEAD 4603  Leading Integrity FULL ONLINE         3.0  BALDOR  TBA     J.  Spencer             15
+RHET 3603  Writing Wrkpl HS FULL ONLINE          3.0  TBA     TBA     J.  Stewart             25
+RHET 3603  Writing Wrkpl BSOL FULL ONLINE        3.0  TBA     TBA     J.  Stewart             25
+RHET 3603  Writing Wrkpl BAS FULL ONLINE         3.0  TBA     TBA     J.  Stewart             25
+ECD  1003  Foundatns Early Childhood             3.0  ECHOLS  120     J.  Vineyard            20
+ECD  1103  Child Growth and Development          3.0  ECHOLS  122     J.  Vineyard            20
+ECED 1401  Early Childhood Field Exp I           1.0  ECHOLS  TBA     J.  Vineyard            20
+ECD  1003  Foundatns Early Childhood             3.0  ECHOLS  120     J.  Vineyard            20
+ECED 1401  Early Childhood Field Exp I           1.0  ECHOLS  TBA     J.  Vineyard            20
+APRO 2843  Medical Insurance Coding              3.0  BALDOR  213     J.  Welton              12
+APRO 2843  Medical Insurance Coding              3.0  BALDOR  213     J.  Welton              12
+APRO 2843  Medical Insurance Coding              3.0  BALDOR  124     J.  Welton              24
+MATH 1403  College Algebra                       3.0  MS-UC   206     J.  West                35
+MATH 4992  Senior Project                        2.0  MS-UC   TBA     J.  West                1
+MATH 1453  Plane Trigonometry                    3.0  MS-UC   100     J.  West                27
+MATH 1403  College Algebra                       3.0  MS-UC   206     J.  West                35
+MATH 1403  College Algebra for Calculus          3.0  MS-UC   205     J.  West                30
+MATH 1453  Plane Trig for Calculus               3.0  MS-UC   205     J.  West                30
+MATH 1403  College Algebra                       3.0  TBA     TBA     J.  West                30
+FORL 2552  Language Practice FRENCH              2.0  FL      113     J.  Wineland            24
+FREN 2303  Intermediate French I                 3.0  MS-UC   307     J.  Wineland            24
+FREN 1304  Beginning French I                    4.0  VINES   227     J.  Wineland            24
+ECON 2803  Prin of Macroeconomics                3.0  FL      200     J.  Wollscheid          35
+ECON 2803  Prin of Macroeconomics                3.0  FL      200     J.  Wollscheid          40
+ECON 2803  Prin of Macroeconomics                3.0  FL      200     J.  Wollscheid          40
+ACCT 2813  Prin of Managerial Accounting         3.0  FL      201     J.  Wright              35
+ACCT 2813  Prin of Managerial Accounting         3.0  FL      201     J.  Wright              30
+ACCT 2813  Prin Managerial Acct HYBRID           3.0  FL      200     J.  Wright              30
+ACCT 3123  Govt Nonprofit Accounting             3.0  FL      200     J.  Wright              30
+AUTO 295V  Automotive Internship                 4.0  BALDOR  TBA     K.  Butler              1
+ATDI 1234  Theory and Maintenance                4.0  BALDOR  154     K.  Butler              15
+ATDI 1234  Theory and Maintenance                4.0  BALDOR  154     K.  Butler              5
+AUTO 1284  Automotive Engines                    4.0  BALDOR  150     K.  Butler              10
+AUTO 1284  Automotive Engines                    4.0  BALDOR  150     K.  Butler              10
+AUTO 1484  Emission Control Systems I            4.0  BALDOR  150     K.  Butler              10
+AUTO 1484  Emission Control Systems I            4.0  BALDOR  150     K.  Butler              10
+NURS 3236  Nurs Women Child PEDS LAB              .0  HLTHSC  309     K.  Callahan
+NURS 3236  Nurs Women Child OB LAB                .0  HOSP    SPARK   K.  Callahan
+ENGL 2023  Intro to American Literature          3.0  HOLT    102     K.  Fudge               35
+ENGL 4793  20th Cent Amer Lit Southern           3.0  HOLT    102     K.  Fudge               25
+BIOL 2211  Human Physiology Laboratory           1.0  MS-UC   240     K.  Garner              24
+BIOL 2211  Human Physiology Laboratory           1.0  MS-UC   240     K.  Garner              24
+BIOL 2211  Human Physiology Laboratory           1.0  MS-UC   240     K.  Garner              24
+BIOL 2211  Human Physiology Laboratory           1.0  MS-UC   240     K.  Garner              24
+BIOL 2213  Human Physiology                      3.0  MS-UC   104     K.  Garner              60
+BIOL 2213  Human Physiology                      3.0  MS-UC   104     K.  Garner              60
+WFL  1374  Human Relations Intrprsnl Devl        4.0  FL      110     K.  Gordon              25
+WFL  1374  Human Relations Intrprsnl Devl        4.0  FL      110     K.  Gordon              25
+LEAD 3603  Found of Org Leadership HYBRID        3.0  FL      219     K.  Gordon              25
+LEAD 4603  Lead With Integrty FULL ONLINE        3.0  TBA     TBA     K.  Gordon              25
+ART  1133  Introduction to Typography            3.0  BALDOR  206     K.  Harper              17
+GRDS 4933  Graphic Design Senior Thesis          3.0  BALDOR  206     K.  Harper              20
+GRDS 3623  Fine Printing and Bookmaking          3.0  GARDNR  BASMT   K.  Harper              10
+MGMT 1201  Planning for Success                  1.0  FL      108     K.  Hickenbotham        30
+NURS 3337  Nursing Care of the Adult I           7.0  HLTHSC  223     K.  Hicks
+NURS 3337  Nurs Care Adult I LAB                  .0  HLTHSC  133     K.  Hicks               8
+NURS 3164  Health Assessment LAB                  .0  HLTHSC  228     K.  Hicks               8
+RHET 4113  Fiction Workshop                      3.0  HOLT    110     K.  Jennings            15
+ENGL 4103  Mjr Authr Laura Ingalls Wilder        3.0  HOLT    110     K.  Jennings            25
+RHET 4173  Sp Topics in Creative Writing         3.0  HOLT    TBA     K.  Jennings            2
+ENGL 493V  English Independent Study             3.0  HOLT    TBA     K.  Jennings            1
+ENGL 1203  Composition I                         3.0  HOLT    110     K.  Jennings            28
+ENGL 1203  Composition I                         3.0  HOLT    108     K.  Jennings            28
+ENGL 3043  Seminar American Literature II        3.0  FL      217     K.  Jones               25
+ENGL 1203  Composition I                         3.0  FL      217     K.  Jones               28
+ENGL 1203  Composition I                         3.0  FL      217     K.  Jones               28
+ENGL 1203  Composition I                         3.0  HOLT    102     K.  Jones               28
+ENGL 4993  Capstone ETL                          3.0  MS-UC   204     K.  Jones               25
+EDUC 490A  Teaching in Secondary School         10.0  MS-UC   TBA     K.  Jones               5
+HLTH 1473  Med Terminology FULL ONLINE           3.0  HLTHSC  TBA     K.  Kidder              25
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  124     K.  Kidder              20
+MGMT 1203  Foundations of Business               3.0  FL      216     K.  Kuehn               36
+MGMT 1203  Foundations of Business               3.0  FL      100     K.  Kuehn               36
+MGMT 2203  Intro International Business          3.0  FL      216     K.  Kuehn               35
+MGMT 4813  Strategic Management                  3.0  FL      113     K.  Kuehn               25
+DHYG 2463  Dental Materials                      3.0  HLTHSC  147     K.  Langwell            16
+DHYG 2463  Dental Materials LAB                   .0  HLTHSC  147     K.  Langwell
+DHYG 3103  Pre Clinic Dental Hyg Theory          3.0  HLTHSC  147     K.  Langwell            16
+DHYG 3102  Pre Clinical Dental Hygiene           2.0  HLTHSC  TBA     K.  Langwell
+HLTH 1473  Med Terminology INTERSESSION          3.0  TBA     TBA     K.  Langwell            20
+ELEG 3124  System and Signal Analysis            4.0  BALDOR  247     K.  Lewelling           24
+ENGN 1022  Engineering Analysis                  2.0  BALDOR  123     K.  Lewelling           22
+ENGN 1111  Intro to Engineering I                1.0  BALDOR  246     K.  Lewelling           10
+ENGN 1121  Intro to Engineering II               1.0  BALDOR  124     K.  Lewelling           20
+ENGN 1111  Intro to Engineering I                1.0  BALDOR  108     K.  Lewelling           16
+ENGN 1111  Intro to Engineering I                1.0  BALDOR  246     K.  Lewelling           10
+WELD 1284  ARC Welding Basic                     4.0  BALDOR  140     K.  Mizell              10
+WELD 1454  Layout Fabrication Sht Metal          4.0  BALDOR  140     K.  Mizell              10
+WELD 2284  ARC Welding Advanced                  4.0  BALDOR  140     K.  Mizell              10
+WELD 1474  Layout Fabrication Strctr Pipe        4.0  BALDOR  140     K.  Mizell              10
+ITC  2334  Advanced Programming                  4.0  BALDOR  147     K.  Pappas              28
+ITC  2334  Advanced Programming                  4.0  BALDOR  147     K.  Pappas              28
+ITP  3243  COBOL                                 3.0  BALDOR  147     K.  Pappas              28
+ITP  3413  Data Structures                       3.0  BALDOR  147     K.  Pappas              28
+RHET 3203  Textual Research Methods              3.0  FL      112     K.  Robinson            25
+ENGL 1203  Composition I                         3.0  HOLT    115     K.  Robinson            28
+RHET 3303  Rhetorical Textual Criticism          3.0  HOLT    115     K.  Robinson            25
+SOCI 2863  Intro Social Research Methods         3.0  FL      112     K.  Spencer             20
+SOCI 2753  Introduction to Sociology             3.0  GARDNR  LHALL   K.  Spencer             40
+SOCI 2753  Intro to Sociology FULL ONLINE        3.0  GARDNR  TBA     K.  Spencer             15
+SOCI 2753  Introduction to Sociology             3.0  MS-UC   306     K.  Spencer             40
+SOCI 2853  Social Problems                       3.0  MS-UC   306     K.  Spencer             35
+MUSC 1161  Class Piano I                         1.0  BREDLV  203     K.  Story               14
+MUSC 2161  Class Piano III                       1.0  BREDLV  203     K.  Story               14
+MUSP 1251  Private Piano                         1.0  BREDLV  TBA     K.  Story               5
+MUSP 3251  Private Piano                         1.0  BREDLV  TBA     K.  Story               5
+PRFS 3143  Economic Analysis Workplace           3.0  BALDOR  110     K.  Taber               15
+LEAD 3643  Group Dynamics                        3.0  HLTHSC  222     K.  Taber               25
+PRFS 3143  Economic Analysis Wkplc UNICTR        3.0  OTHER   MIDST   K.  Taber               15
+PRFS 3533  Wrkplc Env Safety FULL ONLINE         3.0  TBA     TBA     K.  Taber               25
+ART  1123  Digital Imaging                       3.0  BALDOR  207     K.  Wilson              20
+ENGN 1111  Intro to Engineering I                1.0  BALDOR  108     K.  Woolverton          16
+ENGN 1022  Engineering Analysis                  2.0  BALDOR  215     K.  Woolverton          22
+ENGN 1022  Engineering Analysis                  2.0  BALDOR  216     K.  Woolverton          22
+ELEG 2903  Digital Systems I                     3.0  BALDOR  215     K.  Woolverton          15
+ELEG 2903  Digital Systems I                     3.0  BALDOR  208     K.  Woolverton          15
+NURS 4355  Nurse Critical Care                   5.0  HLTHSC  318     K.  Wright              30
+NURS 4355  Nurs Critical Care LAB                 .0  HLTHSC  223     K.  Wright              7
+NURS 4355  Nurs Critical Care LAB                 .0  HLTHSC  133     K.  Wright              7
+MUSB 1252  Private Brass TRUMPET                 2.0  BREDLV  201     L.  Araya               10
+MUSB 3252  Private Brass TRUMPET                 2.0  BREDLV  201     L.  Araya               10
+MUSR 1351  Instrumental Ensemble BRASS           1.0  BREDLV  105     L.  Araya               20
+MUSR 3351  Instrumental Ensemble BRASS           1.0  BREDLV  105     L.  Araya               20
+MUSI 2763  Music Appreciation FULL ONLINE        3.0  VINES   TBA     L.  Araya               24
+ANTH 2803  Cultural Anthropology                 3.0  FL      100     L.  Beard               50
+SOCI 2753  Introduction to Sociology             3.0  GARDNR  LHALL   L.  Beard               60
+SOCI 2753  Intro to Sociology FULL ONLINE        3.0  GARDNR  TBA     L.  Beard               30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     L.  Beleele             30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     L.  Beleele             30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     L.  Beleele             30
+DHYG 2313  Radiology LAB                          .0  HLTHSC  TBA     L.  Bell                5
+ITA  1003  Computer Apps Knowledge Worker        3.0  BALDOR  143     L.  Cady                75
+ITA  1003  Computer Apps Knowledge Worker        3.0  BALDOR  143     L.  Cady                75
+ITA  1003  Computer Apps Knowledge Worker        3.0  BALDOR  143     L.  Cady                75
+ITA  1003  Computer Apps Knowledge Worker        3.0  BALDOR  107     L.  Cady                75
+ITA  1003  Comp Aps Know Wkr INTERSESSION        3.0  BALDOR  201     L.  Cady                75
+ITA  1003  Computer Apps Knowledge Worker        3.0  BALDOR  124     L.  Cady                75
+ENGL 0163  Introduction to Writing               3.0  HOLT    109     L.  Conrad              27
+SAS  0203  On Course for Success                 3.0  VINES   234     L.  Conrad              28
+SAS  0203  On Course for Success                 3.0  VINES   233     L.  Conrad              28
+SAS  0203  On Course for Success                 3.0  VINES   233     L.  Conrad              28
+SAS  0203  On Course for Success                 3.0  VINES   234     L.  Conrad              28
+PRFS 3833  Diversity in Workplace HYBRID         3.0  BALDOR  110     L.  Cox                 25
+PRFS 3833  Div Wrkplce FULL ONLINE UNICTR        3.0  TBA     TBA     L.  Cox                 20
+HLTH 1004  Intro to Health Occupations           4.0  BALDOR  147     L.  Crawford            20
+HLTH 1004  Intro to Health Occupations           4.0  HLTHSC  318     L.  Crawford            20
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  318     L.  Crawford            25
+MUSI 2763  Music Appreciation FULL ONLINE        3.0  BREDLV  TBA     L.  Dooly               30
+MUSI 2763  Music Appreciation FULL ONLINE        3.0  BREDLV  TBA     L.  Dooly               30
+GEOG 3103  Geography of Globalization            3.0  GARDNR  204     L.  Fair                10
+GEOG 2753  World Regional Geography              3.0  GARDNR  204     L.  Fair                40
+GEOG 2753  World Reg Geog FULL ONLINE            3.0  GARDNR  TBA     L.  Fair                32
+GEOG 2773  Human Geography                       3.0  GARDNR  204     L.  Fair                25
+GEOG 3103  Geography of Globalization            3.0  GARDNR  204     L.  Fair                15
+MGMT 3153  Organizational Behavior               3.0  FL      201     L.  Faulk               35
+MGMT 3153  Organizational Behavior               3.0  FL      220     L.  Faulk               40
+MGMT 3153  Organizational Behavior               3.0  FL      220     L.  Faulk               35
+MGMT 3613  Leadership                            3.0  FL      201     L.  Faulk               40
+PSYC 2803  Hist Syst of Psyc FULL ONLINE         3.0  GARDNR  TBA     L.  Gibbons             25
+PSYC 2963  Developmental Psy A Life Span         3.0  GARDNR  137     L.  Gibbons             40
+PSYC 1163  General Psychology FULL ONLINE        3.0  GARDNR  TBA     L.  Gibbons             25
+PSYC 4223  Psyc Personality FULL ONLINE          3.0  GARDNR  TBA     L.  Gibbons             25
+ACCT 2803  Prin of Financial Accounting          3.0  FL      220     L.  Grimm               35
+HIST 2753  United States History I               3.0  GARDNR  138     L.  Jones               50
+HIST 2753  United States History I               3.0  GARDNR  138     L.  Jones               50
+HIST 2763  United States History II              3.0  GARDNR  138     L.  Jones               50
+ENGL 3453  Women Literature Jane Austen          3.0  FL      218     L.  Lawrence            25
+ENGL 2033  Cultural Studies                      3.0  HOLT    111     L.  Lawrence            25
+ENGL 3023  Seminar British Lit II HYBRID         3.0  HOLT    110     L.  Lawrence            25
+ENGL 493V  English Independent Study             3.0  HOLT    TBA     L.  Lawrence            1
+ENGL 1203  Composition I                         3.0  HOLT    110     L.  Lawrence            28
+EDUC 3001  Elec Portfolio Develmnt HYBRID        1.0  MS-UC   212     L.  Lewis               30
+EDUC 3001  Electronic Portfolio Develmnt         1.0  MS-UC   212     L.  Lewis               30
+EDUC 3001  Electronic Portfolio Develmnt         1.0  MS-UC   212     L.  Lewis               30
+EDUC 3221  Practicum I                           1.0  MS-UC   308     L.  Lewis
+LEGL 1043  Intro to Law                          3.0  BALDOR  107     L.  Lisk                24
+LEGL 1043  Intro to Law                          3.0  BALDOR  107     L.  Lisk                24
+LEGL 190V  Paralegal Internship                  3.0  BALDOR  TBA     L.  Lisk                6
+LEGL 1043  Intro to Law                          3.0  MS-UC   303     L.  Lisk                24
+PSYC 3503  Behavorial Statistics                 3.0  FL      112     L.  Manriquez           24
+PSYC 3503  Behavorial Statistics                 3.0  FL      112     L.  Manriquez           24
+PSYC 3503  Behavorial Statistics                 3.0  FL      112     L.  Manriquez           24
+PSYC 3613  Experimental Psychology               3.0  FL      112     L.  Manriquez           24
+PSYC 1001  Psychology Orientation                1.0  GARDNR  228     L.  Manriquez           25
+PSYC 3703  Intro to Forensic Psychology          3.0  HOLT    110     L.  Manriquez
+PSYC 1163  Gen Psyc FULL ONLINE INTRSN           3.0  TBA     TBA     L.  Manriquez           20
+SPAN 2303  Intermediate Spanish I                3.0  FL      216     L.  McClellan           24
+SPAN 2303  Intermediate Spanish I                3.0  FL      218     L.  McClellan           24
+CHEM 1401  College Chemistry I Lab               1.0  MS-UC   340     L.  Nelson              24
+CHEM 1413  College Chemistry II                  3.0  MS-UC   304     L.  Nelson              48
+CHEM 1411  College Chemistry II Lab              1.0  MS-UC   340     L.  Nelson              24
+CHEM 3403  Biochemistry I                        3.0  MS-UC   311     L.  Nelson              32
+CHEM 3401  Biochemistry I Laboratory             1.0  MS-UC   338     L.  Nelson              24
+PRFS 4033  Consensus Bldg FULL ONLINE            3.0  BALDOR  TBA     L.  Oliver              15
+PRFS 3133  Ethics Workplace FULL ONLINE          3.0  TBA     TBA     L.  Oliver              15
+PRFS 3533  Wrkplc Env Safety FULL ONLINE         3.0  TBA     TBA     L.  Oliver              15
+CJ   2603  Courts Crim Proc FULL ONLINE          3.0  GARDNR  TBA     L.  Pearn               25
+CJ   2603  Courts Criminal Procd HYBRID          3.0  GARDNR  139     L.  Pearn               30
+ECED 3183  Language and Literacy I               3.0  MS-UC   301     L.  Reid                33
+ECED 3193  Children's Literature                 3.0  MS-UC   301     L.  Reid                33
+ECED 3283  Language Literacy II                  3.0  MS-UC   303     L.  Reid                30
+ECED 3283  Language Literacy II PDS              3.0  OTHER   CNTRL   L.  Reid                12
+NURS 4458  Psyc Comm Health PSYC LAB              .0  BALDOR  TBA     L.  Renfro
+NURS 4458  Psyc Comm Health COMM LAB              .0  BALDOR  TBA     L.  Renfro
+MEEG 4493  Internal Combustion Engines           3.0  BALDOR  247     L.  Roe                 24
+MGMT 2963  Business Statistics                   3.0  FL      100     L.  Seifert             55
+FIN  1523  Personal Finance HYBRID               3.0  FL      200     L.  Settlage            30
+FIN  1523  Personal Finance HYBRID               3.0  FL      216     L.  Settlage            30
+FIN  3813  Mny Bnkng Fin Mkts FULL ONLINE        3.0  TBA     TBA     L.  Settlage            40
+PSYC 2963  Developmental Psy A Life Span         3.0  GARDNR  231     L.  Shaeffer            58
+PSYC 2963  Developmental Psy A Life Span         3.0  GARDNR  137     L.  Shaeffer            50
+PSYC 3183  Cognitive Psychology                  3.0  GARDNR  137     L.  Shaeffer            58
+LEAD 4623  Trans Leadership HYBRID               3.0  BALDOR  123     L.  VanOsdol            25
+LEAD 3603  Found of Org Leadership HYBRID        3.0  BALDOR  110     L.  VanOsdol
+LEAD 3623  Prof Communication HYBRID             3.0  BALDOR  110     L.  VanOsdol            25
+LEAD 4603  Lead With Integrity HYBRID            3.0  BALDOR  110     L.  VanOsdol
+LEAD 4693  Dim Org Leadership FULL ONLINE        3.0  TBA     TBA     L.  VanOsdol            25
+PHYE 2853  Health and Safety                     3.0  MS-UC   209     L.  Whorton             30
+ECED 1411  Early Childhood Field Exp II          1.0  ECHOLS  TBA     L.  Williams            20
+ECED 1411  Early Childhood Field Exp II          1.0  ECHOLS  TBA     L.  Williams            5
+ECTC 2703  Preschool Curriculum (B-Pre-K)        3.0  ECHOLS  119     L.  Williams            20
+ECTC 2703  Preschool Curriculum (B-Pre-K)        3.0  ECHOLS  119     L.  Williams            5
+ECED 490C  Early Childhood Educ Internshp       12.0  MS-UC   TBA     L.  Williams            5
+ENGL 1203  Composition I                         3.0  FL      113     L.  Witherington        28
+ENGL 1203  Composition I                         3.0  HOLT    110     L.  Witherington        28
+ENGL 1203  Composition I                         3.0  HOLT    110     L.  Witherington        28
+ENGL 1203  Composition I                         3.0  MS-UC   307     L.  Witherington        25
+SPED 3022  Survey of Diverse Populations         2.0  MS-UC   209     L.  Yocum               30
+SPED 3022  Survey of Diverse Populations         2.0  MS-UC   205     L.  Yocum               40
+MLED 3563  Middle School Concepts                3.0  MS-UC   209     L.  Yocum               30
+MLED 4123  Integrtng Mthds Soc Stds Arts         3.0  MS-UC   209     L.  Yocum               30
+EDUC 3112  Literacy Dev in Content Areas         2.0  MS-UC   209     L.  Yocum               30
+MATH 0233  Beginning Algebra                     3.0  MS-UC   212     L.  Yu                  30
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  MS-UC   236     L.  Yu                  30
+MATH 1403  College Algebra                       3.0  TBA     TBA     L.  Yu                  10
+ECD  1003  Foundatns Early Childhood             3.0  ECHOLS  119     M.  Bell                20
+ECD  1003  Foundatns Early Childhood             3.0  ECHOLS  119     M.  Bell                5
+ECED 1401  Early Childhood Field Exp I           1.0  ECHOLS  TBA     M.  Bell                5
+ECED 1401  Early Childhood Field Exp I           1.0  ECHOLS  TBA     M.  Bell                20
+SPAN 1304  Beginning Spanish I                   4.0  VINES   236     M.  Bieber              24
+SPAN 1304  Beginning Spanish I                   4.0  VINES   236     M.  Bieber              24
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  325     M.  Boucaud             25
+SOCI 4133  African American Hist Snc 1865        3.0  GARDNR  228     M.  Crane               8
+HIST 493V  History Independent Study             3.0  GARDNR  TBA     M.  Crane               1
+HIST 2763  United States History II              3.0  GARDNR  138     M.  Crane               50
+HIST 2763  United States History II              3.0  GARDNR  138     M.  Crane               50
+HIST 3443  Civil War Recnstrctn 1848-1876        3.0  GARDNR  221     M.  Crane               25
+HIST 4133  African American Hist Snc 1865        3.0  GARDNR  228     M.  Crane               20
+WELD 1404  MIG Welding Basic                     4.0  BALDOR  140     M.  Crawford            20
+WELD 2404  MIG Welding Advanced                  4.0  BALDOR  140     M.  Crawford            20
+WELD 1234  Welding Blue Print Reading            4.0  BALDOR  133     M.  Crawford            20
+HLTH 1004  Intro to Health Occupations           4.0  OTHER   WALDR   M.  Daggs               14
+HLTH 1473  Medical Terminology                   3.0  OTHER   WALDR   M.  Daggs               15
+HLTH 1473  Medical Terminology                   3.0  OTHER   WALDR   M.  Daggs               10
+LEGL 2322  Civil Procedure                       2.0  BALDOR  123     M.  Daily               24
+NURS 2103  Intro to Professional Nursing         3.0  HLTHSC  133     M.  Duran               60
+NURS 3164  Health Assessment LAB                  .0  HLTHSC  237     M.  Duran               8
+NURS 3227  Foundations Nursing Care LAB           .0  HOSP    FIANA   M.  Duran               8
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     M.  Farrell             25
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     M.  Farrell             30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     M.  Farrell             30
+EDUC 2752  Introduction to Education             2.0  MS-UC   301     M.  Francis             34
+EDUC 2752  Introduction to Education             2.0  MS-UC   301     M.  Francis             34
+EDUC 2752  Introduction to Education             2.0  MS-UC   301     M.  Francis             34
+ECED 3023  Foundations Early Childhood           3.0  MS-UC   302     M.  Francis             30
+ECED 3173  Guiding Children                      3.0  MS-UC   301     M.  Francis             33
+ECED 490C  Early Childhood Educ Internshp       12.0  MS-UC   TBA     M.  Francis             5
+HIST 1133  Civilizations World Since 1500        3.0  GARDNR  201     M.  Franklin            50
+HIST 1133  Civilizations World Since 1500        3.0  GARDNR  201     M.  Franklin            50
+HIST 3113  Ancient Mediterranean World           3.0  GARDNR  228     M.  Franklin            25
+PHIL 2753  Intro Philosophy FULL ONLINE          3.0  GARDNR  TBA     M.  Goodwin             32
+PHIL 2753  Intro Philosophy FULL ONLINE          3.0  GARDNR  TBA     M.  Goodwin             32
+HLTH 2953  First Aid                             3.0  HLTHSC  314     M.  Hagans              20
+HLTH 2953  First Aid                             3.0  HLTHSC  314     M.  Hagans              20
+NURS 4355  Nurs Critical Care LAB                 .0  HLTHSC  223     M.  Harp                7
+NURS 4355  Nurs Critical Care LAB                 .0  HLTHSC  133     M.  Harp                7
+CJ   2313  Correct Sys Prac FULL ONLINE          3.0  GARDNR  TBA     M.  Hudson              25
+CGT  1284  Engnring Grphic II FULL ONLINE        4.0  BALDOR  TBA     M.  Johnston            24
+CGT  1644  3D Visualization                      4.0  BALDOR  201     M.  Johnston            24
+CGT  2894  Parametric Modeling HYBRID            4.0  BALDOR  213     M.  Johnston            24
+ITA  1251  Computer Spreadsheets                 1.0  BALDOR  147     M.  Johnston            24
+READ 0513  Critical Thinking and Reading         3.0  GARDNR  139     M.  Jones
+ENGL 1201  College Writing Process               1.0  HOLT    111     M.  Jones               25
+ENGL 1201  College Writing Process               1.0  HOLT    111     M.  Jones               25
+ENGL 1201  College Writing Process               1.0  HOLT    111     M.  Jones               25
+ENGL 1203  Composition I                         3.0  HOLT    108     M.  Jones               25
+ENGL 1203  Composition I                         3.0  HOLT    108     M.  Jones               25
+RHET 2863  Advanced Composition                  3.0  HOLT    109     M.  Jones               25
+READ 0513  Critical Thinking and Reading         3.0  VINES   235     M.  Kalua               25
+READ 0513  Critical Thinking and Reading         3.0  VINES   235     M.  Kalua               25
+ELEC 2753  Communications Systems                3.0  BALDOR  215     M.  Khan                18
+ELEC 1233  Fundamentals of Electricity           3.0  BALDOR  214     M.  Khan                18
+ELEC 2513  PLC Applications                      3.0  ECHOLS  203     M.  Khan                2
+ELEC 2513  PLC Applications                      3.0  ECHOLS  203     M.  Khan                12
+ELEC 2513  PLC Applications                      3.0  ECHOLS  203     M.  Khan                11
+ATDI 1234  Theory and Maintenance                4.0  BALDOR  154     M.  Lennon              16
+ATDI 1234  Theory and Maintenance                4.0  BALDOR  154     M.  Lennon              4
+ATDI 1234  Theory and Maintenance                4.0  BALDOR  154     M.  Lennon              16
+ATDI 1234  Theory and Maintenance                4.0  BALDOR  154     M.  Lennon              4
+ATDI 2434  Electrical Systems II                 4.0  BALDOR  154     M.  Lennon              20
+RHET 3203  Textual Research Methods              3.0  FL      112     M.  Luebke              25
+RHET 3603  Writing for the Workplace             3.0  HOLT    111     M.  Luebke              25
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     M.  Mann                24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     M.  Mann                24
+SPAN 3023  Spanish Conversation                  3.0  FL      216     M.  Martinez-Santiag    24
+SPAN 2313  Intermediate Spanish II               3.0  HLTHSC  124     M.  Martinez-Santiag    14
+SPAN 2323  Inter Spanish II Heritage Spk         3.0  HLTHSC  124     M.  Martinez-Santiag    10
+FORL 2552  Language Practice Spanish             2.0  HLTHSC  124     M.  Martinez-Santiag    25
+SPAN 1304  Beginning Spanish I                   4.0  VINES   236     M.  Martinez-Santiag    24
+HIST 1133  Civ Wld Since 1500 FULL ONLINE        3.0  GARDNR  TBA     M.  McCoy               32
+HIST 3803  Methods Historical Research           3.0  GARDNR  228     M.  McCoy               16
+HIST 4113  Amer West: Trans-Mississippi          3.0  GARDNR  228     M.  McCoy               25
+HIST 1123  Civ World to 1500 FULL ONLINE         3.0  TBA     TBA     M.  McCoy               32
+EMT  1408  Emergency Med Tech Basic              8.0  HLTHSC  314     M.  Nelson              20
+EMT  1408  EMT Basic LAB                          .0  HOSP    SPARK   M.  Nelson
+PHYE 0990  Well Fit                               .0  GYM     145     M.  Pendergrass         15
+PHYE 1621  Total Fitness                         1.0  GYM     145     M.  Pendergrass         50
+PHYE 1621  Total Fitness                         1.0  GYM     145     M.  Pendergrass         50
+NURS 3337  Nurs Care Adult I LAB                  .0  HLTHSC  133     M.  Pham-Russell        8
+PHAR 3203  General Pharmacology BSN              3.0  HLTHSC  222     M.  Pham-Russell        60
+MATH 1403  College Algebra                       3.0  MS-UC   211     M.  Reading             30
+MATH 1403  College Algebra                       3.0  MS-UC   211     M.  Reading             30
+MATH 1403  College Algebra                       3.0  MS-UC   211     M.  Reading             30
+ENGN 1111  Intro to Engineering I                1.0  BALDOR  110     M.  Reynolds            16
+ENGN 1111  Intro to Engineering I                1.0  BALDOR  246     M.  Reynolds            16
+ENGN 1022  Engineering Analysis                  2.0  BALDOR  214     M.  Reynolds            22
+ENGN 1111  Intro to Engineering I                1.0  BALDOR  246     M.  Reynolds            16
+ENGN 1111  Intro to Engineering I                1.0  BALDOR  108     M.  Reynolds            16
+MATH 4992  Senior Project                        2.0  MS-UC   TBA     M.  Rigsby              2
+MATH 4433  Group Theory                          3.0  MS-UC   201     M.  Rigsby              3
+MATH 2804  Calculus I                            4.0  MS-UC   205     M.  Rigsby              33
+MATH 2854  Calculus II                           4.0  MS-UC   202     M.  Rigsby              25
+MATH 2904  Calculus III                          4.0  MS-UC   201     M.  Rigsby              23
+THEA 1711  Studio Dance I                        1.0  OTHER   WABS    M.  Schoenfeld          20
+ART  2863  Survey Art History I                  3.0  BREDLV  207     M.  Shepard             30
+ART  2863  Survey Art History I                  3.0  BREDLV  207     M.  Shepard             30
+ART  4213  Modern Art                            3.0  BREDLV  207     M.  Shepard             25
+ART  3523  American Art                          3.0  BREDLV  207     M.  Shepard             20
+MLED 490A  Tching Middle Childhood School       10.0  MS-UC   TBA     M.  Sherrod             5
+ECED 490C  Early Childhood Educ Internshp       12.0  MS-UC   TBA     M.  Sherrod             5
+HIST 2753  US History I FULL ONLINE              3.0  GARDNR  TBA     M.  Siler               32
+HIST 2753  US History I FULL ONLINE              3.0  GARDNR  TBA     M.  Siler               32
+HIST 2753  US History I                          3.0  TBA     TBA     M.  Siler               20
+SPAN 3063  Advanced Composition                  3.0  FL      217     M.  Sobhani             24
+SPAN 1304  Beginning Spanish I HYBRID            4.0  VINES   227     M.  Sobhani             24
+SPAN 1304  Beginning Spanish I HYBRID            4.0  VINES   227     M.  Sobhani             24
+ART  3313  Advanced Drawing                      3.0  BALLMN  103     M.  Spears              17
+MATH 0233  Beginning Algebra                     3.0  VINES   233     M.  Utz                 30
+MATH 0233  Beginning Algebra                     3.0  VINES   235     M.  Utz                 30
+MATH 0233  Beginning Algebra                     3.0  VINES   201     M.  Utz                 24
+MATH 1203  Intermediate Algebra                  3.0  VINES   201     M.  Utz                 24
+MATH 1203  Intermediate Algebra                  3.0  VINES   201     M.  Utz                 24
+MATH 1203  Intermediate Algebra                  3.0  VINES   234     M.  Utz                 25
+PRFS 4133  Project Management HYBRID             3.0  BALDOR  110     M.  Voelkel             20
+WFL  290V  Special Topics Covey 7 Habits         3.0  BII     115     M.  Voelkel             15
+WFL  1601  Basic Busi Comm Microsoft Word        1.0  BII     115     M.  Voelkel             15
+WFL  1621  Bsc Elec Prsn Microsft Pwr Pnt        1.0  BII     115     M.  Voelkel             15
+WFL  2903  Workforce Leadership Capstone         3.0  FL      TBA     M.  Voelkel             4
+PRFS 4133  Proj Mngmnt FULL ONLINE UNICTR        3.0  TBA     TBA     M.  Voelkel             15
+CHED 2013  Care Prev Ath Inj FULL ONLINE         3.0  MS-UC   TBA     M.  Waack               30
+MUSI 1223  Music Theory I                        3.0  BREDLV  201     M.  Waynick             30
+MUSI 2803  Music Theory III                      3.0  BREDLV  201     M.  Waynick             20
+ENGL 1203  Composition I                         3.0  FL      217     M.  Westphal            28
+ENGL 1203  Composition I                         3.0  HOLT    109     M.  Westphal            28
+ENGL 1203  Composition I                         3.0  HOLT    110     M.  Westphal            28
+CJ   1253  Criminology                           3.0  GARDNR  228     M.  Wuestewald          15
+CJ   390V  Sp Topics Wrongful Convictions        3.0  GARDNR  201     M.  Wuestewald          30
+CJ   3413  Psychology and Crime                  3.0  GARDNR  231     M.  Wuestewald          30
+CJ   1253  Criminology                           3.0  GARDNR  204     M.  Wuestewald          30
+ECED 490C  Early Childhood Educ Internshp       12.0  MS-UC   TBA     M.  Yates               5
+ACCT 467V  Internship in Accounting              3.0  FL      218     M.  Zainuba             20
+COBI 467V  Integrative Internship                3.0  FL      218     M.  Zainuba             20
+MGMT 3133  Social Responsibility Ethics          3.0  FL      219     M.  Zainuba             35
+MGMT 3133  Social Responsibility Ethics          3.0  FL      219     M.  Zainuba             30
+ACCT 467V  Internship in Accounting              1.0  FL      218     M.  Zainuba             1
+MUSV 1251  Private Voice                         1.0  BREDLV  TBA     N.  Hayes               10
+MUSV 1252  Private Voice                         2.0  BREDLV  TBA     N.  Hayes               10
+ART  1103  2-D Design                            3.0  BALLMN  101     N.  Howard              22
+ART  1143  3-D Design                            3.0  BALLMN  105A    N.  Howard              12
+ART  1143  3-D Design                            3.0  BALLMN  105A    N.  Howard              15
+ART  1143  3-D Design                            3.0  BALLMN  105A    N.  Howard              6
+HUMN 2563  Humanities Through the Arts           3.0  BREDLV  207     N.  Mathis              32
+HUMN 2563  Humanities Through the Arts           3.0  BREDLV  207     N.  Mathis              32
+HUMN 2563  Humanities Through the Arts           3.0  BREDLV  207     N.  Mathis              32
+PSYC 1001  Psychology Orientation                1.0  GARDNR  228     N.  Otero               25
+PSYC 1163  General Psychology                    3.0  GARDNR  231     N.  Otero               60
+PSYC 4153  Conditioning and Learning             3.0  GARDNR  137     N.  Otero               20
+PSYC 4303  Sensation and Perception              3.0  GARDNR  137     N.  Otero               40
+PSYC 4803  Sr Sem Drugs Behav FULL ONLINE        3.0  GARDNR  TBA     N.  Otero               12
+PSYC 1163  General Psychology                    3.0  TBA     TBA     N.  Otero               15
+PSYC 1163  General Psychology                    3.0  TBA     TBA     N.  Otero               25
+NURS 3164  Health Assessment LAB                  .0  HLTHSC  237     N.  Owens               6
+SPCH 1203  Introduction to Speech Comm           3.0  FL      111     N.  Perrin              30
+SPCH 1203  Introduction to Speech Comm           3.0  FL      111     N.  Perrin              30
+MATH 4992  Senior Project                        2.0  MS-UC   TBA     N.  Sagullo             1
+MATH 1715  Pre Calculus Mathematics              5.0  MS-UC   205     N.  Sagullo             35
+MATH 2403  Survey of Calculus                    3.0  MS-UC   208     N.  Sagullo             33
+MATH 2403  Survey of Calculus                    3.0  MS-UC   206     N.  Sagullo             33
+MATH 2403  Survey of Calculus FULL ONLINE        3.0  TBA     TBA     N.  Sagullo             25
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   212     P.  Abbott              18
+CHEM 1303  Chemical Principles                   3.0  MS-UC   304     P.  Abbott              60
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     P.  Abbott              32
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     P.  Abbott              32
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     P.  Abbott              32
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     P.  Abbott              32
+CHEM 1301  Chemical Principles Lab               1.0  MS-UC   123     P.  Abbott              10
+CHEM 2711  Organic Chemistry II Lab              1.0  MS-UC   340     P.  Abbott              24
+IDS  1403  Leadership Development Studies        3.0  CMPCTR  126     P.  Beran               25
+NURS 4805  Issues Trends Nurs FULL ONLINE        5.0  TBA     TBA     P.  Blesch              20
+NURS 4903  Dimens Prof Prct FULL ONLINE          3.0  TBA     TBA     P.  Blesch              20
+NURS 3164  Hlth Assess RN BSN FULL ONLINE        4.0  TBA     TBA     P.  Blesch              20
+RELI 2273  Old Testament Survey                  3.0  GARDNR  204     P.  Catron-Ping         25
+HIST 3133  The Renaissance                       3.0  GARDNR  139     P.  Catron-Ping         25
+NURS 4364  Leader Prof Nursing LAB                .0  HOSP    MERCY   P.  Cornelius           8
+NURS 4364  Leader Prof Nursing LAB                .0  HOSP    MERCY   P.  Cornelius           7
+DHYG 2122  Clinic II Theory                      2.0  HLTHSC  147     P.  Davidson            16
+DHYG 2224  Dental Hygiene Clinic II              4.0  HLTHSC  TBA     P.  Davidson
+DHYG 2512  Local Anesthesia Nitrous Oxide        2.0  HLTHSC  147     P.  Davidson            16
+DHYG 2512  Local Anesthesia LAB                   .0  HLTHSC  147     P.  Davidson
+DHYG 2111  Dental Anatomy and Occlusion          1.0  HLTHSC  147     P.  Davidson            16
+THEA 1451  Theatre Practicum Technical           1.0  BREDLV  TBA     P.  Guerra-Monje        25
+THEA 2513  Fundamentals of Design                3.0  BREDLV  114     P.  Guerra-Monje        16
+THEA 3533  Scenic Design                         3.0  BREDLV  114     P.  Guerra-Monje        20
+THEA 4213  Theatre History I                     3.0  BREDLV  114     P.  Guerra-Monje        20
+HLTH 3103  Pathophyslgy IS RN FULL ONLINE        3.0  TBA     TBA     P.  Henderson           20
+HLTH 4103  Research in HS BSN FULL ONLINE        3.0  TBA     TBA     P.  Henderson           25
+HLTH 4103  Rsrch HS RN-BSN IS FULL ONLINE        3.0  TBA     TBA     P.  Henderson           25
+CJ   4113  Professionalism Ethics in CJ          3.0  GARDNR  228     P.  Kroutter            30
+CJ   3983  Intro Res Methods FULL ONLINE         3.0  GARDNR  TBA     P.  Kroutter            25
+CJ   397V  Academic Internship                   3.0  GARDNR  TBA     P.  Kroutter            18
+HLTH 1473  Med Terminology FULL ONLINE           3.0  HLTHSC  TBA     P.  Rhodes              25
+HLTH 1473  Med Terminology FULL ONLINE           3.0  HLTHSC  TBA     P.  Rhodes              25
+HIST 2753  United States History I               3.0  GARDNR  231     P.  Russell             50
+HIST 4153  History of Arkansas                   3.0  GARDNR  139     P.  Russell             25
+HIST 4153  History of Arkansas                   3.0  GARDNR  139     P.  Russell             25
+EDUC 490A  Teaching in Secondary School         10.0  MS-UC   TBA     P.  Russell             5
+MGMT 1203  Foundations of Business               3.0  FL      201     P.  Stephens            42
+MGMT 2863  Business Communications               3.0  FL      219     P.  Stephens            35
+CGT  1001  CAD Concepts and Applications         1.0  BALDOR  201     P.  Taylor              24
+CGT  1104  GPS Mapping Fundamentals              4.0  BALDOR  213     P.  Taylor              14
+CGT  1104  GPS Mapping Fundamentals              4.0  BALDOR  213     P.  Taylor              10
+PSYC 2613  Research Methods Psychology           3.0  HLTHSC  227     R.  Barrett             25
+PSYC 3613  Experimental Psychology               3.0  HLTHSC  227     R.  Barrett             24
+MEEG 4483  Thermal Sys Analysis Design           3.0  BALDOR  247     R.  Couvillion          24
+MEEG 4480  Thermal Sys Anal Drill                 .0  TBA     TBA     R.  Couvillion          30
+PHIL 3103  Reason Across Disc FULL ONLINE        3.0  GARDNR  TBA     R.  Fulmer              31
+PHIL 3203  Ethics Across Disc FULL ONLINE        3.0  GARDNR  TBA     R.  Fulmer              32
+RELI 2303  World Religions FULL ONLINE           3.0  GARDNR  TBA     R.  Fulmer              32
+PRFS 3533  Wrkplc Env Safety FULL ONLINE         3.0  TBA     TBA     R.  Huggins             18
+PRFS 3533  Wrkplc Sfty FULL ONLINE UNICTR        3.0  TBA     TBA     R.  Huggins             17
+LEAD 4623  Trans Leadership FULL ONLINE          3.0  TBA     TBA     R.  Huggins             25
+LEAD 4603  Lead With Integrty FULL ONLINE        3.0  TBA     TBA     R.  Huggins             25
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     R.  Kannan              24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     R.  Kannan              24
+BIOL 4001  Seminar in Biology                    1.0  MS-UC   311     R.  Kannan              15
+BIOL 4854  Ornithology                           4.0  MS-UC   311     R.  Kannan              20
+BIOL 1153  Biological Science FULL ONLINE        3.0  TBA     TBA     R.  Kannan              24
+BIOL 1153  Biological Science                    3.0  MS-UC   104     R.  Lightner            80
+BIOL 1461  Microbiology Immunology Lab           1.0  MS-UC   234     R.  Lightner            24
+BIOL 1461  Microbiology Immunology Lab           1.0  MS-UC   234     R.  Lightner            24
+BIOL 1461  Microbiology Immunology Lab           1.0  MS-UC   234     R.  Lightner            24
+BIOL 1463  Microbiology and Immunology           3.0  MS-UC   104     R.  Lightner            45
+BIOL 3204  Conserv Environmental Scien           4.0  MS-UC   234     R.  Lightner            28
+CS   1033  Foundtns of Operating Systems         3.0  BALDOR  145B    R.  Massengale          18
+ITF  414V  IT Work-Based Learning                3.0  BALDOR  TBA     R.  Massengale          23
+ELEG 4403  Control Systems                       3.0  BALDOR  247     R.  McCann              24
+MUSI 3822  Principles of Conducting              2.0  BREDLV  106B    R.  Moore               15
+MUSR 1421  Chorale                               1.0  BREDLV  105     R.  Moore               75
+MUSR 1461  Women's Chorus                        1.0  BREDLV  105     R.  Moore               40
+MUSR 3421  Chorale                               1.0  BREDLV  105     R.  Moore               40
+MUSR 3461  Women's Chorus                        1.0  BREDLV  105     R.  Moore               50
+MUSV 1251  Private Voice                         1.0  BREDLV  TBA     R.  Moore               10
+MUSV 1252  Private Voice                         2.0  BREDLV  106B    R.  Moore               10
+MUSV 3252  Private Voice                         2.0  BREDLV  TBA     R.  Moore               10
+SOCI 2753  Intro to Sociology HONORS             3.0  GARDNR  137     R.  Mortenson           24
+SOCI 2753  Introduction to Sociology             3.0  MS-UC   101     R.  Mortenson           40
+SOCI 2753  Introduction to Sociology             3.0  MS-UC   101     R.  Mortenson           20
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     R.  Nelson              24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     R.  Nelson              24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     R.  Nelson              24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     R.  Nelson              24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     R.  Nelson              24
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     R.  Nelson              24
+BIOL 1153  Biological Science                    3.0  MS-UC   104     R.  Nelson              80
+SPAN 3623  Survey of Spanish Amer Liter I        3.0  FL      216     R.  Nolasco-Schulthe    24
+SPAN 1304  Beg Spanish I FULL ONLINE             4.0  TBA     TBA     R.  Nolasco-Schulthe    24
+SPAN 1304  Beginning Spanish I                   4.0  VINES   236     R.  Nolasco-Schulthe    24
+MATH 4992  Senior Project                        2.0  MS-UC   TBA     R.  Parks               1
+MATH 1333  Number Sense Data Analysis I          3.0  MS-UC   203     R.  Parks               30
+MATH 1343  Number Sense Data Analysis II         3.0  MS-UC   203     R.  Parks               30
+MATH 3803  Math Pedagogy Numerical Sys           3.0  MS-UC   203     R.  Parks               24
+MATH 3823  Math Pedagogy Upper Scndry Mth        3.0  MS-UC   236     R.  Parks               25
+EDUC 490A  Teaching in Secondary School         10.0  MS-UC   TBA     R.  Parks               5
+NURS 3227  Foundations Nursing Care LAB           .0  HOSP    SPARK   R.  Salazar             8
+ELEG 3924  Microprocessor Systems Design         4.0  BALDOR  214     R.  Saunders            24
+ELEG 2101  Electric Circuits I Lab               1.0  BALDOR  215     R.  Saunders            24
+ELEG 2103  Electric Circuits I                   3.0  BALDOR  208     R.  Saunders            24
+CJ   4113  Prof and Ethics FULL ONLINE           3.0  GARDNR  TBA     R.  Turner              25
+CJ   4833  Adm Concpt Law Enf FULL ONLINE        3.0  TBA     TBA     R.  Turner              25
+LAW  2003  Legal Environment of Business         3.0  FL      200     R.  Wade                35
+LAW  2003  Legal Environment of Business         3.0  FL      200     R.  Wade                35
+MATH 1303  College Mathematics                   3.0  MS-UC   208     R.  Watson              35
+MATH 1303  College Mathematics                   3.0  MS-UC   208     R.  Watson              35
+MATH 1403  College Algebra                       3.0  MS-UC   100     R.  Watson              35
+MATH 1303  College Mathematics                   3.0  MS-UC   100     R.  Watson              35
+MATH 1403  College Algebra                       3.0  MS-UC   202     R.  Watson              35
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     R.  Watson              35
+APRO 1103  Computer Input Technology             3.0  BALDOR  124     R.  Wells               24
+APRO 1113  Career Management                     3.0  BALDOR  124     R.  Wells               20
+ENGL 1213  Composition II                        3.0  FL      113     R.  Wilhite             28
+ENGL 1213  Composition II                        3.0  HOLT    115     R.  Wilhite             28
+ENGL 3343  Poetry                                3.0  HOLT    110     R.  Wilhite             25
+MATH 1403  College Algebra                       3.0  MS-UC   205     R.  Wylie               35
+MATH 2403  Survey of Calculus                    3.0  MS-UC   205     R.  Wylie               30
+ENGL 1203  Composition I                         3.0  HOLT    108     S.  Bane                28
+ENGL 1203  Composition I                         3.0  HOLT    108     S.  Bane                28
+BIOL 400V  Undergraduate Research Biology        2.0  MS-UC   TBA     S.  Baviskar            3
+BIOL 400V  Undergraduate Research Biology        1.0  MS-UC   TBA     S.  Baviskar            2
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     S.  Baviskar            24
+BIOL 1153  Biological Science                    3.0  MS-UC   104     S.  Baviskar            80
+BIOL 2201  Human Anatomy Laboratory              1.0  MS-UC   240     S.  Baviskar            24
+BIOL 2201  Human Anatomy Laboratory              1.0  MS-UC   240     S.  Baviskar            24
+BIOL 2201  Human Anatomy Laboratory              1.0  MS-UC   240     S.  Baviskar            24
+BIOL 2203  Human Anatomy                         3.0  MS-UC   104     S.  Baviskar            60
+SOCI 2753  Intro to Sociology FULL ONLINE        3.0  GARDNR  TBA     S.  Brown               32
+SOCI 2753  Intro to Sociology FULL ONLINE        3.0  GARDNR  TBA     S.  Brown               25
+HIST 2763  United States History II              3.0  GARDNR  138     S.  Cashion             50
+HIST 4153  History of Arkansas                   3.0  GARDNR  139     S.  Cashion             25
+HIST 4153  History of Arkansas                   3.0  GARDNR  139     S.  Cashion             25
+CHEM 400V  Chemistry Research                    2.0  MS-UC   TBA     S.  Curtis              5
+CHEM 2703  Organic Chemistry I                   3.0  MS-UC   101     S.  Curtis              72
+CHEM 2701  Organic Chemistry I Lab               1.0  MS-UC   338     S.  Curtis              24
+CHEM 2701  Organic Chemistry I Lab               1.0  MS-UC   338     S.  Curtis              24
+CHEM 2701  Organic Chemistry I Lab               1.0  MS-UC   338     S.  Curtis              24
+CHEM 2713  Organic Chemistry II                  3.0  MS-UC   306     S.  Curtis              24
+CHEM 3991  Foundations Chem Research             1.0  MS-UC   TBA     S.  Curtis              12
+ECED 3063  Meths Tching Math in Classroom        3.0  MS-UC   302     S.  Davis               30
+ECED 3153  Creative Art Erly Childhood Ed        3.0  MS-UC   308     S.  Davis               30
+ECED 3063  Meths Tching Math in Classroom        3.0  MS-UC   302     S.  Davis               30
+ECED 3113  Integrated Curriculum                 3.0  MS-UC   301     S.  Davis               33
+ENGL 0163  Introduction to Writing               3.0  HOLT    109     S.  DuVaul              25
+ENGL 0163  Introduction to Writing               3.0  VINES   201     S.  DuVaul              24
+ENGL 0163  Introduction to Writing               3.0  VINES   235     S.  DuVaul              27
+ENGL 0163  Introduction to Writing               3.0  VINES   233     S.  DuVaul              27
+ENGL 0163  Introduction to Writing               3.0  VINES   234     S.  DuVaul              27
+SUR  1526  Surgical Tech Procedures I            6.0  HLTHSC  326     S.  Fulbright           18
+SUR  153A  Surgical Tech Practicum I            10.0  HOSP    SPARK   S.  Fulbright
+ELEC 1233  Fundamentals of Electricity           3.0  BALDOR  214     S.  Gomez               24
+ELEC 1263  Industrial Electricity I              3.0  BALDOR  208     S.  Gomez               18
+ELEC 1233  Fundamentals of Electricity           3.0  BALDOR  214     S.  Gomez
+ELEC 2253  Visual Basic Electronics Apps         3.0  BALDOR  216     S.  Gomez               24
+ISM  4203  Lead Prin Theories FULL ONLINE        3.0  TBA     TBA     S.  Gregory             15
+ISM  4213  Leadership Prac FULL ONLINE           3.0  TBA     TBA     S.  Gregory             15
+ISM  4513  Applied Research FULL ONLINE          3.0  TBA     TBA     S.  Gregory             15
+RHET 3103  Editing Usge Style Clarity            3.0  FL      220     S.  Griffith            25
+RHET 3603  Writing for the Workplace             3.0  FL      220     S.  Griffith            25
+ENGL 1203  Composition I                         3.0  HOLT    108     S.  Griffith            25
+ENGL 1203  Composition I                         3.0  TBA     TBA     S.  Griffith            25
+ECTC 2503  Child Guidance                        3.0  ECHOLS  122     S.  Heiss               20
+MATH 1403  College Algebra                       3.0  MS-UC   204     S.  Henderson           25
+MATH 2403  Survey of Calculus                    3.0  MS-UC   205     S.  Henderson           33
+MATH 0233  Beginning Algebra                     3.0  VINES   234     S.  Henderson           25
+MATH 1403  College Algebra                       3.0  VINES   234     S.  Henderson           30
+MATH 0233  Beginning Algebra                     3.0  VINES   234     S.  Henderson           25
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  VINES   235     S.  Henderson           30
+ECD  1103  Child Growth and Development          3.0  ECHOLS  120     S.  Henehan
+ECD  1103  Child Growth and Development          3.0  ECHOLS  120     S.  Henehan             5
+ECED 3033  Child Development                     3.0  MS-UC   302     S.  Henehan             30
+BSAT 3053  Recrdig Mthds Hist Strs HYBRID        3.0  BALDOR  210     S.  Horne               20
+BSAT 3993  Applying CAD Tech HYBRID              3.0  BALDOR  201     S.  Horne               20
+BSAT 3084  3D Advanced Concepts HYBRID           4.0  BALDOR  210     S.  Horne               24
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     S.  Huang               35
+STAT 2503  Probability and Statistics I          3.0  MS-UC   204     S.  Huang               35
+STAT 2503  Prob and Stats I HYBRID               3.0  MS-UC   202     S.  Huang               25
+STAT 2503  Prob and Stats I FULL ONLINE          3.0  TBA     TBA     S.  Huang               25
+HUMN 2563  Humanities Through the Arts           3.0  BREDLV  207     S.  Husarik             32
+HUMN 2563  Humanities Through the Arts           3.0  BREDLV  207     S.  Husarik             32
+HUMN 2563  Humanities Arts FULL ONLINE           3.0  BREDLV  TBA     S.  Husarik             24
+HUMN 2663  Introduction to Film                  3.0  BREDLV  207     S.  Husarik             32
+MUSI 3503  Music History I                       3.0  BREDLV  207     S.  Husarik             20
+HUMN 2563  Humn thru Arts INTERSESSION           3.0  TBA     TBA     S.  Husarik             30
+HUMN 2563  Humanities Thru the Arts              3.0  TBA     TBA     S.  Husarik             6
+NURS 434C  Nursing Care Adult II LAB              .0  HOSP    SPARK   S.  Imanda              8
+PSYC 1163  General Psychology                    3.0  GARDNR  LHALL   S.  Kimbley             75
+HIST 2753  United States History I               3.0  GARDNR  138     S.  Kite                50
+HIST 4503  Introduction to Public History        3.0  GARDNR  201     S.  Kite                25
+HIST 4803  Seminar in U S History                3.0  GARDNR  137     S.  Kite                25
+HIST 4953  History Internship                    3.0  GARDNR  TBA     S.  Kite                5
+RINT 3523  Communicating Through Exhibits        3.0  GARDNR  204     S.  Kite                25
+LEAD 3623  Prof Communication FULL ONLINE        3.0  TBA     TBA     S.  Knight              25
+PRFS 3133  Ethics in Workplce FULL ONLINE        3.0  TBA     TBA     S.  Loseke              18
+PRFS 3133  Ethic Wkplc FULL ONLINE UNICTR        3.0  TBA     TBA     S.  Loseke              17
+PRFS 3133  Ethics in Workplce FULL ONLINE        3.0  TBA     TBA     S.  Loseke              30
+PRFS 4433  Sup Total Qty Mgmt FULL ONLINE        3.0  TBA     TBA     S.  Loseke              18
+PRFS 4433  Sup Qty Mgt FULL ONLINE UNICTR        3.0  TBA     TBA     S.  Loseke              17
+PRFS 4713  Business Logistics FULL ONLINE        3.0  TBA     TBA     S.  Loseke              18
+PRFS 4713  Bus Logist FULL ONLINE UNICTR         3.0  TBA     TBA     S.  Loseke              17
+NURS 3236  Nurs Women Child PEDS LAB              .0  HLTHSC  309     S.  Mann                8
+NURS 3164  Health Assessment LAB                  .0  HLTHSC  217     S.  Mann                8
+NURS 3164  Health Assessment LAB                  .0  HLTHSC  228     S.  Mann                8
+ENGL 1213  Composition II                        3.0  FL      219     S.  Matthews            28
+ENGL 1213  Composition II                        3.0  FL      218     S.  Matthews            28
+PSYC 1163  General Psychology                    3.0  GARDNR  137     S.  Mixon               55
+PSYC 1163  General Psychology                    3.0  GARDNR  LHALL   S.  Mixon               70
+LPN  1187  Fundamentals I CLINIC                  .0  HLTHSC  217     S.  Pejic               8
+LPN  1187  Fundamentals I                        7.0  HLTHSC  227     S.  Pejic
+LPN  1187  Fundamentals I LAB                     .0  HLTHSC  217     S.  Pejic               8
+LPN  1197  Fundamentals II                       7.0  HLTHSC  227     S.  Pejic
+LPN  1197  Fundamentals II LAB                    .0  HLTHSC  217     S.  Pejic               8
+LPN  1197  Fundamentals II CLINIC                 .0  HOSP    METHO   S.  Pejic               8
+DHYG 2311  Periodontology II                     1.0  HLTHSC  147     S.  Rappeport           16
+NURS 3337  Nurs Care Adult I LAB                  .0  HLTHSC  133     S.  Romero              8
+MATH 1403  College Algebra                       3.0  MS-UC   206     S.  Ruple               35
+MATH 1403  College Algebra                       3.0  MS-UC   206     S.  Ruple               30
+MATH 0233  Beginning Algebra                     3.0  VINES   201     S.  Ruple               24
+MATH 1203  Intermediate Algebra                  3.0  VINES   201     S.  Ruple               24
+MATH 1203  Intermediate Algebra                  3.0  VINES   235     S.  Ruple               25
+MATH 1203  Intermediate Algebra                  3.0  VINES   233     S.  Ruple               25
+COMM 493V  Independent Project                   3.0  BALLMN  TBA     S.  Simkowski           1
+SPCH 1203  Intro Speech Communication            3.0  BALLMN  TBA     S.  Simkowski           25
+COMM 4743  Communication Law                     3.0  FL      111     S.  Simkowski           15
+SPCH 1203  Intro Speech Comm FULL ONLINE         3.0  TBA     TBA     S.  Simkowski           20
+SPCH 1203  Intro Speech Comm FULL ONLINE         3.0  TBA     TBA     S.  Simkowski           20
+ELEG 3903  Electric Circuits and Machines        3.0  BALDOR  246     S.  Spiesshoefer        30
+ELEG 4061  Elec Engineering Design I Lab         1.0  BALDOR  215     S.  Spiesshoefer        24
+ELEG 4073  EE Design II Lab                      3.0  BALDOR  215     S.  Spiesshoefer        24
+EDUC 3002  Intro Educ Tech FULL ONLINE           2.0  MS-UC   TBA     S.  Stout               30
+EDUC 3001  Electronic Portfolio Develmnt         1.0  MS-UC   212     S.  Stout               30
+EDUC 3002  Intro to Educational Tech             2.0  MS-UC   212     S.  Stout               30
+ENGL 2013  Intro to Global Literature            3.0  HOLT    102     S.  Whitlow             35
+ENGL 2013  Intro Global Lit FULL ONLINE          3.0  TBA     TBA     S.  Whitlow             25
+GERM 1314  Beginning German II HYBRID            4.0  FL      218     S.  Wiggins             24
+ENGL 1203  Composition I                         3.0  MS-UC   306     S.  Wiggins             28
+GERM 2303  Intermediate German I                 3.0  VINES   TBA     S.  Wiggins             2
+FIN  3713  Business Finance HYBRID               3.0  FL      200     S.  Wu                  30
+FIN  3713  Business Finance HYBRID               3.0  FL      216     S.  Wu                  30
+FIN  3723  Investments HYBRID                    3.0  FL      216     S.  Wu                  30
+FIN  447V  Independent Study in Finance          3.0  FL      TBA     S.  Wu                  2
+CS   1013  Foundations of Programming I          3.0  BALDOR  143     T.  Bobbitt             28
+CS   1033  Foundtns of Operating Systems         3.0  BALDOR  145B    T.  Bobbitt             18
+ATDI 1354  Suspension and Steering               4.0  BALDOR  154     T.  Brown               20
+BIOL 400V  Undergraduate Research Biology        1.0  MS-UC   TBA     T.  Buchanan            1
+BIOL 1151  Biological Science Laboratory         1.0  MS-UC   118     T.  Buchanan            24
+BIOL 1153  Biological Science                    3.0  MS-UC   104     T.  Buchanan            80
+BIOL 3401  Ecology Laboratory                    1.0  MS-UC   120     T.  Buchanan            24
+BIOL 3401  Ecology Laboratory                    1.0  MS-UC   120     T.  Buchanan            24
+BIOL 3403  Ecology                               3.0  MS-UC   104     T.  Buchanan            75
+MUSD 1252  Private Percussion                    2.0  BREDLV  105     T.  Dobbs               10
+MUSD 3252  Private Percussion                    2.0  BREDLV  105     T.  Dobbs               10
+MUSI 1322  Music Technology                      2.0  BREDLV  208     T.  Dobbs               20
+MUSI 2763  Music Appreciation                    3.0  BREDLV  201     T.  Dobbs               35
+MUSI 2763  Music Appreciation                    3.0  BREDLV  201     T.  Dobbs               35
+MUSR 1351  Instrmtl Ensemble PERCUSSION          1.0  BREDLV  105     T.  Dobbs               20
+MUSR 3351  Instrmtl Ensemble PERCUSSION          1.0  BREDLV  105     T.  Dobbs               20
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     T.  Hackney             30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     T.  Hackney             30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     T.  Hackney             30
+LPN  1187  Fundamentals I CLINIC                  .0  HLTHSC  217     T.  Hall                8
+LPN  1187  Fundamentals I LAB                     .0  HLTHSC  217     T.  Hall                8
+LPN  1197  Fundamentals II LAB                    .0  HLTHSC  217     T.  Hall                8
+LPN  1197  Fundamentals II CLINIC                 .0  HOSP    FIANA   T.  Hall                8
+ACCT 2803  Prin of Financial Accounting          3.0  FL      200     T.  Hayes               40
+ACCT 2803  Prin of Financial Accounting          3.0  FL      201     T.  Hayes               40
+ACCT 3003  Intermediate Accounting I             3.0  FL      220     T.  Hayes               32
+ACCT 4053  Auditing                              3.0  FL      218     T.  Hayes               30
+PHYE 1502  Sports Fundamentals                   2.0  HLTHSC  318     T.  Holland             30
+PHYE 2353  Sports Officiating                    3.0  HLTHSC  318     T.  Holland             30
+NURS 3113  Nursing Skills LAB                     .0  HLTHSC  228     T.  McCoy               8
+NURS 4364  Leader Prof Nursing LAB                .0  HOSP    SPARK   T.  McCoy               8
+NURS 4364  Leader Prof Nursing LAB                .0  HOSP    SPARK   T.  McCoy               7
+NURS 4364  Leader Prof Nrsng FULL ONLINE         4.0  TBA     TBA     T.  McCoy               30
+ANTH 2203  Introduction to Archaeology           3.0  HLTHSC  321     T.  Mulvihill           20
+ITA  1011  Quickbooks                            1.0  BALDOR  124     T.  Opolka              24
+ITA  1011  Quickbooks                            1.0  BALDOR  123     T.  Opolka              24
+CJ   1013  Intro Criminal Justice System         3.0  FL      216     T.  Pearn               30
+CJ   2403  Legal Asp Law Enf FULL ONLINE         3.0  GARDNR  TBA     T.  Pearn               25
+CJ   2403  Legal Aspects Law Enforcement         3.0  GARDNR  204     T.  Pearn               30
+CJ   3213  Criminal Investigations               3.0  GARDNR  204     T.  Pearn               30
+SPCH 3223  Argumentation and Debate              3.0  FL      111     T.  Pennartz            25
+NURS 434C  Nursing Care Adult II LAB              .0  HOSP    SPARK   T.  Rogers              8
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  MS-UC   236     T.  Smith-Leins         30
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  VINES   233     T.  Smith-Leins         30
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  VINES   235     T.  Smith-Leins         30
+MATH 0234  Beg Algebra With Pre-Algebra          4.0  VINES   235     T.  Smith-Leins         32
+NURS 3113  Nursing Skills                        3.0  HLTHSC  222     T.  Sparks              56
+NURS 3113  Nursing Skills LAB                     .0  HLTHSC  237     T.  Sparks              8
+NURS 3113  Nursing Skills LAB                     .0  HLTHSC  237     T.  Sparks              8
+NURS 3113  Nursing Skills LAB                     .0  HLTHSC  237     T.  Sparks              8
+NURS 3113  Nursing Skills LAB                     .0  HLTHSC  237     T.  Sparks              8
+NURS 3227  Foundations of Nursing Care           7.0  HLTHSC  222     T.  Sparks              56
+HIST 3053  History of Modern Science             3.0  GARDNR  231     T.  Timmons             25
+HIST 3053  Hist of Modern Science HYBRID         3.0  GARDNR  139     T.  Timmons             25
+HIST 3063  Hist Tech Society FULL ONLINE         3.0  GARDNR  TBA     T.  Timmons             32
+HIST 4203  History of Mathematics                3.0  MS-UC   201     T.  Timmons             25
+HIST 1123  Civilizations of World to 1500        3.0  GARDNR  201     T.  Waller              50
+HIST 1123  Civilizations of World to 1500        3.0  GARDNR  201     T.  Waller              50
+HIST 4303  History of Southeast Asia             3.0  GARDNR  201     T.  Waller              25
+COMM 493V  Independent Project                   3.0  BALLMN  TBA     T.  Walton              5
+COMM 493V  Independent Project                   3.0  BALLMN  TBA     T.  Walton              1
+COMM 493V  Independent Project                   2.0  BALLMN  TBA     T.  Walton              1
+SPCH 1203  Intro Speech HONORS                   3.0  FL      111     T.  Walton              25
+SPCH 1203  Intro to Speech Comm                  3.0  FL      111     T.  Walton              30
+SPCH 1203  Intro to Speech Comm                  3.0  FL      111     T.  Walton              30
+SPCH 1203  Introduction to Speech Comm           3.0  FL      111     T.  Walton              30
+COMM 2203  Intro to Mass Comm                    3.0  MS-UC   207     T.  Walton              25
+ANTH 2803  Cult Anthropology FULL ONLINE         3.0  GARDNR  TBA     T.  Watkins             30
+ANTH 2803  Cult Anthropology FULL ONLINE         3.0  GARDNR  TBA     T.  Watkins             30
+ENGL 1203  Composition I                         3.0  TBA     TBA     T.  Wells               27
+ENGL 0163  Introduction to Writing               3.0  VINES   233     T.  Wells               27
+ENGL 2503  Language and Society                  3.0  VINES   227     T.  Wells               12
+FORL 2503  Language and Society                  3.0  VINES   227     T.  Wells               12
+ENGL 0163  Introduction to Writing               3.0  VINES   233     T.  Wells               27
+READ 0513  Critical Thinking and Reading         3.0  VINES   234     T.  Wells
+READ 0513  Critical Thinking and Reading         3.0  VINES   235     T.  Wells
+ENGL 0163  Introduction to Writing               3.0  VINES   234     T.  Wells               27
+RINT 4953  Resources Interpret Internship        3.0  OTHER   VBDRE   T.  Wing                5
+RINT 3903  Mthds of Hertg Site Int HYBRID        3.0  OTHER   VBDRE   T.  Wing                25
+DHYG 2313  Radiology                             3.0  HLTHSC  147     V.  Hardgraves          16
+DHYG 2313  Radiology LAB                          .0  HLTHSC  TBA     V.  Hardgraves          5
+DHYG 2313  Radiology LAB                          .0  HLTHSC  TBA     V.  Hardgraves
+DHYG 3412  Oral Embryology Histology             2.0  HLTHSC  147     V.  Hardgraves          16
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     V.  Mobley              30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     V.  Mobley              30
+SPCH 1203  Introduction to Speech Comm           3.0  MS-UC   207     V.  Mobley              30
+HIST 2753  United States History I               3.0  GARDNR  204     W.  Beall               40
+HIST 2763  United States History II              3.0  GARDNR  221     W.  Beall               35
+DHYG 2432  Head and Neck Anatomy                 2.0  HLTHSC  147     W.  Borengasser         16
+CGT  2744  CAD Level I FULL ONLINE               4.0  BALDOR  TBA     W.  Cleland             24
+HLTH 1473  Medical Terminology                   3.0  HLTHSC  124     W.  Jones               20
+HLTH 1473  Med Terminology FULL ONLINE           3.0  HLTHSC  TBA     W.  Jones               25
+CJ   1013  Intro Criminal Justice System         3.0  GARDNR  201     W.  Milam
+MEEG 491V  Spc Tpcs - Fund of Mech Design        3.0  BALDOR  247     W.  Myers               24
+MUSC 1151  Class Guitar I                        1.0  BREDLV  206C    W.  Reyes               15
+MUSR 1351  Instrumental Ensembles GUITAR         1.0  BREDLV  TBA     W.  Reyes               10
+MUSS 1252  Private Strings GUITAR                2.0  BREDLV  TBA     W.  Reyes               10
+MUSS 3252  Private Strings GUITAR                2.0  BREDLV  TBA     W.  Reyes               10
+PSYC 1163  General Psychology                    3.0  GARDNR  231     W.  Winkle              50
+PSYC 4223  Psychology of Personality             3.0  GARDNR  138     W.  Winkle              50
+POLS 2753  Am Natl Govt FULL ONLINE              3.0  GARDNR  TBA     W.  Yamkam              31
+POLS 2853  St and Local Govt FULL ONLINE         3.0  GARDNR  TBA     W.  Yamkam              32
+POLS 3133  The U S Congress                      3.0  GARDNR  231     W.  Yamkam              25
+POLS 4103  American Campaigns Elections          3.0  HLTHSC  124     W.  Yamkam              25
+POLS 2753  American Natl Govt                    3.0  TBA     TBA     W.  Yamkam              1

@@ -181,6 +181,7 @@
                        WHEN '2' CALL 'COURSE-ADD'                       
                        WHEN '3' CALL 'COURSE-UPDATE'                    
                        WHEN '5' CALL 'COURSE-INQUIRY'
+                       WHEN '6' CALL 'COURSE-LIST'
                END-EVALUATE
            END-PERFORM.
                  
