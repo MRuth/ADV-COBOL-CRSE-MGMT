@@ -1,22 +1,19 @@
        FD  MST-CTRL-LIST.
-       01  UNIV-NAME                   PIC X(80).
-       01  UNIV-ADDR.
-           03  UNIV-ADDR-ST            PIC X(30).
-           03  UNIV-ADDR-ZIP           PIC 9(5).
-           03  FILLER                  PIC X(45).
-       01  NEXT-CRNS.
-           03  NEXT-CRN-YR             PIC 9(4).
-           03  NEXT-CRN-SEM            PIC 9(2).
-           03  NEXT-CRN-CRN            PIC 9(4).
-           03  FILLER                  PIC X(70).
-       01  NEXT-INST.
-           03  INST-ID                 PIC 9(4).
-           03  FILLER                  PIC X(76).
-       01  NEXT-STU.
-           03  STU-ID                  PIC 9(4).
-           03  FILLER                  PIC X(76).
-               
-           
-      
+       01  MST-UNIV-NAME                   PIC X(80).
+       01  MST-UNIV-ADDR.
+           03  MST-UNIV-ADDR-ST            PIC X(30).
+           03  MST-UNIV-ADDR-ZIP           PIC 9(5).
+           03  FILLER                      PIC X(45)       VALUE SPACES.
+       01  MST-NEXT-CRNS.
+           03  MST-NEXT-CRN-YR             PIC 9(4).
+           03  MST-NEXT-CRN-SEM            PIC 9(2).
+           03  MST-NEXT-CRN-CRN            PIC 9(4).
+           03  FILLER                      PIC X(70)       VALUE SPACES.
+       01  MST-NEXT-INST.
+           03  MST-INST-ID                 PIC 9(4).
+           03  FILLER                      PIC X(76)       VALUE SPACES.
+       01  MST-NEXT-STU.
+           03  MST-STU-ID                  PIC 9(4).
+           03  FILLER                      PIC X(76)       VALUE SPACES.
 
 

@@ -20,24 +20,33 @@
            ACCESS IS SEQUENTIAL
            RECORD KEY IS OUT-STU-ID.
            
+       SELECT MST-CTRL-LIST    ASSIGN TO 
+                                       "../Files/MST-CTRL-LST.DAT"
+                                       ORGANIZATION IS RELATIVE
+                                       ACCESS IS RANDOM
+                                       RELATIVE KEY IS WS-MST-REC-KEY
+                                       FILE STATUS IS WS-STAT.
+           
        SELECT SORT-WORK ASSIGN TO 'SORTWORK.TXT'.
        
        DATA DIVISION.
        
        FILE SECTION.
        
+       COPY MST-CTRL-LIST-RECS.
+       
        FD  IN-FILE.
            01  IN-REC.
                03  IN-NAME.
-                   05  IN-L-NAME               PIC X(15).
-                   05  IN-F-NAME               PIC X(15).
+                   05  IN-L-NAME       PIC X(15).
+                   05  IN-F-NAME       PIC X(15).
                03  IN-ADDR.
-                   05  IN-STREET               PIC X(25).
-                   05  IN-CITY                 PIC X(20).
-                   05  IN-ST                   PIC XX.
-                   05  IN-ZIP                  PIC XXXXX.
-               03 IN-PHONE                     PIC X(10).
-               03 FILLER                       PIC X(21).
+                   05  IN-STREET       PIC X(25).
+                   05  IN-CITY         PIC X(20).
+                   05  IN-ST           PIC XX.
+                   05  IN-ZIP          PIC XXXXX.
+               03 IN-PHONE             PIC X(10).
+               03 FILLER               PIC X(21).
        
        FD  OUT-FILE.
            01  OUT-REC.
@@ -67,11 +76,13 @@
                
        WORKING-STORAGE SECTION.
        
-           01  WS-EOF              PIC X   VALUE 'N'.
-               88  EOF                     VALUE 'Y'.
-           01  WS-STATUS           PIC X       VALUE 'A'.
-           01  WS-CURR-ID          PIC 9999    VALUE 0000.
-           01  WS-RSP              PIC X.
+           01  WS-EOF                  PIC X       VALUE 'N'.
+               88  EOF                             VALUE 'Y'.
+           01  WS-STATUS               PIC X       VALUE 'A'.
+           01  WS-CURR-ID              PIC 9999    VALUE 0000.
+           01  WS-RSP                  PIC X.
+           01  WS-MST-REC-KEY          PIC 9999.
+           01  WS-STAT                 PIC XX.             
        
        SCREEN SECTION.
            01  CLEAR.
@@ -83,6 +94,8 @@
            
            OPEN INPUT IN-FILE.
            OPEN OUTPUT OUT-FILE.
+           OPEN OUTPUT MST-CTRL-LIST.
+           
            MOVE    'N'    TO WS-EOF.
            DISPLAY CLEAR.
            SORT SORT-WORK
@@ -90,8 +103,16 @@
                ON ASCENDING KEY SRT-F-NAME
                INPUT  PROCEDURE 100-FILE-IN
                OUTPUT PROCEDURE 200-FILE-OUT.
+             
+           MOVE 6 TO WS-MST-REC-KEY.
+           MOVE SPACES TO MST-NEXT-STU.
+           MOVE WS-CURR-ID TO MST-STU-ID.
+           WRITE MST-NEXT-STU.
+           
            CLOSE IN-FILE,
-               OUT-FILE.
+               OUT-FILE
+               MST-CTRL-LIST.
+               
            DISPLAY SPACES.
            DISPLAY "PRESS ANY KEY TO CONTINUE" WITH NO ADVANCING.
            ACCEPT WS-RSP.

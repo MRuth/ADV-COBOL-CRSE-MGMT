@@ -6,7 +6,7 @@
        FILE-CONTROL.
                                                                         
            SELECT MST-CTRL-LIST    ASSIGN TO 
-                                       "./FILES/MST-CTRL-LIST.DAT"
+                                       "../Files/MST-CTRL-LST.DAT"
                                        ORGANIZATION IS RELATIVE
                                        ACCESS IS RANDOM
                                        RELATIVE KEY IS WS-REC-KEY
@@ -28,9 +28,25 @@
        
        OPEN OUTPUT MST-CTRL-LIST.
        
+       DISPLAY WS-STAT.
+       
        MOVE 1 TO WS-REC-KEY.
-       MOVE 'UNIVERSITY OF ARKANSAS - FORT SMITH' TO UNIV-NAME.
-       WRITE UNIV-NAME.
+       MOVE "UNIVERSITY OF ARKANSAS - FORT SMITH" TO MST-UNIV-NAME.
+       WRITE MST-UNIV-NAME.
+
+       MOVE 3 TO WS-REC-KEY
+       MOVE SPACES TO MST-NEXT-CRNS.
+       MOVE 0000 TO MST-NEXT-CRN-YR.
+       MOVE 00 TO MST-NEXT-CRN-SEM.
+       MOVE 0000 TO MST-NEXT-CRN-CRN.
+       WRITE MST-NEXT-CRNS.
+       
+       MOVE 4 TO WS-REC-KEY
+       MOVE SPACES TO MST-NEXT-CRNS.
+       MOVE 0000 TO MST-NEXT-CRN-YR.
+       MOVE 00 TO MST-NEXT-CRN-SEM.
+       MOVE 0000 TO MST-NEXT-CRN-CRN.
+       WRITE MST-NEXT-CRNS.
        
        CLOSE MST-CTRL-LIST.
        
