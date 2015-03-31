@@ -85,5 +85,3 @@
            ACCEPT WS-RESP.
            CLOSE IN-FILE.
            EXIT PROGRAM.
-           
-           STOP RUN.

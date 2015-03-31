@@ -30,7 +30,10 @@
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
            03  WS-SAVE             PIC X   VALUE 'N'.
-               88  SAVE                    VALUE 'Y'.     
+               88  SAVE                    VALUE 'Y'.
+           03  WS-OLD-NAME         PIC X(35).
+           03  WS-OLD-CREDIT       PIC X(4).
+           03  WS-OLD-STAT         PIC X.
        01  WS-DTL.
            03  WS-CRSE-ID          PIC X(9).
            03  WS-CRSE-NAME        PIC X(35).
@@ -46,29 +49,40 @@
             05  LINE 3  COL 25  VALUE   'COURSE NUMBER:'.
             05          COL 40  PIC X(9) TO WS-CRSE-ID          
                                          AUTO REQUIRED.       
-       01  SCRN-DATA.
+       01  SCRN-NAME.
+           03  SCRN-CRSE-OLD-NAME.
+               05  LINE 5  COL 25  VALUE   'OLD NAME   :'.
+               05          COL 40  FROM    WS-OLD-NAME.
            03  SCRN-CRSE-NAME.
-               05  LINE 4  COL 25  VALUE   'NEW NAME:'.
+               05  LINE 6  COL 25  VALUE     'NEW NAME   :'.
                05          COL 40  PIC X(35) TO WS-CRSE-NAME
-                                                AUTO REQUIRED.
+                                             AUTO REQUIRED.
+       01  SCRN-CREDIT.                                         
+           03  SCRN-CRSE-OLD-CREDIT.
+               05  LINE 8  COL 25  VALUE   'OLD CREDIT :'.
+               05          COL 40  FROM    WS-OLD-CREDIT.                                           
            03  SCRN-CRSE-CREDIT.
-               05  LINE 5  COL 25  VALUE   'NEW CREDIT:'.
+               05  LINE 9  COL 25  VALUE   'NEW CREDIT :'.
                05          COL 40  PIC X(4) TO WS-CRSE-CREDIT
-                                               AUTO REQUIRED.
+                                            AUTO REQUIRED.
+       01  SCRN-STATUS.                                        
+           03  SCRN-CRSE-OLD-STAT.
+               05  LINE 11  COL 25  VALUE   'OLD STATUS :'.
+               05           COL 40  FROM    WS-OLD-STAT.                                             
            03  SCRN-CRSE-STAT.
-               05  LINE 6  COL 25  VALUE   'COURSE STAT:'.
-               05          COL 40  PIC X    TO WS-CRSE-STAT
-                                               AUTO REQUIRED. 
-           03  SCRN-SAVE.
-               05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
-               05          COL 30  PIC X    TO WS-SAVE
-                                               REQUIRED.
+               05  LINE 12  COL 25  VALUE    'NEW STATUS :'.
+               05           COL 40  PIC X    TO WS-CRSE-STAT
+                                             AUTO REQUIRED.
+       01  SCRN-SAVE.
+           03  LINE 14  COL 32  VALUE   'SAVE (Y/N)'.
+           03          COL 30  PIC X    TO WS-SAVE
+                                        REQUIRED.
        01  SCRN-CONFIRM1.
            03  LINE 8  COL 30  VALUE 'RECORD IS UPDATED'.
        01  SCRN-CONFIRM2.
            03  LINE 8  COL 30  VALUE 'RECORD IS NOT UPDATED'.                                                                              
        01  SCRN-ANOTHER.
-           03  LINE 9  COL 32  VALUE 'ENTER ANOTHER? (Y/N)'.
+           03  LINE 9  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
        01  SCRN-ERR.
            03  LINE 8  COL 30  VALUE 'RECORD NOT FOUND'.    
@@ -94,9 +108,14 @@
                        DISPLAY SCRN-ANOTHER
                        ACCEPT SCRN-ANOTHER
                    NOT INVALID KEY
-                       DISPLAY SCRN-DATA
+                       MOVE CRSE-NAME   TO WS-OLD-NAME
+                       MOVE CRSE-CREDIT TO WS-OLD-CREDIT
+                       MOVE CRSE-STAT   TO WS-OLD-STAT
+                       DISPLAY SCRN-NAME
                        ACCEPT SCRN-CRSE-NAME
+                       DISPLAY SCRN-CREDIT
                        ACCEPT SCRN-CRSE-CREDIT
+                       DISPLAY SCRN-STATUS
                        ACCEPT SCRN-CRSE-STAT
                        ACCEPT SCRN-SAVE
                        IF SAVE

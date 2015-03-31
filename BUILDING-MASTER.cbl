@@ -5,7 +5,7 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
            SELECT IN-FILE      ASSIGN        TO 
-                                       '../FILES/MASTER-FILE-SORTED.TXT'
+                               '../FILES/MASTER-FILE-SORTED.TXT'
                                ORGANIZATION  IS LINE SEQUENTIAL.
            SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
            SELECT OUT-FILE     ASSIGN        TO 'BUILDING-MASTER.DAT'   
@@ -45,10 +45,7 @@
            03  S-MAX-SEAT         PIC 99.
        FD  OUT-FILE.
        01  OUT-REC.
-           03  O-BUILDING-ROOM.
-               05  O-BUILDING    PIC X(6).
-               05  FILLER        PIC X VALUE SPACE.
-               05  O-ROOM        PIC X(6).
+           03  O-BUILDING-ROOM   PIC X(12).
            03  O-MAX-SEAT        PIC 99.
        WORKING-STORAGE SECTION.
        01  MISC-VARS.
@@ -56,12 +53,13 @@
            03  WS-STAT             PIC 99.
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
-       01  WS-DTL-LN.
            03  WS-BUILDING         PIC X(6).
-           03  FILLER              PIC XX.
            03  WS-ROOM             PIC X(6).
-           03  FILLER              PIC XX.
-           03  WS-MAX-SEAT         PIC 99.
+           03  WS-SPACE            PIC X VALUE SPACE.
+       01  WS-DTL-LN.
+           03  WS-BUILDING-ROOM     PIC X(12).
+           03  FILLER               PIC XX.
+           03  WS-MAX-SEAT          PIC 99.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -86,9 +84,8 @@
                    AT END
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
-                       MOVE O-BUILDING      TO WS-BUILDING
-                       MOVE O-ROOM          TO WS-ROOM
-                       MOVE O-MAX-SEAT      TO WS-MAX-SEAT
+                       MOVE O-BUILDING-ROOM    TO WS-BUILDING-ROOM
+                       MOVE O-MAX-SEAT         TO WS-MAX-SEAT
                        DISPLAY WS-DTL-LN
                END-READ
            END-PERFORM.
@@ -120,8 +117,14 @@
                    AT END 
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
-                       MOVE S-BUILDING      TO O-BUILDING
-                       MOVE S-ROOM          TO O-ROOM
+                       MOVE S-BUILDING      TO WS-BUILDING
+                       MOVE S-ROOM          TO WS-ROOM
+                       MOVE SPACES          TO O-BUILDING-ROOM
+                       STRING
+                           WS-BUILDING DELIMITED BY SPACE
+                           WS-SPACE    DELIMITED BY SIZE
+                           WS-ROOM     DELIMITED BY SPACE
+                           INTO O-BUILDING-ROOM
                        MOVE S-MAX-SEAT      TO O-MAX-SEAT
                        WRITE OUT-REC
                END-RETURN

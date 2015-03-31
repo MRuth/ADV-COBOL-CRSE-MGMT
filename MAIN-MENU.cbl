@@ -151,8 +151,8 @@
                        WHEN '1' PERFORM 210-STUDENT
                        WHEN '2' PERFORM 220-COURSE
                        WHEN '3' PERFORM 230-SCHEDULE
-                       WHEN '4' PERFORM 240-BUILDING
-                       WHEN '5' PERFORM 250-INSTRUCTOR
+                       WHEN '4' PERFORM 240-INSTRUCTOR                      
+                       WHEN '5' PERFORM 250-BUILDING
                        WHEN '6' PERFORM 260-REPORTS
                        WHEN 'X' MOVE 'Y' TO WS-EXIT
            END-EVALUATE.
@@ -196,19 +196,8 @@
                        WHEN '1' PERFORM 210-STUDENT
                END-EVALUATE
            END-PERFORM.
-                 
-       240-BUILDING.
-           ACCEPT WS-DATE FROM DATE.
-           ACCEPT WS-TIME FROM TIME.
-           PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, BLD-MENU
-               ACCEPT BLD-MENU
-               EVALUATE WS-SEL
-                       WHEN '1' PERFORM 210-STUDENT
-               END-EVALUATE
-           END-PERFORM.
-                 
-       250-INSTRUCTOR.
+           
+       240-INSTRUCTOR.
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            PERFORM UNTIL WS-SEL = "R"
@@ -216,6 +205,21 @@
                ACCEPT INST-MENU
                EVALUATE WS-SEL
                        WHEN '1' CALL 'INSTRUCTOR-MASTER'
+                       WHEN '2' CALL 'INSTRUCTOR-ADD'
+                       WHEN '3' CALL 'INSTRUCTOR-UPDATE'
+                       WHEN '4' CALL 'INSTRUCTOR-INQUIRY'
+                       WHEN '5' CALL 'INSTRUCTOR-LIST'
+               END-EVALUATE
+           END-PERFORM.    
+                 
+       250-BUILDING.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
+           PERFORM UNTIL WS-SEL = "R"
+               DISPLAY HEADER, BLD-MENU
+               ACCEPT BLD-MENU
+               EVALUATE WS-SEL
+                       WHEN '1' CALL 'BUILDING-MASTER'
                END-EVALUATE
            END-PERFORM.
                  
