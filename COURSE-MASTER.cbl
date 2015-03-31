@@ -1,5 +1,5 @@
-       IDENTIFICATION DIVISION.
-       PROGRAM-ID. COURSE-MASTER.
+       IDENTIFICATION DIVISION.                                         
+       PROGRAM-ID. COURSE-MASTER.                                       
       *-----------------------------------------------------------------
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
@@ -53,6 +53,9 @@
            03  WS-COURSE-CREDIT    PIC X(4).
            03  FILLER              PIC XX.
            03  WS-COURSE-STAT      PIC X.
+       SCREEN SECTION.
+       01  BLNK-SCRN.
+           03  BLANK SCREEN.           
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -63,30 +66,15 @@
                 ON ASCENDING KEY S-COURSE-ID
                 INPUT  PROCEDURE 100-FILE-IN
                 OUTPUT PROCEDURE 200-FILE-OUT.
-           DISPLAY "PROGRAM TERMINATED".
-           DISPLAY "PRESS ENTER TO CLOSE".
+           DISPLAY BLNK-SCRN.
+           DISPLAY 'BUILD SUCCESSFULLY'.
+           DISPLAY 'PRESS ENTER TO RETURN TO COURSE MENU'.
+           ACCEPT WS-RESP.
            
            CLOSE IN-FILE.
            CLOSE OUT-FILE.
            
-      *     OPEN INPUT OUT-FILE.
-           
-      *     MOVE 'N' TO WS-EOF.
-      *     PERFORM UNTIL EOF
-      *         READ OUT-FILE 
-      *             AT END
-      *                 MOVE 'Y' TO WS-EOF
-      *             NOT AT END
-      *                 MOVE O-COURSE-ID     TO WS-COURSE-ID
-      *                 MOVE O-COURSE-NAME   TO WS-COURSE-NAME
-      *                 MOVE O-COURSE-CREDIT TO WS-COURSE-CREDIT
-      *                 MOVE O-COURSE-STAT   TO WS-COURSE-STAT
-      *                 DISPLAY WS-DTL-LN
-      *         END-READ
-      *     END-PERFORM.
-      *     CLOSE OUT-FILE.
-           
-           STOP RUN.
+           EXIT PROGRAM.
       *-----------------------------------------------------------------
        100-FILE-IN.
            PERFORM UNTIL EOF
