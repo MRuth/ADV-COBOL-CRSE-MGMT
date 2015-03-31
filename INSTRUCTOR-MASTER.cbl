@@ -4,26 +4,28 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT IN-FILE      ASSIGN        TO 
-                                       '../FILES/MASTER-FILE-SORTED.TXT'
-                               ORGANIZATION  IS LINE SEQUENTIAL.
-           SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
-           SELECT OUT-FILE     ASSIGN        TO 'INSTRUCTOR-MASTER.DAT'
-                               ORGANIZATION  IS INDEXED
-                               ACCESS        IS SEQUENTIAL
-                               RECORD KEY    IS O-INSTRUCTOR-NAME
-                               FILE STATUS   IS WS-STAT.
-           SELECT OUT-FILEF     ASSIGN        TO 'INSTR-MASTER.DAT'
-                                ORGANIZATION  IS INDEXED
-                                ACCESS        IS SEQUENTIAL
-                                RECORD KEY    IS OF-INSTRUCTOR-ID
-                                FILE STATUS   IS WS-STAT.
-           SELECT MST-CTRL-LIST    ASSIGN TO 
-                                       "../Files/MST-CTRL-LST.DAT"
-                                       ORGANIZATION IS RELATIVE
-                                       ACCESS IS RANDOM
-                                       RELATIVE KEY IS WS-MST-REC-KEY
-                                       FILE STATUS IS WS-MST-STAT.                                                                        
+           SELECT IN-FILE             ASSIGN        TO 
+                                      '../FILES/MASTER-FILE-SORTED.TXT'
+                                      ORGANIZATION  IS LINE SEQUENTIAL.
+           SELECT SORT-WORK           ASSIGN        TO 'SORTWORK.TXT'.
+           SELECT OUT-FILE            ASSIGN        TO 
+                                      '../FILES/INSTRUCTOR-MASTER.DAT'
+                                      ORGANIZATION  IS INDEXED
+                                      ACCESS        IS SEQUENTIAL
+                                      RECORD KEY    IS O-INSTRUCTOR-NAME
+                                      FILE STATUS   IS WS-STAT.
+           SELECT OUT-FILEF           ASSIGN        TO 
+                                      '../FILES/INSTR-MASTER.DAT'
+                                      ORGANIZATION  IS INDEXED
+                                      ACCESS        IS SEQUENTIAL
+                                      RECORD KEY    IS OF-INSTRUCTOR-ID
+                                      FILE STATUS   IS WS-STAT.
+           SELECT MST-CTRL-LIST       ASSIGN TO 
+                                      "../Files/MST-CTRL-LST.DAT"
+                                      ORGANIZATION IS RELATIVE
+                                      ACCESS IS RANDOM
+                                      RELATIVE KEY IS WS-MST-REC-KEY
+                                      FILE STATUS IS WS-MST-STAT.                                                                        
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
@@ -71,17 +73,21 @@
                88  EOF                     VALUE 'Y'.
            03  WS-MST-REC-KEY      PIC 9999.
            03  WS-MST-STAT         PIC XX.
-           03  WS-CURR-ID          PIC 9999 VALUE 7000.
+           03  WS-CURR-ID          PIC 9999.
        01  WS-DTL-LN.
            03  WS-INSTRUCTOR-ID     PIC 9999.
            03  FILLER               PIC XX.
            03  WS-INSTRUCTOR-NAME   PIC X(22).
+       SCREEN SECTION.
+       01  BLNK-SCRN.
+           03  BLANK SCREEN.    
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
            OPEN INPUT IN-FILE.
            OPEN OUTPUT OUT-FILE.
            OPEN I-O MST-CTRL-LIST.
+           MOVE 7000 TO WS-CURR-ID.
            
            SORT SORT-WORK
                 ON ASCENDING KEY S-INSTRUCTOR
@@ -109,31 +115,19 @@
            CLOSE OUT-FILE.
            CLOSE OUT-FILEF.
            
-           OPEN INPUT OUT-FILEF.
-           
-           MOVE 'N' TO WS-EOF.
-           PERFORM UNTIL EOF
-               READ OUT-FILEF 
-                   AT END
-                       MOVE 'Y' TO WS-EOF
-                   NOT AT END
-                       MOVE OF-INSTRUCTOR-ID     TO WS-INSTRUCTOR-ID
-                       MOVE OF-INSTRUCTOR-NAME   TO WS-INSTRUCTOR-NAME
-                       DISPLAY WS-DTL-LN
-               END-READ
-           END-PERFORM.
-           CLOSE OUT-FILEF.
-           
            MOVE 5 TO WS-MST-REC-KEY.
            MOVE WS-CURR-ID TO MST-INST-ID.
-           WRITE MST-NEXT-INST.     
+           REWRITE MST-NEXT-INST.     
            
            CLOSE MST-CTRL-LIST.
+           DISPLAY BLNK-SCRN.
+           DISPLAY 'BUILD SUCCESSFULLY'.
            DISPLAY 'PRESS ENTER TO GET BACK TO MENU'.
            ACCEPT WS-RESP.
            EXIT PROGRAM.
       *-----------------------------------------------------------------
-       100-FILE-IN.
+       100-FILE-IN. 
+           MOVE 'N' TO WS-EOF.
            PERFORM UNTIL EOF
                READ IN-FILE 
                    AT END
