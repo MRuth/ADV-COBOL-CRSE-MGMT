@@ -75,8 +75,8 @@
                                              AUTO REQUIRED.
        01  SCRN-SAVE.
            03  LINE 14  COL 32  VALUE   'SAVE (Y/N)'.
-           03          COL 30  PIC X    TO WS-SAVE
-                                        REQUIRED.
+           03           COL 30  PIC X    TO WS-SAVE
+                                         REQUIRED.
        01  SCRN-CONFIRM1.
            03  LINE 8  COL 30  VALUE 'RECORD IS UPDATED'.
        01  SCRN-CONFIRM2.
@@ -117,6 +117,7 @@
                        ACCEPT SCRN-CRSE-CREDIT
                        DISPLAY SCRN-STATUS
                        ACCEPT SCRN-CRSE-STAT
+                       DISPLAY SCRN-SAVE
                        ACCEPT SCRN-SAVE
                        IF SAVE
                            THEN                                         
