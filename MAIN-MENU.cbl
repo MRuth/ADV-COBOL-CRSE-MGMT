@@ -165,7 +165,7 @@
                    DISPLAY HEADER, STU-MENU
                    ACCEPT STU-MENU
                    EVALUATE WS-SEL
-                       WHEN '1' CALL 'STU-BUILDER'
+                       WHEN '1' CALL 'STUDENT-MASTER'
                        WHEN '2' CALL 'STUDENT-ADD'
                        WHEN '3' CALL 'STUDENT-UPDATE'
                        WHEN '4' CALL 'STUDENT-INQUIRY'
