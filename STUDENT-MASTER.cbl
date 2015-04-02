@@ -52,12 +52,10 @@
            01  OUT-REC.
                03  OUT-STU-ID          PIC 9999.
                03  OUT-NAME.
-                   05  OUT-F-NAME      PIC X(15).
                    05  OUT-L-NAME      PIC X(15).
+                   05  OUT-F-NAME      PIC X(15).
                03  OUT-ADDR.
                    05  OUT-STREET      PIC X(25).
-                   05  OUT-CITY        PIC X(20).
-                   05  OUT-ST          PIC XX.
                    05  OUT-ZIP         PIC XXXXX.
                03  OUT-PHONE           PIC X(10).
                03  OUT-STATUS          PIC X.
@@ -69,8 +67,6 @@
                    05  SRT-F-NAME      PIC X(15).
                03  SRT-ADDR.
                    05  SRT-STREET      PIC X(25).
-                   05  SRT-CITY        PIC X(20).
-                   05  SRT-ST          PIC XX.
                    05  SRT-ZIP         PIC XXXXX.
                03  SRT-PHONE           PIC X(10).
                
@@ -88,7 +84,7 @@
        SCREEN SECTION.
            01  CLEAR.
                03  BLANK SCREEN.
-
+      
        PROCEDURE DIVISION.
        
        000-MAIN.
@@ -126,7 +122,8 @@
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
                        MOVE IN-NAME    TO SRT-NAME
-                       MOVE IN-ADDR    TO SRT-ADDR
+                       MOVE IN-STREET  TO SRT-STREET
+                       MOVE IN-ZIP     TO SRT-ZIP
                        MOVE IN-PHONE   TO SRT-PHONE
                        RELEASE SRT-REC
                END-READ
@@ -141,7 +138,8 @@
                    NOT AT END
                        MOVE WS-CURR-ID TO OUT-STU-ID
                        MOVE SRT-NAME   TO OUT-NAME
-                       MOVE SRT-ADDR   TO OUT-ADDR
+                       MOVE SRT-STREET TO OUT-STREET
+                       MOVE SRT-ZIP    TO OUT-ZIP
                        MOVE SRT-PHONE  TO OUT-PHONE
                        MOVE WS-STATUS  TO OUT-STATUS
                        ADD 1           TO WS-CURR-ID
@@ -162,3 +160,4 @@
                
            DISPLAY OUT-STU-ID, " ", OUT-NAME, " ", 
                            OUT-STATUS
+      
