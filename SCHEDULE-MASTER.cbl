@@ -1,0 +1,106 @@
+       IDENTIFICATION DIVISION.                                         
+       PROGRAM-ID. SCHEDULE-MASTER.                                     
+      *-----------------------------------------------------------------
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT IN-FILE      ASSIGN        TO
+                                       '../FILES/SCHEDULE-MASTER-S.TXT'
+                               ORGANIZATION  IS LINE SEQUENTIAL.
+           SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
+           SELECT OUT-FILE     ASSIGN        TO
+                                       '../FILES/SCHEDULE-MASTER.DAT'
+                               ORGANIZATION  IS INDEXED
+                               ACCESS        IS SEQUENTIAL
+                               RECORD KEY    IS O-SCHEDULE-ID
+                               FILE STATUS   IS WS-STAT.
+      *-----------------------------------------------------------------
+       DATA DIVISION.
+      *-----------------------------------------------------------------
+       FILE SECTION.
+       FD  IN-FILE.
+       01  IN-REC.
+           03  SCHEDULE-ID           PIC X(9).
+           03  FILLER              PIC XX VALUE SPACES.
+           03  SCHEDULE-NAME         PIC X(35).
+           03  FILLER              PIC X  VALUE SPACE.
+           03  SCHEDULE-CREDIT       PIC X(4).
+           03  FILLER              PIC XX VALUE SPACES.
+           03  SCHEDULE-STAT         PIC X.
+       SD  SORT-WORK.
+       01  SORT-REC.
+           03  S-SCHEDULE-ID           PIC X(9).
+           03  S-SCHEDULE-NAME         PIC X(35).
+           03  S-SCHEDULE-CREDIT       PIC X(4).
+           03  S-SCHEDULE-STAT         PIC X.
+       FD  OUT-FILE.
+       01  OUT-REC.
+           03  O-SCHEDULE-ID        PIC X(9).
+           03  O-SCHEDULE-NAME      PIC X(35).
+           03  O-SCHEDULE-CREDIT    PIC X(4).
+           03  O-SCHEDULE-STAT      PIC X.
+       WORKING-STORAGE SECTION.
+       01  MISC-VARS.
+           03  WS-RESP             PIC X   VALUE SPACE.
+           03  WS-STAT             PIC 99.
+           03  WS-EOF              PIC X   VALUE 'N'.
+               88  EOF                     VALUE 'Y'.
+       01  WS-DTL-LN.
+           03  WS-SCHEDULE-ID        PIC X(9).
+           03  FILLER              PIC XX.
+           03  WS-SCHEDULE-NAME      PIC X(35).
+           03  FILLER              PIC XX.
+           03  WS-SCHEDULE-CREDIT    PIC X(4).
+           03  FILLER              PIC XX.
+           03  WS-SCHEDULE-STAT      PIC X.
+       SCREEN SECTION.
+       01  BLNK-SCRN.
+           03  BLANK SCREEN.           
+      *----------------------------------------------------------------- 
+       PROCEDURE DIVISION.
+       000-MAIN.
+           OPEN INPUT IN-FILE.
+           OPEN OUTPUT OUT-FILE.
+           
+           SORT SORT-WORK
+                ON ASCENDING KEY S-SCHEDULE-ID
+                INPUT  PROCEDURE 100-FILE-IN
+                OUTPUT PROCEDURE 200-FILE-OUT.
+           DISPLAY BLNK-SCRN.
+           DISPLAY 'BUILD SUCCESSFULLY'.
+           DISPLAY 'PRESS ENTER TO RETURN TO SCHEDULE MENU'.
+           ACCEPT WS-RESP.
+           
+           CLOSE IN-FILE.
+           CLOSE OUT-FILE.
+           
+           EXIT PROGRAM.
+      *-----------------------------------------------------------------
+       100-FILE-IN.
+           PERFORM UNTIL EOF
+               READ IN-FILE 
+                   AT END
+                       MOVE 'Y' TO WS-EOF
+                   NOT AT END
+                       MOVE SCHEDULE-ID     TO S-SCHEDULE-ID
+                       MOVE SCHEDULE-NAME   TO S-SCHEDULE-NAME
+                       MOVE SCHEDULE-CREDIT TO S-SCHEDULE-CREDIT
+                       MOVE SCHEDULE-STAT   TO S-SCHEDULE-STAT
+                       RELEASE SORT-REC
+               END-READ
+           END-PERFORM.
+      *-----------------------------------------------------------------
+       200-FILE-OUT.
+           MOVE 'N' TO WS-EOF.
+           PERFORM UNTIL EOF
+               RETURN SORT-WORK 
+                   AT END 
+                       MOVE 'Y' TO WS-EOF
+                   NOT AT END
+                       MOVE S-SCHEDULE-ID     TO O-SCHEDULE-ID
+                       MOVE S-SCHEDULE-NAME   TO O-SCHEDULE-NAME
+                       MOVE S-SCHEDULE-CREDIT TO O-SCHEDULE-CREDIT
+                       MOVE S-SCHEDULE-STAT   TO O-SCHEDULE-STAT
+                       WRITE OUT-REC
+               END-RETURN
+           END-PERFORM.
