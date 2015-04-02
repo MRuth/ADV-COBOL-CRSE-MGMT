@@ -66,7 +66,7 @@
        01  SCRN-WRITE-NOT-SAVE.
            03  LINE 1  COL 30  VALUE 'COURSE IS NOT ADDED'.           
        01  SCRN-ANOTHER.
-           03  LINE 3  COL 32  VALUE 'ENTER ANOTHER? (Y/N)'.
+           03  LINE 3  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.

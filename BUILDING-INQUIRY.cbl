@@ -55,7 +55,7 @@
        01  SCRN-ERR.
            03  LINE 5  COL 30  VALUE 'ROOM NOT FOUND'.    
        01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'LOOK FOR ANOTHER? (Y/N)'.
+           03  LINE 7  COL 32  VALUE 'LOOK UP ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
