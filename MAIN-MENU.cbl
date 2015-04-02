@@ -166,6 +166,10 @@
                    ACCEPT STU-MENU
                    EVALUATE WS-SEL
                        WHEN '1' CALL 'STU-BUILDER'
+                       WHEN '2' CALL 'STUDENT-ADD'
+                       WHEN '3' CALL 'STUDENT-UPDATE'
+                       WHEN '4' CALL 'STUDENT-INQUIRY'
+                       WHEN '5' CALL 'STUDENT-LIST'
                    END-EVALUATE
               END-PERFORM.
            
