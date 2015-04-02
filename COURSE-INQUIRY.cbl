@@ -52,7 +52,7 @@
                05  LINE 5  COL 25  VALUE   'COURSE CREDIT:'.
                05          COL 40  PIC X(4) FROM WS-CRSE-CREDIT.
        01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'ENTER ANOTHER? (Y/N)'.
+           03  LINE 7  COL 32  VALUE 'LOOK UP ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
        01  SCRN-ERR.
            03  LINE 6  COL 30  VALUE 'RECORD NOT FOUND'.    
