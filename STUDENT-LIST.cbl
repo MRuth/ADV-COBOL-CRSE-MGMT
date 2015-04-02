@@ -36,15 +36,6 @@
        01  WS-RESP                     PIC X.
        01  WS-EOF                      PIC X       VALUE 'N'.
            88  EOF                                 VALUE 'Y'.
-       01  WS-REC.
-           03  WS-STU-ID               PIC 9999.
-           03  WS-NAME.
-               05  WS-L-NAME           PIC X(15).
-               05  WS-F-NAME           PIC X(15).
-           03  WS-ADDR.
-               05  WS-STREET           PIC X(25).
-               05  WS-ZIP              PIC XXXXX.
-           03  WS-PHONE                PIC X(10).
        
        SCREEN SECTION.
        01  NEW-SCREEN.
@@ -59,24 +50,28 @@
                
        PROCEDURE DIVISION.
        000-MAIN.
-       OPEN INPUT IN-FILE.
+           OPEN INPUT IN-FILE.
+           MOVE 'N'    TO WS-EOF.
+           MOVE 0      TO WS-CTR.
+           
+           DISPLAY NEW-SCREEN.
+           DISPLAY SPACES.
+           DISPLAY SPACES.
+           
+           PERFORM UNTIL EOF
+               READ IN-FILE 
+                   AT END
+                       MOVE 'Y' TO WS-EOF
+                   NOT AT END
+                       PERFORM 100-DISPLAY
+               END-READ
+           END-PERFORM.
+           
+           CLOSE IN-FILE.
        
-       DISPLAY NEW-SCREEN.
-       DISPLAY SPACES.
-       DISPLAY SPACES.
-       
-       PERFORM UNTIL EOF
-           READ IN-FILE 
-               AT END
-                   MOVE 'Y' TO WS-EOF
-               NOT AT END
-                   PERFORM 100-DISPLAY
-           END-READ
-       END-PERFORM.
-       
-       DISPLAY "PRESS ENTER TO EXIT" WITH NO ADVANCING.
-       ACCEPT WS-RESP.
-       EXIT PROGRAM.
+           DISPLAY "PRESS ENTER TO EXIT" WITH NO ADVANCING.
+           ACCEPT WS-RESP.
+           EXIT PROGRAM.
        
        100-DISPLAY.
            ADD 1 TO WS-CTR
