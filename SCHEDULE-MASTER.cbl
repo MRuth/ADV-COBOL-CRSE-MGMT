@@ -5,7 +5,7 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
            SELECT IN-FILE      ASSIGN        TO
-                                       '../FILES/SCHEDULE-MASTER-S.TXT'
+                                       '../FILES/MASTER-FILE-SORTED.TXT'
                                ORGANIZATION  IS LINE SEQUENTIAL.
            SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
            SELECT OUT-FILE     ASSIGN        TO
@@ -20,13 +20,17 @@
        FILE SECTION.
        FD  IN-FILE.
        01  IN-REC.
-           03  SCHEDULE-ID           PIC X(9).
+           03  COURSE-ID-IN        PIC X(9).
            03  FILLER              PIC XX VALUE SPACES.
-           03  SCHEDULE-NAME         PIC X(35).
+           03  COURSE-NAME-IN      PIC X(35).
            03  FILLER              PIC X  VALUE SPACE.
-           03  SCHEDULE-CREDIT       PIC X(4).
+           03  COURSE-CREDIT-IN    PIC X(4).
            03  FILLER              PIC XX VALUE SPACES.
-           03  SCHEDULE-STAT         PIC X.
+           03  BUILDING-ID-IN      PIC X(14).
+           03  FILLER              PIC XX VALUE SPACES.
+           03  INSTRUCTOR-NAME-IN  PIC X(22).
+           03  FILLER              PIC XX VALUE SPACES.
+           03  OPEN-SEATS-IN       PIC X(2).
        SD  SORT-WORK.
        01  SORT-REC.
            03  S-SCHEDULE-ID           PIC X(9).
@@ -82,10 +86,10 @@
                    AT END
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
-                       MOVE SCHEDULE-ID     TO S-SCHEDULE-ID
-                       MOVE SCHEDULE-NAME   TO S-SCHEDULE-NAME
-                       MOVE SCHEDULE-CREDIT TO S-SCHEDULE-CREDIT
-                       MOVE SCHEDULE-STAT   TO S-SCHEDULE-STAT
+                       MOVE COURSE-ID-IN     TO S-SCHEDULE-ID
+                       MOVE COURSE-NAME-IN   TO S-SCHEDULE-NAME
+                       MOVE COURSE-CREDIT-IN TO S-SCHEDULE-CREDIT
+                       MOVE BUILDING-ID-IN   TO S-SCHEDULE-STAT
                        RELEASE SORT-REC
                END-READ
            END-PERFORM.
