@@ -29,6 +29,7 @@
            03  WS-ANOTHER          PIC X   VALUE 'Y'.
                88  ANOTHER                 VALUE 'N'.
            03  WS-BLD-ROOM         PIC X(12).
+           03  WS-OLD-MAX-SEAT     PIC 99.
        01  WS-DTL-LN.
            03  WS-BLD-NAME         PIC X(8).
            03  WS-SPACE            PIC X VALUE SPACE.
@@ -39,7 +40,7 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'ADD BUILDING'.
+           03  LINE 1  COL 30  VALUE 'UPDATE BUILDING'.
        01  SCRN-DATA.
            03  SCRN-BLD-NAME.
                05  LINE 3  COL 25  VALUE   'BUILDING NAME: '.
@@ -49,22 +50,26 @@
                05  LINE 4  COL 25  VALUE   'ROOM NUMBER  : '.
                05          COL 40  PIC X(4) TO WS-ROOM-NO
                                              AUTO REQUIRED.
-           03  SCRN-MAX-SEAT.
-               05  LINE 5  COL 25  VALUE   'MAX SEAT     : '.
+       01  SCRN-SEAT.                                      
+           03  SCRN-OLD-MAX-SEAT.
+               05  LINE 5  COL 25  VALUE   'OLD MAX SEAT : '.
+               05          COL 40  PIC Z9  FROM WS-OLD-MAX-SEAT.
+           03  SCRN-NEW-MAX-SEAT.
+               05  LINE 6  COL 25  VALUE   'NEW MAX SEAT : '.
                05          COL 40  PIC Z9  TO WS-MAX-SEAT
-                                            AUTO REQUIRED.
+                                           AUTO REQUIRED.
            03  SCRN-SAVE.
-               05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
+               05  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
                05          COL 30  PIC X     TO WS-SAVE.
-       01  SCRN-WRITE-ERR.
-           03  LINE 1  COL 30  VALUE 'ROOM IS ALREADY EXIST'.
-       01  SCRN-WRITE-SUC.
-           03  LINE 1  COL 30  VALUE 'ROOM IS ADDED'.
-       01  SCRN-WRITE-NOT-SAVE.
-           03  LINE 1  COL 30  VALUE 'ROOM IS NOT ADDED'.           
+       01  SCRN-CONFIRM1.
+           03  LINE 8  COL 30  VALUE 'ROOM IS UPDATED'.
+       01  SCRN-CONFIRM2.
+           03  LINE 8  COL 30  VALUE 'ROOM IS NOT UPDATED'.                                                                                
        01  SCRN-ANOTHER.
-           03  LINE 3  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
+           03  LINE 9  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
+       01  SCRN-ERR.
+           03  LINE 8  COL 30  VALUE 'ROOM NOT FOUND'.  
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -78,37 +83,41 @@
                    
                    ACCEPT  SCRN-BLD-NAME
                    ACCEPT  SCRN-ROOM-NO
-                   ACCEPT  SCRN-MAX-SEAT
                    
-                   DISPLAY SCRN-SAVE
-                   ACCEPT  SCRN-SAVE
+                   STRING
+                       WS-BLD-NAME DELIMITED BY SPACE
+                       WS-SPACE    DELIMITED BY SIZE
+                       WS-ROOM-NO  DELIMITED BY SPACE
+                       INTO WS-BLD-ROOM
+                   MOVE WS-BLD-ROOM TO BLD-BUILDING-ROOM
                    
-                   IF SAVE
-                       THEN
-                           STRING
-                               WS-BLD-NAME DELIMITED BY SPACE
-                               WS-SPACE    DELIMITED BY SIZE
-                               WS-ROOM-NO  DELIMITED BY SPACE
-                               INTO WS-BLD-ROOM
-                               MOVE WS-BLD-ROOM TO BLD-BUILDING-ROOM
-                               MOVE WS-MAX-SEAT TO BLD-MAX-SEAT
-                           WRITE BLD-REC
-                               INVALID KEY
+                   READ BLD-MASTER
+                       INVALID KEY
+                           DISPLAY BLNK-SCRN
+                           DISPLAY SCRN-ERR
+                           DISPLAY SCRN-ANOTHER
+                           ACCEPT SCRN-ANOTHER
+                       NOT INVALID KEY
+                           MOVE BLD-MAX-SEAT TO WS-OLD-MAX-SEAT
+                           DISPLAY SCRN-SEAT
+                           ACCEPT SCRN-NEW-MAX-SEAT
+                           ACCEPT SCRN-SAVE
+                           IF SAVE
+                               THEN
+                                   MOVE WS-MAX-SEAT TO BLD-MAX-SEAT
+                                   REWRITE BLD-REC
                                    DISPLAY BLNK-SCRN
-                                   DISPLAY SCRN-WRITE-ERR
+                                   DISPLAY SCRN-CONFIRM1
                                    DISPLAY SCRN-ANOTHER
-                                   ACCEPT  SCRN-ANOTHER
-                               NOT INVALID KEY
+                                   ACCEPT SCRN-ANOTHER
+                               ELSE
                                    DISPLAY BLNK-SCRN
-                                   DISPLAY SCRN-WRITE-SUC
+                                   DISPLAY SCRN-CONFIRM2
                                    DISPLAY SCRN-ANOTHER
-                                   ACCEPT  SCRN-ANOTHER
-                   ELSE 
-                       DISPLAY BLNK-SCRN
-                       DISPLAY SCRN-WRITE-NOT-SAVE
-                       DISPLAY SCRN-ANOTHER
-                       ACCEPT SCRN-ANOTHER
-                   END-IF
+                                   ACCEPT SCRN-ANOTHER
+                           END-IF    
+                   END-READ                                                        
+
            END-PERFORM.
            
            CLOSE BLD-MASTER.           
