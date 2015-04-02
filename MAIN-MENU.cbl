@@ -220,10 +220,14 @@
                ACCEPT BLD-MENU
                EVALUATE WS-SEL
                        WHEN '1' CALL 'BUILDING-MASTER'
+                       WHEN '2' CALL 'BUILDING-ADD'
+                       WHEN '3' CALL 'BUILDING-UPDATE'
+                       WHEN '4' CALL 'BUILDING-INQUIRY'
+                       WHEN '5' CALL 'BUILDING-LIST'
                END-EVALUATE
            END-PERFORM.
                  
-        260-REPORTS.
+       260-REPORTS.
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            PERFORM UNTIL WS-SEL = "R"

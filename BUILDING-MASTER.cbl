@@ -8,7 +8,8 @@
                                '../FILES/MASTER-FILE-SORTED.TXT'
                                ORGANIZATION  IS LINE SEQUENTIAL.
            SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
-           SELECT OUT-FILE     ASSIGN        TO 'BUILDING-MASTER.DAT'   
+           SELECT OUT-FILE     ASSIGN        TO 
+                               '../FILES/BUILDING-MASTER.DAT'
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS SEQUENTIAL
                                RECORD KEY    IS O-BUILDING-ROOM
@@ -60,6 +61,9 @@
            03  WS-BUILDING-ROOM     PIC X(12).
            03  FILLER               PIC XX.
            03  WS-MAX-SEAT          PIC 99.
+       SCREEN SECTION.
+       01  BLNK-SCRN.
+           03  BLANK SCREEN.             
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -70,28 +74,15 @@
                 ON ASCENDING KEY S-BUILDING-ROOM
                 INPUT  PROCEDURE 100-FILE-IN
                 OUTPUT PROCEDURE 200-FILE-OUT.
-           DISPLAY "PROGRAM TERMINATED".
-           DISPLAY "PRESS ENTER TO CLOSE".
+           DISPLAY BLNK-SCRN.     
+           DISPLAY "BUILD SUCCESSFULLY".
+           DISPLAY "PRESS ENTER TO RETURN TO MAIN MENU".
+           ACCEPT WS-RESP.
            
            CLOSE IN-FILE.
            CLOSE OUT-FILE.
            
-           OPEN INPUT OUT-FILE.
-           
-           MOVE 'N' TO WS-EOF.
-           PERFORM UNTIL EOF
-               READ OUT-FILE 
-                   AT END
-                       MOVE 'Y' TO WS-EOF
-                   NOT AT END
-                       MOVE O-BUILDING-ROOM    TO WS-BUILDING-ROOM
-                       MOVE O-MAX-SEAT         TO WS-MAX-SEAT
-                       DISPLAY WS-DTL-LN
-               END-READ
-           END-PERFORM.
-           CLOSE OUT-FILE.
-           
-           STOP RUN.
+           EXIT PROGRAM.
       *-----------------------------------------------------------------
        100-FILE-IN.
            PERFORM UNTIL EOF
