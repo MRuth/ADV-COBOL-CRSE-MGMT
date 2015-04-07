@@ -82,7 +82,9 @@
            OPEN OUTPUT STU-FILE.
            OPEN I-O MST-CTRL-LIST.
            
-           MOVE    'N'    TO WS-EOF.
+           MOVE    'N'     TO WS-EOF.
+           MOVE    0       TO WS-CURR-ID.
+           MOVE    0       TO WS-DSP-CTR.
            DISPLAY CLEAR.
            SORT SORT-WORK
                ON ASCENDING KEY SRT-L-NAME
