@@ -47,15 +47,7 @@
            03  FILLER              PIC X(37) VALUE 'COURSE NAME'.
            03  FILLER              PIC X(7)  VALUE 'CREDIT'.
            03  FILLER              PIC X(25) VALUE 'STATUS'.
-       01  WS-DTL-LN.
-           03  WS-COURSE-ID        PIC X(9).
-           03  FILLER              PIC XX.
-           03  WS-COURSE-NAME      PIC X(35).
-           03  FILLER              PIC XX.
-           03  WS-COURSE-CREDIT    PIC X(4).
-           03  FILLER              PIC X(5).
-           03  WS-COURSE-STAT      PIC X.
-           03  FILLER              PIC X(24).
+
        SCREEN SECTION.
        01  BLNK-SCREEN.
            03  BLANK SCREEN.
@@ -74,7 +66,7 @@
                    AT END
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
-                           DISPLAY IN-REC BEFORE ADVANCING 2 LINES
+                           DISPLAY IN-REC
 
                            ADD 1 TO WS-COUNTER
                            IF WS-COUNTER = 5
