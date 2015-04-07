@@ -21,10 +21,10 @@
            
            SELECT OUT-FILE     ASSIGN        TO
                                        '../FILES/SCHEDULE-MASTER.DAT'
-                               ORGANIZATION  IS LINE SEQUENTIAL.
-      *                         ACCESS        IS SEQUENTIAL
-      *                         RECORD KEY    IS O-SCHEDULE-ID
-      *                         FILE STATUS   IS WS-STAT.
+                               ORGANIZATION  IS INDEXED
+                               ACCESS        IS SEQUENTIAL
+                               RECORD KEY    IS SCHEDULE-ID-O
+                               FILE STATUS   IS WS-STAT.
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
@@ -32,19 +32,19 @@
        FD  IN-FILE1.
        01  IN-REC1.
            03  FILLER              PIC X(6).
-           03  COURSE-ID-1        PIC X(9).
+           03  COURSE-ID-1         PIC X(9).
            03  FILLER              PIC X(6).
-           03  COURSE-NAME-1      PIC X(30).
+           03  COURSE-NAME-1       PIC X(30).
            03  FILLER              PIC X(6).
            03  COURSE-CREDIT-1.
                05 CRS-CRED-CHECK-1 PIC 9.
                05 COURSE-REST      PIC XX.
            03  FILLER              PIC X.
-           03  I-TIMEDAY-1        PIC X(20).
-           03  BUILDING-ID-1      PIC X(11).
+           03  I-TIMEDAY-1         PIC X(20).
+           03  BUILDING-ID-1       PIC X(11).
            03  FILLER              PIC XX.
-           03  INSTRUCTOR-NAME-1  PIC X(22).
-           03  OPEN-SEATS-1       PIC X(2).
+           03  INSTRUCTOR-NAME-1   PIC X(22).
+           03  OPEN-SEATS-1        PIC X(2).
            03  FILLER              PIC XX.
            03  ENR-1.
                05 ENR-CHECK-1      PIC 9.
@@ -52,19 +52,19 @@
        FD  IN-FILE2.
        01  IN-REC2.
            03  FILLER              PIC X(6).
-           03  COURSE-ID-2        PIC X(9).
+           03  COURSE-ID-2         PIC X(9).
            03  FILLER              PIC X(6).
-           03  COURSE-NAME-2      PIC X(30).
+           03  COURSE-NAME-2       PIC X(30).
            03  FILLER              PIC X(6).
            03  COURSE-CREDIT-2.
                05 CRS-CRED-CHECK-2 PIC 9.
                05 COURSE-REST      PIC XX.
            03  FILLER              PIC X.
-           03  I-TIMEDAY-2        PIC X(20).
-           03  BUILDING-ID-2      PIC X(11).
+           03  I-TIMEDAY-2         PIC X(20).
+           03  BUILDING-ID-2       PIC X(11).
            03  FILLER              PIC XX.
-           03  INSTRUCTOR-NAME-2  PIC X(22).
-           03  OPEN-SEATS-2       PIC X(2).
+           03  INSTRUCTOR-NAME-2   PIC X(22).
+           03  OPEN-SEATS-2        PIC X(2).
            03  FILLER              PIC XX.
            03  ENR-2.
                05 ENR-CHECK-2      PIC 9.
@@ -72,19 +72,19 @@
        FD  IN-FILE3.
        01  IN-REC3.
            03  FILLER              PIC X(6).
-           03  COURSE-ID-3        PIC X(9).
+           03  COURSE-ID-3         PIC X(9).
            03  FILLER              PIC X(6).
-           03  COURSE-NAME-3      PIC X(30).
+           03  COURSE-NAME-3       PIC X(30).
            03  FILLER              PIC X(6).
            03  COURSE-CREDIT-3.
                05 CRS-CRED-CHECK-3 PIC 9.
                05 COURSE-REST      PIC XX.
            03  FILLER              PIC X.
-           03  I-TIMEDAY-3        PIC X(20).
-           03  BUILDING-ID-3      PIC X(11).
+           03  I-TIMEDAY-3         PIC X(20).
+           03  BUILDING-ID-3       PIC X(11).
            03  FILLER              PIC XX.
-           03  INSTRUCTOR-NAME-3  PIC X(22).
-           03  OPEN-SEATS-3       PIC X(2).
+           03  INSTRUCTOR-NAME-3   PIC X(22).
+           03  OPEN-SEATS-3        PIC X(2).
            03  FILLER              PIC XX.
            03  ENR-3.
                05 ENR-CHECK-3      PIC 9.
@@ -92,19 +92,19 @@
        FD  IN-FILE4.
        01  IN-REC4.
            03  FILLER              PIC X(6).
-           03  COURSE-ID-4        PIC X(9).
+           03  COURSE-ID-4         PIC X(9).
            03  FILLER              PIC X(6).
-           03  COURSE-NAME-4      PIC X(30).
+           03  COURSE-NAME-4       PIC X(30).
            03  FILLER              PIC X(6).
            03  COURSE-CREDIT-4.
                05 CRS-CRED-CHECK-4 PIC 9.
                05 COURSE-REST      PIC XX.
            03  FILLER              PIC X.
-           03  I-TIMEDAY-4        PIC X(20).
-           03  BUILDING-ID-4      PIC X(11).
+           03  I-TIMEDAY-4         PIC X(20).
+           03  BUILDING-ID-4       PIC X(11).
            03  FILLER              PIC XX.
-           03  INSTRUCTOR-NAME-4  PIC X(22).
-           03  OPEN-SEATS-4       PIC X(2).
+           03  INSTRUCTOR-NAME-4   PIC X(22).
+           03  OPEN-SEATS-4        PIC X(2).
            03  FILLER              PIC XX.
            03  ENR-4.
                05 ENR-CHECK-4      PIC 9.
@@ -161,14 +161,7 @@
                05 SCHED-CRN        PIC 9(4).
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
-       01  WS-DTL-LN.
-           03  WS-SCHEDULE-ID        PIC X(9).
-           03  FILLER              PIC XX.
-           03  WS-SCHEDULE-NAME      PIC X(35).
-           03  FILLER              PIC XX.
-           03  WS-SCHEDULE-CREDIT    PIC X(4).
-           03  FILLER              PIC XX.
-           03  WS-SCHEDULE-STAT      PIC X.
+
        SCREEN SECTION.
        01  BLNK-SCRN.
            03  BLANK SCREEN.           
@@ -205,7 +198,8 @@
                 ON ASCENDING KEY SCHEDULE-ID
                 INPUT  PROCEDURE 140-INPUT-4
                 OUTPUT PROCEDURE 200-FILE-OUT.
-           110-INPUT-1.
+      *-----------------------------------------------------------------
+            110-INPUT-1.
            OPEN INPUT IN-FILE1.
            MOVE 2015 TO SCHED-YR.
            MOVE 01 TO SCHED-TM.
@@ -234,7 +228,8 @@
                END-PERFORM.
                CLOSE IN-FILE1.
                
-           120-INPUT-2.
+      *-----------------------------------------------------------------
+            120-INPUT-2.
            MOVE 'N' TO WS-EOF.
            OPEN INPUT IN-FILE2.
            MOVE 2015 TO SCHED-YR.
@@ -265,7 +260,8 @@
                CLOSE IN-FILE2.
                
                
-           130-INPUT-3.
+      *-----------------------------------------------------------------
+            130-INPUT-3.
            MOVE 'N' TO WS-EOF.
            OPEN INPUT IN-FILE3.
            MOVE 2015 TO SCHED-YR.
@@ -296,7 +292,8 @@
                CLOSE IN-FILE3.
                
                
-           140-INPUT-4.
+      *-----------------------------------------------------------------
+            140-INPUT-4.
            MOVE 'N' TO WS-EOF.
            OPEN INPUT IN-FILE4.
            MOVE 2015 TO SCHED-YR.
