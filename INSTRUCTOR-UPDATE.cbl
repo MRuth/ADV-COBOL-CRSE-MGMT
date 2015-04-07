@@ -44,12 +44,9 @@
             05          COL 40  PIC ZZZZ TO WS-INSTR-ID          
                                          AUTO REQUIRED.       
        01  SCRN-DATA.
-           03  SCRN-INSTR-OLD-NAME.
-               05  LINE 4  COL 25  VALUE 'OLD NAME     :'.
-               05          COL 40  PIC X(22)    FROM WS-OLD-NAME.
            03  SCRN-INSTR-NEW-NAME.
                05  LINE 5  COL 25  VALUE 'NEW NAME     :'.
-               05          COL 40  PIC X(22)    TO WS-INSTR-NAME
+               05          COL 40  PIC X(22)    USING WS-INSTR-NAME
                                                 AUTO REQUIRED.
            03  SCRN-SAVE.
                05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
@@ -86,7 +83,7 @@
                        DISPLAY SCRN-ANOTHER
                        ACCEPT SCRN-ANOTHER
                    NOT INVALID KEY
-                       MOVE INSTR-NAME TO WS-OLD-NAME
+                       MOVE INSTR-NAME TO WS-INSTR-NAME
                        DISPLAY SCRN-DATA
                        ACCEPT SCRN-INSTR-NEW-NAME
                        ACCEPT SCRN-SAVE
