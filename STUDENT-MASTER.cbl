@@ -15,10 +15,10 @@
        SELECT IN-FILE ASSIGN TO '../FILES/STUDENT-STARTER.TXT'
            ORGANIZATION IS LINE SEQUENTIAL.
            
-       SELECT OUT-FILE ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
+       SELECT STU-FILE ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
            ORGANIZATION IS INDEXED
            ACCESS IS SEQUENTIAL
-           RECORD KEY IS OUT-STU-ID.
+           RECORD KEY IS STU-ID.
            
        SELECT MST-CTRL-LIST    ASSIGN TO 
                                        "../Files/MST-CTRL-LST.DAT"
@@ -34,6 +34,7 @@
        FILE SECTION.
        
        COPY MST-CTRL-LIST-RECS.
+       COPY STU-FILE-DEF.
        
        FD  IN-FILE.
            01  IN-REC.
@@ -48,18 +49,6 @@
                03 IN-PHONE             PIC X(10).
                03 FILLER               PIC X(21).
        
-       FD  OUT-FILE.
-           01  OUT-REC.
-               03  OUT-STU-ID          PIC 9999.
-               03  OUT-NAME.
-                   05  OUT-L-NAME      PIC X(15).
-                   05  OUT-F-NAME      PIC X(15).
-               03  OUT-ADDR.
-                   05  OUT-STREET      PIC X(25).
-                   05  OUT-ZIP         PIC XXXXX.
-               03  OUT-PHONE           PIC X(10).
-               03  OUT-STATUS          PIC X.
-               
        SD  SORT-WORK.
            01  SRT-REC.
                03  SRT-NAME.
@@ -90,10 +79,12 @@
        000-MAIN.
            
            OPEN INPUT IN-FILE.
-           OPEN OUTPUT OUT-FILE.
+           OPEN OUTPUT STU-FILE.
            OPEN I-O MST-CTRL-LIST.
            
-           MOVE    'N'    TO WS-EOF.
+           MOVE    'N'     TO WS-EOF.
+           MOVE    0       TO WS-CURR-ID.
+           MOVE    0       TO WS-DSP-CTR.
            DISPLAY CLEAR.
            SORT SORT-WORK
                ON ASCENDING KEY SRT-L-NAME
@@ -104,10 +95,10 @@
            MOVE 6 TO WS-MST-REC-KEY.
            MOVE SPACES TO MST-NEXT-STU.
            MOVE WS-CURR-ID TO MST-STU-ID.
-           WRITE MST-NEXT-STU.
+           REWRITE MST-NEXT-STU.
            
            CLOSE IN-FILE,
-               OUT-FILE
+               STU-FILE
                MST-CTRL-LIST.
                
            DISPLAY SPACES.
@@ -136,14 +127,14 @@
                    AT END 
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
-                       MOVE WS-CURR-ID TO OUT-STU-ID
-                       MOVE SRT-NAME   TO OUT-NAME
-                       MOVE SRT-STREET TO OUT-STREET
-                       MOVE SRT-ZIP    TO OUT-ZIP
-                       MOVE SRT-PHONE  TO OUT-PHONE
-                       MOVE WS-STATUS  TO OUT-STATUS
+                       MOVE WS-CURR-ID TO STU-ID
+                       MOVE SRT-NAME   TO STU-NAME
+                       MOVE SRT-STREET TO STU-STREET
+                       MOVE SRT-ZIP    TO STU-ZIP
+                       MOVE SRT-PHONE  TO STU-PHONE
+                       MOVE WS-STATUS  TO STU-STATUS
                        ADD 1           TO WS-CURR-ID
-                       WRITE OUT-REC
+                       WRITE STU-REC
                        PERFORM 300-DISPLAY
                END-RETURN
            END-PERFORM.
@@ -158,6 +149,6 @@
                DISPLAY CLEAR
                MOVE 1 TO WS-DSP-CTR.
                
-           DISPLAY OUT-STU-ID, " ", OUT-NAME, " ", 
-                           OUT-STATUS
+           DISPLAY STU-ID, " ", STU-NAME, " ", 
+                           STU-STATUS
       

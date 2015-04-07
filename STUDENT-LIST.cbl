@@ -11,25 +11,15 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
        
-       SELECT IN-FILE ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
+       SELECT STU-FILE ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
            ORGANIZATION IS INDEXED
            ACCESS IS SEQUENTIAL
-           RECORD KEY IS IN-STU-ID.
+           RECORD KEY IS STU-ID.
    
        DATA DIVISION.
        FILE SECTION.
        
-       FD  IN-FILE.
-           01  IN-REC.
-               03  IN-STU-ID           PIC 9999.
-               03  IN-NAME.
-                   05  IN-L-NAME       PIC X(15).
-                   05  IN-F-NAME       PIC X(15).
-               03  IN-ADDR.
-                   05  IN-STREET       PIC X(25).
-                   05  IN-ZIP          PIC XXXXX.
-               03  IN-PHONE            PIC X(10).
-               03  IN-STATUS           PIC X.       
+       COPY STU-FILE-DEF.   
        
        WORKING-STORAGE SECTION.
        01  WS-CTR                      PIC 99      VALUE 0.
@@ -50,7 +40,7 @@
                
        PROCEDURE DIVISION.
        000-MAIN.
-           OPEN INPUT IN-FILE.
+           OPEN INPUT STU-FILE.
            MOVE 'N'    TO WS-EOF.
            MOVE 0      TO WS-CTR.
            
@@ -59,7 +49,7 @@
            DISPLAY SPACES.
            
            PERFORM UNTIL EOF
-               READ IN-FILE 
+               READ STU-FILE 
                    AT END
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
@@ -67,7 +57,7 @@
                END-READ
            END-PERFORM.
            
-           CLOSE IN-FILE.
+           CLOSE STU-FILE.
        
            DISPLAY "PRESS ENTER TO EXIT" WITH NO ADVANCING.
            ACCEPT WS-RESP.
@@ -83,9 +73,9 @@
                DISPLAY SPACES
                DISPLAY SPACES
                MOVE 1 TO WS-CTR                                 
-           END-IF                                               
-           DISPLAY IN-STU-ID, " ", IN-L-NAME, " ", IN-F-NAME,   
-               " ",IN-STREET, " ", IN-ZIP, " ", IN-PHONE.
+           END-IF                                                       
+           DISPLAY STU-ID, " ", STU-L-NAME, " ", STU-F-NAME," ",
+           STU-STREET, " ", STU-ZIP, " ", STU-PHONE.
            DISPLAY SPACES.
               
 

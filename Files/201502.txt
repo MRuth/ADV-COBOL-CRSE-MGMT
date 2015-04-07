@@ -1,0 +1,658 @@
+
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 1
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Applied Science and Technology / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Automotive and Diesel
+67    ATDI 1584  001 Heating Air Conditioning Sys        4.0 08:00-10:50 MTWR    BALDOR 154   K.  Butler            20  0    0
+         Meets eight weeks 01-JUN-2015 to 26-JUL-2015
+
+Information Tech Applications
+88    ITA  1003  0E1 Comp Aps Know Wrkr FULL ONLINE      3.0 TBA                 BALDOR TBA   TBA                   50  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+      WEEKEND SCHEDULE
+91    ITA  1051  DW1 Comp Word Processing                1.0 05:25-08:15 F       BALDOR 210   TBA                   24  0    0
+                                                             08:00-04:50 S       BALDOR 210   TBA                   24  0    0
+                                                             01:00-04:50 U       BALDOR 210   TBA                   24  0    0
+         Meets one week 05-JUN-2015 to 07-JUN-2015
+92    ITA  1101  DW1 Comp Present Graphics               1.0 05:25-08:15 F       BALDOR 210   TBA                   24  0    0
+                                                             08:00-04:50 S       BALDOR 210   TBA                   24  0    0
+                                                             01:00-04:50 U       BALDOR 210   TBA                   24  0    0
+         Meets one week 12-JUN-2015 to 14-JUN-2015
+93    ITA  1251  DW1 Computer Spreadsheets               1.0 05:25-08:15 F       BALDOR 210   TBA                   24  0    0
+                                                             08:00-04:50 S       BALDOR 210   TBA                   24  0    0
+                                                             01:00-04:50 U       BALDOR 210   TBA                   24  0    0
+         Meets one week 19-JUN-2015 to 21-JUN-2015
+
+Leadership
+49    LEAD 3603  0E1 Found Leadership FULL ONLINE        3.0 TBA                 TBA    TBA   K.  Tardif            25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+50    LEAD 3603  0E2 Found Leadership FULL ONLINE        3.0 TBA                 TBA    TBA   L.  VanOsdol          25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+51    LEAD 3623  0E1 Prof Communication FULL ONLINE      3.0 TBA                 TBA    TBA   E.  Washburn          25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+52    LEAD 4623  0E1 Transfm Leadership FULL ONLINE      3.0 TBA                 TBA    TBA   L.  VanOsdol          25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Paralegal Studies
+77    LEGL 1043  001 Intro to Law                        3.0 10:20-12:30 MTWR    BALDOR 123   L.  Lisk              24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+78    LEGL 2723  001 Criminal Law and Procedure          3.0 03:00-05:10 MTWR    BALDOR 123   L.  Lisk              24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Office Management Technology
+64    OMT  1703  0E1 Adv Computer Apps FULL ONLINE       3.0 TBA                 BALDOR TBA   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+65    OMT  2344  0E1 Off Com Essentials FULL ONLINE      4.0 TBA                 TBA    TBA   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Professional Studies
+26    PRFS 3533  0E1 Workplace Safety FULL ONLINE        3.0 TBA                 TBA    TBA   K.  Taber             15  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 2
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Applied Science and Technology / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+28    PRFS 4033  0E1 Consensus Bldg FULL ONLINE          3.0 TBA                 TBA    TBA   A.  Thomas            25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+30    PRFS 4633  0E1 Decision Making FULL ONLINE         3.0 TBA                 TBA    TBA   A.  Thomas            18  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Welding Technology
+      EVENING SCHEDULE
+161   WELD 2282  9G1 SMAW Certification Assmnt           2.0 05:25-08:15 MTWR    BALDOR 133   M.  Crawford          10  0    0
+         Meets four weeks 29-JUN-2015 to 26-JUL-2015
+160   WELD 2402  9G1 GMAW Certification Assmnt           2.0 05:25-08:15 MTWR    BALDOR 133   M.  Crawford          10  0    0
+         Meets four weeks 01-JUN-2015 to 28-JUN-2015
+162   WELD 2484  9G1 Pipe Welding                        4.0 05:25-08:15 MTWR    BALDOR 133   M.  Crawford          10  0    0
+         Meets eight weeks 01-JUN-2015 to 26-JUL-2015
+
+Workforce Leadership
+20    WFL  2903  0A1 Workforce Leadership Capstone       3.0 TBA                 FL     TBA   M.  Voelkel           4   0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+      EVENING SCHEDULE
+4     WFL  2174  901 Intro Lean Enterprise Systems       4.0 04:00-08:30 M       FL     110   C.  McKinney          25  0    0
+         Meets fourteen weeks 11-MAY-2015 to 16-AUG-2015
+19    WFL  2413  901 Project Management                  3.0 04:00-08:40 W       FL     110   M.  Voelkel           25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+18    WFL  2583  901 Team Development                    3.0 04:00-08:40 T       FL     110   K.  Gordon            26  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 3
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                               Summer I 2015 / Business / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Accounting
+170   ACCT 2803  0D1 Prin of Financial Accounting        3.0 10:20-12:30 MTWR    FL     218   T.  Hayes             25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+171   ACCT 2813  0D1 Prin of Managerial Accounting       3.0 12:40-02:50 MTWR    FL     218   T.  Hayes             25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+172   ACCT 467V  001 Internship in Accounting            3.0 03:00-05:15 W       FL     219   M.  Zainuba           20  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+College Business Integration
+173   COBI 467V  001 Integrative Internship              3.0 03:00-05:15 W       FL     219   M.  Zainuba           20  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Economics
+174   ECON 2803  0D1 Prin of Macroeconomics              3.0 08:00-10:10 MTWR    FL     218   L.  Settlage          25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Management
+175   MGMT 4813  001 Strategic Management                3.0 08:00-10:10 MTWR    FL     219   TBA                   25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 4
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                         Summer I 2015 / Education - INACTIVE / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Special Education
+63    SPED 3203  001 Nature Needs Stdts Disabilties      3.0 TBA                 MS-UC  TBA   G.  Ezell             30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 5
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                           Summer I 2015 / Health Sciences / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Health
+164   HLTH 1473  0D1 Medical Terminology                 3.0 10:20-12:30 MTWR    HLTHSC 124   TBA                   20  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+165   HLTH 1473  0E1 Med Terminology FULL ONLINE         3.0 TBA                 TBA    TBA   TBA                   25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+166   HLTH 2953  0D1 First Aid                           3.0 10:20-12:30 MTWR    HLTHSC 314   G.  Bentley           20  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+      WEEKEND SCHEDULE
+163   HLTH 1001  0W1 CPR Basic Life Sup Hlth Prof        1.0 08:00-04:20 FS      HLTHSC 314   G.  Bentley           9   0    0
+         Meets one week 01-JUN-2015 to 07-JUN-2015
+
+Imaging Sciences Leadership
+73    ISL  4313  0E1 Healthcare Sys FULL ONLINE          3.0 TBA                 TBA    TBA   A.  Cole              15  0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+72    ISL  4413  0E1 Adm Sprv Diag Img FULL ONLINE       3.0 TBA                 TBA    TBA   A.  Elmore            15  0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+
+Imaging Sciences Management
+85    ISM  4303  0E1 Qual Mgmt Diag Img FULL ONLINE      3.0 TBA                 TBA    TBA   A.  Elmore            3   0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+
+Imaging Sciences Sonography
+70    ISS  4303  0D1 Obstetrical Gyn Sonography I        3.0 08:00-12:00 R       HLTHSC 321   J.  Callahan          7   0    0
+                                                             01:00-03:00 R       HLTHSC 321   J.  Callahan          7   0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+84    ISS  4323  001 Clinical Practice II                3.0 08:00-04:30 MTW     HOSP   SPARK A.  Cole
+                                                                                              B.  Jones
+                                                                                              J.  Callahan          7   0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+
+Licensed Practical Nurse
+182   LPN  1237  0D1 Medical/Surg III w/Specialties      7.0 08:00-10:10 MT      HLTHSC 227   S.  Pejic             16  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+185   LPN  1237  L01 Med/Surg III w/Specialties LAB       .0 12:00-02:30 MT      HLTHSC 228   S.  Pejic             8   0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+186   LPN  1237  L02 Med/Surg III w/Specialties LAB       .0 12:00-02:30 MT      HLTHSC 237   TBA                   9   0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+183   LPN  1237  C01 Med/Surg III Special CLINICAL        .0 06:30-12:00 WR      HOSP   HARBO S.  Pejic             8   0    0
+                                                             06:30-12:00 WR      HOSP   SPARK S.  Pejic             8   0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+184   LPN  1237  C02 Med/Surg III Special CLINICAL        .0 06:30-12:00 WR      HOSP   HARBO S.  Pejic             16  0    0
+                                                             06:30-12:00 WR      HOSP   SPARK S.  Pejic             16  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 6
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                           Summer I 2015 / Health Sciences / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Nursing
+187   NURS 4603  0E1 Hlth Promotion Tch FULL ONLINE      3.0 TBA                 TBA    TBA   P.  Rhodes            25  0    0
+         Meets six weeks 01-JUN-2015 to 09-JUL-2015
+
+Radiography
+68    RADT 1302  0D1 Radiographic Exposures II           2.0 10:20-11:50 MW      HLTHSC 325   C.  Harmon            18  0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+66    RADT 1312  0D1 Radiographic Procedures III         2.0 08:00-10:10 MW      HLTHSC 325   A.  Elmore            18  0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+89    RADT 1323  001 Clinical Education III              3.0 12:30-04:00 MW      HLTHSC 325   C.  Harmon
+                                                                                              B.  Jones
+                                                                                              R.  Thompson          9   0    0
+                                                             07:00-04:00 TR      HOSP   MERCY C.  Harmon
+                                                                                              B.  Jones
+                                                                                              R.  Thompson          9   0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+90    RADT 1323  002 Clinical Education III              3.0 12:30-04:00 MW      HLTHSC 325   A.  Elmore
+                                                                                              S.  Gregory
+                                                                                              B.  Jones             9   0    0
+                                                             07:00-04:00 TR      HOSP   SPARK A.  Elmore
+                                                                                              S.  Gregory
+                                                                                              B.  Jones             9   0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+71    RADT 2601  0D1 Radiographic Pathology              1.0 08:00-09:30 T       HLTHSC 325   B.  Jones             18  0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+69    RADT 2611  0D1 Senior Seminars                     1.0 10:00-11:30 TR      HLTHSC TBA   C.  Harmon            18  0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+86    RADT 2623  001 Clinical Education VI               3.0 07:00-04:00 MW      HOSP   MERCY C.  Harmon            9   0    0
+                                                             12:30-04:00 TR      HLTHSC 325   C.  Harmon            9   0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+87    RADT 2623  002 Clinical Education VI               3.0 07:00-04:00 MW      HOSP   SPARK A.  Elmore
+                                                                                              B.  Jones             9   0    0
+                                                             12:30-04:00 TR      HLTHSC 325   A.  Elmore
+                                                                                              B.  Jones             9   0    0
+         Meets ten weeks 11-MAY-2015 to 19-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 7
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Humanities and Social Science / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Anthropology
+176   ANTH 490V  0D1 Sp Top Archaeologic Fieldwork       3.0 06:30-03:30 MTWRFSU OTHER  PARKI T.  Mulvihill         5   0    0
+         Meets three weeks 01-JUN-2015 to 21-JUN-2015
+
+Criminal Justice
+39    CJ   1013  0E1 Intro CJ System FULL ONLINE         3.0 TBA                 TBA    TBA   B.  Morrill           32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+43    CJ   1253  0E1 Criminology FULL ONLINE             3.0 TBA                 TBA    TBA   D.  Williams          32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+40    CJ   2313  0E1 Corr Sys Practices FULL ONLINE      3.0 TBA                 TBA    TBA   M.  Hudson            32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+35    CJ   2402  001 Crime Scene Documentation           2.0 12:40-03:40 W       GARDNR 228   D.  Balch             30  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+41    CJ   2403  0E1 Legal Aspt Law Enf FULL ONLINE      3.0 TBA                 TBA    TBA   T.  Pearn             32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+34    CJ   2504  001 Criminalistics: Forensic Sci        4.0 12:40-03:40 TR      GARDNR 228   D.  Balch             30  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+76    CJ   2513  0E1 Juv Delinq Justice FULL ONLINE      3.0 TBA                 TBA    TBA   M.  Wuestewald        32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+42    CJ   2603  0E1 Courts Crim Proc FULL ONLINE        3.0 TBA                 TBA    TBA   L.  Pearn             32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+75    CJ   3003  0E1 White Collar Crime FULL ONLINE      3.0 TBA                 TBA    TBA   T.  Pearn             32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+74    CJ   3023  0E1 Child Maltreat FULL ONLINE          3.0 TBA                 TBA    TBA   D.  Williams          32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+45    CJ   390V  0E1 Policing Futures FULL ONLINE        1.0 TBA                 TBA    TBA   P.  Kroutter          32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+38    CJ   397V  0D1 Academic Internship                 3.0 TBA                 TBA    TBA   M.  Wuestewald        15  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+44    CJ   4833  0E1 Adm Con Law Enf FULL ONLINE         3.0 TBA                 TBA    TBA   R.  Turner            32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+      EVENING SCHEDULE
+37    CJ   2603  901 Courts and Criminal Procedure       3.0 05:25-07:35 MTWR    GARDNR 139   D.  Dunagin           40  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Geography
+33    GEOG 2753  001 World Regional Geography            3.0 10:20-12:30 MTWR    GARDNR 204   B.  Higgins           30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+22    GEOG 2753  0E2 World Reg Geog FULL ONLINE          3.0 TBA                 TBA    TBA   TBA                   32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Graphic Design
+181   GRDS 3223  001 Digital Photography                 3.0 08:00-12:20 MTWR    BALDOR 206   B.  Alexis            20  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 8
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Humanities and Social Science / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+History
+32    HIST 1123  0E1 Civ World to 1500 FULL ONLINE       3.0 TBA                 TBA    TBA   M.  McCoy             32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+6     HIST 1133  0E1 Civ Wrld Snce 1500 FULL ONLINE      3.0 TBA                 TBA    TBA   M.  McCoy             32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+8     HIST 2753  0E1 US History I FULL ONLINE            3.0 TBA                 TBA    TBA   D.  Breitenberg       32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+11    HIST 2763  0E1 US History II FULL ONLINE           3.0 TBA                 TBA    TBA   D.  Breitenberg       32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+14    HIST 3053  0E1 History of Mod Sci FULL ONLINE      3.0 TBA                 TBA    TBA   T.  Timmons           32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+15    HIST 3063  0E1 Hist Tech Society FULL ONLINE       3.0 TBA                 TBA    TBA   T.  Timmons           32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+17    HIST 3803  0E1 Methods Hist Res FULL ONLINE        3.0 TBA                 TBA    TBA   B.  Higgins           32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+16    HIST 4153  0E1 History of AR FULL ONLINE           3.0 TBA                 TBA    TBA   D.  Breitenberg       32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Humanities
+114   HUMN 2563  0E1 Humanities Arts FULL ONLINE         3.0 TBA                 BREDLV TBA   S.  Husarik           25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Music - Instruction
+115   MUSI 2763  0E1 Music Appreciation FULL ONLINE      3.0 TBA                 BREDLV TBA   S.  Husarik           25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Philosophy
+177   PHIL 2753  001 Introduction to Philosophy          3.0 10:20-12:30 MTWR    GARDNR 201   D.  Hubbard           30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+23    PHIL 3103  0E1 Reason Across Disc FULL ONLINE      3.0 TBA                 TBA    TBA   TBA                   32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Physical Education
+167   PHYE 0990  001 Well Fit                             .0 TBA                 GYM    TBA   M.  Pendergrass       100 0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+168   PHYE 1621  001 Total Fitness                       1.0 03:00-04:30 MTWR    GYM    139   C.  Williams          25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+169   PHYE 2853  0E1 Health and Safety FULL ONLINE       3.0 TBA                 TBA    TBA   D.  Popp              30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Political Science
+2     POLS 2753  001 American National Government        3.0 10:20-12:30 MTWR    GARDNR 221   C.  Sullivan          30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 9
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Humanities and Social Science / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+24    POLS 2753  0E1 American Natl Gov FULL ONLINE       3.0 TBA                 TBA    TBA   W.  Yamkam            32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+25    POLS 2853  0E1 State Local Govt FULL ONLINE        3.0 TBA                 TBA    TBA   W.  Yamkam            32  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Psychology
+146   PSYC 1001  0D1 Psychology Orientation              1.0 10:20-11:50 MW      GARDNR 139   J.  Benjamin          25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+95    PSYC 1163  0D1 General Psychology                  3.0 08:00-10:10 MTWR    GARDNR 201   G.  Roberts           50  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+147   PSYC 1163  0E1 General Psychology FULL ONLINE      3.0 TBA                 VINES  TBA   L.  Manriquez         35  0    0
+         Meets seven weeks 01-JUN-2015 to 19-JUL-2015
+97    PSYC 2513  0Y1 Intro to Beh Statistics HYBRID      3.0 12:40-02:50 MW      FL     112   J.  Benjamin          20  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+96    PSYC 2963  0D1 Developmental Psyc A Life Span      3.0 10:20-12:30 MTWR    GARDNR 228   TBA                   30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+148   PSYC 3133  0E1 Social Psychology FULL ONLINE       3.0 TBA                 GARDNR TBA   J.  Benjamin          25  0    0
+         Meets seven weeks 01-JUN-2015 to 19-JUL-2015
+149   PSYC 3183  0E1 Cognitive Psycho FULL ONLINE        3.0 TBA                 VINES  TBA   L.  Manriquez         32  0    0
+         Meets seven weeks 01-JUN-2015 to 19-JUL-2015
+150   PSYC 4153  0E1 Cond and Learning FULL ONLINE       3.0 TBA                 GARDNR TBA   N.  Otero             20  0    0
+         Meets seven weeks 01-JUN-2015 to 19-JUL-2015
+151   PSYC 4303  0E1 Sen and Perception FULL ONLINE      3.0 TBA                 GARDNR TBA   N.  Otero             20  0    0
+         Meets seven weeks 01-JUN-2015 to 19-JUL-2015
+98    PSYC 4953  0Y1 Psychology Capstone HYBRID          3.0 10:20-12:30 MW      GARDNR 137   R.  Barrett           15  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Sociology
+145   SOCI 2753  0E1 Intro to Sociology FULL ONLINE      3.0 TBA                 GARDNR TBA   S.  Brown             25  0    0
+         Meets seven weeks 01-JUN-2015 to 19-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 10
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                     Summer I 2015 / Languages and Communication / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Communications
+57    COMM 2223  001 Foundations of Communication        3.0 10:20-12:30 MTWR    VINES  233   TBA                   10  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+59    COMM 4203  001 Culture and Communication           3.0 10:20-12:30 MTWR    TBA    TBA   T.  Walton            10  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+English
+191   ENGL 1203  0D1 Composition I                       3.0 08:00-10:10 MTWR    HOLT   108   A.  Lee               28  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+192   ENGL 1203  0T1 Composition I                       3.0 12:40-02:50 MTWR    HOLT   115   L.  Lawrence          25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+194   ENGL 1213  001 Composition II                      3.0 10:20-12:30 MTWR    HOLT   102   K.  Jennings          28  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+193   ENGL 1213  0E1 Composition II                      3.0 TBA                 HOLT   TBA   TBA                   28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+196   ENGL 2013  0E1 Intro Global Lit FULL ONLINE        3.0 TBA                 VINES  TBA   S.  Whitlow           25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+195   ENGL 2023  0D1 Intro to American Literature        3.0 10:20-12:30 MTWR    HOLT   115   C.  Gerard            35  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+197   ENGL 2033  0E1 Cultural Studies FULL ONLINE        3.0 TBA                 HOLT   TBA   C.  Sublette          25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+180   ENGL 4333  0D1 Second Language Assessment          3.0 10:20-12:30 MTWR    HOLT   108   A.  Lee               12  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Foreign Language
+83    FORL 4333  0D1 Second Language Assessment          3.0 10:20-12:30 MTWR    HOLT   108   A.  Lee               12  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Rhetoric and Writing
+198   RHET 3603  0E1 Writing Workplace FULL ONLINE       3.0 TBA                 HOLT   TBA   M.  Luebke            25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+199   RHET 3603  0E2 Writing Workplace FULL ONLINE       3.0 TBA                 BALLMN TBA   B.  Bowers            25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Spanish
+79    SPAN 1304  0Y1 Beginning Spanish I HYBRID          4.0 08:00-10:10 MTWR    VINES  235   M.  Martinez-Santiag  24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+80    SPAN 1304  0E1 Beg Spanish I FULL ONLINE           4.0 TBA                 VINES  TBA   A.  Wendorf           24  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+81    SPAN 1314  0Y1 Beginning Spanish II HYBRID         4.0 10:20-12:30 MTWR    VINES  235   M.  Martinez-Santiag  24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+82    SPAN 4993  0Y1 Capstone HYBRID                     3.0 10:20-12:30 MTWR    VINES  227   B.  Ross              15  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 11
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                     Summer I 2015 / Languages and Communication / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Speech
+53    SPCH 1203  001 Introduction to Speech Comm         3.0 08:00-10:10 MTWR    HOLT   115   TBA                   30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+54    SPCH 1203  0D1 Introduction to Speech Comm         3.0 10:20-12:30 MTWR    HOLT   110   TBA                   30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+55    SPCH 1203  002 Introduction to Speech Comm         3.0 12:40-02:50 MTWR    HOLT   102   T.  Walton            30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+60    SPCH 1203  0E1 Intro Speech Comm FULL ONLINE       3.0 TBA                 BALLMN TBA   B.  Wiggins           20  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+61    SPCH 1203  0E2 Intro Speech Comm FULL ONLINE       3.0 TBA                 BALLMN TBA   S.  Simkowski         20  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+56    SPCH 2203  001 Foundations of Communication        3.0 10:20-12:30 MTWR    VINES  233   TBA                   15  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+58    SPCH 4203  001 Culture and Communication           3.0 10:20-12:30 MTWR    TBA    TBA   T.  Walton            15  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 12
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                      Summer I 2015 / Student Success - INACTIVE / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Mathematics
+109   MATH 0233  001 Beginning Algebra                   3.0 10:20-12:30 MTWR    MS-UC  212   S.  Henderson         25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Reading
+190   READ 0513  001 Critical Thinking and Reading       3.0 08:00-10:10 MTWR    VINES  233   C.  Phillips          24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Student Academic Success
+200   SAS  0201  001 Bridge to Success Seminar           1.0 09:00-09:50 MTWR    HOLT   110   B.  Yates             24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 13
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Science Tech Engineering Math / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Biology
+140   BIOL 1151  001 Biological Science Laboratory       1.0 12:40-02:10 MTWR    MS-UC  118   TBA                   32  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+142   BIOL 1153  001 Biological Science                  3.0 08:00-10:10 MTWR    MS-UC  100   R.  Nelson            32  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+189   BIOL 2003  0   Intro to Cell Bio FULL ONLINE       3.0 TBA                 TBA    TBA   B.  Williamson        30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+153   BIOL 2003  001 Intro to Cell Biol FULL ONLINE      3.0 TBA                 TBA    TBA   TBA                   30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+143   BIOL 2201  001 Human Anatomy Laboratory            1.0 03:00-04:30 MTWR    MS-UC  240   S.  Baviskar          32  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+152   BIOL 2203  001 Human Anatomy                       3.0 12:40-02:50 MTWR    MS-UC  208   S.  Baviskar          32  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+154   BIOL 2301  001 General Botany Laboratory           1.0 03:00-05:10 MTWR    MS-UC  120   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+155   BIOL 2303  001 General Botany                      3.0 10:20-12:30 MTWR    MS-UC  306   R.  Nelson            24  0    0
+                                                             10:20-12:30 MTWR    MS-UC  120   R.  Nelson            24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+157   BIOL 4403  1U  Evolutionary Bio FULL ONLINE        3.0 TBA                 TBA    TBA   B.  Williamson        30  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Chemistry
+121   CHEM 1301  001 Chemical Principles Lab             1.0 10:20-11:50 MTWR    MS-UC  340   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+122   CHEM 1303  001 Chemical Principles                 3.0 08:00-10:10 MTWR    MS-UC  307   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+123   CHEM 1401  001 College Chemistry I Lab             1.0 03:00-05:10 MTWR    MS-UC  340   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+124   CHEM 1403  001 College Chemistry I                 3.0 12:40-02:50 MTWR    MS-UC  311   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+125   CHEM 2701  001 Organic Chemistry I Lab             1.0 08:00-10:10 MTWR    MS-UC  338   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+126   CHEM 2703  001 Organic Chemistry I                 3.0 10:20-12:30 MTWR    MS-UC  311   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Computer & Information Science
+101   CS   1013  001 Foundations of Programming I        3.0 12:40-02:50 TR      BALDOR 143   D.  Wright            28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+107   CS   1023  0Y1 Found of Programming II HYBRID      3.0 10:20-12:30 TR      BALDOR 147   J.  Hightower         28  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+100   CS   1033  0E1 Foundt of Oper Sys FULL ONLINE      3.0 TBA                 TBA    TBA   D.  Wright            28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+99    CS   2013  001 Database Systems I                  3.0 10:20-12:30 TR      BALDOR 144   R.  Massengale        28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 14
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Science Tech Engineering Math / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+158   CS   2033  0D1 Web Systems                         3.0 10:20-12:30 MW      BALDOR 147   G.  Fulenwider        28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+159   CS   3403  0D1 .NET Application Programming        3.0 12:40-02:50 MW      BALDOR 147   G.  Fulenwider        28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Information Tech Capstone
+108   ITF  3634  0Y1 Enterprise Java Prog HYBRID         4.0 12:40-03:40 TR      BALDOR 147   J.  Hightower         28  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+102   ITF  4114  0Y1 Capstone Project HYBRID             4.0 12:40-03:40 T       BALDOR 144   R.  Massengale        28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+103   ITF  413V  0A1 IT Independent Study                3.0 TBA                 TBA    TBA   R.  Massengale        10  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+104   ITF  414V  0D1 IT Work-Based Learning              3.0 TBA                 TBA    TBA   R.  Massengale        28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Information Tech Networking
+105   ITN  3214  0Y1 Internetworking I HYBRID            4.0 12:40-03:40 MW      BALDOR 145B  B.  Thigpen           20  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+106   ITN  3234  0Y1 Internetworking III HYBRID          4.0 12:40-03:40 TR      BALDOR 145B  B.  Thigpen           20  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Information Tech Programming
+179   ITP  4113  001 .Net Application Programming        3.0 12:40-02:50 MW      BALDOR 147   G.  Fulenwider        28  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Information Tech Web
+178   ITW  4213  001 .Net Web Technologies               3.0 12:30-02:50 MW      BALDOR 147   G.  Fulenwider        28  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Mathematics
+110   MATH 0304  001 Beginning and Intermed Algebra      4.0 08:00-11:00 MTWR    MS-UC  236   T.  Smith-Leins       25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+111   MATH 0304  002 Beginning and Intermed Algebra      4.0 12:40-03:40 MTWR    MS-UC  212   S.  Ruple             25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+137   MATH 1303  0E1 Coll Math & QL FULL ONLINE          3.0 TBA                 TBA    TBA   E.  Foss              25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+112   MATH 1403  001 College Algebra                     3.0 08:00-10:10 MTWR    MS-UC  206   S.  Ruple             25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+113   MATH 1403  002 College Algebra                     3.0 12:40-02:50 MTWR    MS-UC  206   S.  Henderson         25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+138   MATH 1403  0E1 College Algebra FULL ONLINE         3.0 TBA                 TBA    TBA   J.  West              25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+131   MATH 1404  001 College Algebra (Extnd Format)      4.0 10:20-11:50 MTWR    MS-UC  202   R.  Watson            25  0    0
+                                                             12:00-12:30 MTWR    MS-UC  236   R.  Watson            25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 15
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Science Tech Engineering Math / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+134   MATH 1404  002 College Algebra (Extnd Format)      4.0 12:40-02:10 MTWR    MS-UC  202   C.  McEver            25  0    0
+                                                             02:20-02:50 MTWR    MS-UC  236   C.  McEver            25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+136   MATH 1715  001 Pre Calculus Mathematics            5.0 10:20-12:10 MTWR    MS-UC  201   J.  Lewallen          25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+139   MATH 2403  0E1 Survey of Cal FULL ONLINE           3.0 TBA                 TBA    TBA   N.  Sagullo           25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+116   MATH 2804  001 Calculus I                          4.0 08:00-11:00 MTWR    MS-UC  203   B.  Hutchison         25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+144   MATH 2804  0E1 Calculus I FULL ONLINE              4.0 TBA                 TBA    TBA   J.  Jackson           25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+117   MATH 2904  001 Calculus III                        4.0 08:00-11:00 MTWR    MS-UC  205   J.  Guerra            25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+      EVENING SCHEDULE
+129   MATH 0304  901 Beginning and Intermed Algebra      4.0 05:25-06:55 MTWR    MS-UC  236   R.  Watson            25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Mechanical Engineering
+62    MEEG 2703  0E1 Num Methods I FULL ONLINE           3.0 TBA                 TBA    TBA   M.  Reynolds          15  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+
+Physical Science
+127   PHSC 2651  001 Earth Science Laboratory            1.0 10:20-11:50 MTWR    MS-UC  344   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+128   PHSC 2653  001 Earth Science                       3.0 08:00-10:10 MTWR    MS-UC  344   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+130   PHSC 2711  001 Physical Science Laboratory         1.0 12:40-02:10 MTWR    MS-UC  334   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+132   PHSC 2713  001 Physical Science                    3.0 10:20-12:30 MTWR    MS-UC  307   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Physics
+135   PHYS 2803  001 College Physics I                   3.0 08:00-10:10 MTWR    MS-UC  306   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+133   PHYS 2811  001 College Physics Laboratory I        1.0 10:20-11:50 MTWR    MS-UC  334   TBA                   24  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+
+Statistics
+118   STAT 2503  001 Probability and Statistics I        3.0 08:00-11:00 MTWR    MS-UC  204   D.  Uhm               20  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+119   STAT 2503  002 Probability and Statistics I        3.0 12:40-02:50 MTWR    MS-UC  204   D.  Uhm               20  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+120   STAT 2503  0E1 Prob & Stats I FULL ONLINE          3.0 TBA                 TBA    TBA   S.  Huang             25  0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 16
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Science Tech Engineering Math / Main Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+141   STAT 2503  0E2 Prob & Stats I FULL ONLINE          3.0 TBA                 TBA    TBA   J.  Jackson           25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 17
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                    Summer I 2015 / Applied Science and Technology / Off-Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+Professional Studies
+27    PRFS 3533  0EU Work Safety FULL ONLINE UNICTR      3.0 TBA                 TBA    TBA   K.  Taber             15  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+29    PRFS 4033  0EU Con Bldg FULL ONLINE UNICTR         3.0 TBA                 TBA    TBA   A.  Thomas            25  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+31    PRFS 4633  0EU Dec Making FULL ONLINE UNICTR       3.0 TBA                 TBA    TBA   A.  Thomas            17  0    0
+         Meets ten weeks 01-JUN-2015 to 06-AUG-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 18
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                     Summer I 2015 / Humanities and Social Science / Off-Campus
+
+                                                            ----------------- MEETING SESSIONS ------------------------
+___   ____ ____  ___ _____                           _______ __________          ____   ____  _____________         ___ ___  ____
+CRN   SUBJ CRSE  SEC TITLE                           CREDITS TIME & DAY          BLDG   ROOM  INSTRUCTOR(S)         MAX ENR  WAIT
+
+History
+21    HIST 4953  001 History Internship                  3.0 TBA                 OTHER  VBDRE T.  Wing              5   0    0
+         Meets five weeks 01-JUN-2015 to 02-JUL-2015
+17-FEB-2015 10:08:04                                      Schedule Print                                                  PAGE 19
+201502                                                     UA Fort Smith                                                  SWRSCHP
+                                                           Summer I 2015
+                                               * * * REPORT CONTROL INFORMATION * * *
+REPORT NAME: SWRSCHP
+DATA BASE USED FOR THIS JOB: UA Fort Smith
+TERM: 201502
+COLLEGE: %
+DEPARTMENT: %
+PART OF TERM: %
+CAMPUS: %
+PRINT ENROLLMENT: Y
+DETAIL REPORT: N
+BREAK ON DEPT: N
+SECTION: %
+SUBJECT: %
+RECORD COUNT: 185
