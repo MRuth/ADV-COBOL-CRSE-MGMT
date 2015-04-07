@@ -197,7 +197,7 @@
                DISPLAY HEADER, SCHED-MENU
                ACCEPT SCHED-MENU
                EVALUATE WS-SEL
-                       WHEN '1' PERFORM 210-STUDENT
+                       WHEN '1' CALL 'SCHEDULE-MASTER'
                END-EVALUATE
            END-PERFORM.
            
