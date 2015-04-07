@@ -5,20 +5,31 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
            SELECT IN-FILE      ASSIGN        TO 
-                                       '../FILES/COURSE-MASTER-SORT.DAT'
+                                       '../FILES/SCHEDULE-MASTER.DAT'   
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS SEQUENTIAL
-                               RECORD KEY    IS I-COURSE-ID
+                               RECORD KEY    IS SCHEDULE-ID-I
                                FILE STATUS   IS WS-STAT.
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
        FD  IN-FILE.
        01  IN-REC.
-           03  I-COURSE-ID        PIC X(9).
-           03  I-COURSE-NAME      PIC X(35).
-           03  I-COURSE-CREDIT    PIC X(4).
-           03  I-COURSE-STAT      PIC X.
+           03  SCHEDULE-ID-I       PIC X(12).
+           03  FILLER              PIC X.
+           03  COURSE-ID-I         PIC X(9).
+           03  FILLER              PIC X.
+           03  COURSE-NAME-I       PIC X(30).
+           03  FILLER              PIC X.
+           03  COURSE-CREDIT-I     PIC X(3).
+           03  FILLER              PIC X.
+           03  I-TIMEDAY-I         PIC X(20).
+           03  FILLER              PIC X.
+           03  BUILDING-ID-I       PIC X(11).
+           03  FILLER              PIC X.
+           03  INSTRUCTOR-NAME-I   PIC X(22).
+           03  FILLER              PIC X.
+           03  OPEN-SEATS-I        PIC X(2).
        WORKING-STORAGE SECTION.
        01  MISC-VARS.
            03  WS-RESP             PIC X   VALUE SPACE.
@@ -63,13 +74,10 @@
                    AT END
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
-                           MOVE I-COURSE-ID     TO WS-COURSE-ID
-                           MOVE I-COURSE-NAME   TO WS-COURSE-NAME
-                           MOVE I-COURSE-CREDIT TO WS-COURSE-CREDIT
-                           MOVE I-COURSE-STAT   TO WS-COURSE-STAT
-                           DISPLAY WS-DTL-LN
+                           DISPLAY IN-REC BEFORE ADVANCING 2 LINES
+
                            ADD 1 TO WS-COUNTER
-                           IF WS-COUNTER = 10
+                           IF WS-COUNTER = 5
                                THEN
                                    DISPLAY WS-PG-BREAK
                                    ACCEPT WS-RESP

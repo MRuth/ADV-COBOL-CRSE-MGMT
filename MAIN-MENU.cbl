@@ -85,10 +85,10 @@
           03  SCHEDMENU.
                05  LINE 01 COL 38 VALUE "SCHEDULE MENU".
                05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
-               05  LINE 08 COL 32 VALUE " 2) ADD STUDENT".
-               05  LINE 10 COL 32 VALUE " 3) UPDATE STUDENT".
-               05  LINE 12 COL 32 VALUE " 4) INQUIRE BY ID".
-               05  LINE 14 COL 32 VALUE " 5) LIST STUDENTS".
+               05  LINE 08 COL 32 VALUE " 2) ADD TO SCHEDULE".
+               05  LINE 10 COL 32 VALUE " 3) UPDATE WITHIN SCHEDULE".
+               05  LINE 12 COL 32 VALUE " 4) INQUIRE BY CRN".
+               05  LINE 14 COL 32 VALUE " 5) LIST SCHEDULE".
                05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 20 COL 37 VALUE "Selection".
                05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
@@ -198,6 +198,7 @@
                ACCEPT SCHED-MENU
                EVALUATE WS-SEL
                        WHEN '1' CALL 'SCHEDULE-MASTER'
+                       WHEN '5' CALL 'SCHEDULE-LIST'
                END-EVALUATE
            END-PERFORM.
            
