@@ -40,13 +40,13 @@
        01  SCRN-TITLE.
            03  LINE 1  COL 30  VALUE 'INSTRUCTOR UPDATE'.
        01  SCRN-ID.
-            05  LINE 3  COL 25  VALUE    'INSTRUCTOR ID: '.
-            05          COL 40  PIC ZZZZ TO WS-INSTR-ID          
+            05  LINE 3  COL 25  VALUE    'INSTRUCTOR ID  : '.
+            05          COL 42  PIC ZZZZ TO WS-INSTR-ID          
                                          AUTO REQUIRED.       
        01  SCRN-DATA.
            03  SCRN-INSTR-NEW-NAME.
-               05  LINE 5  COL 25  VALUE 'NEW NAME     :'.
-               05          COL 40  PIC X(22)    USING WS-INSTR-NAME
+               05  LINE 5  COL 25  VALUE 'INSTRUCTOR NAME: '.
+               05          COL 42  PIC X(22)    USING WS-INSTR-NAME
                                                 AUTO REQUIRED.
            03  SCRN-SAVE.
                05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
