@@ -93,7 +93,7 @@
            MOVE 6 TO WS-MST-REC-KEY.
            MOVE SPACES TO MST-NEXT-STU.
            MOVE WS-CURR-ID TO MST-STU-ID.
-           WRITE MST-NEXT-STU.
+           REWRITE MST-NEXT-STU.
            
            CLOSE IN-FILE,
                STU-FILE
