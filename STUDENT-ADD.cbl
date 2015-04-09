@@ -11,7 +11,7 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT STU-FILE         ASSIGN TO 
+           SELECT STU-MST         ASSIGN TO 
                                    '../FILES/STUDENT-MASTER.DAT'
                                    ORGANIZATION    IS INDEXED
                                    ACCESS          IS RANDOM
@@ -26,7 +26,7 @@
 
        DATA DIVISION.
        FILE SECTION.
-       COPY STU-FILE-DEF.
+       COPY STU-MST-DEF.
        COPY MST-CTRL-LIST-RECS.
        
        WORKING-STORAGE SECTION.
@@ -35,7 +35,7 @@
        01  WS-MST-REC-KEY          PIC 99.
        01  WS-EOF                  PIC X       VALUE 'N'.
            88  EOF                             VALUE 'Y'.
-       01  WS-SAVE                 PIC X       VALUE 'N'.
+       01  WS-SAVE                 PIC X       VALUE SPACES.
            88  SAVE                            VALUE 'Y'.
        01  WS-ANOTHER              PIC X       VALUE 'Y'.
            88  ANOTHER                         VALUE 'N'.
@@ -63,36 +63,41 @@
                05  SCRN-STU-L-NAME.
                    07  LINE 5   COL 25              VALUE
                                                    'STUDENT L-NAME: '.
-                   07          COL 43  PIC X(15)   TO WS-STU-L-NAME
+                   07          COL 43  PIC X(15)   USING WS-STU-L-NAME
                                                    REQUIRED.
                05  SCRN-STU-F-NAME.
                    07  LINE 6  COL 25              VALUE
                                                    'STUDENT F-NAME: '.
-                   07          COL 43  PIC X(15)   TO WS-STU-F-NAME
+                   07          COL 43  PIC X(15)   USING WS-STU-F-NAME
                                                    REQUIRED.
            03  SCRN-STU-ADDR.
                05  SCRN-STU-STREET.
                    07  LINE 8  COL 25              VALUE
                                                    'STUDENT STREET: '.
-                   07          COL 43  PIC X(25)   TO WS-STU-STREET
+                   07          COL 43  PIC X(25)   USING WS-STU-STREET
                                                    REQUIRED.
                05  SCRN-STU-ZIP.
                    07  LINE 9  COL 25              VALUE
                                                    'STUDENT ZIP   : '.
-                   07          COL 43  PIC XXXXX   TO WS-STU-ZIP
+                   07          COL 43  PIC XXXXX   USING WS-STU-ZIP
                                                    AUTO REQUIRED.
+               05  SCRN-STU-CITY-ST.
+                   07  LINE 11 COL 35              VALUE 'CITY:'.
+                   
+                   07  LINE 12 COL 35              VALUE 'ST  :'.
+                   
            03  SCRN-STU-PHONE.
-               05  LINE 11 COL 25                  VALUE
+               05  LINE 14 COL 25                  VALUE
                                                    'STUDENT PHONE : '.
-               05          COL 43      PIC X(10)   TO WS-STU-PHONE
+               05          COL 43      PIC X(10)   USING WS-STU-PHONE
                                                    AUTO REQUIRED.
            03  SCRN-STU-STATUS.                                         
-               05  LINE 13 COL 25                  VALUE                
+               05  LINE 16 COL 25                  VALUE                
                                                    'STATUS (A/I)  : '.
-               05          COL 43      PIC X       TO WS-STU-STATUS
+               05          COL 43      PIC X       USING WS-STU-STATUS
                                                    AUTO REQUIRED.
            03  SCRN-SAVE.
-               05  LINE 15 COL 32                  VALUE 'SAVE (Y/N)'.
+               05  LINE 18 COL 32                  VALUE 'SAVE (Y/N)'.
                05          COL 30      PIC X       TO WS-SAVE.
        01  SCRN-WRITE-ERR.
            03  LINE 3  COL 30  VALUE 'STUDENT ALREADY EXISTS'.
@@ -106,7 +111,7 @@
            
        PROCEDURE DIVISION.
        000-MAIN.
-           OPEN I-O STU-FILE.
+           OPEN I-O STU-MST.
            OPEN I-O MST-CTRL-LIST.
            
            MOVE 6 TO WS-MST-REC-KEY.
@@ -118,17 +123,22 @@
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
            
-               DISPLAY NEW-SCREEN
-               DISPLAY SCRN-FIELDS
-               ACCEPT SCRN-STU-L-NAME
-               ACCEPT SCRN-STU-F-NAME
-               ACCEPT SCRN-STU-STREET
-               ACCEPT SCRN-STU-ZIP
-               ACCEPT SCRN-STU-PHONE
-               ACCEPT SCRN-STU-STATUS
+               PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
                
-               DISPLAY SCRN-SAVE
-               ACCEPT  SCRN-SAVE
+                   DISPLAY NEW-SCREEN
+                   DISPLAY SCRN-FIELDS
+                   ACCEPT SCRN-STU-L-NAME
+                   ACCEPT SCRN-STU-F-NAME
+                   ACCEPT SCRN-STU-STREET
+                   ACCEPT SCRN-STU-ZIP
+                   ACCEPT SCRN-STU-PHONE
+                   ACCEPT SCRN-STU-STATUS
+                   
+                   
+                   DISPLAY SCRN-SAVE
+                   ACCEPT  SCRN-SAVE
+               
+               END-PERFORM
                
                IF SAVE THEN
                    MOVE WS-STU-ID          TO STU-ID
@@ -160,7 +170,7 @@
            MOVE WS-STU-ID TO MST-STU-ID
            REWRITE MST-NEXT-STU.
            
-           CLOSE STU-FILE.
+           CLOSE STU-MST.
            CLOSE MST-CTRL-LIST.
            
            EXIT PROGRAM.
