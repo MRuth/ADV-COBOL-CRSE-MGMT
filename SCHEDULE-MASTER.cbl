@@ -21,6 +21,7 @@
                                ORGANIZATION IS INDEXED
                                ACCESS        IS SEQUENTIAL
                                RECORD KEY    IS INST-ID
+                               ALTERNATE KEY IS INST-NAME
                                FILE STATUS   IS WS-STAT.
                                
            SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
@@ -130,7 +131,7 @@
            03  FILLER              PIC X.
            03  COURSE-CREDIT-S     PIC X(3).
            03  FILLER              PIC X.
-           03  I-TIMEDAY-S         PIC X(20).
+           03  TIMEDAY-S         PIC X(20).
            03  FILLER              PIC X.
            03  BUILDING-ID-S       PIC X(11).
            03  FILLER              PIC X.
@@ -146,16 +147,12 @@
            03  FILLER              PIC X.
            03  COURSE-ID-O         PIC X(9).
            03  FILLER              PIC X.
-           03  COURSE-NAME-O       PIC X(30).
-           03  FILLER              PIC X.
-           03  COURSE-CREDIT-O     PIC X(3).
-           03  FILLER              PIC X.
-           03  I-TIMEDAY-O         PIC X(20).
+           03  TIMEDAY-O           PIC X(20).
            03  FILLER              PIC X.
            03  BUILDING-ID-O       PIC X(11).
            03  FILLER              PIC X.
-           03  INSTRUCTOR-NAME-O   PIC X(22).
-           03  FILLER              PIC X.
+           03  INSTRUCTOR-ID-O     PIC X(4).
+           03  FILLER              PIC X(3).
            03  OPEN-SEATS-O        PIC X(2).
 
        WORKING-STORAGE SECTION.
@@ -228,12 +225,11 @@
                                MOVE COURSE-NAME-1   TO COURSE-NAME-S
                                MOVE COURSE-CREDIT-1 TO COURSE-CREDIT-S
                                MOVE BUILDING-ID-1   TO BUILDING-ID-S
-                               MOVE I-TIMEDAY-1     TO I-TIMEDAY-S
-                               MOVE INSTRUCTOR-NAME-1 TO 
+                               MOVE I-TIMEDAY-1     TO TIMEDAY-S
+                               MOVE INSTRUCTOR-NAME-1 TO  
                                    INSTRUCTOR-NAME-S
                                MOVE OPEN-SEATS-1    TO OPEN-SEATS-S
                                ADD 1 TO SCHED-CRN GIVING SCHED-CRN
-                               DISPLAY SRT-REC
                                RELEASE SRT-REC
                            END-IF
                    END-READ
@@ -259,12 +255,11 @@
                                MOVE COURSE-NAME-2   TO COURSE-NAME-S
                                MOVE COURSE-CREDIT-2 TO COURSE-CREDIT-S
                                MOVE BUILDING-ID-2   TO BUILDING-ID-S
-                               MOVE I-TIMEDAY-2     TO I-TIMEDAY-S
+                               MOVE I-TIMEDAY-2     TO TIMEDAY-S
                                MOVE INSTRUCTOR-NAME-2 TO 
                                    INSTRUCTOR-NAME-S
                                MOVE OPEN-SEATS-2    TO OPEN-SEATS-S
                                ADD 1 TO SCHED-CRN GIVING SCHED-CRN
-                               DISPLAY SRT-REC
                                RELEASE SRT-REC
                            END-IF
                    END-READ
@@ -291,12 +286,11 @@
                                MOVE COURSE-NAME-3   TO COURSE-NAME-S
                                MOVE COURSE-CREDIT-3 TO COURSE-CREDIT-S
                                MOVE BUILDING-ID-3   TO BUILDING-ID-S
-                               MOVE I-TIMEDAY-3     TO I-TIMEDAY-S
+                               MOVE I-TIMEDAY-3     TO TIMEDAY-S
                                MOVE INSTRUCTOR-NAME-3 TO 
                                    INSTRUCTOR-NAME-S
                                MOVE OPEN-SEATS-3    TO OPEN-SEATS-S
                                ADD 1 TO SCHED-CRN GIVING SCHED-CRN
-                               DISPLAY SRT-REC
                                RELEASE SRT-REC
                            END-IF
                    END-READ
@@ -323,18 +317,16 @@
                                MOVE COURSE-NAME-4   TO COURSE-NAME-S
                                MOVE COURSE-CREDIT-4 TO COURSE-CREDIT-S
                                MOVE BUILDING-ID-4   TO BUILDING-ID-S
-                               MOVE I-TIMEDAY-4     TO I-TIMEDAY-S
+                               MOVE I-TIMEDAY-4     TO TIMEDAY-S
                                MOVE INSTRUCTOR-NAME-4 TO 
                                    INSTRUCTOR-NAME-S
                                MOVE OPEN-SEATS-4    TO OPEN-SEATS-S
                                ADD 1 TO SCHED-CRN GIVING SCHED-CRN
-                               DISPLAY SRT-REC
                                RELEASE SRT-REC
                            END-IF
                    END-READ
                END-PERFORM.
-               CLOSE IN-FILE4.
-           
+               CLOSE IN-FILE4.                                          
       *-----------------------------------------------------------------
        300-FILE-OUT.
            MOVE 'N' TO WS-EOF.
@@ -343,9 +335,18 @@
                    AT END 
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
-                       MOVE INSTRUCTOR-NAME-S TO WS-INST-NAME
-                       PERFORM 310-INST-SRCH
-                       MOVE SRT-REC TO OUT-REC
+                       MOVE INSTRUCTOR-NAME-S TO INST-NAME
+                       START INST-MST KEY EQUALS INST-NAME
+                           INVALID KEY
+                               MOVE 9999 TO INSTRUCTOR-ID-O
+                           NOT INVALID KEY
+                               READ INST-MST
+                               MOVE INST-ID TO INSTRUCTOR-ID-O
+                       MOVE SCHEDULE-ID TO SCHEDULE-ID-O
+                       MOVE COURSE-ID-S TO COURSE-ID-O
+                       MOVE TIMEDAY-S TO TIMEDAY-O
+                       MOVE BUILDING-ID-S TO BUILDING-ID-O
+                       MOVE OPEN-SEATS-S TO OPEN-SEATS-O
                        WRITE OUT-REC
                END-RETURN
            END-PERFORM.

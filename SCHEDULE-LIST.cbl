@@ -19,16 +19,12 @@
            03  FILLER              PIC X.
            03  COURSE-ID-I         PIC X(9).
            03  FILLER              PIC X.
-           03  COURSE-NAME-I       PIC X(30).
-           03  FILLER              PIC X.
-           03  COURSE-CREDIT-I     PIC X(3).
-           03  FILLER              PIC X.
-           03  I-TIMEDAY-I         PIC X(20).
+           03  TIMEDAY-I           PIC X(20).
            03  FILLER              PIC X.
            03  BUILDING-ID-I       PIC X(11).
            03  FILLER              PIC X.
-           03  INSTRUCTOR-NAME-I   PIC X(22).
-           03  FILLER              PIC X.
+           03  INSTRUCTOR-ID-I     PIC X(4).
+           03  FILLER              PIC X(3).
            03  OPEN-SEATS-I        PIC X(2).
        WORKING-STORAGE SECTION.
        01  MISC-VARS.
@@ -43,10 +39,12 @@
            03  FILLER              PIC X(16) VALUE 'DISPLAY 10 MORE '.
            03  FILLER              PIC X(49) VALUE 'RECORDS'.
        01  WS-HEADER.
-           03  FILLER              PIC X(11) VALUE 'COURSE ID'.
-           03  FILLER              PIC X(37) VALUE 'COURSE NAME'.
-           03  FILLER              PIC X(7)  VALUE 'CREDIT'.
-           03  FILLER              PIC X(25) VALUE 'STATUS'.
+           03  FILLER              PIC X(13) VALUE 'SCHEDULE ID'.
+           03  FILLER              PIC X(10) VALUE 'COURSE ID'.
+           03  FILLER              PIC X(21)  VALUE 'TIME        DAYS'.
+           03  FILLER              PIC X(12) VALUE 'BLD/ROOM'.
+           03  FILLER              PIC X(5) VALUE 'INST'.
+           03  FILLER              PIC X(5) VALUE 'SEATS'. 
 
        SCREEN SECTION.
        01  BLNK-SCREEN.
@@ -67,9 +65,9 @@
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
                            DISPLAY IN-REC
-
+                           DISPLAY WS-BLNK-LN
                            ADD 1 TO WS-COUNTER
-                           IF WS-COUNTER = 5
+                           IF WS-COUNTER = 10
                                THEN
                                    DISPLAY WS-PG-BREAK
                                    ACCEPT WS-RESP
