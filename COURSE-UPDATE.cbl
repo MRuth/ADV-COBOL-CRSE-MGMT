@@ -46,35 +46,27 @@
        01  SCRN-TITLE.
            03  LINE 1  COL 30  VALUE 'COURSE UPDATE'.
        01  SCRN-ID.
-            05  LINE 3  COL 25  VALUE   'COURSE NUMBER:'.
-            05          COL 40  PIC X(9) TO WS-CRSE-ID          
-                                         AUTO REQUIRED.       
+            05  LINE 3  COL 25  VALUE        'COURSE NUMBER:'.
+            05          COL 41  PIC X(9)     TO WS-CRSE-ID          
+                                             AUTO REQUIRED.       
        01  SCRN-NAME.
            03  SCRN-CRSE-OLD-NAME.
-               05  LINE 5  COL 25  VALUE   'OLD NAME   :'.
-               05          COL 40  FROM    WS-OLD-NAME.
            03  SCRN-CRSE-NAME.
-               05  LINE 6  COL 25  VALUE     'NEW NAME   :'.
-               05          COL 40  PIC X(35) TO WS-CRSE-NAME
+               05  LINE 5  COL 25  VALUE     'COURSE NAME  :'.
+               05          COL 41  PIC X(35) USING WS-CRSE-NAME
                                              AUTO REQUIRED.
-       01  SCRN-CREDIT.                                         
-           03  SCRN-CRSE-OLD-CREDIT.
-               05  LINE 8  COL 25  VALUE   'OLD CREDIT :'.
-               05          COL 40  FROM    WS-OLD-CREDIT.                                           
+       01  SCRN-CREDIT.
            03  SCRN-CRSE-CREDIT.
-               05  LINE 9  COL 25  VALUE   'NEW CREDIT :'.
-               05          COL 40  PIC X(4) TO WS-CRSE-CREDIT
-                                            AUTO REQUIRED.
-       01  SCRN-STATUS.                                        
-           03  SCRN-CRSE-OLD-STAT.
-               05  LINE 11  COL 25  VALUE   'OLD STATUS :'.
-               05           COL 40  FROM    WS-OLD-STAT.                                             
+               05  LINE 6  COL 25  VALUE     'COURSE CREDIT:'.
+               05          COL 41  PIC X(4)  USING WS-CRSE-CREDIT
+                                             AUTO REQUIRED.
+       01  SCRN-STATUS.
            03  SCRN-CRSE-STAT.
-               05  LINE 12  COL 25  VALUE    'NEW STATUS :'.
-               05           COL 40  PIC X    TO WS-CRSE-STAT
+               05  LINE 7  COL 25  VALUE     'COURSE STATUS:'.
+               05          COL 41  PIC X     USING WS-CRSE-STAT
                                              AUTO REQUIRED.
        01  SCRN-SAVE.
-           03  LINE 14  COL 32  VALUE   'SAVE (Y/N)'.
+           03  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
            03           COL 30  PIC X    TO WS-SAVE
                                          REQUIRED.
        01  SCRN-CONFIRM1.
@@ -108,9 +100,9 @@
                        DISPLAY SCRN-ANOTHER
                        ACCEPT SCRN-ANOTHER
                    NOT INVALID KEY
-                       MOVE CRSE-NAME   TO WS-OLD-NAME
-                       MOVE CRSE-CREDIT TO WS-OLD-CREDIT
-                       MOVE CRSE-STAT   TO WS-OLD-STAT
+                       MOVE CRSE-NAME   TO WS-CRSE-NAME
+                       MOVE CRSE-CREDIT TO WS-CRSE-CREDIT
+                       MOVE CRSE-STAT   TO WS-CRSE-STAT
                        DISPLAY SCRN-NAME
                        ACCEPT SCRN-CRSE-NAME
                        DISPLAY SCRN-CREDIT

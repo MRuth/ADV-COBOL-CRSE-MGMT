@@ -50,16 +50,12 @@
                05  LINE 4  COL 25  VALUE   'ROOM NUMBER  : '.
                05          COL 40  PIC X(4) TO WS-ROOM-NO
                                              AUTO REQUIRED.
-       01  SCRN-SEAT.                                      
-           03  SCRN-OLD-MAX-SEAT.
-               05  LINE 5  COL 25  VALUE   'OLD MAX SEAT : '.
-               05          COL 40  PIC Z9  FROM WS-OLD-MAX-SEAT.
+       01  SCRN-SEAT.
            03  SCRN-NEW-MAX-SEAT.
-               05  LINE 6  COL 25  VALUE   'NEW MAX SEAT : '.
-               05          COL 40  PIC Z9  TO WS-MAX-SEAT
-                                           AUTO REQUIRED.
+               05  LINE 5  COL 25  VALUE   'MAX SEAT     : '.
+               05          COL 40  PIC Z9  USING WS-MAX-SEAT.
            03  SCRN-SAVE.
-               05  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
+               05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
                05          COL 30  PIC X     TO WS-SAVE.
        01  SCRN-CONFIRM1.
            03  LINE 8  COL 30  VALUE 'ROOM IS UPDATED'.
@@ -98,7 +94,7 @@
                            DISPLAY SCRN-ANOTHER
                            ACCEPT SCRN-ANOTHER
                        NOT INVALID KEY
-                           MOVE BLD-MAX-SEAT TO WS-OLD-MAX-SEAT
+                           MOVE BLD-MAX-SEAT TO WS-MAX-SEAT
                            DISPLAY SCRN-SEAT
                            ACCEPT SCRN-NEW-MAX-SEAT
                            ACCEPT SCRN-SAVE

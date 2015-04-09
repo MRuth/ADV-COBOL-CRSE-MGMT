@@ -45,16 +45,16 @@
            03  LINE 1  COL 30  VALUE 'ADD COURSE'.
        01  SCRN-DATA.
            03  SCRN-CRSE-ID.
-               05  LINE 3  COL 25  VALUE   'COURSE NUMBER'.
-               05          COL 39  PIC X(9) TO WS-COURSE-ID          
+               05  LINE 3  COL 25  VALUE   'COURSE NUMBER:'.
+               05          COL 40  PIC X(9) TO WS-COURSE-ID          
                                             AUTO REQUIRED.
            03  SCRN-CRSE-NAME.
-               05  LINE 4  COL 25  VALUE   'COURSE NAME'.
-               05          COL 37  PIC X(35) TO WS-COURSE-NAME 
+               05  LINE 4  COL 25  VALUE   'COURSE NAME  :'.
+               05          COL 40  PIC X(35) TO WS-COURSE-NAME 
                                              AUTO REQUIRED.
            03  SCRN-CRSE-CREDIT.
-               05  LINE 5  COL 25  VALUE   'COURSE CREDIT'.
-               05          COL 39  PIC X(4) TO WS-COURSE-CREDIT 
+               05  LINE 5  COL 25  VALUE   'COURSE CREDIT:'.
+               05          COL 40  PIC X(4) TO WS-COURSE-CREDIT 
                                             AUTO REQUIRED.
            03  SCRN-SAVE.
                05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
