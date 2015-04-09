@@ -105,7 +105,7 @@
                05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 20 COL 37 VALUE "Selection".
                05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
-       01 BLD-MENU.
+       01 BLD-MENU. 
           03  BLDMENU.
                05  LINE 01 COL 38 VALUE "BUILDING MENU".
                05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
