@@ -14,12 +14,13 @@
                                       ACCESS        IS SEQUENTIAL
                                       RECORD KEY    IS O-INSTRUCTOR-NAME
                                       FILE STATUS   IS WS-STAT.
-           SELECT OUT-FILEF           ASSIGN        TO 
-                                      '../FILES/INSTR-MASTER.DAT'
-                                      ORGANIZATION  IS INDEXED
-                                      ACCESS        IS SEQUENTIAL
-                                      RECORD KEY    IS OF-INSTRUCTOR-ID
-                                      FILE STATUS   IS WS-STAT.
+           SELECT OUT-FILEF         ASSIGN        TO 
+                                    '../FILES/INSTR-MASTER.DAT'
+                                    ORGANIZATION  IS INDEXED
+                                    ACCESS        IS SEQUENTIAL
+                                    RECORD KEY    IS OF-INSTRUCTOR-ID
+                                    ALTERNATE KEY IS OF-INSTRUCTOR-NAME
+                                    FILE STATUS   IS WS-STAT.
            SELECT MST-CTRL-LIST       ASSIGN TO 
                                       "../Files/MST-CTRL-LST.DAT"
                                       ORGANIZATION IS RELATIVE
@@ -112,6 +113,11 @@
                        ADD 1 TO WS-CURR-ID
                END-READ
            END-PERFORM.
+           
+           MOVE 9999 TO OF-INSTRUCTOR-ID.
+           MOVE 'TBA' TO OF-INSTRUCTOR-NAME
+           WRITE OUT-FREC.
+           
            CLOSE OUT-FILE.
            CLOSE OUT-FILEF.
            
