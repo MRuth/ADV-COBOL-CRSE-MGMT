@@ -11,7 +11,7 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
        
-       SELECT STU-FILE ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
+       SELECT STU-MST ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
            ORGANIZATION IS INDEXED
            ACCESS IS SEQUENTIAL
            RECORD KEY IS STU-ID.
@@ -19,7 +19,7 @@
        DATA DIVISION.
        FILE SECTION.
        
-       COPY STU-FILE-DEF.   
+       COPY STU-MST-DEF.   
        
        WORKING-STORAGE SECTION.
        01  WS-CTR                      PIC 99      VALUE 0.
@@ -40,7 +40,7 @@
                
        PROCEDURE DIVISION.
        000-MAIN.
-           OPEN INPUT STU-FILE.
+           OPEN INPUT STU-MST.
            MOVE 'N'    TO WS-EOF.
            MOVE 0      TO WS-CTR.
            
@@ -49,7 +49,7 @@
            DISPLAY SPACES.
            
            PERFORM UNTIL EOF
-               READ STU-FILE 
+               READ STU-MST 
                    AT END
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
@@ -57,7 +57,7 @@
                END-READ
            END-PERFORM.
            
-           CLOSE STU-FILE.
+           CLOSE STU-MST.
        
            DISPLAY "PRESS ENTER TO EXIT" WITH NO ADVANCING.
            ACCEPT WS-RESP.

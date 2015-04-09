@@ -15,7 +15,7 @@
        SELECT IN-FILE ASSIGN TO '../FILES/STUDENT-STARTER.TXT'
            ORGANIZATION IS LINE SEQUENTIAL.
            
-       SELECT STU-FILE ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
+       SELECT STU-MST ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
            ORGANIZATION IS INDEXED
            ACCESS IS SEQUENTIAL
            RECORD KEY IS STU-ID.
@@ -34,7 +34,7 @@
        FILE SECTION.
        
        COPY MST-CTRL-LIST-RECS.
-       COPY STU-FILE-DEF.
+       COPY STU-MST-DEF.
        
        FD  IN-FILE.
            01  IN-REC.
@@ -79,7 +79,7 @@
        000-MAIN.
            
            OPEN INPUT IN-FILE.
-           OPEN OUTPUT STU-FILE.
+           OPEN OUTPUT STU-MST.
            OPEN I-O MST-CTRL-LIST.
            
            MOVE    'N'     TO WS-EOF.
@@ -98,7 +98,7 @@
            REWRITE MST-NEXT-STU.
            
            CLOSE IN-FILE,
-               STU-FILE
+               STU-MST
                MST-CTRL-LIST.
                
            DISPLAY SPACES.

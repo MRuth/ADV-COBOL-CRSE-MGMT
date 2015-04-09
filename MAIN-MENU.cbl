@@ -51,10 +51,11 @@
                05  LINE 10 COL 32 VALUE " 3) SCHEDULE".
                05  LINE 12 COL 32 VALUE " 4) INSTRUCTOR RECORDS".
                05  LINE 14 COL 32 VALUE " 5) BUILDING RECORDS".
-               05  LINE 16 COL 32 VALUE " 6) REPORTS".
-               05  LINE 18 COL 32 VALUE " X) Exit".
-               05  LINE 20 COL 37 VALUE "Selection".
-               05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 16 COL 32 VALUE " 6) ZIPCODE RECORDS".
+               05  LINE 18 COL 32 VALUE " 7) REPORTS".
+               05  LINE 20 COL 32 VALUE " X) Exit".
+               05  LINE 22 COL 37 VALUE "Selection".
+               05  LINE 22 COL 35 PIC X TO WS-SEL AUTO.
        
        01 STU-MENU.
           03  STUMENU.
@@ -115,7 +116,15 @@
                05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 20 COL 37 VALUE "Selection".
                05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
-       
+       01  ZIP-MENU.
+           03  ZIPMENU.
+               05  LINE 01 COL 38 VALUE "ZIPCODE MENU".
+               05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
+               05  LINE 08 COL 32 VALUE " 2) SEARCH BY ZIP".
+               05  LINE 10 COL 32 VALUE " 3) SEARCH BY CITY".
+               05  LINE 12 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 20 COL 37 VALUE "Selection".
+               05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
        01 RPT-MENU.
           03  RPTMENU.
                05  LINE 01 COL 38 VALUE "REPORT MENU".
@@ -153,7 +162,8 @@
                        WHEN '3' PERFORM 230-SCHEDULE
                        WHEN '4' PERFORM 240-INSTRUCTOR                      
                        WHEN '5' PERFORM 250-BUILDING
-                       WHEN '6' PERFORM 260-REPORTS
+                       WHEN '6' PERFORM 260-ZIPCODE
+                       WHEN '7' PERFORM 270-REPORTS
                        WHEN 'X' MOVE 'Y' TO WS-EXIT
            END-EVALUATE.
                    
@@ -232,8 +242,21 @@
                        WHEN '5' CALL 'BUILDING-LIST'
                END-EVALUATE
            END-PERFORM.
+           
+       260-ZIPCODE.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
+           PERFORM UNTIL WS-SEL = "R"
+               DISPLAY HEADER, ZIP-MENU
+               ACCEPT ZIP-MENU
+               EVALUATE WS-SEL
+                       WHEN '1' CALL 'ZIPD-BLDISAM'
+                       WHEN '2' CALL 'ZIPB-INQNUM'
+                       WHEN '3' CALL 'ZIPC-INQCITY'
+               END-EVALUATE
+           END-PERFORM.
                  
-       260-REPORTS.
+       270-REPORTS.
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            PERFORM UNTIL WS-SEL = "R"
