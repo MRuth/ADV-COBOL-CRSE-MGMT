@@ -16,13 +16,19 @@
            SELECT IN-FILE4     ASSIGN        TO
                                        '../FILES/201505.TXT'            
                                ORGANIZATION  IS LINE SEQUENTIAL.
+           SELECT INST-MST     ASSIGN TO
+                                       '../FILES/INSTR-MASTER.DAT'
+                               ORGANIZATION IS INDEXED
+                               ACCESS        IS SEQUENTIAL
+                               RECORD KEY    IS INST-ID
+                               FILE STATUS   IS WS-STAT.
                                
            SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
            
            SELECT OUT-FILE     ASSIGN        TO
                                        '../FILES/SCHEDULE-MASTER.DAT'
                                ORGANIZATION  IS INDEXED
-                               ACCESS        IS SEQUENTIAL
+                               ACCESS        IS DYNAMIC
                                RECORD KEY    IS SCHEDULE-ID-O
                                FILE STATUS   IS WS-STAT.
       *-----------------------------------------------------------------
@@ -109,7 +115,10 @@
            03  ENR-4.
                05 ENR-CHECK-4      PIC 9.
                05 ENR-REST-4       PIC 9.
-           
+       FD  INST-MST.
+       01  INST-REC.
+           03  INST-ID    PIC 9999.
+           03  INST-NAME  PIC X(22).
            
        SD  SORT-WORK.
        01  SRT-REC.
@@ -161,6 +170,8 @@
                05 SCHED-CRN        PIC 9(4).
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
+           03  WS-INST-NAME        PIC X(22).
+           03  WS-INST-ID          PIC X(4).
 
        SCREEN SECTION.
        01  BLNK-SCRN.
@@ -170,6 +181,7 @@
        000-MAIN.
            
            OPEN OUTPUT OUT-FILE.
+           OPEN INPUT INST-MST.
            PERFORM 100-SORT-FILES
            DISPLAY BLNK-SCRN.
            DISPLAY 'MASTER BUILT SUCCESSFULLY'.
@@ -185,19 +197,19 @@
        SORT SORT-WORK
                 ON ASCENDING KEY SCHEDULE-ID
                 INPUT  PROCEDURE 110-INPUT-1
-                OUTPUT PROCEDURE 200-FILE-OUT.
+                OUTPUT PROCEDURE 300-FILE-OUT.
        SORT SORT-WORK
                 ON ASCENDING KEY SCHEDULE-ID
                 INPUT  PROCEDURE 120-INPUT-2
-                OUTPUT PROCEDURE 200-FILE-OUT.
+                OUTPUT PROCEDURE 300-FILE-OUT.
        SORT SORT-WORK
                 ON ASCENDING KEY SCHEDULE-ID
                 INPUT  PROCEDURE 130-INPUT-3
-                OUTPUT PROCEDURE 200-FILE-OUT.
+                OUTPUT PROCEDURE 300-FILE-OUT.
        SORT SORT-WORK
                 ON ASCENDING KEY SCHEDULE-ID
                 INPUT  PROCEDURE 140-INPUT-4
-                OUTPUT PROCEDURE 200-FILE-OUT.
+                OUTPUT PROCEDURE 300-FILE-OUT.
       *-----------------------------------------------------------------
             110-INPUT-1.
            OPEN INPUT IN-FILE1.
@@ -324,14 +336,22 @@
                CLOSE IN-FILE4.
            
       *-----------------------------------------------------------------
-       200-FILE-OUT.
+       300-FILE-OUT.
            MOVE 'N' TO WS-EOF.
            PERFORM UNTIL EOF
                RETURN SORT-WORK 
                    AT END 
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
+                       MOVE INSTRUCTOR-NAME-S TO WS-INST-NAME
+                       PERFORM 310-INST-SRCH
                        MOVE SRT-REC TO OUT-REC
                        WRITE OUT-REC
                END-RETURN
            END-PERFORM.
+           
+           
+           
+      
+               
+               

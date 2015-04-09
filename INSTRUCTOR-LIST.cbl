@@ -9,6 +9,7 @@
                                        ORGANIZATION  IS INDEXED
                                        ACCESS        IS SEQUENTIAL
                                        RECORD KEY    IS INSTR-ID
+                                       ALTERNATE KEY IS INSTR-NAME
                                        FILE STATUS   IS WS-STAT.
       *-----------------------------------------------------------------
        DATA DIVISION.
