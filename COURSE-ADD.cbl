@@ -27,7 +27,7 @@
            03  WS-STAT             PIC 99.
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
-           03  WS-SAVE             PIC X   VALUE 'N'.
+           03  WS-SAVE             PIC X   VALUE SPACE.
                88  SAVE                    VALUE 'Y'.
            03  WS-ANOTHER          PIC X   VALUE 'Y'.
                88  ANOTHER                 VALUE 'N'.
@@ -46,27 +46,27 @@
        01  SCRN-DATA.
            03  SCRN-CRSE-ID.
                05  LINE 3  COL 25  VALUE   'COURSE NUMBER:'.
-               05          COL 40  PIC X(9) TO WS-COURSE-ID          
+               05          COL 40  PIC X(9) USING WS-COURSE-ID          
                                             AUTO REQUIRED.
            03  SCRN-CRSE-NAME.
                05  LINE 4  COL 25  VALUE   'COURSE NAME  :'.
-               05          COL 40  PIC X(35) TO WS-COURSE-NAME 
+               05          COL 40  PIC X(35) USING WS-COURSE-NAME 
                                              AUTO REQUIRED.
            03  SCRN-CRSE-CREDIT.
                05  LINE 5  COL 25  VALUE   'COURSE CREDIT:'.
-               05          COL 40  PIC X(4) TO WS-COURSE-CREDIT 
+               05          COL 40  PIC X(4) USING WS-COURSE-CREDIT 
                                             AUTO REQUIRED.
            03  SCRN-SAVE.
                05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
                05          COL 30  PIC X     TO WS-SAVE.
        01  SCRN-WRITE-ERR.
-           03  LINE 1  COL 30  VALUE 'COURSE IS ALREADY EXIST'.
+           03  LINE 5  COL 30  VALUE 'COURSE IS ALREADY EXIST'.
        01  SCRN-WRITE-SUC.
-           03  LINE 1  COL 30  VALUE 'COURSE IS ADDED'.
+           03  LINE 5  COL 30  VALUE 'COURSE IS ADDED'.
        01  SCRN-WRITE-NOT-SAVE.
-           03  LINE 1  COL 30  VALUE 'COURSE IS NOT ADDED'.           
+           03  LINE 5  COL 30  VALUE 'COURSE IS NOT ADDED'.           
        01  SCRN-ANOTHER.
-           03  LINE 3  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
+           03  LINE 7  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
@@ -76,6 +76,7 @@
            
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
+               PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
                    DISPLAY BLNK-SCRN
                    DISPLAY SCRN-TITLE
                    DISPLAY SCRN-DATA
@@ -86,7 +87,7 @@
                    
                    DISPLAY SCRN-SAVE
                    ACCEPT  SCRN-SAVE
-                   
+               END-PERFORM          
                    IF SAVE
                        THEN
                            MOVE WS-COURSE-ID TO CRSE-ID

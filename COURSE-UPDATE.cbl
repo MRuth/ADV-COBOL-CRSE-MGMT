@@ -29,7 +29,7 @@
                88  ANOTHER                 VALUE 'N'.
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
-           03  WS-SAVE             PIC X   VALUE 'N'.
+           03  WS-SAVE             PIC X   VALUE SPACE.
                88  SAVE                    VALUE 'Y'.
            03  WS-OLD-NAME         PIC X(35).
            03  WS-OLD-CREDIT       PIC X(4).
@@ -67,8 +67,7 @@
                                              AUTO REQUIRED.
        01  SCRN-SAVE.
            03  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
-           03           COL 30  PIC X    TO WS-SAVE
-                                         REQUIRED.
+           03           COL 30  PIC X    TO WS-SAVE.
        01  SCRN-CONFIRM1.
            03  LINE 8  COL 30  VALUE 'RECORD IS UPDATED'.
        01  SCRN-CONFIRM2.
@@ -86,48 +85,50 @@
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
            
-               DISPLAY BLNK-SCRN
-               DISPLAY SCRN-TITLE
-               DISPLAY SCRN-ID
-               ACCEPT  SCRN-ID
-               
-               MOVE WS-CRSE-ID TO CRSE-ID
-               
-               READ CRSE-MASTER
-                   INVALID KEY
-                       DISPLAY BLNK-SCRN
-                       DISPLAY SCRN-ERR
-                       DISPLAY SCRN-ANOTHER
-                       ACCEPT SCRN-ANOTHER
-                   NOT INVALID KEY
-                       MOVE CRSE-NAME   TO WS-CRSE-NAME
-                       MOVE CRSE-CREDIT TO WS-CRSE-CREDIT
-                       MOVE CRSE-STAT   TO WS-CRSE-STAT
-                       DISPLAY SCRN-NAME
-                       ACCEPT SCRN-CRSE-NAME
-                       DISPLAY SCRN-CREDIT
-                       ACCEPT SCRN-CRSE-CREDIT
-                       DISPLAY SCRN-STATUS
-                       ACCEPT SCRN-CRSE-STAT
-                       DISPLAY SCRN-SAVE
-                       ACCEPT SCRN-SAVE
-                       IF SAVE
-                           THEN                                         
+                   DISPLAY BLNK-SCRN
+                   DISPLAY SCRN-TITLE
+                   DISPLAY SCRN-ID
+                   ACCEPT  SCRN-ID
+                   
+                   MOVE WS-CRSE-ID TO CRSE-ID
+                   
+                   READ CRSE-MASTER
+                       INVALID KEY
+                           DISPLAY BLNK-SCRN
+                           DISPLAY SCRN-ERR
+                           DISPLAY SCRN-ANOTHER
+                           ACCEPT SCRN-ANOTHER
+                       NOT INVALID KEY
+                           MOVE CRSE-NAME   TO WS-CRSE-NAME
+                           MOVE CRSE-CREDIT TO WS-CRSE-CREDIT
+                           MOVE CRSE-STAT   TO WS-CRSE-STAT
+                           PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
+                               DISPLAY SCRN-NAME
+                               ACCEPT SCRN-CRSE-NAME
+                               DISPLAY SCRN-CREDIT
+                               ACCEPT SCRN-CRSE-CREDIT
+                               DISPLAY SCRN-STATUS
+                               ACCEPT SCRN-CRSE-STAT
+                               DISPLAY SCRN-SAVE
+                               ACCEPT SCRN-SAVE
                                MOVE WS-CRSE-NAME TO CRSE-NAME           
                                MOVE WS-CRSE-CREDIT TO CRSE-CREDIT
                                MOVE WS-CRSE-STAT TO CRSE-STAT
-                               REWRITE CRSE-REC
+                           END-PERFORM             
+                   END-READ
+                           IF SAVE
+                               THEN
+                                   REWRITE CRSE-REC
+                                   DISPLAY BLNK-SCRN
+                                   DISPLAY SCRN-CONFIRM1
+                                   DISPLAY SCRN-ANOTHER
+                                   ACCEPT SCRN-ANOTHER
+                           ELSE
                                DISPLAY BLNK-SCRN
-                               DISPLAY SCRN-CONFIRM1
+                               DISPLAY SCRN-CONFIRM2
                                DISPLAY SCRN-ANOTHER
                                ACCEPT SCRN-ANOTHER
-                       ELSE
-                           DISPLAY BLNK-SCRN
-                           DISPLAY SCRN-CONFIRM2
-                           DISPLAY SCRN-ANOTHER
-                           ACCEPT SCRN-ANOTHER
-                       END-IF    
-               END-READ
+                           END-IF
            END-PERFORM.
 
            CLOSE CRSE-MASTER.
