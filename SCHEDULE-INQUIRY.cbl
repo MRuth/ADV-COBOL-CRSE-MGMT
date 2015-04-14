@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. SCHEDULE-LIST.
+       PROGRAM-ID. SCHEDULE-INQUIRY.
       *-----------------------------------------------------------------
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
