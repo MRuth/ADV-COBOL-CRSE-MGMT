@@ -36,14 +36,14 @@
            03  OPEN-SEATS-I        PIC X(2).
        WORKING-STORAGE SECTION.
        01  MISC-VARS.
-           03  WS-RESP             PIC X   VALUE SPACE.
+           03  WS-RESP             PIC X     VALUE SPACE.
            03  WS-STAT             PIC 99.
-           03  WS-EOF              PIC X   VALUE 'N'.
-               88  EOF                     VALUE 'Y'.
-           03  WS-COUNTER          PIC 99 VALUE 0.
+           03  WS-EOF              PIC X     VALUE 'N'.
+               88  EOF                       VALUE 'Y'.
+           03  WS-COUNTER          PIC 99    VALUE 0.
            03  WS-BLNK-LN          PIC X(80) VALUE SPACES.
-           03  WS-ANOTHER          PIC X VALUE 'Y'.
-               88  ANOTHER                 VALUE 'N'.
+           03  WS-ANOTHER          PIC X     VALUE 'Y'.
+               88  ANOTHER                   VALUE 'N'.
            03  WS-COURSE-DEPT      PIC X(4).
            03  WS-YEAR             PIC 9(4).
            03  WS-SEM              PIC 99.
@@ -54,10 +54,10 @@
        01  WS-HEADER.
            03  FILLER              PIC X(13) VALUE 'YEAR SEM CRN '. 
            03  FILLER              PIC X(10) VALUE 'COURSE ID'.
-           03  FILLER              PIC X(21)  VALUE 'TIME        DAYS'.
+           03  FILLER              PIC X(21) VALUE 'TIME        DAYS'.
            03  FILLER              PIC X(12) VALUE 'BLD/ROOM'.
-           03  FILLER              PIC X(5) VALUE 'INST'.
-           03  FILLER              PIC X(5) VALUE 'SEATS'. 
+           03  FILLER              PIC X(5)  VALUE 'INST'.
+           03  FILLER              PIC X(5)  VALUE 'SEATS'. 
 
        SCREEN SECTION.
        01  BLNK-SCRN.
