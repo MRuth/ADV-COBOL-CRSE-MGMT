@@ -92,10 +92,10 @@
                    07          COL 43  PIC XXXXX   USING WS-STU-ZIP
                                                    AUTO REQUIRED.
                05  SCRN-STU-CITY-ST.
-                   07  LINE 11 COL 35              VALUE 'CITY:'.
+                   07  LINE 11 COL 35              VALUE 'CITY: '.
                    07          COL 43  PIC X(30)   FROM ZIP-CITY.
                    
-                   07  LINE 12 COL 35              VALUE 'ST  :'.
+                   07  LINE 12 COL 35              VALUE 'ST  : '.
                    07          COL 43  PIC XX      FROM ZIP-STATE.
                    
            03  SCRN-STU-PHONE.
