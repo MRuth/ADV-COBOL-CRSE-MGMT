@@ -23,16 +23,26 @@
                                    ORGANIZATION  IS RELATIVE
                                    ACCESS IS RANDOM
                                    RELATIVE KEY  IS WS-MST-REC-KEY.
+                                   
+           SELECT ZIP-MST      ASSIGN TO "../FILES/ZIPMASTER.DAT"
+                               ORGANIZATION  IS INDEXED
+                               ACCESS        IS DYNAMIC
+                               RECORD KEY    IS ZIP-KEY
+                               ALTERNATE KEY IS ZIP-CITY
+                                   WITH DUPLICATES
+                               FILE STATUS   IS WS-ZIP-STAT.
 
        DATA DIVISION.
        FILE SECTION.
        COPY STU-MST-DEF.
        COPY MST-CTRL-LIST-RECS.
+       COPY ZIP-MST-DEF.
        
        WORKING-STORAGE SECTION.
        01  WS-RESP                 PIC X.
        01  WS-STAT                 PIC 99.
        01  WS-MST-REC-KEY          PIC 99.
+       01  WS-ZIP-STAT             PIC 99.
        01  WS-EOF                  PIC X       VALUE 'N'.
            88  EOF                             VALUE 'Y'.
        01  WS-SAVE                 PIC X       VALUE SPACES.
@@ -83,8 +93,10 @@
                                                    AUTO REQUIRED.
                05  SCRN-STU-CITY-ST.
                    07  LINE 11 COL 35              VALUE 'CITY:'.
+                   07          COL 43  PIC X(30)   FROM ZIP-CITY.
                    
                    07  LINE 12 COL 35              VALUE 'ST  :'.
+                   07          COL 43  PIC XX      FROM ZIP-STATE.
                    
            03  SCRN-STU-PHONE.
                05  LINE 14 COL 25                  VALUE
@@ -113,6 +125,7 @@
        000-MAIN.
            OPEN I-O STU-MST.
            OPEN I-O MST-CTRL-LIST.
+           OPEN INPUT ZIP-MST.
            
            MOVE 6 TO WS-MST-REC-KEY.
            READ MST-CTRL-LIST
@@ -131,6 +144,7 @@
                    ACCEPT SCRN-STU-F-NAME
                    ACCEPT SCRN-STU-STREET
                    ACCEPT SCRN-STU-ZIP
+                   PERFORM 100-GET-CITY-ST
                    ACCEPT SCRN-STU-PHONE
                    ACCEPT SCRN-STU-STATUS
                    
@@ -170,8 +184,21 @@
            MOVE WS-STU-ID TO MST-STU-ID
            REWRITE MST-NEXT-STU.
            
-           CLOSE STU-MST.
-           CLOSE MST-CTRL-LIST.
+           CLOSE   STU-MST,
+                   MST-CTRL-LIST,
+                   ZIP-MST.
            
            EXIT PROGRAM.
        
+       
+       100-GET-CITY-ST.
+       MOVE WS-STU-ZIP TO ZIP-KEY.
+       START ZIP-MST KEY EQUAL TO ZIP-KEY
+               INVALID KEY
+                   MOVE "RECORD NOT FOUND" TO ZIP-CITY
+                   MOVE SPACES TO ZIP-COUNTY
+                                  ZIP-STATE
+               NOT INVALID KEY
+                   READ ZIP-MST
+       END-START
+       DISPLAY SCRN-FIELDS.
