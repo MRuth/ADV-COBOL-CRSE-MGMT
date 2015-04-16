@@ -210,6 +210,7 @@
                ACCEPT SCHED-MENU 
                EVALUATE WS-SEL
                        WHEN '1' CALL 'SCHEDULE-MASTER'
+                       WHEN '3' CALL 'SCHEDULE-ADD'
                        WHEN '4' CALL 'SCHEDULE-INQUIRY'
                        WHEN '5' CALL 'SCHEDULE-LIST'
                END-EVALUATE
