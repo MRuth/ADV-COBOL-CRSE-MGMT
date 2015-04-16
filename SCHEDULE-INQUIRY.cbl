@@ -21,7 +21,7 @@
                05  SCHEDULE-SEM    PIC XX.
                05  FILLER          PIC X.
                05  SCHEDULE-CRN    PIC X(4).
-           03  FILLER              PIC X.
+           03  FILLER              PIC X.  
            03  COURSE-ID-I.
                05  COURSE-ID-DEPT  PIC X(4).
                05  FILLER          PIC X.
