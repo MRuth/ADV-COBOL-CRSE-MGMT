@@ -24,6 +24,8 @@
        FD  REG-MASTER.
        01  REG-REC.
            03  REG-STU-ID          PIC 9(4).
+           03  REG-YEAR            PIC 9999.
+           03  REG-SEM             PIC 99.
            03  FIRST-CRN           PIC 9(4).
            03  SECOND-CRN          PIC 9(4).
            03  THIRD-CRN           PIC 9(4).
@@ -41,6 +43,8 @@
                88  ANOTHER                 VALUE 'N'.
            03  WS-STU-NAME         PIC X(20).
            03  WS-SPACE            PIC X VALUE SPACE.
+           03  WS-YEAR             PIC 9999.
+           03  WS-SEM              PIC 99.
        01  WS-DTL-LN.
            03  WS-STU-ID              PIC 9(4).
            03  WS-FIRST-CRN           PIC 9(4).
@@ -62,50 +66,62 @@
            03  SCRN-STU-NAME.
                05  LINE 5  COL 25  VALUE   'STUDENT NAME : '.
                05          COL 40  PIC X(20) FROM WS-STU-NAME.
-       01  SCRN-CRN1.        
+       01  SCRN-CRN1.
+           03  SCRN-YEAR-SEM1.
+               05  LINE 7  COL 15  VALUE   'YEAR: '.
+               05          COL 22  PIC ZZZ9 TO WS-YEAR
+                                            AUTO REQUIRED FULL.
+               05          COL 50  VALUE   'SEMESTER: '.
+               05          COL 61  PIC Z9   TO WS-SEM
+                                            AUTO REQUIRED.
            03  SCRN-FIRST-CRN1.
-               05  LINE 7  COL 25  VALUE   'FIRST CRN    : '.
-               05          COL 40  PIC X(4) TO WS-FIRST-CRN
+               05  LINE 9  COL 25  VALUE   'FIRST CRN    : '.
+               05          COL 40  PIC ZZZ9 TO WS-FIRST-CRN
                                             AUTO.
            03  SCRN-SECOND-CRN1.
-               05  LINE 8  COL 25  VALUE   'SECOND CRN   : '.
-               05          COL 40  PIC X(4) TO WS-SECOND-CRN
+               05  LINE 10 COL 25  VALUE   'SECOND CRN   : '.
+               05          COL 40  PIC ZZZ9 TO WS-SECOND-CRN
                                             AUTO.
            03  SCRN-THIRD-CRN1.
-               05  LINE 9  COL 25  VALUE   'THIRD CRN    : '.
-               05          COL 40  PIC X(4) TO WS-THIRD-CRN
-                                            AUTO.
+               05  LINE 11  COL 25  VALUE   'THIRD CRN    : '.
+               05           COL 40  PIC ZZZ9 TO WS-THIRD-CRN
+                                             AUTO.
            03  SCRN-FOURTH-CRN1.
-               05  LINE 10  COL 25  VALUE   'FOURTH CRN   : '.
-               05           COL 40  PIC X(4) TO WS-FOURTH-CRN
-                                            AUTO.
+               05  LINE 12  COL 25  VALUE   'FOURTH CRN   : '.
+               05           COL 40  PIC ZZZ9 TO WS-FOURTH-CRN
+                                             AUTO.
            03  SCRN-FIFTH-CRN1.
-               05  LINE 11  COL 25  VALUE   'FIFTH CRN    : '.
-               05           COL 40  PIC X(4) TO WS-FIFTH-CRN
-                                            AUTO.
-       01  SCRN-CRN2.        
+               05  LINE 13  COL 25  VALUE   'FIFTH CRN    : '.
+               05           COL 40  PIC ZZZ9 TO WS-FIFTH-CRN
+                                             AUTO.
+       01  SCRN-CRN2.
+           03  SCRN-YEAR-SEM2.
+               05  LINE 7  COL 15  VALUE   'YEAR: '.
+               05          COL 22  PIC ZZZ9 USING REG-YEAR.
+               05          COL 50  VALUE   'SEMESTER: '.
+               05          COL 61  PIC Z9   USING REG-SEM.
            03  SCRN-FIRST-CRN2.
-               05  LINE 7  COL 25  VALUE   'FIRST CRN    : '.
-               05          COL 40  PIC X(4) USING FIRST-CRN
+               05  LINE 9  COL 25  VALUE   'FIRST CRN    : '.
+               05          COL 40  PIC ZZZ9 USING FIRST-CRN
                                             AUTO.
            03  SCRN-SECOND-CRN2.
-               05  LINE 8  COL 25  VALUE   'SECOND CRN   : '.
-               05          COL 40  PIC X(4) USING SECOND-CRN
+               05  LINE 10 COL 25  VALUE   'SECOND CRN   : '.
+               05          COL 40  PIC ZZZ9 USING SECOND-CRN
                                             AUTO.
            03  SCRN-THIRD-CRN2.
-               05  LINE 9  COL 25  VALUE   'THIRD CRN    : '.
-               05          COL 40  PIC X(4) USING THIRD-CRN
+               05  LINE 11 COL 25  VALUE   'THIRD CRN    : '.
+               05          COL 40  PIC ZZZ9 USING THIRD-CRN
                                             AUTO.
            03  SCRN-FOURTH-CRN2.
-               05  LINE 10 COL 25  VALUE   'FOURTH CRN   : '.
-               05          COL 40  PIC X(4) USING FOURTH-CRN
+               05  LINE 12 COL 25  VALUE   'FOURTH CRN   : '.
+               05          COL 40  PIC ZZZ9 USING FOURTH-CRN
                                             AUTO.
            03  SCRN-FIFTH-CRN2.
-               05  LINE 11 COL 25  VALUE   'FIFTH CRN    : '.
-               05          COL 40  PIC X(4) USING FIFTH-CRN
+               05  LINE 13 COL 25  VALUE   'FIFTH CRN    : '.
+               05          COL 40  PIC ZZZ9 USING FIFTH-CRN
                                             AUTO.                                                                                                                                                                      
            03  SCRN-SAVE.
-               05  LINE 13  COL 32  VALUE     'SAVE (Y/N)'.
+               05  LINE 15  COL 32  VALUE     'SAVE (Y/N)'.
                05           COL 30  PIC X     TO WS-SAVE.
        01  SCRN-WRITE-ERR.
            03  LINE 8  COL 30  VALUE 'STUDENT CAN NOT BE FOUND'.
@@ -147,6 +163,7 @@
                                READ REG-MASTER
                                    INVALID KEY
                                        DISPLAY SCRN-CRN1
+                                       ACCEPT  SCRN-YEAR-SEM1
                                        ACCEPT  SCRN-FIRST-CRN1
                                        ACCEPT  SCRN-SECOND-CRN1
                                        ACCEPT  SCRN-THIRD-CRN1
@@ -157,6 +174,7 @@
                                        PERFORM 100-SAVE1
                                    NOT INVALID KEY
                                        DISPLAY SCRN-CRN2
+                                       ACCEPT  SCRN-YEAR-SEM2
                                        ACCEPT  SCRN-FIRST-CRN2
                                        ACCEPT  SCRN-SECOND-CRN2
                                        ACCEPT  SCRN-THIRD-CRN2
@@ -177,6 +195,8 @@
        100-SAVE1.
            IF SAVE
                THEN
+                   MOVE WS-YEAR TO REG-YEAR
+                   MOVE WS-SEM TO REG-SEM
                    MOVE WS-FIRST-CRN TO FIRST-CRN
                    MOVE WS-SECOND-CRN TO SECOND-CRN
                    MOVE WS-THIRD-CRN TO THIRD-CRN

@@ -66,9 +66,10 @@
                05  LINE 12 COL 32 VALUE " 4) INQUIRE BY ID".
                05  LINE 14 COL 32 VALUE " 5) LIST STUDENTS".
                05  LINE 16 COL 32 VALUE " 6) REGISTER CLASS".
-               05  LINE 18 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 22 COL 37 VALUE "Selection".
-               05  LINE 22 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 18 COL 32 VALUE " 7) DROP CLASS".
+               05  LINE 20 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
        
        01 CRS-MENU.
           03  CRSMENU.
@@ -182,6 +183,7 @@
                        WHEN '4' CALL 'STUDENT-INQUIRY'
                        WHEN '5' CALL 'STUDENT-LIST'
                        WHEN '6' CALL 'REGISTER-ADD'
+                       WHEN '7' CALL 'REGISTER-DROP'
                    END-EVALUATE
               END-PERFORM.
            

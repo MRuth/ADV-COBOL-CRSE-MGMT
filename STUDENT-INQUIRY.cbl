@@ -10,8 +10,9 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT STU-MST      ASSIGN TO '../FILES/SUDENT-MASTER.DAT'
+           SELECT STU-MST      ASSIGN TO '../FILES/STUDENT-MASTER.DAT'
                                ORGANIZATION IS INDEXED
+                               ACCESS IS DYNAMIC
                                RECORD KEY IS STU-ID
                                FILE STATUS IS WS-STU-STAT.
                                            
@@ -76,22 +77,62 @@
                                        'PERFORM ANOTHER INQUIRY (Y/N)'.
            03              COL 33      PIC X       TO  WS-RESP
                                                    AUTO REQUIRED.
+       01  SCRN-NOT-FOUND.
+           03      LINE 11 COL 25                  VALUE
+                                       'STUDENT RECORD NOT FOUND!'.
 
        PROCEDURE DIVISION.
        000-MAIN.
+           OPEN INPUT  STU-MST,
+                       ZIP-MST.
+                       
            MOVE 'Y'    TO WS-RESP.
            
            PERFORM UNTIL ANOTHER
-               MOVE ZEROS TO STU-ID
-               MOVE SPACES TO ZIP-KEY
-               DISPLAY NEW-SCREEN
-               DISPLAY SCRN-INQUIRE
-               ACCEPT SCRN-STU-ID
-               DISPLAY SCRN-ANOTHER
-               ACCEPT SCRN-ANOTHER
+               MOVE SPACES TO STU-REC
+               MOVE SPACES TO ZIP-REC
+               PERFORM 100-DISP-SCREEN
+               PERFORM 200-GET-STUDENT
            END-PERFORM.
+           
+           CLOSE   STU-MST,
+                   ZIP-MST.
+                   
        EXIT PROGRAM.
        
-       100-GET-STUDENT.
-       200-GET-CITY-ST.
-       
+       100-DISP-SCREEN.
+           MOVE ZEROS TO STU-ID.
+           MOVE SPACES TO ZIP-KEY.
+           DISPLAY NEW-SCREEN.
+           DISPLAY SCRN-INQUIRE.
+           ACCEPT SCRN-STU-ID.
+           
+       200-GET-STUDENT.
+           START STU-MST KEY EQUAL TO STU-ID
+               INVALID KEY
+                   DISPLAY NEW-SCREEN
+                   DISPLAY SCRN-STU-ID
+                   DISPLAY SCRN-NOT-FOUND
+               NOT INVALID KEY
+                   READ STU-MST
+                   PERFORM 300-GET-CITY-ST
+                   DISPLAY    SCRN-INQUIRE
+           END-START.
+            DISPLAY    SCRN-ANOTHER.
+            ACCEPT     SCRN-ANOTHER.
+           
+       300-GET-CITY-ST.
+           MOVE STU-ZIP    TO  ZIP-KEY.
+           START ZIP-MST KEY EQUAL TO ZIP-KEY
+               INVALID KEY
+                   MOVE "RECORD NOT FOUND" TO ZIP-CITY
+                   MOVE SPACES TO ZIP-COUNTY
+                                  ZIP-STATE
+               NOT INVALID KEY
+                   READ ZIP-MST
+           END-START.
+           
+       400-DISPLAY.
+           DISPLAY SCRN-INQUIRE.
+           DISPLAY SCRN-ANOTHER.
+           ACCEPT  SCRN-ANOTHER.
