@@ -11,7 +11,7 @@
                                RECORD KEY    IS SCHEDULE-ID-I
                                FILE STATUS   IS WS-STAT.
       *-----------------------------------------------------------------
-       DATA DIVISION.
+       DATA DIVISION.  
       *-----------------------------------------------------------------
        FD  IN-FILE.
        01  IN-REC.
