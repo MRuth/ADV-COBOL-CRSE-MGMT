@@ -10,6 +10,7 @@
                                        ORGANIZATION  IS INDEXED
                                        ACCESS        IS RANDOM
                                        RECORD KEY    IS INSTR-ID
+                                       ALTERNATE KEY IS INSTR-NAME
                                        FILE STATUS   IS WS-STAT.
            SELECT MST-CTRL-LIST        ASSIGN TO 
                                        "../Files/MST-CTRL-LST.DAT"
