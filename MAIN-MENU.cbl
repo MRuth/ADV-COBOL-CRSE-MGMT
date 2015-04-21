@@ -130,7 +130,7 @@
        01 RPT-MENU.
           03  RPTMENU.
                05  LINE 01 COL 38 VALUE "REPORT MENU".
-               05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
+               05  LINE 06 COL 32 VALUE " 1) COURSES BY INSTRUCTOR".
                05  LINE 08 COL 32 VALUE " 2) ADD STUDENT".
                05  LINE 10 COL 32 VALUE " 3) UPDATE STUDENT".
                05  LINE 12 COL 32 VALUE " 4) INQUIRE BY ID".
@@ -212,6 +212,7 @@
                ACCEPT SCHED-MENU 
                EVALUATE WS-SEL
                        WHEN '1' CALL 'SCHEDULE-MASTER'
+                       WHEN '2' CALL 'SCHEDULE-ADD'
                        WHEN '3' CALL 'SCHEDULE-ADD'
                        WHEN '4' CALL 'SCHEDULE-INQUIRY'
                        WHEN '5' CALL 'SCHEDULE-LIST'
@@ -268,7 +269,7 @@
                DISPLAY HEADER, RPT-MENU
                ACCEPT RPT-MENU
                EVALUATE WS-SEL
-                       WHEN '1' PERFORM 210-STUDENT
+                       WHEN '1' CALL 'REPORT-COURSE-BY-INST'
                END-EVALUATE
            END-PERFORM.
                            
