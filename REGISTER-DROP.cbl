@@ -8,14 +8,26 @@
                                '../FILES/REGISTER-MASTER.DAT'   
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS RANDOM
-                               RECORD KEY    IS REG-STU-ID
+                               RECORD KEY    IS REG-KEY
                                FILE STATUS   IS WS-STAT.
            SELECT STU-MST      ASSIGN TO 
                                '../FILES/STUDENT-MASTER.DAT'
                                ORGANIZATION    IS INDEXED
                                ACCESS          IS RANDOM
                                RECORD KEY      IS STU-ID
-                               FILE STATUS     IS WS-STAT.                        
+                               FILE STATUS     IS WS-STAT.
+           SELECT CRSE-MASTER  ASSIGN        TO 
+                               '../FILES/COURSE-MASTER-SORT.DAT'
+                               ORGANIZATION  IS INDEXED
+                               ACCESS        IS RANDOM
+                               RECORD KEY    IS CRSE-ID
+                               FILE STATUS   IS WS-STAT. 
+           SELECT SCHE-MST     ASSIGN TO
+                               '../FILES/SCHEDULE-MASTER.DAT'
+                               ORGANIZATION  IS INDEXED
+                               ACCESS        IS RANDOM
+                               RECORD KEY    IS SCHEDULE-ID-O
+                               FILE STATUS   IS WS-STAT.                       
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
@@ -23,14 +35,34 @@
        COPY STU-MST-DEF.
        FD  REG-MASTER.
        01  REG-REC.
-           03  REG-STU-ID          PIC 9(4).
-           03  REG-YEAR            PIC 9999.
-           03  REG-SEM             PIC 99.           
+           03  REG-KEY.
+               05  REG-STU-ID          PIC 9(4).
+               05  REG-YEAR            PIC 9999.
+               05  REG-SEM             PIC 99.
            03  FIRST-CRN           PIC 9(4).
            03  SECOND-CRN          PIC 9(4).
            03  THIRD-CRN           PIC 9(4).
            03  FOURTH-CRN          PIC 9(4).
            03  FIFTH-CRN           PIC 9(4).
+       FD  CRSE-MASTER.
+       01  CRSE-REC.
+           03  CRSE-ID        PIC X(9).
+           03  CRSE-NAME      PIC X(35).
+           03  CRSE-CREDIT    PIC X(4).
+           03  CRSE-STAT      PIC X.
+       FD  SCHE-MST.
+       01  SCHE-REC.
+           03  SCHEDULE-ID-O       PIC X(12).
+           03  FILLER              PIC X.
+           03  COURSE-ID-O         PIC X(9).
+           03  FILLER              PIC X.
+           03  TIMEDAY-O           PIC X(20).
+           03  FILLER              PIC X.
+           03  BUILDING-ID-O       PIC X(11).
+           03  FILLER              PIC X.
+           03  INSTRUCTOR-ID-O     PIC X(4).
+           03  FILLER              PIC X(3).
+           03  OPEN-SEATS-O        PIC X(2).
        WORKING-STORAGE SECTION.
        01  MISC-VARS.
            03  WS-RESP             PIC X   VALUE SPACE.
@@ -44,13 +76,15 @@
                88  ANOTHER                 VALUE 'N'.
            03  WS-STU-NAME         PIC X(20).
            03  WS-SPACE            PIC X VALUE SPACE.
+           03  WS-CRN              PIC 9999.
+           03  WS-CRSE-NAME        PIC X(39).
        01  WS-DTL-LN.
-           03  WS-STU-ID              PIC 9(4).
-           03  WS-FIRST-CRN           PIC 9(4).
-           03  WS-SECOND-CRN          PIC 9(4).
-           03  WS-THIRD-CRN           PIC 9(4).
-           03  WS-FOURTH-CRN          PIC 9(4).
-           03  WS-FIFTH-CRN           PIC 9(4).
+           03  WS-STU-ID               PIC 9(4).
+           03  WS-FIRST-CRSE           PIC X(35).
+           03  WS-SECOND-CRSE          PIC X(35).
+           03  WS-THIRD-CRSE           PIC X(35).
+           03  WS-FOURTH-CRSE          PIC X(35).
+           03  WS-FIFTH-CRSE           PIC X(35).
       *-----------------------------------------------------------------
        SCREEN SECTION.
        01  BLNK-SCRN.
@@ -59,44 +93,46 @@
            03  LINE 1  COL 30  VALUE 'REGISTER DROP CLASSES'.
        01  SCRN-DATA.
            03  SCRN-STU-ID.
-               05  LINE 3  COL 25  VALUE   'STUDENT ID   : '.
+               05  LINE 3  COL 25  VALUE   'Student ID   : '.
                05          COL 42  PIC 9(4) TO WS-STU-ID          
                                             AUTO REQUIRED.
            03  SCRN-STU-NAME.
-               05  LINE 5  COL 25  VALUE   'STUDENT NAME : '.
+               05  LINE 5  COL 25  VALUE   'Student Name : '.
                05          COL 42  PIC X(20) FROM WS-STU-NAME.
-       01  SCRN-CRN.
            03  SCRN-YEAR-SEM.
-               05  LINE 7  COL 15  VALUE   'YEAR: '.
-               05          COL 22  PIC ZZZ9 FROM REG-YEAR.
-               05          COL 50  VALUE   'SEMESTER: '.
-               05          COL 61  PIC Z9   FROM REG-SEM.       
-           03  SCRN-FIRST-CRN.
-               05  LINE 9  COL 25  VALUE   '1) FIRST CRN    : '.
-               05          COL 42  PIC ZZZ9 FROM FIRST-CRN.
-           03  SCRN-SECOND-CRN.
-               05  LINE 10 COL 25  VALUE   '2) SECOND CRN   : '.
-               05          COL 42  PIC ZZZ9 FROM SECOND-CRN.
-           03  SCRN-THIRD-CRN.
-               05  LINE 11 COL 25  VALUE   '3) THIRD CRN    : '.
-               05          COL 42  PIC ZZZ9 FROM THIRD-CRN.
-           03  SCRN-FOURTH-CRN.
-               05  LINE 12 COL 25  VALUE   '4) FOURTH CRN   : '.
-               05          COL 42  PIC ZZZ9 FROM FOURTH-CRN.
-           03  SCRN-FIFTH-CRN.
-               05  LINE 13 COL 25  VALUE   '5) FIFTH CRN    : '.
-               05          COL 42  PIC ZZZ9 FROM FIFTH-CRN.
+               05  LINE 7  COL 15  VALUE   'Year: '.
+               05          COL 22  PIC ZZZ9 TO REG-YEAR
+                                            AUTO REQUIRED FULL.
+               05          COL 50  VALUE   'Semester: '.
+               05          COL 61  PIC Z9   TO REG-SEM
+                                            AUTO REQUIRED. 
+       01  SCRN-CRSE.    
+           03  SCRN-FIRST-CRSE.
+               05  LINE 9  COL 25  VALUE   '1) First Course : '.
+               05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
+           03  SCRN-SECOND-CRSE.
+               05  LINE 10 COL 25  VALUE   '2) Second Course: '.
+               05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
+           03  SCRN-THIRD-CRSE.
+               05  LINE 11 COL 25  VALUE   '3) Third Course : '.
+               05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
+           03  SCRN-FOURTH-CRSE.
+               05  LINE 12 COL 25  VALUE   '4) Fourth Course: '.
+               05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
+           03  SCRN-FIFTH-CRSE.
+               05  LINE 13 COL 25  VALUE   '5) Fifth Course : '.
+               05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
            03  SCRN-RETURN.
-               05  LINE 14 COL 25  VALUE   'R) FINISH'.
+               05  LINE 14 COL 25  VALUE   'R) Finish'.
            03  SCRN-SEL.
-               05  LINE 16  COL 32  VALUE     'SELECTION'.
+               05  LINE 16  COL 32  VALUE     'Selection'.
                05           COL 30  PIC X     TO WS-SEL.
        01  SCRN-ERR1.
            03  LINE 8  COL 30  VALUE 'STUDENT CANNOT BE FOUND'.
        01  SCRN-ERR2.
            03  LINE 8  COL 30  VALUE 'STUDENT HAS NOT REGISTERED'.
        01  SCRN-CONTINUE.
-           03  LINE 10 COL 32  VALUE 'CONTINUE? (Y/N)'.
+           03  LINE 10 COL 32  VALUE 'Continue? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER
                                         REQUIRED.
       *----------------------------------------------------------------- 
@@ -119,7 +155,15 @@
                        DISPLAY SCRN-CONTINUE
                        ACCEPT  SCRN-CONTINUE
                    NOT INVALID KEY
-                       MOVE WS-STU-ID  TO REG-STU-ID
+                       STRING
+                       STU-F-NAME DELIMITED BY SPACE
+                       WS-SPACE   DELIMITED BY SIZE
+                       STU-L-NAME DELIMITED BY SPACE
+                       INTO WS-STU-NAME
+                       DISPLAY SCRN-STU-NAME
+                       DISPLAY SCRN-YEAR-SEM
+                       ACCEPT  SCRN-YEAR-SEM
+                       MOVE WS-STU-ID  TO REG-STU-ID                               
                            READ REG-MASTER
                                INVALID KEY
                                    DISPLAY BLNK-SCRN
@@ -127,32 +171,27 @@
                                    DISPLAY SCRN-CONTINUE
                                    ACCEPT  SCRN-CONTINUE
                                NOT INVALID KEY
-                                   STRING
-                                   STU-F-NAME DELIMITED BY SPACE
-                                   WS-SPACE   DELIMITED BY SIZE
-                                   STU-L-NAME DELIMITED BY SPACE
-                                   INTO WS-STU-NAME
-                                   DISPLAY SCRN-STU-NAME
+                                   MOVE 'X' TO WS-SEL
                                    PERFORM UNTIL WS-SEL = 'R'
-                                       DISPLAY SCRN-CRN
+                                       MOVE FIRST-CRN TO WS-CRN
+                                       PERFORM 200-GET-CLASS-NAME
+                                       DISPLAY SCRN-FIRST-CRSE
+                                       MOVE SECOND-CRN TO WS-CRN
+                                       PERFORM 200-GET-CLASS-NAME
+                                       DISPLAY SCRN-SECOND-CRSE
+                                       MOVE THIRD-CRN TO WS-CRN
+                                       PERFORM 200-GET-CLASS-NAME
+                                       DISPLAY SCRN-THIRD-CRSE
+                                       MOVE FOURTH-CRN TO WS-CRN
+                                       PERFORM 200-GET-CLASS-NAME
+                                       DISPLAY SCRN-FOURTH-CRSE
+                                       MOVE FIFTH-CRN TO WS-CRN
+                                       PERFORM 200-GET-CLASS-NAME
+                                       DISPLAY SCRN-FIFTH-CRSE
+                                       DISPLAY SCRN-RETURN
+                                       DISPLAY SCRN-SEL
                                        ACCEPT SCRN-SEL
-                                       EVALUATE WS-SEL
-                                           WHEN '1'
-                                               MOVE ZEROS TO FIRST-CRN
-                                               REWRITE REG-REC
-                                           WHEN '2'
-                                               MOVE ZEROS TO SECOND-CRN
-                                               REWRITE REG-REC
-                                           WHEN '3'
-                                               MOVE ZEROS TO THIRD-CRN
-                                               REWRITE REG-REC      
-                                           WHEN '4'
-                                               MOVE ZEROS TO FOURTH-CRN
-                                               REWRITE REG-REC
-                                           WHEN '5'
-                                               MOVE ZEROS TO FIFTH-CRN
-                                               REWRITE REG-REC
-                                       END-EVALUATE
+                                       PERFORM 100-EVALUATE-SEL
                                    END-PERFORM
                                    DISPLAY BLNK-SCRN
                                    DISPLAY SCRN-CONTINUE
@@ -165,4 +204,55 @@
            CLOSE STU-MST.
            
            EXIT PROGRAM.
-               
+      *-----------------------------------------------------------------
+       100-EVALUATE-SEL.
+           
+           EVALUATE WS-SEL
+               WHEN '1'
+                   MOVE ZEROS TO FIRST-CRN
+                   REWRITE REG-REC
+               WHEN '2'
+                   MOVE ZEROS TO SECOND-CRN
+                   REWRITE REG-REC
+               WHEN '3'
+                   MOVE ZEROS TO THIRD-CRN
+                   REWRITE REG-REC      
+               WHEN '4'
+                   MOVE ZEROS TO FOURTH-CRN
+                   REWRITE REG-REC
+               WHEN '5'
+                   MOVE ZEROS TO FIFTH-CRN
+                   REWRITE REG-REC
+           END-EVALUATE. 
+      *-----------------------------------------------------------------
+       200-GET-CLASS-NAME.
+       
+           MOVE SPACES TO WS-CRSE-NAME
+
+           STRING REG-YEAR DELIMITED BY SIZE
+                  WS-SPACE DELIMITED BY SIZE
+                  REG-SEM DELIMITED BY SIZE
+                  WS-SPACE DELIMITED BY SIZE
+                  WS-CRN DELIMITED BY SIZE
+                  INTO SCHEDULE-ID-O.
+
+           OPEN INPUT SCHE-MST.
+           OPEN INPUT CRSE-MASTER.
+           READ SCHE-MST
+               INVALID KEY
+                   MOVE 'Have not yet registerd' TO WS-CRSE-NAME
+               NOT INVALID KEY
+                   MOVE COURSE-ID-O TO CRSE-ID
+                   READ CRSE-MASTER
+                       INVALID KEY
+                       NOT INVALID KEY
+                          STRING WS-CRN DELIMITED BY SIZE
+                                 WS-SPACE DELIMITED BY SIZE
+                                 CRSE-NAME DELIMITED BY SIZE
+                                 INTO WS-CRSE-NAME
+                   END-READ
+           END-READ
+           
+           CLOSE SCHE-MST.
+           CLOSE CRSE-MASTER.
+      *----------------------------------------------------------------- 
