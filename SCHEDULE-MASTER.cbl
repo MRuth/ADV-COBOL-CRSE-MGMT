@@ -195,32 +195,6 @@
            DISPLAY BLNK-SCRN.
            DISPLAY 'MASTER BUILT SUCCESSFULLY'.
            DISPLAY 'PRESS ENTER TO RETURN TO MENU'.
-           
-           
-           
-           MOVE 3 TO WS-MST-REC-KEY.
-           READ MST-CTRL-LIST
-               INVALID KEY
-                   DISPLAY 'CUNT'
-               NOT INVALID KEY
-                   DISPLAY MST-NEXT-CRNS
-               
-           END-READ.
-           MOVE 4 TO WS-MST-REC-KEY.
-           READ MST-CTRL-LIST
-               NOT INVALID KEY
-                   DISPLAY MST-NEXT-CRNS
-           END-READ.
-           MOVE 7 TO WS-MST-REC-KEY.
-           READ MST-CTRL-LIST
-               NOT INVALID KEY
-                   DISPLAY MST-NEXT-CRNS 
-           END-READ.
-           MOVE 8 TO WS-MST-REC-KEY.
-           READ MST-CTRL-LIST
-               NOT INVALID KEY
-                   DISPLAY MST-NEXT-CRNS
-           END-READ.
            ACCEPT WS-RESP.
            CLOSE MST-CTRL-LIST.
            CLOSE OUT-FILE.
