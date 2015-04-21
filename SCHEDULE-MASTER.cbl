@@ -32,18 +32,20 @@
                                ACCESS        IS DYNAMIC
                                RECORD KEY    IS SCHEDULE-ID-O
                                FILE STATUS   IS WS-STAT.
-           SELECT MST-CTRL-LIST    ASSIGN TO 
-                         
-                         "../Files/MST-CTRL-LST.DAT"
+                               
+                               
+           SELECT MST-CTRL-LIST    ASSIGN TO
+                                       "../Files/MST-CTRL-LST.DAT"
                                ORGANIZATION IS RELATIVE
                                ACCESS IS RANDOM
-                               RELATIVE KEY IS WS-REC-KEY
+                               RELATIVE KEY IS WS-MST-REC-KEY
                                FILE STATUS IS WS-STAT.
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
        FILE SECTION.
        COPY MST-CTRL-LIST-RECS.
+       
        FD  IN-FILE1.
        01  IN-REC1.
            03  FILLER              PIC X(6).
@@ -177,7 +179,7 @@
                88  EOF                     VALUE 'Y'.
            03  WS-INST-NAME        PIC X(22).
            03  WS-INST-ID          PIC X(4).
-           03  WS-REC-KEY          PIC 99.
+           03  WS-MST-REC-KEY          PIC 99.
 
        SCREEN SECTION.
        01  BLNK-SCRN.
@@ -188,13 +190,13 @@
            
            OPEN OUTPUT OUT-FILE.
            OPEN INPUT INST-MST.
+           OPEN I-O MST-CTRL-LIST.
            PERFORM 100-SORT-FILES
            DISPLAY BLNK-SCRN.
            DISPLAY 'MASTER BUILT SUCCESSFULLY'.
            DISPLAY 'PRESS ENTER TO RETURN TO MENU'.
            ACCEPT WS-RESP.
-           
-          
+           CLOSE MST-CTRL-LIST.
            CLOSE OUT-FILE.
            
            EXIT PROGRAM.
@@ -217,7 +219,7 @@
                 INPUT  PROCEDURE 140-INPUT-4
                 OUTPUT PROCEDURE 300-FILE-OUT.
       *-----------------------------------------------------------------
-            110-INPUT-1.
+         110-INPUT-1.
            OPEN INPUT IN-FILE1.
            MOVE 2015 TO SCHED-YR.
            MOVE 01 TO SCHED-TM.
@@ -243,10 +245,16 @@
                            END-IF
                    END-READ
                END-PERFORM.
+               MOVE 3 TO WS-MST-REC-KEY.
+               ADD 1 TO SCHED-CRN GIVING SCHED-CRN.
+               MOVE SCHED-CRN TO MST-NEXT-CRN-CRN.
+               MOVE SCHED-YR TO MST-NEXT-CRN-YR.
+               MOVE SCHED-TM TO MST-NEXT-CRN-SEM.
+               REWRITE  MST-NEXT-CRNS.
                CLOSE IN-FILE1.
                
       *-----------------------------------------------------------------
-            120-INPUT-2.
+         120-INPUT-2.
            MOVE 'N' TO WS-EOF.
            OPEN INPUT IN-FILE2.
            MOVE 2015 TO SCHED-YR.
@@ -273,11 +281,17 @@
                            END-IF
                    END-READ
                END-PERFORM.
+               MOVE 7 TO WS-MST-REC-KEY.
+               ADD 1 TO SCHED-CRN GIVING SCHED-CRN.
+               MOVE SCHED-CRN TO MST-NEXT-CRN-CRN.
+               MOVE SCHED-YR TO MST-NEXT-CRN-YR.
+               MOVE SCHED-TM TO MST-NEXT-CRN-SEM.
+               REWRITE  MST-NEXT-CRNS.
                CLOSE IN-FILE2.
                
                
       *-----------------------------------------------------------------
-            130-INPUT-3.
+         130-INPUT-3.
            MOVE 'N' TO WS-EOF.
            OPEN INPUT IN-FILE3.
            MOVE 2015 TO SCHED-YR.
@@ -304,11 +318,17 @@
                            END-IF
                    END-READ
                END-PERFORM.
+               MOVE 8 TO WS-MST-REC-KEY.
+               ADD 1 TO SCHED-CRN GIVING SCHED-CRN.
+               MOVE SCHED-CRN TO MST-NEXT-CRN-CRN.
+               MOVE SCHED-YR TO MST-NEXT-CRN-YR.
+               MOVE SCHED-TM TO MST-NEXT-CRN-SEM.
+               REWRITE  MST-NEXT-CRNS.
                CLOSE IN-FILE3.
                
                
       *-----------------------------------------------------------------
-            140-INPUT-4.
+         140-INPUT-4.
            MOVE 'N' TO WS-EOF.
            OPEN INPUT IN-FILE4.
            MOVE 2015 TO SCHED-YR.
@@ -335,8 +355,18 @@
                            END-IF
                    END-READ
                END-PERFORM.
+               MOVE 4 TO WS-MST-REC-KEY.
+               ADD 1 TO SCHED-CRN GIVING SCHED-CRN.
+               MOVE SCHED-CRN TO MST-NEXT-CRN-CRN.
+               MOVE SCHED-YR TO MST-NEXT-CRN-YR.
+               MOVE SCHED-TM TO MST-NEXT-CRN-SEM.
+               REWRITE  MST-NEXT-CRNS.
                CLOSE IN-FILE4.                                          
       *-----------------------------------------------------------------
+       
+       
+       
+       
        300-FILE-OUT.
            MOVE 'N' TO WS-EOF.
            PERFORM UNTIL EOF

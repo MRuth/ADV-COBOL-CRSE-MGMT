@@ -1,3 +1,9 @@
+      ******************************************************************
+      *PROGRAM : Group Project SCHEDULE-INQUIRY                        *
+      *AUTHOR  : Cory Bailey                                           *
+      *DATE    : 02-03-2014                                            *
+      *ABSTRACT:                                                       *
+      ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. SCHEDULE-INQUIRY.
       *-----------------------------------------------------------------
@@ -7,7 +13,7 @@
            SELECT IN-FILE      ASSIGN        TO 
                                        '../FILES/SCHEDULE-MASTER.DAT'   
                                ORGANIZATION  IS INDEXED
-                               ACCESS        IS SEQUENTIAL
+                               ACCESS        IS SEQUENTIAL 
                                RECORD KEY    IS SCHEDULE-ID-I
                                FILE STATUS   IS WS-STAT.
       *-----------------------------------------------------------------
@@ -111,7 +117,7 @@
                READ IN-FILE 
                    AT END
                        MOVE 'Y' TO WS-EOF
-                   NOT AT END
+                   NOT AT END 
                        IF SCHEDULE-YEAR EQUALS WS-YEAR
                            AND SCHEDULE-SEM  EQUALS WS-SEM
                            AND COURSE-ID-DEPT EQUALS WS-COURSE-DEPT
