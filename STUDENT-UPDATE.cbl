@@ -1,12 +1,11 @@
-      ******************************************************************
-      *PROGRAM : STUDENT-ADD                                           *
-      *AUTHOR  : MONTANA RUTH                                          *
-      *DATE    : Apr 2, 2015                                           *
-      *ABSTRACT:                                                       *
-      ******************************************************************
-        
+	  ******************************************************************
+	  *PROGRAM :  STUDENT-UPDATE                                       *
+	  *AUTHOR  : MONTANA RUTH                                          *
+	  *DATE    : Apr 21, 2015                                          *
+	  *ABSTRACT:                                                       *
+	  ****************************************************************** 
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. STUDENT-ADD.
+       PROGRAM-ID. STUDENT-UPDATE.
        
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
@@ -14,15 +13,9 @@
            SELECT STU-MST         ASSIGN TO 
                                    '../FILES/STUDENT-MASTER.DAT'
                                    ORGANIZATION    IS INDEXED
-                                   ACCESS          IS RANDOM
+                                   ACCESS          IS DYNAMIC
                                    RECORD KEY      IS STU-ID
                                    FILE STATUS     IS WS-STAT.
-                               
-           SELECT MST-CTRL-LIST    ASSIGN TO 
-                                   '../Files/MST-CTRL-LST.DAT'
-                                   ORGANIZATION  IS RELATIVE
-                                   ACCESS IS RANDOM
-                                   RELATIVE KEY  IS WS-MST-REC-KEY.
                                    
            SELECT ZIP-MST      ASSIGN TO "../FILES/ZIPMASTER.DAT"
                                ORGANIZATION  IS INDEXED
@@ -35,7 +28,6 @@
        DATA DIVISION.
        FILE SECTION.
        COPY STU-MST-DEF.
-       COPY MST-CTRL-LIST-RECS.
        COPY ZIP-MST-DEF.
        
        WORKING-STORAGE SECTION.
@@ -68,6 +60,9 @@
        01  NEW-SCREEN.
            03  BLANK SCREEN.
            03  LINE 1 COL 34                   VALUE 'ADD NEW STUDENT'.
+       01  SCRN-STU-ID-INQUIRE.
+           03      LINE 3  COL 25                  VALUE 'STUDENT ID:'.
+           03              COL 43      PIC 9999    TO WS-STU-ID.
        01  SCRN-FIELDS.
            03  SCRN-STU-ID.
                05  LINE 3  COL 25                  VALUE
@@ -117,21 +112,22 @@
                05  LINE 16 COL 32                  VALUE 'SAVE (Y/N)'.
                05          COL 30      PIC X       TO WS-SAVE
                                                    AUTO.
-       01  SCRN-WRITE-ERR.
-           03  LINE 3  COL 30  VALUE 'STUDENT ALREADY EXISTS'.
+       01  SCRN-WRITE-ERR-1.
+           03  LINE 3  COL 30  VALUE 
+                   'A STUDENT ALREADY EXISTS WITH THIS ID'.
        01  SCRN-WRITE-SUC.
-           03  LINE 3  COL 30  VALUE 'STUDENT HAS BEEN ADDED'.
+           03  LINE 3  COL 30  VALUE 'STUDENT HAS BEEN UPDATED'.
        01  SCRN-WRITE-NOT-SAVE.
-           03  LINE 3  COL 30  VALUE 'STUDENT HAS NOT BEEN ADDED'.      
+           03  LINE 3  COL 30  VALUE 'STUDENT HAS NOT BEEN UPDATED'.    
        01  SCRN-ANOTHER.
-           03  LINE 5  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
+           03  LINE 5  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
            03          COL 30          PIC X       TO WS-ANOTHER
                                                    AUTO.
            
        PROCEDURE DIVISION.
        000-MAIN.
+       
            OPEN I-O STU-MST.
-           OPEN I-O MST-CTRL-LIST.
            OPEN INPUT ZIP-MST.
            
            MOVE SPACES TO WS-ANOTHER.
@@ -142,16 +138,13 @@
                MOVE SPACES TO WS-SAVE
                MOVE SPACES TO WS-DTL-LN
                
-               MOVE 6 TO WS-MST-REC-KEY
-               READ MST-CTRL-LIST
-                   NOT INVALID KEY
-                       MOVE MST-STU-ID TO WS-STU-ID
-               END-READ
+               
                
                PERFORM UNTIL SAVE OR NO-SAVE
                
                    DISPLAY NEW-SCREEN
                    DISPLAY SCRN-FIELDS
+                   PERFORM 200-GET-STU-REC
                    ACCEPT SCRN-STU-L-NAME
                    ACCEPT SCRN-STU-F-NAME
                    ACCEPT SCRN-STU-STREET
@@ -172,16 +165,14 @@
                    MOVE WS-STU-PHONE       TO STU-PHONE
                    MOVE 'A'                TO STU-STATUS
                    
-                   WRITE STU-REC
+                   REWRITE STU-REC
                        INVALID KEY
                            DISPLAY NEW-SCREEN
-                           DISPLAY SCRN-WRITE-ERR
+                           DISPLAY SCRN-WRITE-ERR-1
                        NOT INVALID KEY
                            ADD 1 TO WS-STU-ID
                            DISPLAY NEW-SCREEN
                            DISPLAY SCRN-WRITE-SUC
-                           MOVE WS-STU-ID TO MST-NEXT-STU
-                           REWRITE MST-NEXT-STU
                ELSE
                    DISPLAY NEW-SCREEN
                    DISPLAY SCRN-WRITE-NOT-SAVE
@@ -192,10 +183,8 @@
                END-PERFORM
            END-PERFORM.
            
-           MOVE WS-STU-ID TO MST-STU-ID
            
            CLOSE   STU-MST,
-                   MST-CTRL-LIST,
                    ZIP-MST.
            
            EXIT PROGRAM.
@@ -212,3 +201,15 @@
                    READ ZIP-MST
        END-START
        DISPLAY SCRN-FIELDS.
+       
+       200-GET-STU-REC.
+           DISPLAY SCRN-STU-ID-INQUIRE.
+           ACCEPT  SCRN-STU-ID-INQUIRE.
+           MOVE WS-STU-ID  TO STU-ID.
+           
+           START STU-MST KEY EQUAL TO STU-ID
+               INVALID KEY
+               NOT INVALID KEY
+           END-START.
+           
+       
