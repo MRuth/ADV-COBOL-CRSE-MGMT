@@ -32,10 +32,18 @@
                                ACCESS        IS DYNAMIC
                                RECORD KEY    IS SCHEDULE-ID-O
                                FILE STATUS   IS WS-STAT.
+           SELECT MST-CTRL-LIST    ASSIGN TO 
+                         
+                         "../Files/MST-CTRL-LST.DAT"
+                               ORGANIZATION IS RELATIVE
+                               ACCESS IS RANDOM
+                               RELATIVE KEY IS WS-REC-KEY
+                               FILE STATUS IS WS-STAT.
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
        FILE SECTION.
+       COPY MST-CTRL-LIST-RECS.
        FD  IN-FILE1.
        01  IN-REC1.
            03  FILLER              PIC X(6).
@@ -169,6 +177,7 @@
                88  EOF                     VALUE 'Y'.
            03  WS-INST-NAME        PIC X(22).
            03  WS-INST-ID          PIC X(4).
+           03  WS-REC-KEY          PIC 99.
 
        SCREEN SECTION.
        01  BLNK-SCRN.
