@@ -47,10 +47,12 @@
            88  EOF                             VALUE 'Y'.
        01  WS-SAVE                 PIC X       VALUE SPACES.
            88  SAVE                            VALUE 'Y'.
-       01  WS-ANOTHER              PIC X       VALUE 'Y'.
-           88  ANOTHER                         VALUE 'N'.
+           88  NO-SAVE                         VALUE 'N'.
+       01  WS-ANOTHER              PIC X       VALUE SPACES.
+           88  ANOTHER                         VALUE 'Y'.
+           88  NONE                            VALUE 'N'.
        01  WS-DTL-LN.
-               03  WS-STU-ID           PIC 9999.
+               03  WS-STU-ID               PIC 9999.
                03  WS-STU-NAME.
                    05  WS-STU-L-NAME       PIC X(15).
                    05  WS-STU-F-NAME       PIC X(15).
@@ -101,7 +103,13 @@
            03  SCRN-STU-PHONE.
                05  LINE 14 COL 25                  VALUE
                                                    'STUDENT PHONE : '.
-               05          COL 43      PIC X(10)   USING WS-STU-PHONE
+               05          COL 43      PIC XXX     USING STU-PHONE-1
+                                                   AUTO REQUIRED.
+               05          COL 46                  VALUE '-'.
+               05          COL 47      PIC XXX     USING STU-PHONE-2
+                                                   AUTO REQUIRED.
+               05          COL 50                  VALUE '-'.
+               05          COL 51      PIC XXXX    USING STU-PHONE-3
                                                    AUTO REQUIRED.
            03  SCRN-STU-STATUS.                                         
                05  LINE 16 COL 25                  VALUE                
@@ -110,7 +118,8 @@
                                                    AUTO REQUIRED.
            03  SCRN-SAVE.
                05  LINE 18 COL 32                  VALUE 'SAVE (Y/N)'.
-               05          COL 30      PIC X       TO WS-SAVE.
+               05          COL 30      PIC X       TO WS-SAVE
+                                                   AUTO.
        01  SCRN-WRITE-ERR.
            03  LINE 3  COL 30  VALUE 'STUDENT ALREADY EXISTS'.
        01  SCRN-WRITE-SUC.
@@ -119,7 +128,8 @@
            03  LINE 3  COL 30  VALUE 'STUDENT HAS NOT BEEN ADDED'.      
        01  SCRN-ANOTHER.
            03  LINE 5  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
-           03          COL 30  PIC X TO WS-ANOTHER.
+           03          COL 30          PIC X       TO WS-ANOTHER
+                                                   AUTO.
            
        PROCEDURE DIVISION.
        000-MAIN.
@@ -127,16 +137,19 @@
            OPEN I-O MST-CTRL-LIST.
            OPEN INPUT ZIP-MST.
            
-           MOVE 6 TO WS-MST-REC-KEY.
-           READ MST-CTRL-LIST
-               NOT INVALID KEY
-                   MOVE MST-STU-ID TO WS-STU-ID
-           END-READ.
-           
-           MOVE 'Y' TO WS-ANOTHER.
-           PERFORM UNTIL ANOTHER
-           
-               PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
+           PERFORM UNTIL NONE
+
+               MOVE SPACES TO WS-ANOTHER
+               MOVE SPACES TO WS-SAVE
+               MOVE SPACES TO WS-DTL-LN
+               
+               MOVE 6 TO WS-MST-REC-KEY
+               READ MST-CTRL-LIST
+                   NOT INVALID KEY
+                       MOVE MST-STU-ID TO WS-STU-ID
+               END-READ
+               
+               PERFORM UNTIL SAVE OR NO-SAVE
                
                    DISPLAY NEW-SCREEN
                    DISPLAY SCRN-FIELDS
@@ -165,20 +178,18 @@
                        INVALID KEY
                            DISPLAY NEW-SCREEN
                            DISPLAY SCRN-WRITE-ERR
-                           DISPLAY SCRN-ANOTHER
-                           ACCEPT  SCRN-ANOTHER
                        NOT INVALID KEY
                            ADD 1 TO WS-STU-ID
                            DISPLAY NEW-SCREEN
                            DISPLAY SCRN-WRITE-SUC
-                           DISPLAY SCRN-ANOTHER
-                           ACCEPT  SCRN-ANOTHER
                ELSE
                    DISPLAY NEW-SCREEN
                    DISPLAY SCRN-WRITE-NOT-SAVE
+               END-IF
+               PERFORM UNTIL ANOTHER OR NONE
                    DISPLAY SCRN-ANOTHER
                    ACCEPT  SCRN-ANOTHER
-               END-IF
+               END-PERFORM
            END-PERFORM.
            
            MOVE WS-STU-ID TO MST-STU-ID

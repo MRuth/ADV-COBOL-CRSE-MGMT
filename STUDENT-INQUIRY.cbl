@@ -32,8 +32,9 @@
        WORKING-STORAGE SECTION.
        01  WS-STU-STAT             PIC 99.
        01  WS-ZIP-STAT             PIC 99.
-       01  WS-RESP                 PIC X       VALUE 'Y'.
-           88  ANOTHER                         VALUE 'N'.
+       01  WS-RESP                 PIC X       VALUE SPACES.
+           88  NONE                            VALUE 'N'.
+           88  ANOTHER                         VALUE 'Y'.
        
        
        SCREEN SECTION.
@@ -71,7 +72,11 @@
            03  SCRN-STU-PHONE.
                05  LINE 15 COL 25                  VALUE
                                                    'STUDENT PHONE : '.
-               05          COL 43      PIC X(10)   FROM STU-PHONE.
+               05          COL 43      PIC XXX     FROM STU-PHONE-1.
+               05          COL 46                  VALUE '-'.
+               05          COL 47      PIC XXX     FROM STU-PHONE-2.
+               05          COL 50                  VALUE '-'.
+               05          COL 51      PIC XXXX    FROM STU-PHONE-3.
        01  SCRN-ANOTHER.
            03      LINE 18 COL 35                  VALUE
                                        'PERFORM ANOTHER INQUIRY (Y/N)'.
@@ -85,10 +90,9 @@
        000-MAIN.
            OPEN INPUT  STU-MST,
                        ZIP-MST.
-                       
-           MOVE 'Y'    TO WS-RESP.
            
-           PERFORM UNTIL ANOTHER
+           PERFORM UNTIL NONE
+               MOVE SPACES TO WS-RESP
                MOVE SPACES TO STU-REC
                MOVE SPACES TO ZIP-REC
                PERFORM 100-DISP-SCREEN
@@ -118,8 +122,11 @@
                    PERFORM 300-GET-CITY-ST
                    DISPLAY    SCRN-INQUIRE
            END-START.
-            DISPLAY    SCRN-ANOTHER.
-            ACCEPT     SCRN-ANOTHER.
+           
+           PERFORM UNTIL ANOTHER OR NONE
+               DISPLAY    SCRN-ANOTHER
+               ACCEPT     SCRN-ANOTHER
+           END-PERFORM.
            
        300-GET-CITY-ST.
            MOVE STU-ZIP    TO  ZIP-KEY.
