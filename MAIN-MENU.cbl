@@ -131,10 +131,8 @@
           03  RPTMENU.
                05  LINE 01 COL 38 VALUE "REPORT MENU".
                05  LINE 06 COL 32 VALUE " 1) COURSES BY INSTRUCTOR".
-               05  LINE 08 COL 32 VALUE " 2) ADD STUDENT".
-               05  LINE 10 COL 32 VALUE " 3) UPDATE STUDENT".
-               05  LINE 12 COL 32 VALUE " 4) INQUIRE BY ID".
-               05  LINE 14 COL 32 VALUE " 5) LIST STUDENTS".
+               05  LINE 08 COL 32 VALUE " 2) CLASS ROLL".
+
                05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 20 COL 37 VALUE "Selection".
                05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
@@ -270,6 +268,7 @@
                ACCEPT RPT-MENU
                EVALUATE WS-SEL
                        WHEN '1' CALL 'REPORT-COURSE-BY-INST'
+                       WHEN '2' CALL 'CLASS-ROLL'
                END-EVALUATE
            END-PERFORM.
                            

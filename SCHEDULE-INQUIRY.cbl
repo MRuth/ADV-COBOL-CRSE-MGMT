@@ -13,7 +13,7 @@
            SELECT IN-FILE      ASSIGN        TO 
                                        '../FILES/SCHEDULE-MASTER.DAT'   
                                ORGANIZATION  IS INDEXED
-                               ACCESS        IS SEQUENTIAL
+                               ACCESS        IS SEQUENTIAL 
                                RECORD KEY    IS SCHEDULE-ID-I
                                FILE STATUS   IS WS-STAT.
       *-----------------------------------------------------------------
