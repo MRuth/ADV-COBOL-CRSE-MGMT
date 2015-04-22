@@ -18,31 +18,12 @@
            03  WS-SEL                  PIC X.
            03  WS-EXIT                 PIC X   VALUE 'N'.
       
-       01 WS-DATE-TIME.
-           03  WS-DATE.
-               05  WS-DATE-YY        PIC 99.
-               05  WS-DATE-MM        PIC 99.
-               05  WS-DATE-DD        PIC 99.
-           03  WS-TIME.
-               05 WS-TIME-HH         PIC 99.
-               05 WS-TIME-MM         PIC 99.
-               05 WS-TIME-SS         PIC 99.
+       COPY WS-DATE-TIME.
       *-----------------------------------------------------------------
        SCREEN SECTION.
        01 CLEAR.
            03 BLANK SCREEN.
-       01 HEADER.
-           03 BLANK SCREEN.
-           03 LINE 01 COL 01 VALUE "TEAM MASTER CONTROL".
-           
-           03 LINE 01 COL 71 FROM   WS-DATE-MM.
-           03 LINE 01 COL 73 VALUE  "/".
-           03 LINE 01 COL 74 FROM   WS-DATE-DD.
-           03 LINE 01 COL 76 VALUE  "/20".
-           03 LINE 01 COL 79 FROM   WS-DATE-YY.
-           03 LINE 02 COL 76 FROM   WS-TIME-HH.
-           03 LINE 02 COL 78 VALUE ":".
-           03 LINE 02 COL 79 FROM  WS-TIME-MM.
+       COPY SCR-HEADER.
        01 MAIN.
            03  MENU.
                05 LINE 01 COL 38 VALUE "MAIN MENU".
@@ -54,93 +35,99 @@
                05  LINE 16 COL 32 VALUE " 6) ZIPCODE RECORDS".
                05  LINE 18 COL 32 VALUE " 7) REPORTS".
                05  LINE 20 COL 32 VALUE " X) Exit".
-               05  LINE 22 COL 37 VALUE "Selection".
-               05  LINE 22 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
        
        01 STU-MENU.
           03  STUMENU.
                05  LINE 01 COL 38 VALUE "STUDENT MENU".
-               05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
+               05  LINE 06 COL 32 VALUE " 1) LIST STUDENTS".
                05  LINE 08 COL 32 VALUE " 2) ADD STUDENT".
                05  LINE 10 COL 32 VALUE " 3) UPDATE STUDENT".
                05  LINE 12 COL 32 VALUE " 4) INQUIRE BY ID".
-               05  LINE 14 COL 32 VALUE " 5) LIST STUDENTS".
-               05  LINE 16 COL 32 VALUE " 6) REGISTER CLASS".
-               05  LINE 18 COL 32 VALUE " 7) DROP CLASS".
-               05  LINE 20 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 14 COL 32 VALUE " 5) REGISTER CLASS". 
+               05  LINE 16 COL 32 VALUE " 6) DROP CLASS".
+               05  LINE 18 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 24 COL 37 VALUE "Selection".
                05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
        
        01 CRS-MENU.
           03  CRSMENU.
                05  LINE 01 COL 38 VALUE "COURSE MENU".
-               05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
+               05  LINE 06 COL 32 VALUE " 1) LIST COURSES".
                05  LINE 08 COL 32 VALUE " 2) ADD COURSE".
                05  LINE 10 COL 32 VALUE " 3) UPDATE COURSE".
-               05  LINE 12 COL 32 VALUE " 4) INQUIRE BY CRN".
-               05  LINE 14 COL 32 VALUE " 5) INQUIRE BY COURSE".
-               05  LINE 16 COL 32 VALUE " 6) LIST COURSES".
-               05  LINE 18 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 20 COL 37 VALUE "Selection".
-               05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 12 COL 32 VALUE " 4) INQUIRE BY COURSE".
+               05  LINE 14 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
                
        01 SCHED-MENU.
           03  SCHEDMENU.
                05  LINE 01 COL 38 VALUE "SCHEDULE MENU".
-               05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
+               05  LINE 06 COL 32 VALUE " 1) LIST SCHEDULE".
                05  LINE 08 COL 32 VALUE " 2) ADD TO SCHEDULE".
                05  LINE 10 COL 32 VALUE " 3) UPDATE WITHIN SCHEDULE".
                05  LINE 12 COL 32 VALUE " 4) SEARCH BY COURSE DEPT".
-               05  LINE 14 COL 32 VALUE " 5) LIST SCHEDULE".
-               05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 20 COL 37 VALUE "Selection".
-               05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 14 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
                
        01 INST-MENU.
           03  INSTMENU.
                05  LINE 01 COL 38 VALUE "INSTRUCTOR MENU".
-               05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
+               05  LINE 06 COL 32 VALUE " 1) LIST INSTRUCTORS".
                05  LINE 08 COL 32 VALUE " 2) ADD INSTRUCTOR".
                05  LINE 10 COL 32 VALUE " 3) UPDATE INSTRUCTOR".
                05  LINE 12 COL 32 VALUE " 4) INQUIRE BY ID".
-               05  LINE 14 COL 32 VALUE " 5) LIST INSTRUCTORS".
-               05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 20 COL 37 VALUE "Selection".
-               05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 14 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
        01 BLD-MENU. 
           03  BLDMENU.
                05  LINE 01 COL 38 VALUE "BUILDING MENU".
-               05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
+               05  LINE 06 COL 32 VALUE " 1) LIST ROOMS".
                05  LINE 08 COL 32 VALUE " 2) ADD ROOM".
                05  LINE 10 COL 32 VALUE " 3) UPDATE ROOM".
                05  LINE 12 COL 32 VALUE " 4) VIEW ROOM".
-               05  LINE 14 COL 32 VALUE " 5) LIST ROOMS".
-               05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 20 COL 37 VALUE "Selection".
-               05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 14 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
        01  ZIP-MENU.
            03  ZIPMENU.
                05  LINE 01 COL 38 VALUE "ZIPCODE MENU".
-               05  LINE 06 COL 32 VALUE " 1) BUILD MASTER".
-               05  LINE 08 COL 32 VALUE " 2) SEARCH BY ZIP".
-               05  LINE 10 COL 32 VALUE " 3) SEARCH BY CITY".
-               05  LINE 12 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 20 COL 37 VALUE "Selection".
-               05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 06 COL 32 VALUE " 1) SEARCH BY ZIP".
+               05  LINE 08 COL 32 VALUE " 2) SEARCH BY CITY".
+               05  LINE 10 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
        01 RPT-MENU.
           03  RPTMENU.
                05  LINE 01 COL 38 VALUE "REPORT MENU".
                05  LINE 06 COL 32 VALUE " 1) COURSES BY INSTRUCTOR".
                05  LINE 08 COL 32 VALUE " 2) CLASS ROLL".
 
+               05  LINE 10 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+       01 DEB-MENU.
+          03  DEBMENU.
+               05  LINE 01 COL 34 VALUE "SUPER SECRET DEBUG MENU".
+               05  LINE 06 COL 25 VALUE " 1) BUILD STUDENT".
+               05  LINE 06 COL 50 VALUE " 2) BUILD COURSE".
+               05  LINE 08 COL 25 VALUE " 3) BUILD INSTRUCTOR".
+               05  LINE 08 COL 50 VALUE " 4) BUILD SCHEDULE".
+               05  LINE 10 COL 25 VALUE " 5) BUILD BUILDING".
+               05  LINE 10 COL 50 VALUE " 6) BUILD ZIP".
+               05  LINE 12 COL 32 VALUE " 7) BUILD MASTER CONTROL".
                05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 20 COL 37 VALUE "Selection".
-               05  LINE 20 COL 35 PIC X TO WS-SEL AUTO.
-      *----------------------------------------------------------------
+               05  LINE 24 COL 37 VALUE "Selection".
+               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+      *------------------------------R----------------------------------
        PROCEDURE DIVISION.
        100-MAIN.
 
-          
+           
            PERFORM UNTIL WS-EXIT = "Y"
                DISPLAY CLEAR
                PERFORM 200-MAIN
@@ -164,24 +151,24 @@
                        WHEN '5' PERFORM 250-BUILDING
                        WHEN '6' PERFORM 260-ZIPCODE
                        WHEN '7' PERFORM 270-REPORTS
+                       WHEN 's' PERFORM 280-DEBUG
                        WHEN 'X' MOVE 'Y' TO WS-EXIT
            END-EVALUATE.
                    
                    
-           210-STUDENT.
+       210-STUDENT.
                ACCEPT WS-DATE FROM DATE.
                ACCEPT WS-TIME FROM TIME.
                PERFORM UNTIL WS-SEL = "R"
                    DISPLAY HEADER, STU-MENU
                    ACCEPT STU-MENU
                    EVALUATE WS-SEL
-                       WHEN '1' CALL 'STUDENT-MASTER'
+                       WHEN '1' CALL 'STUDENT-LIST'
                        WHEN '2' CALL 'STUDENT-ADD'
                        WHEN '3' CALL 'STUDENT-UPDATE'
                        WHEN '4' CALL 'STUDENT-INQUIRY'
-                       WHEN '5' CALL 'STUDENT-LIST'
-                       WHEN '6' CALL 'REGISTER-ADD'
-                       WHEN '7' CALL 'REGISTER-DROP'
+                       WHEN '5' CALL 'REGISTER-ADD'
+                       WHEN '6' CALL 'REGISTER-DROP'
                    END-EVALUATE
               END-PERFORM.
            
@@ -193,11 +180,11 @@
                DISPLAY HEADER, CRS-MENU                                 
                ACCEPT CRS-MENU                                          
                EVALUATE WS-SEL                                          
-                       WHEN '1' CALL 'COURSE-MASTER'
+                       WHEN '1' CALL 'COURSE-LIST'
                        WHEN '2' CALL 'COURSE-ADD'                       
                        WHEN '3' CALL 'COURSE-UPDATE'                    
-                       WHEN '5' CALL 'COURSE-INQUIRY'
-                       WHEN '6' CALL 'COURSE-LIST'
+                       WHEN '4' CALL 'COURSE-INQUIRY'
+                       
                END-EVALUATE 
            END-PERFORM.
                  
@@ -209,11 +196,10 @@
                DISPLAY HEADER, SCHED-MENU
                ACCEPT SCHED-MENU 
                EVALUATE WS-SEL
-                       WHEN '1' CALL 'SCHEDULE-MASTER'
+                       WHEN '1' CALL 'SCHEDULE-LIST'
                        WHEN '2' CALL 'SCHEDULE-ADD'
-                       WHEN '3' CALL 'SCHEDULE-ADD'
+                       WHEN '3' CALL 'SCHEDULE-UPDATE'
                        WHEN '4' CALL 'SCHEDULE-INQUIRY'
-                       WHEN '5' CALL 'SCHEDULE-LIST'
                END-EVALUATE
            END-PERFORM.
            
@@ -224,11 +210,10 @@
                DISPLAY HEADER, INST-MENU
                ACCEPT INST-MENU
                EVALUATE WS-SEL
-                       WHEN '1' CALL 'INSTRUCTOR-MASTER'
+                       WHEN '1' CALL 'INSTRUCTOR-LIST'
                        WHEN '2' CALL 'INSTRUCTOR-ADD'
                        WHEN '3' CALL 'INSTRUCTOR-UPDATE'
                        WHEN '4' CALL 'INSTRUCTOR-INQUIRY'
-                       WHEN '5' CALL 'INSTRUCTOR-LIST'
                END-EVALUATE
            END-PERFORM.    
                  
@@ -239,11 +224,10 @@
                DISPLAY HEADER, BLD-MENU
                ACCEPT BLD-MENU
                EVALUATE WS-SEL
-                       WHEN '1' CALL 'BUILDING-MASTER'
+                       WHEN '1' CALL 'BUILDING-LIST'
                        WHEN '2' CALL 'BUILDING-ADD'
                        WHEN '3' CALL 'BUILDING-UPDATE'
                        WHEN '4' CALL 'BUILDING-INQUIRY'
-                       WHEN '5' CALL 'BUILDING-LIST'
                END-EVALUATE
            END-PERFORM.
            
@@ -254,9 +238,8 @@
                DISPLAY HEADER, ZIP-MENU
                ACCEPT ZIP-MENU
                EVALUATE WS-SEL
-                       WHEN '1' CALL 'ZIPD-BLDISAM'
-                       WHEN '2' CALL 'ZIPB-INQNUM'
-                       WHEN '3' CALL 'ZIPC-INQCITY'
+                       WHEN '1' CALL 'ZIPB-INQNUM'
+                       WHEN '2' CALL 'ZIPC-INQCITY'
                END-EVALUATE
            END-PERFORM.
                  
@@ -273,6 +256,21 @@
            END-PERFORM.
                            
                  
-                 
+       280-DEBUG.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
+           PERFORM UNTIL WS-SEL = "R"
+               DISPLAY HEADER, DEB-MENU
+               ACCEPT DEB-MENU
+               EVALUATE WS-SEL
+                       WHEN '1' CALL 'STUDENT-MASTER'
+                       WHEN '2' CALL 'COURSE-MASTER'
+                       WHEN '3' CALL 'INSTRUCTOR-MASTER'
+                       WHEN '4' CALL 'SCHEDULE-MASTER'
+                       WHEN '5' CALL 'BUILDING-MASTER'
+                       WHEN '6' CALL 'ZIPD-BLDISAM'
+                       WHEN '7' CALL 'BUILD-MST-CTRL-LIST'
+              END-EVALUATE
+           END-PERFORM.         
        
                  
