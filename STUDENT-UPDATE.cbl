@@ -14,7 +14,8 @@
                                    '../FILES/STUDENT-MASTER.DAT'
                                    ORGANIZATION    IS INDEXED
                                    ACCESS          IS DYNAMIC
-                                   RECORD KEY      IS STU-ID
+                                   RECORD      KEY IS STU-ID
+                                   ALTERNATE   KEY IS STU-NAME
                                    FILE STATUS     IS WS-STAT.
                                    
            SELECT ZIP-MST      ASSIGN TO "../FILES/ZIPMASTER.DAT"
@@ -145,7 +146,7 @@
                DISPLAY SCRN-STU-ID-INQUIRE
                ACCEPT  SCRN-STU-ID-INQUIRE
                
-               PERFORM 200-GET-STU-REC
+               PERFORM 100-GET-STU-REC
                
                PERFORM UNTIL ANOTHER OR NONE
                    DISPLAY SCRN-ANOTHER
@@ -160,19 +161,8 @@
            EXIT PROGRAM.
        
        
-       100-GET-CITY-ST.
-       MOVE WS-STU-ZIP TO ZIP-KEY.
-       START ZIP-MST KEY EQUAL TO ZIP-KEY
-               INVALID KEY
-                   MOVE "RECORD NOT FOUND" TO ZIP-CITY
-                   MOVE SPACES TO ZIP-COUNTY
-                                  ZIP-STATE
-               NOT INVALID KEY
-                   READ ZIP-MST
-       END-START
-       DISPLAY SCRN-FIELDS.
        
-       200-GET-STU-REC.
+       100-GET-STU-REC.
            MOVE WS-STU-ID  TO STU-ID.
            
            START STU-MST KEY EQUAL TO STU-ID
@@ -182,10 +172,10 @@
                NOT INVALID KEY
                    READ STU-MST
                    MOVE STU-REC TO WS-STU-REC
-                   PERFORM 300-UPDATE
+                   PERFORM 200-UPDATE
            END-START.
        
-       300-UPDATE.
+       200-UPDATE.
            
            PERFORM UNTIL SAVE OR NO-SAVE
                DISPLAY SCRN-FIELDS
@@ -193,7 +183,7 @@
                ACCEPT SCRN-STU-F-NAME
                ACCEPT SCRN-STU-STREET
                ACCEPT SCRN-STU-ZIP
-               PERFORM 100-GET-CITY-ST
+               PERFORM 300-GET-CITY-ST
                ACCEPT SCRN-STU-PHONE
                ACCEPT SCRN-SAVE
            END-PERFORM.
@@ -211,4 +201,14 @@
                DISPLAY SCRN-WRITE-NOT-SAVE
            END-IF.
        
-       
+       300-GET-CITY-ST.
+       MOVE WS-STU-ZIP TO ZIP-KEY.
+       START ZIP-MST KEY EQUAL TO ZIP-KEY
+               INVALID KEY
+                   MOVE "RECORD NOT FOUND" TO ZIP-CITY
+                   MOVE SPACES TO ZIP-COUNTY
+                                  ZIP-STATE
+               NOT INVALID KEY
+                   READ ZIP-MST
+       END-START
+       DISPLAY SCRN-FIELDS.

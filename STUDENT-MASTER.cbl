@@ -12,20 +12,21 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
        
-       SELECT IN-FILE ASSIGN TO '../FILES/STUDENT-STARTER.TXT'
-           ORGANIZATION IS LINE SEQUENTIAL.
-           
-       SELECT STU-MST ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
-           ORGANIZATION IS INDEXED
-           ACCESS IS SEQUENTIAL
-           RECORD KEY IS STU-ID.
+           SELECT IN-FILE ASSIGN TO '../FILES/STUDENT-STARTER.TXT'
+               ORGANIZATION IS LINE SEQUENTIAL.
+               
+           SELECT STU-MST ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
+               ORGANIZATION    IS INDEXED
+               ACCESS          IS SEQUENTIAL
+               RECORD      KEY IS STU-ID
+               ALTERNATE   KEY IS STU-NAME.
            
        SELECT MST-CTRL-LIST    ASSIGN TO 
                                        "../Files/MST-CTRL-LST.DAT"
-                                       ORGANIZATION IS RELATIVE
-                                       ACCESS IS RANDOM
-                                       RELATIVE KEY IS WS-MST-REC-KEY
-                                       FILE STATUS IS WS-MST-STAT.
+                                       ORGANIZATION    IS RELATIVE
+                                       ACCESS          IS RANDOM
+                                       RELATIVE KEY    IS WS-MST-REC-KEY
+                                       FILE STATUS     IS WS-MST-STAT.
            
        SELECT SORT-WORK ASSIGN TO 'SORTWORK.TXT'.
        
@@ -64,7 +65,7 @@
            01  WS-EOF                  PIC X       VALUE 'N'.
                88  EOF                             VALUE 'Y'.
            01  WS-STATUS               PIC X       VALUE 'A'.
-           01  WS-CURR-ID              PIC 9999    VALUE 0.
+           01  WS-CURR-ID              PIC 9999    VALUE 1.
            01  WS-RSP                  PIC X.
            01  WS-MST-REC-KEY          PIC 9999.
            01  WS-MST-STAT             PIC XX.
@@ -83,7 +84,7 @@
            OPEN I-O MST-CTRL-LIST.
            
            MOVE    'N'     TO WS-EOF.
-           MOVE    0       TO WS-CURR-ID.
+           MOVE    1       TO WS-CURR-ID.
            MOVE    0       TO WS-DSP-CTR.
            DISPLAY CLEAR.
            SORT SORT-WORK

@@ -11,10 +11,11 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
        
-       SELECT STU-MST ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
-           ORGANIZATION IS INDEXED
-           ACCESS IS SEQUENTIAL
-           RECORD KEY IS STU-ID.
+           SELECT STU-MST ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
+               ORGANIZATION IS INDEXED
+               ACCESS          IS SEQUENTIAL
+               RECORD      KEY IS STU-ID
+               ALTERNATE   KEY IS STU-NAME.
    
        DATA DIVISION.
        FILE SECTION.
@@ -30,13 +31,14 @@
        SCREEN SECTION.
        01  NEW-SCREEN.
            03  BLANK SCREEN.
-           03  HEADER.
-               05  LINE 01 COL 01  VALUE 'ID'.
-               05  LINE 01 COL 06  VALUE 'LAST NAME'.
-               05  LINE 01 COL 22  VALUE 'FIRST NAME'.
-               05  LINE 01 COL 38  VALUE 'STREET'.
-               05  LINE 01 COL 64  VALUE 'ZIP'.
-               05  LINE 01 COL 70  value 'PHONE'.
+       01  HEADER.
+           03  LINE 02 COL 34  VALUE 'STUDENT LISTING'.
+           03  LINE 04 COL 01  VALUE 'ID'.
+           03          COL 06  VALUE 'LAST NAME'.
+           03          COL 22  VALUE 'FIRST NAME'.
+           03          COL 38  VALUE 'STREET'.
+           03          COL 64  VALUE 'ZIP'.
+           03          COL 70  value 'PHONE'.
                
        PROCEDURE DIVISION.
        000-MAIN.
@@ -45,6 +47,8 @@
            MOVE 0      TO WS-CTR.
            
            DISPLAY NEW-SCREEN.
+           DISPLAY HEADER
+           
            DISPLAY SPACES.
            DISPLAY SPACES.
            
@@ -65,17 +69,17 @@
        
        100-DISPLAY.
            ADD 1 TO WS-CTR
-           IF WS-CTR = 10 THEN
+           IF WS-CTR > 15 THEN
                DISPLAY SPACES
                DISPLAY 'PRESS ENTER TO CONTINUE'
                ACCEPT WS-RESP
                DISPLAY NEW-SCREEN
+               DISPLAY HEADER
                DISPLAY SPACES
                DISPLAY SPACES
                MOVE 1 TO WS-CTR                                 
            END-IF                                                       
            DISPLAY STU-ID, " ", STU-L-NAME, " ", STU-F-NAME," ",
            STU-STREET, " ", STU-ZIP, " ", STU-PHONE.
-           DISPLAY SPACES.
               
 

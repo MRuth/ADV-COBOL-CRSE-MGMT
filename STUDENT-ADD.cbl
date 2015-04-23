@@ -16,6 +16,7 @@
                                    ORGANIZATION    IS INDEXED
                                    ACCESS          IS RANDOM
                                    RECORD KEY      IS STU-ID
+                                   ALTERNATE KEY   IS STU-NAME
                                    FILE STATUS     IS WS-STAT.
                                
            SELECT MST-CTRL-LIST    ASSIGN TO 
@@ -142,57 +143,16 @@
                MOVE SPACES TO WS-SAVE
                MOVE SPACES TO WS-DTL-LN
                
-               MOVE 6 TO WS-MST-REC-KEY
-               READ MST-CTRL-LIST
-                   NOT INVALID KEY
-                       MOVE MST-STU-ID TO WS-STU-ID
-               END-READ
+               DISPLAY NEW-SCREEN
+               PERFORM 100-GET-STU-ID
+               PERFORM 200-ACCEPT-STU-INFO
                
-               PERFORM UNTIL SAVE OR NO-SAVE
-               
-                   DISPLAY NEW-SCREEN
-                   DISPLAY SCRN-FIELDS
-                   ACCEPT SCRN-STU-L-NAME
-                   ACCEPT SCRN-STU-F-NAME
-                   ACCEPT SCRN-STU-STREET
-                   ACCEPT SCRN-STU-ZIP
-                   PERFORM 100-GET-CITY-ST
-                   ACCEPT SCRN-STU-PHONE
-                   
-                   
-                   DISPLAY SCRN-SAVE
-                   ACCEPT  SCRN-SAVE
-               
-               END-PERFORM
-               
-               IF SAVE THEN
-                   MOVE WS-STU-ID          TO STU-ID
-                   MOVE WS-STU-NAME        TO STU-NAME
-                   MOVE WS-STU-ADDR        TO STU-ADDR
-                   MOVE WS-STU-PHONE       TO STU-PHONE
-                   MOVE 'A'                TO STU-STATUS
-                   
-                   WRITE STU-REC
-                       INVALID KEY
-                           DISPLAY NEW-SCREEN
-                           DISPLAY SCRN-WRITE-ERR
-                       NOT INVALID KEY
-                           ADD 1 TO WS-STU-ID
-                           DISPLAY NEW-SCREEN
-                           DISPLAY SCRN-WRITE-SUC
-                           MOVE WS-STU-ID TO MST-NEXT-STU
-                           REWRITE MST-NEXT-STU
-               ELSE
-                   DISPLAY NEW-SCREEN
-                   DISPLAY SCRN-WRITE-NOT-SAVE
-               END-IF
                PERFORM UNTIL ANOTHER OR NONE
                    DISPLAY SCRN-ANOTHER
                    ACCEPT  SCRN-ANOTHER
                END-PERFORM
            END-PERFORM.
            
-           MOVE WS-STU-ID TO MST-STU-ID
            
            CLOSE   STU-MST,
                    MST-CTRL-LIST,
@@ -200,8 +160,58 @@
            
            EXIT PROGRAM.
        
-       
-       100-GET-CITY-ST.
+       100-GET-STU-ID.
+           MOVE 6 TO WS-MST-REC-KEY.
+                   READ MST-CTRL-LIST
+                       NOT INVALID KEY
+                           MOVE MST-STU-ID TO WS-STU-ID
+                   END-READ.
+           
+       200-ACCEPT-STU-INFO.
+           PERFORM UNTIL SAVE OR NO-SAVE
+                   
+               DISPLAY NEW-SCREEN
+               DISPLAY SCRN-FIELDS
+               ACCEPT SCRN-STU-L-NAME
+               ACCEPT SCRN-STU-F-NAME
+               ACCEPT SCRN-STU-STREET
+               ACCEPT SCRN-STU-ZIP
+               PERFORM 400-GET-CITY-ST
+               ACCEPT SCRN-STU-PHONE
+               
+               
+               DISPLAY SCRN-SAVE
+               ACCEPT  SCRN-SAVE
+                   
+           END-PERFORM.
+           
+           IF SAVE THEN
+                  PERFORM 300-SAVE-STU-INFO
+               ELSE
+                   DISPLAY NEW-SCREEN
+                   DISPLAY SCRN-WRITE-NOT-SAVE
+           END-IF.
+           
+       300-SAVE-STU-INFO.
+           MOVE WS-STU-ID          TO STU-ID
+           MOVE WS-STU-NAME        TO STU-NAME
+           MOVE WS-STU-ADDR        TO STU-ADDR
+           MOVE WS-STU-PHONE       TO STU-PHONE
+           MOVE 'A'                TO STU-STATUS
+                   
+           WRITE STU-REC
+               INVALID KEY
+                   DISPLAY NEW-SCREEN
+                   DISPLAY SCRN-WRITE-ERR
+               NOT INVALID KEY
+                   ADD 1 TO WS-STU-ID
+                   DISPLAY NEW-SCREEN
+                   DISPLAY SCRN-WRITE-SUC
+                   MOVE WS-STU-ID TO MST-NEXT-STU
+                   REWRITE MST-NEXT-STU
+           END-WRITE.
+           
+       400-GET-CITY-ST.
        MOVE WS-STU-ZIP TO ZIP-KEY.
        START ZIP-MST KEY EQUAL TO ZIP-KEY
                INVALID KEY
@@ -212,3 +222,4 @@
                    READ ZIP-MST
        END-START
        DISPLAY SCRN-FIELDS.
+       

@@ -11,10 +11,11 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
            SELECT STU-MST      ASSIGN TO '../FILES/STUDENT-MASTER.DAT'
-                               ORGANIZATION IS INDEXED
-                               ACCESS IS DYNAMIC
-                               RECORD KEY IS STU-ID
-                               FILE STATUS IS WS-STU-STAT.
+                               ORGANIZATION    IS INDEXED
+                               ACCESS          IS DYNAMIC
+                               RECORD      KEY IS STU-ID
+                               ALTERNATE   KEY IS STU-NAME
+                               FILE STATUS     IS WS-STU-STAT.
                                            
            SELECT ZIP-MST      ASSIGN TO "../FILES/ZIPMASTER.DAT"
                                ORGANIZATION  IS INDEXED

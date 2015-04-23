@@ -1,4 +1,5 @@
-      *Skeleton COBOL Copybook
-      
-
-
+       999-DISP-HEADER.
+           DISPLAY NEW-SCREEN.
+           ACCEPT WS-DATE  FROM DATE.
+           ACCEPT WS-TIME  FROM TIME.
+           DISPLAY SCRN-MAIN-HEADER.
