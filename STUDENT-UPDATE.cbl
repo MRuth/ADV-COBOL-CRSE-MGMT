@@ -43,7 +43,7 @@
        01  WS-ANOTHER              PIC X       VALUE SPACES.
            88  ANOTHER                         VALUE 'Y'.
            88  NONE                            VALUE 'N'.
-       01  WS-DTL-LN.
+       01  WS-STU-REC.
                03  WS-STU-ID               PIC 9999.
                03  WS-STU-NAME.
                    05  WS-STU-L-NAME       PIC X(15).
@@ -59,10 +59,11 @@
        SCREEN SECTION.
        01  NEW-SCREEN.
            03  BLANK SCREEN.
-           03  LINE 1 COL 34                   VALUE 'ADD NEW STUDENT'.
+           03  LINE 1 COL 34                   VALUE 'UPDATE STUDENT'.
        01  SCRN-STU-ID-INQUIRE.
            03      LINE 3  COL 25                  VALUE 'STUDENT ID:'.
-           03              COL 43      PIC 9999    TO WS-STU-ID.
+           03              COL 43      PIC 9999    TO WS-STU-ID
+                                                   REQUIRED AUTO.
        01  SCRN-FIELDS.
            03  SCRN-STU-ID.
                05  LINE 3  COL 25                  VALUE
@@ -114,7 +115,7 @@
                                                    AUTO.
        01  SCRN-WRITE-ERR-1.
            03  LINE 3  COL 30  VALUE 
-                   'A STUDENT ALREADY EXISTS WITH THIS ID'.
+                   'THIS STUDENT DOES NOT EXIS.T'.
        01  SCRN-WRITE-SUC.
            03  LINE 3  COL 30  VALUE 'STUDENT HAS BEEN UPDATED'.
        01  SCRN-WRITE-NOT-SAVE.
@@ -136,47 +137,16 @@
 
                MOVE SPACES TO WS-ANOTHER
                MOVE SPACES TO WS-SAVE
-               MOVE SPACES TO WS-DTL-LN
+               MOVE SPACES TO WS-STU-REC
+               MOVE SPACES TO ZIP-REC
                
+               DISPLAY NEW-SCREEN
+               DISPLAY SCRN-FIELDS
+               DISPLAY SCRN-STU-ID-INQUIRE
+               ACCEPT  SCRN-STU-ID-INQUIRE
                
+               PERFORM 200-GET-STU-REC
                
-               PERFORM UNTIL SAVE OR NO-SAVE
-               
-                   DISPLAY NEW-SCREEN
-                   DISPLAY SCRN-FIELDS
-                   PERFORM 200-GET-STU-REC
-                   ACCEPT SCRN-STU-L-NAME
-                   ACCEPT SCRN-STU-F-NAME
-                   ACCEPT SCRN-STU-STREET
-                   ACCEPT SCRN-STU-ZIP
-                   PERFORM 100-GET-CITY-ST
-                   ACCEPT SCRN-STU-PHONE
-                   
-                   
-                   DISPLAY SCRN-SAVE
-                   ACCEPT  SCRN-SAVE
-               
-               END-PERFORM
-               
-               IF SAVE THEN
-                   MOVE WS-STU-ID          TO STU-ID
-                   MOVE WS-STU-NAME        TO STU-NAME
-                   MOVE WS-STU-ADDR        TO STU-ADDR
-                   MOVE WS-STU-PHONE       TO STU-PHONE
-                   MOVE 'A'                TO STU-STATUS
-                   
-                   REWRITE STU-REC
-                       INVALID KEY
-                           DISPLAY NEW-SCREEN
-                           DISPLAY SCRN-WRITE-ERR-1
-                       NOT INVALID KEY
-                           ADD 1 TO WS-STU-ID
-                           DISPLAY NEW-SCREEN
-                           DISPLAY SCRN-WRITE-SUC
-               ELSE
-                   DISPLAY NEW-SCREEN
-                   DISPLAY SCRN-WRITE-NOT-SAVE
-               END-IF
                PERFORM UNTIL ANOTHER OR NONE
                    DISPLAY SCRN-ANOTHER
                    ACCEPT  SCRN-ANOTHER
@@ -203,13 +173,42 @@
        DISPLAY SCRN-FIELDS.
        
        200-GET-STU-REC.
-           DISPLAY SCRN-STU-ID-INQUIRE.
-           ACCEPT  SCRN-STU-ID-INQUIRE.
            MOVE WS-STU-ID  TO STU-ID.
            
            START STU-MST KEY EQUAL TO STU-ID
                INVALID KEY
+                       DISPLAY NEW-SCREEN
+                       DISPLAY SCRN-WRITE-ERR-1
                NOT INVALID KEY
+                   READ STU-MST
+                   MOVE STU-REC TO WS-STU-REC
+                   PERFORM 300-UPDATE
            END-START.
+       
+       300-UPDATE.
            
+           PERFORM UNTIL SAVE OR NO-SAVE
+               DISPLAY SCRN-FIELDS
+               ACCEPT SCRN-STU-L-NAME
+               ACCEPT SCRN-STU-F-NAME
+               ACCEPT SCRN-STU-STREET
+               ACCEPT SCRN-STU-ZIP
+               PERFORM 100-GET-CITY-ST
+               ACCEPT SCRN-STU-PHONE
+               ACCEPT SCRN-SAVE
+           END-PERFORM.
+           
+           IF SAVE THEN
+               MOVE WS-STU-REC TO STU-REC
+               MOVE 'A' TO STU-STATUS
+               
+               REWRITE STU-REC
+                   NOT INVALID KEY
+                       DISPLAY NEW-SCREEN
+                       DISPLAY SCRN-WRITE-SUC
+           ELSE
+               DISPLAY NEW-SCREEN
+               DISPLAY SCRN-WRITE-NOT-SAVE
+           END-IF.
+       
        

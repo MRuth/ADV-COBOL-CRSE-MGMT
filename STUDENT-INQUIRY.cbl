@@ -90,6 +90,8 @@
        000-MAIN.
            OPEN INPUT  STU-MST,
                        ZIP-MST.
+                       
+           MOVE SPACES TO WS-RESP.
            
            PERFORM UNTIL NONE
                MOVE SPACES TO WS-RESP
