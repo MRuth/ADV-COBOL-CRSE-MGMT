@@ -31,6 +31,8 @@
        COPY ZIP-MST-DEF.
        
        WORKING-STORAGE SECTION.
+       COPY WS-DATE-TIME.
+       
        01  WS-STU-STAT             PIC 99.
        01  WS-ZIP-STAT             PIC 99.
        01  WS-RESP                 PIC X       VALUE SPACES.
@@ -39,9 +41,10 @@
        
        
        SCREEN SECTION.
-       01  NEW-SCREEN.
-           03  BLANK SCREEN.
-           03  LINE 03     COL 34                  VALUE
+       COPY SCR-HEADER.
+       
+       01  HEADER-2.
+           03  LINE 03     COL 37                  VALUE
                                                    'STUDENT INQUIRY'.
        01  SCRN-INQUIRE.
            03  SCRN-STU-ID.
@@ -111,14 +114,14 @@
        100-DISP-SCREEN.
            MOVE ZEROS TO STU-ID.
            MOVE SPACES TO ZIP-KEY.
-           DISPLAY NEW-SCREEN.
+           PERFORM 999-DISP-HEADERS.
            DISPLAY SCRN-INQUIRE.
            ACCEPT SCRN-STU-ID.
            
        200-GET-STUDENT.
            START STU-MST KEY EQUAL TO STU-ID
                INVALID KEY
-                   DISPLAY NEW-SCREEN
+                   PERFORM 999-DISP-HEADERS
                    DISPLAY SCRN-STU-ID
                    DISPLAY SCRN-NOT-FOUND
                NOT INVALID KEY
@@ -147,3 +150,8 @@
            DISPLAY SCRN-INQUIRE.
            DISPLAY SCRN-ANOTHER.
            ACCEPT  SCRN-ANOTHER.
+           
+       999-DISP-HEADERS.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
+           DISPLAY HEADER,HEADER-2.    

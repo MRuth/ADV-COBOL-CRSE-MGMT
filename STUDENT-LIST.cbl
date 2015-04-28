@@ -23,16 +23,16 @@
        COPY STU-MST-DEF.   
        
        WORKING-STORAGE SECTION.
+       COPY WS-DATE-TIME.
        01  WS-CTR                      PIC 99      VALUE 0.
        01  WS-RESP                     PIC X.
        01  WS-EOF                      PIC X       VALUE 'N'.
            88  EOF                                 VALUE 'Y'.
        
-       SCREEN SECTION.
-       01  NEW-SCREEN.
-           03  BLANK SCREEN.
-       01  HEADER.
-           03  LINE 03 COL 34  VALUE 'STUDENT LISTING'.
+       SCREEN SECTION
+       COPY SCR-HEADER.
+       01  HEADER-2.
+           03  LINE 03 COL 37  VALUE 'STUDENT LISTING'.
            03  LINE 05 COL 01  VALUE 'ID'.
            03          COL 06  VALUE 'LAST NAME'.
            03          COL 22  VALUE 'FIRST NAME'.
@@ -46,8 +46,7 @@
            MOVE 'N'    TO WS-EOF.
            MOVE 0      TO WS-CTR.
            
-           DISPLAY NEW-SCREEN.
-           DISPLAY HEADER
+           PERFORM 999-DISP-HEADERS.
            
            DISPLAY SPACES.
            DISPLAY SPACES.
@@ -73,8 +72,7 @@
                DISPLAY SPACES
                DISPLAY 'PRESS ENTER TO CONTINUE'
                ACCEPT WS-RESP
-               DISPLAY NEW-SCREEN
-               DISPLAY HEADER
+               PERFORM 999-DISP-HEADERS
                DISPLAY SPACES
                DISPLAY SPACES
                MOVE 1 TO WS-CTR                                 
@@ -82,4 +80,7 @@
            DISPLAY STU-ID, " ", STU-L-NAME, " ", STU-F-NAME," ",
            STU-STREET, " ", STU-ZIP, " ", STU-PHONE.
               
-
+       999-DISP-HEADERS.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
+           DISPLAY HEADER,HEADER-2.

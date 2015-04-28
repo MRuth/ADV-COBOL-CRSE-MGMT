@@ -32,6 +32,7 @@
        COPY ZIP-MST-DEF.
        
        WORKING-STORAGE SECTION.
+       COPY WS-DATE-TIME.
        01  WS-RESP                 PIC X.
        01  WS-STAT                 PIC 99.
        01  WS-MST-REC-KEY          PIC 99.
@@ -58,9 +59,9 @@
                    05  WS-STU-PHONE-3      PIC XXXX.
                
        SCREEN SECTION.
-       01  NEW-SCREEN.
-           03  BLANK SCREEN.
-           03  LINE 3 COL 34                   VALUE 'UPDATE STUDENT'.
+       COPY SCR-HEADER.
+       01  HEADER-2.
+           03  LINE 3 COL 38                   VALUE 'UPDATE STUDENT'.
        01  SCRN-STU-ID-INQUIRE.
            03      LINE 05 COL 25                  VALUE 'STUDENT ID:'.
            03              COL 43      PIC 9999    TO WS-STU-ID
@@ -141,7 +142,7 @@
                MOVE SPACES TO WS-STU-REC
                MOVE SPACES TO ZIP-REC
                
-               DISPLAY NEW-SCREEN
+               PERFORM 999-DISP-HEADERS
                DISPLAY SCRN-FIELDS
                DISPLAY SCRN-STU-ID-INQUIRE
                ACCEPT  SCRN-STU-ID-INQUIRE
@@ -167,7 +168,7 @@
            
            START STU-MST KEY EQUAL TO STU-ID
                INVALID KEY
-                       DISPLAY NEW-SCREEN
+                       PERFORM 999-DISP-HEADERS
                        DISPLAY SCRN-WRITE-ERR-1
                NOT INVALID KEY
                    READ STU-MST
@@ -194,10 +195,10 @@
                
                REWRITE STU-REC
                    NOT INVALID KEY
-                       DISPLAY NEW-SCREEN
+                       PERFORM 999-DISP-HEADERS
                        DISPLAY SCRN-WRITE-SUC
            ELSE
-               DISPLAY NEW-SCREEN
+               PERFORM 999-DISP-HEADERS
                DISPLAY SCRN-WRITE-NOT-SAVE
            END-IF.
        
@@ -212,3 +213,8 @@
                    READ ZIP-MST
        END-START
        DISPLAY SCRN-FIELDS.
+       
+       999-DISP-HEADERS.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
+           DISPLAY HEADER,HEADER-2.

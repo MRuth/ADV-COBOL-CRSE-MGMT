@@ -40,6 +40,8 @@
        COPY ZIP-MST-DEF.
        
        WORKING-STORAGE SECTION.
+       COPY WS-DATE-TIME.
+       
        01  WS-RESP                 PIC X.
        01  WS-STAT                 PIC 99.
        01  WS-MST-REC-KEY          PIC 99.
@@ -66,9 +68,10 @@
                    05  WS-STU-PHONE-3      PIC XXXX.
                
        SCREEN SECTION.
-       01  NEW-SCREEN.
-           03  BLANK SCREEN.
-           03  LINE 03     COL 34                  VALUE 
+       COPY SCR-HEADER.
+       
+       01  HEADER-2.
+           03  LINE 03     COL 37                  VALUE 
                                                    'ADD NEW STUDENT'.
        01  SCRN-FIELDS.
            03  SCRN-STU-ID.
@@ -145,7 +148,7 @@
                MOVE SPACES TO WS-SAVE
                MOVE SPACES TO WS-DTL-LN
                
-               DISPLAY NEW-SCREEN
+               PERFORM 999-DISP-HEADERS
                PERFORM 100-GET-STU-ID
                PERFORM 200-ACCEPT-STU-INFO
                
@@ -172,7 +175,7 @@
        200-ACCEPT-STU-INFO.
            PERFORM UNTIL SAVE OR NO-SAVE
                    
-               DISPLAY NEW-SCREEN
+               PERFORM 999-DISP-HEADERS
                DISPLAY SCRN-FIELDS
                ACCEPT SCRN-STU-L-NAME
                ACCEPT SCRN-STU-F-NAME
@@ -190,7 +193,7 @@
            IF SAVE THEN
                   PERFORM 300-SAVE-STU-INFO
                ELSE
-                   DISPLAY NEW-SCREEN
+                   PERFORM 999-DISP-HEADERS
                    DISPLAY SCRN-WRITE-NOT-SAVE
            END-IF.
            
@@ -203,11 +206,11 @@
                    
            WRITE STU-REC
                INVALID KEY
-                   DISPLAY NEW-SCREEN
+                   PERFORM 999-DISP-HEADERS
                    DISPLAY SCRN-WRITE-ERR
                NOT INVALID KEY
                    ADD 1 TO WS-STU-ID
-                   DISPLAY NEW-SCREEN
+                   PERFORM 999-DISP-HEADERS
                    DISPLAY SCRN-WRITE-SUC
                    MOVE WS-STU-ID TO MST-NEXT-STU
                    REWRITE MST-NEXT-STU
@@ -225,3 +228,7 @@
        END-START
        DISPLAY SCRN-FIELDS.
        
+       999-DISP-HEADERS.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
+           DISPLAY HEADER,HEADER-2.
