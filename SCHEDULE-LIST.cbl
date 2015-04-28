@@ -18,7 +18,7 @@
            03  SCHEDULE-ID-I       PIC X(12).
            03  FILLER              PIC X.
            03  COURSE-ID-I         PIC X(9).
-           03  FILLER              PIC X.
+           03  FILLER              PIC X. 
            03  TIMEDAY-I           PIC X(20).
            03  FILLER              PIC X.
            03  BUILDING-ID-I       PIC X(11).
