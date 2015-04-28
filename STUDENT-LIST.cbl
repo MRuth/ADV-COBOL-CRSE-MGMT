@@ -32,8 +32,8 @@
        01  NEW-SCREEN.
            03  BLANK SCREEN.
        01  HEADER.
-           03  LINE 02 COL 34  VALUE 'STUDENT LISTING'.
-           03  LINE 04 COL 01  VALUE 'ID'.
+           03  LINE 03 COL 34  VALUE 'STUDENT LISTING'.
+           03  LINE 05 COL 01  VALUE 'ID'.
            03          COL 06  VALUE 'LAST NAME'.
            03          COL 22  VALUE 'FIRST NAME'.
            03          COL 38  VALUE 'STREET'.
