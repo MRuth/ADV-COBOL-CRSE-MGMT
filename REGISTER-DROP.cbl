@@ -15,6 +15,7 @@
                                ORGANIZATION    IS INDEXED
                                ACCESS          IS RANDOM
                                RECORD KEY      IS STU-ID
+                               ALTERNATE   KEY IS STU-NAME
                                FILE STATUS     IS WS-STAT.
            SELECT CRSE-MASTER  ASSIGN        TO 
                                '../FILES/COURSE-MASTER-SORT.DAT'
@@ -90,49 +91,49 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'REGISTER DROP CLASSES'.
+           03  LINE 3  COL 30  VALUE 'REGISTER DROP CLASSES'.
        01  SCRN-DATA.
            03  SCRN-STU-ID.
-               05  LINE 3  COL 25  VALUE   'Student ID   : '.
+               05  LINE 5  COL 25  VALUE   'STUDENT ID   : '.
                05          COL 42  PIC 9(4) TO WS-STU-ID          
                                             AUTO REQUIRED.
            03  SCRN-STU-NAME.
-               05  LINE 5  COL 25  VALUE   'Student Name : '.
+               05  LINE 7  COL 25  VALUE   'STUDENT NAME : '.
                05          COL 42  PIC X(20) FROM WS-STU-NAME.
            03  SCRN-YEAR-SEM.
-               05  LINE 7  COL 15  VALUE   'Year: '.
+               05  LINE 9  COL 15  VALUE   'YEAR: '.
                05          COL 22  PIC ZZZ9 TO REG-YEAR
                                             AUTO REQUIRED FULL.
-               05          COL 50  VALUE   'Semester: '.
+               05          COL 50  VALUE   'SEMESTER: '.
                05          COL 61  PIC Z9   TO REG-SEM
                                             AUTO REQUIRED. 
        01  SCRN-CRSE.    
            03  SCRN-FIRST-CRSE.
-               05  LINE 9  COL 25  VALUE   '1) First Course : '.
+               05  LINE 11  COL 25  VALUE   '1) FIRST COURSE : '.
                05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
            03  SCRN-SECOND-CRSE.
-               05  LINE 10 COL 25  VALUE   '2) Second Course: '.
+               05  LINE 12 COL 25  VALUE   '2) SECOND COURSE: '.
                05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
            03  SCRN-THIRD-CRSE.
-               05  LINE 11 COL 25  VALUE   '3) Third Course : '.
+               05  LINE 13 COL 25  VALUE   '3) THIRD COURSE : '.
                05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
            03  SCRN-FOURTH-CRSE.
-               05  LINE 12 COL 25  VALUE   '4) Fourth Course: '.
+               05  LINE 14 COL 25  VALUE   '4) FOURTH COURSE: '.
                05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
            03  SCRN-FIFTH-CRSE.
-               05  LINE 13 COL 25  VALUE   '5) Fifth Course : '.
+               05  LINE 15 COL 25  VALUE   '5) FIFTH COURSE : '.
                05          COL 43  PIC X(39) FROM WS-CRSE-NAME.
            03  SCRN-RETURN.
-               05  LINE 14 COL 25  VALUE   'R) Finish'.
+               05  LINE 16 COL 25  VALUE   'R) FINISH'.
            03  SCRN-SEL.
-               05  LINE 16  COL 32  VALUE     'Selection'.
+               05  LINE 18  COL 32  VALUE     'SELECTION'.
                05           COL 30  PIC X     TO WS-SEL.
        01  SCRN-ERR1.
-           03  LINE 8  COL 30  VALUE 'STUDENT CANNOT BE FOUND'.
+           03  LINE 5  COL 30  VALUE 'STUDENT CANNOT BE FOUND'.
        01  SCRN-ERR2.
-           03  LINE 8  COL 30  VALUE 'STUDENT HAS NOT REGISTERED'.
+           03  LINE 5  COL 30  VALUE 'STUDENT HAS NOT REGISTERED'.
        01  SCRN-CONTINUE.
-           03  LINE 10 COL 32  VALUE 'Continue? (Y/N)'.
+           03  LINE 7 COL 32  VALUE 'CONTINUE? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER
                                         REQUIRED.
       *----------------------------------------------------------------- 
@@ -240,7 +241,7 @@
            OPEN INPUT CRSE-MASTER.
            READ SCHE-MST
                INVALID KEY
-                   MOVE 'Have not yet registerd' TO WS-CRSE-NAME
+                   MOVE 'NOT YET REGISTERED' TO WS-CRSE-NAME
                NOT INVALID KEY
                    MOVE COURSE-ID-O TO CRSE-ID
                    READ CRSE-MASTER

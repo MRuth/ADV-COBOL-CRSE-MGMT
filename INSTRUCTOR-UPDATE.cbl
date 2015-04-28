@@ -28,7 +28,7 @@
                88  ANOTHER                 VALUE 'N'.
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
-           03  WS-SAVE             PIC X   VALUE 'N'.
+           03  WS-SAVE             PIC X   VALUE SPACE.
                88  SAVE                    VALUE 'Y'.   
            03  WS-OLD-NAME         PIC X(22).     
        01  WS-DTL-LN.
@@ -39,29 +39,28 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'INSTRUCTOR UPDATE'.
+           03  LINE 3  COL 30  VALUE 'INSTRUCTOR UPDATE'.
        01  SCRN-ID.
-            05  LINE 3  COL 25  VALUE    'INSTRUCTOR ID  : '.
+            05  LINE 5  COL 25  VALUE    'INSTRUCTOR ID  : '.
             05          COL 42  PIC ZZZZ TO WS-INSTR-ID          
                                          AUTO REQUIRED.       
        01  SCRN-DATA.
            03  SCRN-INSTR-NEW-NAME.
-               05  LINE 5  COL 25  VALUE 'INSTRUCTOR NAME: '.
+               05  LINE 7  COL 25  VALUE 'INSTRUCTOR NAME: '.
                05          COL 42  PIC X(22)    USING WS-INSTR-NAME
                                                 AUTO REQUIRED.
            03  SCRN-SAVE.
-               05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
-               05          COL 30  PIC X    TO WS-SAVE
-                                               REQUIRED.
+               05  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
+               05          COL 30  PIC X    TO WS-SAVE.
        01  SCRN-CONFIRM1.
-           03  LINE 8  COL 30  VALUE 'INSTRUCTOR IS UPDATED'.
+           03  LINE 5  COL 30  VALUE 'INSTRUCTOR IS UPDATED'.
        01  SCRN-CONFIRM2.
-           03  LINE 8  COL 30  VALUE 'INSTRUCTOR IS NOT UPDATED'.                                                                          
+           03  LINE 5  COL 30  VALUE 'INSTRUCTOR IS NOT UPDATED'.                                                                          
        01  SCRN-ANOTHER.
-           03  LINE 9  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
+           03  LINE 7  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
        01  SCRN-ERR.
-           03  LINE 8  COL 30  VALUE 'INSTRUCTOR NOT FOUND'.    
+           03  LINE 5  COL 30  VALUE 'INSTRUCTOR NOT FOUND'.    
       *-----------------------------------------------------------------
        PROCEDURE DIVISION.
        000-MAIN. 
@@ -85,9 +84,12 @@
                        ACCEPT SCRN-ANOTHER
                    NOT INVALID KEY
                        MOVE INSTR-NAME TO WS-INSTR-NAME
-                       DISPLAY SCRN-DATA
-                       ACCEPT SCRN-INSTR-NEW-NAME
-                       ACCEPT SCRN-SAVE
+                       MOVE SPACE TO WS-SAVE
+                       PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
+                           DISPLAY SCRN-DATA
+                           ACCEPT SCRN-INSTR-NEW-NAME
+                           ACCEPT SCRN-SAVE
+                       END-PERFORM
                        IF SAVE
                            THEN                                         
                                MOVE WS-INSTR-NAME TO INSTR-NAME

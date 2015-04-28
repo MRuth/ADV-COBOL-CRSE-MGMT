@@ -42,22 +42,22 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'ADD COURSE'.
+           03  LINE 3  COL 30  VALUE 'ADD COURSE'.
        01  SCRN-DATA.
            03  SCRN-CRSE-ID.
-               05  LINE 3  COL 25  VALUE   'COURSE NUMBER:'.
+               05  LINE 5  COL 25  VALUE   'COURSE NUMBER:'.
                05          COL 40  PIC X(9) USING WS-COURSE-ID          
                                             AUTO REQUIRED.
            03  SCRN-CRSE-NAME.
-               05  LINE 4  COL 25  VALUE   'COURSE NAME  :'.
+               05  LINE 6  COL 25  VALUE   'COURSE NAME  :'.
                05          COL 40  PIC X(35) USING WS-COURSE-NAME 
                                              AUTO REQUIRED.
            03  SCRN-CRSE-CREDIT.
-               05  LINE 5  COL 25  VALUE   'COURSE CREDIT:'.
+               05  LINE 7  COL 25  VALUE   'COURSE CREDIT:'.
                05          COL 40  PIC X(4) USING WS-COURSE-CREDIT 
                                             AUTO REQUIRED.
            03  SCRN-SAVE.
-               05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
+               05  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
                05          COL 30  PIC X     TO WS-SAVE.
        01  SCRN-WRITE-ERR.
            03  LINE 5  COL 30  VALUE 'COURSE IS ALREADY EXIST'.
@@ -66,7 +66,7 @@
        01  SCRN-WRITE-NOT-SAVE.
            03  LINE 5  COL 30  VALUE 'COURSE IS NOT ADDED'.           
        01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
+           03  LINE 7  COL 32  VALUE 'ADD ANOTHER COURSE? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
@@ -76,6 +76,10 @@
            
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
+               MOVE SPACES TO WS-COURSE-ID
+               MOVE SPACES TO WS-COURSE-NAME
+               MOVE SPACES TO WS-COURSE-CREDIT
+               MOVE SPACE TO WS-SAVE
                PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
                    DISPLAY BLNK-SCRN
                    DISPLAY SCRN-TITLE

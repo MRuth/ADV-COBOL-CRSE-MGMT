@@ -44,39 +44,39 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'COURSE UPDATE'.
+           03  LINE 3  COL 30  VALUE 'COURSE UPDATE'.
        01  SCRN-ID.
-            05  LINE 3  COL 25  VALUE        'COURSE NUMBER:'.
+            05  LINE 5  COL 25  VALUE        'COURSE NUMBER:'.
             05          COL 41  PIC X(9)     TO WS-CRSE-ID          
                                              AUTO REQUIRED.       
        01  SCRN-NAME.
            03  SCRN-CRSE-OLD-NAME.
            03  SCRN-CRSE-NAME.
-               05  LINE 5  COL 25  VALUE     'COURSE NAME  :'.
+               05  LINE 7  COL 25  VALUE     'COURSE NAME  :'.
                05          COL 41  PIC X(35) USING WS-CRSE-NAME
                                              AUTO REQUIRED.
        01  SCRN-CREDIT.
            03  SCRN-CRSE-CREDIT.
-               05  LINE 6  COL 25  VALUE     'COURSE CREDIT:'.
+               05  LINE 8  COL 25  VALUE     'COURSE CREDIT:'.
                05          COL 41  PIC X(4)  USING WS-CRSE-CREDIT
                                              AUTO REQUIRED.
        01  SCRN-STATUS.
            03  SCRN-CRSE-STAT.
-               05  LINE 7  COL 25  VALUE     'COURSE STATUS:'.
+               05  LINE 9  COL 25  VALUE     'COURSE STATUS:'.
                05          COL 41  PIC X     USING WS-CRSE-STAT
                                              AUTO REQUIRED.
        01  SCRN-SAVE.
-           03  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
+           03  LINE 11  COL 32  VALUE   'SAVE (Y/N)'.
            03           COL 30  PIC X    TO WS-SAVE.
        01  SCRN-CONFIRM1.
-           03  LINE 8  COL 30  VALUE 'RECORD IS UPDATED'.
+           03  LINE 5  COL 30  VALUE 'RECORD IS UPDATED'.
        01  SCRN-CONFIRM2.
-           03  LINE 8  COL 30  VALUE 'RECORD IS NOT UPDATED'.                                                                              
+           03  LINE 5  COL 30  VALUE 'RECORD IS NOT UPDATED'.                                                                              
        01  SCRN-ANOTHER.
-           03  LINE 9  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
+           03  LINE 7  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
        01  SCRN-ERR.
-           03  LINE 8  COL 30  VALUE 'RECORD NOT FOUND'.    
+           03  LINE 5  COL 30  VALUE 'RECORD NOT FOUND'.    
       *-----------------------------------------------------------------
        PROCEDURE DIVISION.
        000-MAIN. 
@@ -102,6 +102,7 @@
                            MOVE CRSE-NAME   TO WS-CRSE-NAME
                            MOVE CRSE-CREDIT TO WS-CRSE-CREDIT
                            MOVE CRSE-STAT   TO WS-CRSE-STAT
+                           MOVE SPACE TO WS-SAVE
                            PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
                                DISPLAY SCRN-NAME
                                ACCEPT SCRN-CRSE-NAME
@@ -114,21 +115,21 @@
                                MOVE WS-CRSE-NAME TO CRSE-NAME           
                                MOVE WS-CRSE-CREDIT TO CRSE-CREDIT
                                MOVE WS-CRSE-STAT TO CRSE-STAT
-                           END-PERFORM             
-                   END-READ
-                           IF SAVE
-                               THEN
-                                   REWRITE CRSE-REC
+                               IF SAVE
+                                   THEN
+                                       REWRITE CRSE-REC
+                                       DISPLAY BLNK-SCRN
+                                       DISPLAY SCRN-CONFIRM1
+                                       DISPLAY SCRN-ANOTHER
+                                       ACCEPT SCRN-ANOTHER
+                               ELSE
                                    DISPLAY BLNK-SCRN
-                                   DISPLAY SCRN-CONFIRM1
+                                   DISPLAY SCRN-CONFIRM2
                                    DISPLAY SCRN-ANOTHER
                                    ACCEPT SCRN-ANOTHER
-                           ELSE
-                               DISPLAY BLNK-SCRN
-                               DISPLAY SCRN-CONFIRM2
-                               DISPLAY SCRN-ANOTHER
-                               ACCEPT SCRN-ANOTHER
-                           END-IF
+                               END-IF
+                           END-PERFORM             
+                   END-READ
            END-PERFORM.
 
            CLOSE CRSE-MASTER.

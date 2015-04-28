@@ -24,7 +24,7 @@
            03  WS-STAT             PIC 99.
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
-           03  WS-SAVE             PIC X   VALUE 'N'.
+           03  WS-SAVE             PIC X   VALUE SPACE.
                88  SAVE                    VALUE 'Y'.
            03  WS-ANOTHER          PIC X   VALUE 'Y'.
                88  ANOTHER                 VALUE 'N'.
@@ -40,29 +40,29 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'UPDATE BUILDING'.
+           03  LINE 3  COL 30  VALUE 'UPDATE BUILDING'.
        01  SCRN-DATA.
            03  SCRN-BLD-NAME.
-               05  LINE 3  COL 25  VALUE   'BUILDING NAME: '.
+               05  LINE 5  COL 25  VALUE   'BUILDING NAME: '.
                05          COL 40  PIC X(8) TO WS-BLD-NAME          
                                             AUTO REQUIRED.
            03  SCRN-ROOM-NO.
-               05  LINE 4  COL 25  VALUE   'ROOM NUMBER  : '.
+               05  LINE 6  COL 25  VALUE   'ROOM NUMBER  : '.
                05          COL 40  PIC X(4) TO WS-ROOM-NO
                                              AUTO REQUIRED.
        01  SCRN-SEAT.
            03  SCRN-NEW-MAX-SEAT.
-               05  LINE 5  COL 25  VALUE   'MAX SEAT     : '.
+               05  LINE 7  COL 25  VALUE   'MAX SEAT     : '.
                05          COL 40  PIC Z9  USING WS-MAX-SEAT.
            03  SCRN-SAVE.
-               05  LINE 7  COL 32  VALUE   'SAVE (Y/N)'.
+               05  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
                05          COL 30  PIC X     TO WS-SAVE.
        01  SCRN-CONFIRM1.
-           03  LINE 8  COL 30  VALUE 'ROOM IS UPDATED'.
+           03  LINE 5  COL 30  VALUE 'ROOM IS UPDATED'.
        01  SCRN-CONFIRM2.
-           03  LINE 8  COL 30  VALUE 'ROOM IS NOT UPDATED'.                                                                                
+           03  LINE 5  COL 30  VALUE 'ROOM IS NOT UPDATED'.                                                                                
        01  SCRN-ANOTHER.
-           03  LINE 9  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
+           03  LINE 7  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
        01  SCRN-ERR.
            03  LINE 8  COL 30  VALUE 'ROOM NOT FOUND'.  
@@ -95,9 +95,12 @@
                            ACCEPT SCRN-ANOTHER
                        NOT INVALID KEY
                            MOVE BLD-MAX-SEAT TO WS-MAX-SEAT
-                           DISPLAY SCRN-SEAT
-                           ACCEPT SCRN-NEW-MAX-SEAT
-                           ACCEPT SCRN-SAVE
+                           MOVE SPACE TO WS-SAVE
+                           PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
+                               DISPLAY SCRN-SEAT
+                               ACCEPT SCRN-NEW-MAX-SEAT
+                               ACCEPT SCRN-SAVE
+                           END-PERFORM
                            IF SAVE
                                THEN
                                    MOVE WS-MAX-SEAT TO BLD-MAX-SEAT
@@ -113,7 +116,6 @@
                                    ACCEPT SCRN-ANOTHER
                            END-IF    
                    END-READ                                                        
-
            END-PERFORM.
            
            CLOSE BLD-MASTER.           

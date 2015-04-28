@@ -2,7 +2,7 @@
        PROGRAM-ID. REGISTER-ADD.
       *-----------------------------------------------------------------
        ENVIRONMENT DIVISION.
-       INPUT-OUTPUT SECTION.
+       INPUT-OUTPUT SECTION. 
        FILE-CONTROL.
            SELECT REG-MASTER   ASSIGN        TO 
                                '../FILES/REGISTER-MASTER.DAT'   
@@ -15,9 +15,10 @@
                                ORGANIZATION    IS INDEXED
                                ACCESS          IS RANDOM
                                RECORD KEY      IS STU-ID
+                               ALTERNATE   KEY IS STU-NAME
                                FILE STATUS     IS WS-STAT.
            SELECT SCHE-MST     ASSIGN TO
-                               '../FILES/SCHEDULE-MASTER.DAT'
+                               '../FILES/SCHEDULE-MST.DAT'
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS RANDOM
                                RECORD KEY    IS SCHEDULE-ID-O
@@ -91,17 +92,17 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'REGISTER ADD CLASSES'.
+           03  LINE 3  COL 30  VALUE 'REGISTER ADD CLASSES'.
        01  SCRN-DATA.
            03  SCRN-STU-ID.
-               05  LINE 3  COL 25  VALUE   'STUDENT ID   : '.
+               05  LINE 5  COL 25  VALUE   'STUDENT ID   : '.
                05          COL 40  PIC 9(4) TO WS-STU-ID          
                                             AUTO REQUIRED.
            03  SCRN-STU-NAME.
-               05  LINE 5  COL 25  VALUE   'STUDENT NAME : '.
+               05  LINE 7  COL 25  VALUE   'STUDENT NAME : '.
                05          COL 40  PIC X(20) FROM WS-STU-NAME.
            03  SCRN-YEAR-SEM.
-               05  LINE 7  COL 15  VALUE   'YEAR: '.
+               05  LINE 9  COL 15  VALUE   'YEAR: '.
                05          COL 22  PIC ZZZ9 TO WS-YEAR
                                             AUTO REQUIRED FULL.
                05          COL 50  VALUE   'SEMESTER: '.
@@ -109,72 +110,72 @@
                                             AUTO REQUIRED.               
        01  SCRN-CRN1.
            03  SCRN-FIRST-CRN1.
-               05  LINE 9  COL 25  VALUE   'FIRST CRN    : '.
-               05          COL 40  PIC ZZZ9 TO WS-FIRST-CRN
+               05  LINE 11  COL 25  VALUE   'FIRST CRN    : '.
+               05          COL 40  PIC ZZZ9 USING WS-FIRST-CRN
                                             AUTO.
            03  SCRN-SECOND-CRN1.
-               05  LINE 10 COL 25  VALUE   'SECOND CRN   : '.
-               05          COL 40  PIC ZZZ9 TO WS-SECOND-CRN
+               05  LINE 12 COL 25  VALUE   'SECOND CRN   : '.
+               05          COL 40  PIC ZZZ9 USING WS-SECOND-CRN
                                             AUTO.
            03  SCRN-THIRD-CRN1.
-               05  LINE 11  COL 25  VALUE   'THIRD CRN    : '.
-               05           COL 40  PIC ZZZ9 TO WS-THIRD-CRN
+               05  LINE 13  COL 25  VALUE   'THIRD CRN    : '.
+               05           COL 40  PIC ZZZ9 USING WS-THIRD-CRN
                                              AUTO.
            03  SCRN-FOURTH-CRN1.
-               05  LINE 12  COL 25  VALUE   'FOURTH CRN   : '.
-               05           COL 40  PIC ZZZ9 TO WS-FOURTH-CRN
+               05  LINE 14  COL 25  VALUE   'FOURTH CRN   : '.
+               05           COL 40  PIC ZZZ9 USING WS-FOURTH-CRN
                                              AUTO.
            03  SCRN-FIFTH-CRN1.
-               05  LINE 13  COL 25  VALUE   'FIFTH CRN    : '.
-               05           COL 40  PIC ZZZ9 TO WS-FIFTH-CRN
+               05  LINE 15  COL 25  VALUE   'FIFTH CRN    : '.
+               05           COL 40  PIC ZZZ9 USING WS-FIFTH-CRN
                                              AUTO.
        01  SCRN-CRN2.
            03  SCRN-FIRST-CRN2.
-               05  LINE 9  COL 25  VALUE   'FIRST CRN    : '.
+               05  LINE 11  COL 25  VALUE   'FIRST CRN    : '.
                05          COL 40  PIC ZZZ9 USING FIRST-CRN
                                             AUTO.
            03  SCRN-SECOND-CRN2.
-               05  LINE 10 COL 25  VALUE   'SECOND CRN   : '.
+               05  LINE 12 COL 25  VALUE   'SECOND CRN   : '.
                05          COL 40  PIC ZZZ9 USING SECOND-CRN
                                             AUTO.
            03  SCRN-THIRD-CRN2.
-               05  LINE 11 COL 25  VALUE   'THIRD CRN    : '.
+               05  LINE 13 COL 25  VALUE   'THIRD CRN    : '.
                05          COL 40  PIC ZZZ9 USING THIRD-CRN
                                             AUTO.
            03  SCRN-FOURTH-CRN2.
-               05  LINE 12 COL 25  VALUE   'FOURTH CRN   : '.
+               05  LINE 14 COL 25  VALUE   'FOURTH CRN   : '.
                05          COL 40  PIC ZZZ9 USING FOURTH-CRN
                                             AUTO.
            03  SCRN-FIFTH-CRN2.
-               05  LINE 13 COL 25  VALUE   'FIFTH CRN    : '.
+               05  LINE 15 COL 25  VALUE   'FIFTH CRN    : '.
                05          COL 40  PIC ZZZ9 USING FIFTH-CRN
                                             AUTO.
        01  SCRN-CLASS-NAME1.
-           03  LINE 15  COL 15  PIC ZZZ9 FROM WS-CRN.
-           03           COL 20  PIC X(35) FROM WS-CRSE-NAME.
-       01  SCRN-CLASS-NAME2.
-           03  LINE 16  COL 15  PIC ZZZ9 FROM WS-CRN.
-           03           COL 20  PIC X(35) FROM WS-CRSE-NAME.
-       01  SCRN-CLASS-NAME3.
            03  LINE 17  COL 15  PIC ZZZ9 FROM WS-CRN.
            03           COL 20  PIC X(35) FROM WS-CRSE-NAME.
-       01  SCRN-CLASS-NAME4.
+       01  SCRN-CLASS-NAME2.
            03  LINE 18  COL 15  PIC ZZZ9 FROM WS-CRN.
            03           COL 20  PIC X(35) FROM WS-CRSE-NAME.
-       01  SCRN-CLASS-NAME5.
+       01  SCRN-CLASS-NAME3.
            03  LINE 19  COL 15  PIC ZZZ9 FROM WS-CRN.
            03           COL 20  PIC X(35) FROM WS-CRSE-NAME.
+       01  SCRN-CLASS-NAME4.
+           03  LINE 20  COL 15  PIC ZZZ9 FROM WS-CRN.
+           03           COL 20  PIC X(35) FROM WS-CRSE-NAME.
+       01  SCRN-CLASS-NAME5.
+           03  LINE 21  COL 15  PIC ZZZ9 FROM WS-CRN.
+           03           COL 20  PIC X(35) FROM WS-CRSE-NAME.
        01  SCRN-SAVE.
-           03  LINE 21  COL 32  VALUE     'SAVE (Y/N)'.
+           03  LINE 23  COL 32  VALUE     'SAVE (Y/N)'.
            03           COL 30  PIC X     TO WS-SAVE.
        01  SCRN-WRITE-ERR.
-           03  LINE 8  COL 30  VALUE 'STUDENT CAN NOT BE FOUND'.
+           03  LINE 5  COL 30  VALUE 'STUDENT CAN NOT BE FOUND'.
        01  SCRN-WRITE-SAVE.
-           03  LINE 8  COL 30  VALUE 'REGISTERED SUCCESSFULLY'.
+           03  LINE 5  COL 30  VALUE 'REGISTERED SUCCESSFULLY'.
        01  SCRN-WRITE-NOT-SAVE.
-           03  LINE 8  COL 30  VALUE 'REGISTERED UNSUCCESSFULLY'.      
+           03  LINE 5  COL 30  VALUE 'REGISTERED UNSUCCESSFULLY'.      
        01  SCRN-ANOTHER.
-           03  LINE 10 COL 32  VALUE 'CONTINUE? (Y/N)'.
+           03  LINE 7 COL 32  VALUE 'CONTINUE? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
@@ -184,6 +185,11 @@
 
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
+                   MOVE ZEROS TO WS-FIRST-CRN
+                   MOVE ZEROS TO WS-SECOND-CRN
+                   MOVE ZEROS TO WS-THIRD-CRN
+                   MOVE ZEROS TO WS-FOURTH-CRN
+                   MOVE ZEROS TO WS-FIFTH-CRN
                    DISPLAY BLNK-SCRN
                    DISPLAY SCRN-TITLE
                    DISPLAY SCRN-STU-ID

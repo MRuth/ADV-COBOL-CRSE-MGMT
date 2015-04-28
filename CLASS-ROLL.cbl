@@ -15,6 +15,7 @@
                                ORGANIZATION    IS INDEXED
                                ACCESS          IS RANDOM
                                RECORD KEY      IS STU-ID
+                               ALTERNATE   KEY IS STU-NAME
                                FILE STATUS     IS WS-STAT.
            SELECT SCHE-MST     ASSIGN TO
                                '../FILES/SCHEDULE-MASTER.DAT'
@@ -109,10 +110,10 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'CLASS ROLL'.
+           03  LINE 3  COL 30  VALUE 'CLASS ROLL'.
        01  SCRN-DATA.
            03  SCRN-CRSE.
-               05  LINE 3  COL 1   VALUE  'COURSE CRN: '.
+               05  LINE 5  COL 1   VALUE  'COURSE CRN: '.
                05          COL 14  PIC 9999 USING WS-CRN         
                                             AUTO REQUIRED FULL.
                05          COL 20  VALUE   'YEAR: '.
@@ -122,12 +123,12 @@
                05          COL 45  PIC Z9   USING WS-SEM
                                             AUTO REQUIRED FULL.   
            03  SCRN-CRSE-NAME.
-               05  LINE 5  COL 1   VALUE   'COURSE NAME: '.
+               05  LINE 7  COL 1   VALUE   'COURSE NAME: '.
                05          COL 14  PIC X(35) FROM WS-CRSE-NAME. 
        01  SCRN-ERR.
-           03  LINE 8  COL 30  VALUE 'COURSE CAN NOT BE FOUND'.     
+           03  LINE 5  COL 30  VALUE 'COURSE CAN NOT BE FOUND'.     
        01  SCRN-ANOTHER.
-           03  LINE 10 COL 32  VALUE 'LOOK UP ANOTHER COURSE? (Y/N)'.
+           03  LINE 7  COL 32  VALUE 'LOOK UP ANOTHER COURSE? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER. 
        01  BLNK-SCREEN.
            03  BLANK SCREEN.

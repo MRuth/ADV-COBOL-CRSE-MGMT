@@ -36,17 +36,17 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'INSTRUCTOR INQUIRY'.
+           03  LINE 3  COL 30  VALUE 'INSTRUCTOR INQUIRY'.
        01  SCRN-ID.
-            05  LINE 3  COL 25  VALUE   'INSTRUCTOR ID  :'.
+            05  LINE 5  COL 25  VALUE   'INSTRUCTOR ID  :'.
             05          COL 43  PIC ZZZZ TO WS-INSTR-ID          
                                          AUTO REQUIRED.       
        01  SCRN-DATA.
            03  SCRN-INSTR-NAME.
-               05  LINE 4  COL 25  VALUE   'INSTRUCTOR NAME:'.
+               05  LINE 6  COL 25  VALUE   'INSTRUCTOR NAME:'.
                05          COL 43  PIC X(35) FROM WS-INSTR-NAME.
        01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'LOOK UP ANOTHER? (Y/N)'.
+           03  LINE 8  COL 32  VALUE 'LOOK UP ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
        01  SCRN-ERR.
            03  LINE 6  COL 30  VALUE 'INSTRUCTOR NOT FOUND'.    

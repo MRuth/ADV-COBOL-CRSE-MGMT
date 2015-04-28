@@ -39,23 +39,23 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'INQUIRY BUILDING'.
+           03  LINE 3  COL 30  VALUE 'INQUIRY BUILDING'.
        01  SCRN-BLD-ROOM.
            03  SCRN-BLD-NAME.
-               05  LINE 3  COL 25  VALUE   'BUILDING NAME: '.
+               05  LINE 5  COL 25  VALUE   'BUILDING NAME: '.
                05          COL 40  PIC X(8) TO WS-BLD-NAME          
                                             AUTO REQUIRED.
            03  SCRN-ROOM-NO.
-               05  LINE 4  COL 25  VALUE   'ROOM NUMBER  : '.
+               05  LINE 6  COL 25  VALUE   'ROOM NUMBER  : '.
                05          COL 40  PIC X(4) TO WS-ROOM-NO
                                              AUTO REQUIRED.
        01  SCRN-DATA.
-           03  LINE 5  COL 25  VALUE   'MAX SEAT     : '.
+           03  LINE 7  COL 25  VALUE   'MAX SEAT     : '.
            03          COL 40  PIC Z9  FROM WS-MAX-SEAT.
        01  SCRN-ERR.
-           03  LINE 5  COL 30  VALUE 'ROOM NOT FOUND'.    
+           03  LINE 7  COL 30  VALUE 'ROOM NOT FOUND'.    
        01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'LOOK UP ANOTHER? (Y/N)'.
+           03  LINE 9  COL 32  VALUE 'LOOK UP ANOTHER ROOM? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
