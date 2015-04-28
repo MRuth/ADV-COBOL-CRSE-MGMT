@@ -1,5 +1,5 @@
       *Skeleton COBOL Copybook
-       01 HEADER.
+       01  HEADER. 
            03 BLANK SCREEN.
            03 LINE 01 COL 01 VALUE "TEAM MASTER CONTROL".
            03 LINE 01 COL 38 VALUE "UA FORT SMITH".

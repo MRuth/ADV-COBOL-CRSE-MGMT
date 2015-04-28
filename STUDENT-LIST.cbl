@@ -18,7 +18,7 @@
                ALTERNATE   KEY IS STU-NAME.
    
        DATA DIVISION.
-       FILE SECTION.
+       FILE SECTION. 
        
        COPY STU-MST-DEF.   
        
@@ -67,7 +67,7 @@
            EXIT PROGRAM.
        
        100-DISPLAY.
-           ADD 1 TO WS-CTR
+           ADD 1 TO WS-CTR.
            IF WS-CTR > 15 THEN
                DISPLAY SPACES
                DISPLAY 'PRESS ENTER TO CONTINUE'
@@ -76,11 +76,11 @@
                DISPLAY SPACES
                DISPLAY SPACES
                MOVE 1 TO WS-CTR                                 
-           END-IF                                                       
+           END-IF.                                                      
            DISPLAY STU-ID, " ", STU-L-NAME, " ", STU-F-NAME," ",
            STU-STREET, " ", STU-ZIP, " ", STU-PHONE.
               
        999-DISP-HEADERS.
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
-           DISPLAY HEADER,HEADER-2.
+           DISPLAY HEADER, HEADER-2.

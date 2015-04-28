@@ -23,20 +23,21 @@
                88  EOF                     VALUE 'Y'.
            03  WS-SAVE             PIC X   VALUE SPACE.
                88  SAVE                    VALUE 'Y'.
+               88  NOSAVE                  VALUE 'N'.
            03  WS-ANOTHER          PIC X   VALUE 'Y'.
                88  ANOTHER                 VALUE 'N'.
            03  WS-VALIDATE         PIC X   VALUE 'N'.
                88 VALIDATED                VALUE 'Y'.
            03  WS-MST-REC-KEY      PIC 9.
-           03  WS-STATUS           PIC X(60).
+           03  WS-STATUS           PIC X(60). 
            
        01  WS-REC.
            03  WS-SCHED-ID.
-               05 WS-YEAR          PIC 9(4).
+               05 WS-YEAR          PIC 9(4) VALUE 2015.
                05 FILLER           PIC X.
                05 WS-SEM           PIC 99.
                05 FILLER           PIC X.
-               05 WS-CRN           PIC 9(4).
+               05 WS-CRN           PIC 9(4). 
            03  FILLER              PIC X.
            03  WS-COURSE-ID. 
                05  WS-COURSE-DEPT  PIC X(4). 
@@ -115,22 +116,20 @@
        PROCEDURE DIVISION.
        000-MAIN.
            OPEN I-O SCHED-MST.
-           OPEN I-O CRSE-MASTER.
            OPEN I-O MST-CTRL-LIST. 
            MOVE 'Y' TO WS-ANOTHER.
-           MOVE SPACES TO WS-REC,INST-REC.
-           MOVE 2015 TO WS-YEAR.
-           PERFORM 100-ADD-TO-SCHED.  
-           
+           PERFORM 100-ADD-TO-SCHED.
            CLOSE CRSE-MASTER.
            CLOSE SCHED-MST.
-      *-----------------------------------------------------------------     
            EXIT PROGRAM.
+      *-----------------------------------------------------------------     
+           
        100-ADD-TO-SCHED.
            PERFORM UNTIL ANOTHER
-               MOVE SPACES TO WS-SAVE
+               MOVE SPACES TO WS-SAVE, WS-REC, INST-REC
+               MOVE 2015 TO WS-YEAR
                DISPLAY BLNK-SCRN
-               ACCEPT WS-DATE FROM DATE
+               ACCEPT WS-DATE FROM DATE 
                ACCEPT WS-TIME FROM TIME
                DISPLAY HEADER
                DISPLAY SCRN-TITLE
@@ -167,6 +166,7 @@
                END-PERFORM.
       *-----------------------------------------------------------------
            120-VAL-CRS.
+               OPEN INPUT CRSE-MASTER.
                MOVE 'N' TO WS-VALIDATE.
                PERFORM UNTIL VALIDATED
                    MOVE 'ENTER COURSE DEPT' TO WS-STATUS
@@ -191,7 +191,7 @@
       *-----------------------------------------------------------------         
                
            130-VAL-BLD.
-               OPEN I-O BLD-MASTER.
+               OPEN INPUT BLD-MASTER.
                MOVE 'N' TO WS-VALIDATE.
                PERFORM UNTIL VALIDATED
                    MOVE 'ENTER ROOM ID' TO WS-STATUS
@@ -213,10 +213,10 @@
                    END-READ
                END-PERFORM.
                CLOSE BLD-MASTER.
-               
+                
       *-----------------------------------------------------------------         
            140-VAL-INS.
-               OPEN I-O INST-MASTER.
+               OPEN INPUT INST-MASTER.
                MOVE 'N' TO WS-VALIDATE.
                MOVE 'ENTER INSTRUCTOR ID' TO WS-STATUS.
                DISPLAY SCRN-STATUS.
@@ -236,7 +236,7 @@
                CLOSE INST-MASTER.
       *-----------------------------------------------------------------         
           150-SAVE.
-               PERFORM UNTIL SAVE
+               PERFORM UNTIL SAVE OR NOSAVE
                    DISPLAY SCRN-SAVE 
                    ACCEPT SCRN-SAVE
                    IF SAVE THEN

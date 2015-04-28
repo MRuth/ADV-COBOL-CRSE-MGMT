@@ -5,7 +5,7 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
            SELECT IN-FILE      ASSIGN        TO 
-                                       '../FILES/SCHEDULE-MASTER.DAT'   
+                                       '../FILES/SCHEDULE-MST.DAT'   
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS SEQUENTIAL
                                RECORD KEY    IS SCHEDULE-ID-I
@@ -18,7 +18,7 @@
            03  SCHEDULE-ID-I       PIC X(12).
            03  FILLER              PIC X.
            03  COURSE-ID-I         PIC X(9).
-           03  FILLER              PIC X.
+           03  FILLER              PIC X. 
            03  TIMEDAY-I           PIC X(20).
            03  FILLER              PIC X.
            03  BUILDING-ID-I       PIC X(11).

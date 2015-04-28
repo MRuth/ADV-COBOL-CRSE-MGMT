@@ -27,7 +27,7 @@
            SELECT SORT-WORK    ASSIGN        TO 'SORTWORK.TXT'.
            
            SELECT OUT-FILE     ASSIGN        TO
-                                       '../FILES/SCHEDULE-MASTER.DAT'
+                                       '../FILES/SCHEDULE-MST.DAT'
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS DYNAMIC
                                RECORD KEY    IS SCHEDULE-ID-O
@@ -198,6 +198,7 @@
            ACCEPT WS-RESP.
            CLOSE MST-CTRL-LIST.
            CLOSE OUT-FILE.
+           CLOSE INST-MST.
            
            EXIT PROGRAM.
       *-----------------------------------------------------------------
