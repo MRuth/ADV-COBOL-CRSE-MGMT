@@ -26,103 +26,104 @@
        COPY SCR-HEADER.
        01 MAIN.
            03  MENU.
-               05 LINE 01 COL 38 VALUE "MAIN MENU".
-               05  LINE 06 COL 32 VALUE " 1) STUDENT RECORDS".
-               05  LINE 08 COL 32 VALUE " 2) COURSE RECORDS".
-               05  LINE 10 COL 32 VALUE " 3) SCHEDULE".
-               05  LINE 12 COL 32 VALUE " 4) INSTRUCTOR RECORDS".
-               05  LINE 14 COL 32 VALUE " 5) BUILDING RECORDS".
-               05  LINE 16 COL 32 VALUE " 6) ZIPCODE RECORDS".
-               05  LINE 18 COL 32 VALUE " 7) REPORTS".
-               05  LINE 20 COL 32 VALUE " X) Exit".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 03 COL 40 VALUE "MAIN MENU".
+               05  LINE 05 COL 32 VALUE " 1) STUDENT RECORDS".
+               05  LINE 06 COL 32 VALUE " 2) COURSE RECORDS".
+               05  LINE 07 COL 32 VALUE " 3) SCHEDULE".
+               05  LINE 08 COL 32 VALUE " 4) INSTRUCTOR RECORDS".
+               05  LINE 09 COL 32 VALUE " 5) BUILDING RECORDS".
+               05  LINE 10 COL 32 VALUE " 6) ZIPCODE RECORDS".
+               05  LINE 11 COL 32 VALUE " 7) REPORTS".
+               05  LINE 12 COL 32 VALUE " 8) DEBUG".
+               05  LINE 13 COL 32 VALUE " X) Exit".
+               05  LINE 15 COL 37 VALUE "Selection".
+               05  LINE 15 COL 35 PIC X TO WS-SEL AUTO.
        
        01 STU-MENU.
           03  STUMENU.
-               05  LINE 01 COL 38 VALUE "STUDENT MENU".
-               05  LINE 06 COL 32 VALUE " 1) LIST STUDENTS".
-               05  LINE 08 COL 32 VALUE " 2) ADD STUDENT".
-               05  LINE 10 COL 32 VALUE " 3) UPDATE STUDENT".
-               05  LINE 12 COL 32 VALUE " 4) INQUIRE BY ID".
-               05  LINE 14 COL 32 VALUE " 5) REGISTER CLASS". 
-               05  LINE 16 COL 32 VALUE " 6) DROP CLASS".
-               05  LINE 18 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 03 COL 38 VALUE "STUDENT MENU".
+               05  LINE 05 COL 32 VALUE " 1) LIST STUDENTS".
+               05  LINE 06 COL 32 VALUE " 2) ADD STUDENT".
+               05  LINE 07 COL 32 VALUE " 3) UPDATE STUDENT".
+               05  LINE 08 COL 32 VALUE " 4) INQUIRE BY ID".
+               05  LINE 09 COL 32 VALUE " 5) REGISTER CLASS". 
+               05  LINE 10 COL 32 VALUE " 6) DROP CLASS".
+               05  LINE 11 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 13 COL 37 VALUE "Selection".
+               05  LINE 13 COL 35 PIC X TO WS-SEL AUTO.
        
        01 CRS-MENU.
           03  CRSMENU.
-               05  LINE 01 COL 38 VALUE "COURSE MENU".
-               05  LINE 06 COL 32 VALUE " 1) LIST COURSES".
-               05  LINE 08 COL 32 VALUE " 2) ADD COURSE".
-               05  LINE 10 COL 32 VALUE " 3) UPDATE COURSE".
-               05  LINE 12 COL 32 VALUE " 4) INQUIRE BY COURSE".
-               05  LINE 14 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 03 COL 39 VALUE "COURSE MENU".
+               05  LINE 05 COL 32 VALUE " 1) LIST COURSES".
+               05  LINE 06 COL 32 VALUE " 2) ADD COURSE".
+               05  LINE 07 COL 32 VALUE " 3) UPDATE COURSE".
+               05  LINE 08 COL 32 VALUE " 4) INQUIRE BY COURSE".
+               05  LINE 09 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 11 COL 37 VALUE "Selection".
+               05  LINE 11 COL 35 PIC X TO WS-SEL AUTO.
                
        01 SCHED-MENU.
           03  SCHEDMENU.
-               05  LINE 01 COL 38 VALUE "SCHEDULE MENU".
-               05  LINE 06 COL 32 VALUE " 1) LIST SCHEDULE".
-               05  LINE 08 COL 32 VALUE " 2) ADD TO SCHEDULE".
-               05  LINE 10 COL 32 VALUE " 3) UPDATE WITHIN SCHEDULE".
-               05  LINE 12 COL 32 VALUE " 4) SEARCH BY COURSE DEPT".
-               05  LINE 14 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 03 COL 38 VALUE "SCHEDULE MENU".
+               05  LINE 05 COL 32 VALUE " 1) LIST SCHEDULE".
+               05  LINE 06 COL 32 VALUE " 2) ADD TO SCHEDULE".
+               05  LINE 07 COL 32 VALUE " 3) UPDATE WITHIN SCHEDULE".
+               05  LINE 08 COL 32 VALUE " 4) SEARCH BY COURSE DEPT".
+               05  LINE 09 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 11 COL 37 VALUE "Selection".
+               05  LINE 11 COL 35 PIC X TO WS-SEL AUTO.
                
        01 INST-MENU.
           03  INSTMENU.
-               05  LINE 01 COL 38 VALUE "INSTRUCTOR MENU".
-               05  LINE 06 COL 32 VALUE " 1) LIST INSTRUCTORS".
-               05  LINE 08 COL 32 VALUE " 2) ADD INSTRUCTOR".
-               05  LINE 10 COL 32 VALUE " 3) UPDATE INSTRUCTOR".
-               05  LINE 12 COL 32 VALUE " 4) INQUIRE BY ID".
-               05  LINE 14 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 03 COL 37 VALUE "INSTRUCTOR MENU".
+               05  LINE 05 COL 32 VALUE " 1) LIST INSTRUCTORS".
+               05  LINE 06 COL 32 VALUE " 2) ADD INSTRUCTOR".
+               05  LINE 07 COL 32 VALUE " 3) UPDATE INSTRUCTOR".
+               05  LINE 08 COL 32 VALUE " 4) INQUIRE BY ID".
+               05  LINE 09 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 11 COL 37 VALUE "Selection".
+               05  LINE 11 COL 35 PIC X TO WS-SEL AUTO.
        01 BLD-MENU. 
           03  BLDMENU.
-               05  LINE 01 COL 38 VALUE "BUILDING MENU".
-               05  LINE 06 COL 32 VALUE " 1) LIST ROOMS".
-               05  LINE 08 COL 32 VALUE " 2) ADD ROOM".
-               05  LINE 10 COL 32 VALUE " 3) UPDATE ROOM".
-               05  LINE 12 COL 32 VALUE " 4) VIEW ROOM".
-               05  LINE 14 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 03 COL 38 VALUE "BUILDING MENU".
+               05  LINE 05 COL 32 VALUE " 1) LIST ROOMS".
+               05  LINE 06 COL 32 VALUE " 2) ADD ROOM".
+               05  LINE 07 COL 32 VALUE " 3) UPDATE ROOM".
+               05  LINE 08 COL 32 VALUE " 4) VIEW ROOM".
+               05  LINE 09 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 11 COL 37 VALUE "Selection".
+               05  LINE 11 COL 35 PIC X TO WS-SEL AUTO.
        01  ZIP-MENU.
            03  ZIPMENU.
-               05  LINE 01 COL 38 VALUE "ZIPCODE MENU".
-               05  LINE 06 COL 32 VALUE " 1) SEARCH BY ZIP".
-               05  LINE 08 COL 32 VALUE " 2) SEARCH BY CITY".
-               05  LINE 10 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 03 COL 38 VALUE "ZIPCODE MENU".
+               05  LINE 05 COL 32 VALUE " 1) SEARCH BY ZIP".
+               05  LINE 06 COL 32 VALUE " 2) SEARCH BY CITY".
+               05  LINE 07 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 09 COL 37 VALUE "Selection".
+               05  LINE 09 COL 35 PIC X TO WS-SEL AUTO.
        01 RPT-MENU.
           03  RPTMENU.
-               05  LINE 01 COL 38 VALUE "REPORT MENU".
-               05  LINE 06 COL 32 VALUE " 1) COURSES BY INSTRUCTOR".
-               05  LINE 08 COL 32 VALUE " 2) CLASS ROLL".
+               05  LINE 03 COL 39 VALUE "REPORT MENU".
+               05  LINE 05 COL 32 VALUE " 1) COURSES BY INSTRUCTOR".
+               05  LINE 06 COL 32 VALUE " 2) CLASS ROLL".
 
-               05  LINE 10 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 07 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 09 COL 37 VALUE "Selection".
+               05  LINE 09 COL 35 PIC X TO WS-SEL AUTO.
        01 DEB-MENU.
           03  DEBMENU.
-               05  LINE 01 COL 34 VALUE "SUPER SECRET DEBUG MENU".
-               05  LINE 06 COL 25 VALUE " 1) BUILD STUDENT".
+               05  LINE 03 COL 39 VALUE "DEBUG MENU".
+               05  LINE 05 COL 25 VALUE " 1) BUILD STUDENT".
                05  LINE 06 COL 50 VALUE " 2) BUILD COURSE".
-               05  LINE 08 COL 25 VALUE " 3) BUILD INSTRUCTOR".
+               05  LINE 07 COL 25 VALUE " 3) BUILD INSTRUCTOR".
                05  LINE 08 COL 50 VALUE " 4) BUILD SCHEDULE".
-               05  LINE 10 COL 25 VALUE " 5) BUILD BUILDING".
+               05  LINE 09 COL 25 VALUE " 5) BUILD BUILDING".
                05  LINE 10 COL 50 VALUE " 6) BUILD ZIP".
-               05  LINE 12 COL 32 VALUE " 7) BUILD MASTER CONTROL".
-               05  LINE 16 COL 32 VALUE " R) RETURN TO MAIN MENU".
-               05  LINE 24 COL 37 VALUE "Selection".
-               05  LINE 24 COL 35 PIC X TO WS-SEL AUTO.
+               05  LINE 11 COL 32 VALUE " 7) BUILD MASTER CONTROL".
+               05  LINE 12 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 14 COL 37 VALUE "Selection".
+               05  LINE 14 COL 35 PIC X TO WS-SEL AUTO.
       *------------------------------R----------------------------------
        PROCEDURE DIVISION.
        100-MAIN.
@@ -151,7 +152,7 @@
                        WHEN '5' PERFORM 250-BUILDING
                        WHEN '6' PERFORM 260-ZIPCODE
                        WHEN '7' PERFORM 270-REPORTS
-                       WHEN 's' PERFORM 280-DEBUG
+                       WHEN '8' PERFORM 280-DEBUG
                        WHEN 'X' MOVE 'Y' TO WS-EXIT
            END-EVALUATE.
                    

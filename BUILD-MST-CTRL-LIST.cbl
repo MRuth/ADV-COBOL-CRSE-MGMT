@@ -22,6 +22,11 @@
        WORKING-STORAGE SECTION.
        01  WS-REC-KEY                  PIC 9(4).
        01  WS-STAT                     PIC XX.
+       01  WS-RESP                     PIC X.
+       SCREEN SECTION.
+       01  BLANK-SCREEN.
+           03 BLANK SCREEN.
+       
    
        PROCEDURE DIVISION.
        000-MAIN.
@@ -81,6 +86,7 @@
        CLOSE MST-CTRL-LIST.
        
        
-       STOP RUN.
-              
-
+       DISPLAY BLANK-SCREEN.
+       DISPLAY 'MST-CTRL-LIST BUILD SUCCESSFUL'.
+       ACCEPT WS-RESP.
+       EXIT PROGRAM.
