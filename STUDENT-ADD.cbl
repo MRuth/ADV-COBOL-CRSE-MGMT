@@ -80,35 +80,35 @@
                05          COL 43      PIC 9999    FROM WS-STU-ID.
            03  SCRN-STU-NAME.
                05  SCRN-STU-L-NAME.
-                   07  LINE 06  COL 25              VALUE
+                   07  LINE 07  COL 25              VALUE
                                                    'STUDENT L-NAME: '.
                    07          COL 43  PIC X(15)   USING WS-STU-L-NAME
                                                    REQUIRED.
                05  SCRN-STU-F-NAME.
-                   07  LINE 07 COL 25              VALUE
+                   07  LINE 08 COL 25              VALUE
                                                    'STUDENT F-NAME: '.
                    07          COL 43  PIC X(15)   USING WS-STU-F-NAME
                                                    REQUIRED.
            03  SCRN-STU-ADDR.
                05  SCRN-STU-STREET.
-                   07  LINE 08 COL 25              VALUE
+                   07  LINE 10 COL 25              VALUE
                                                    'STUDENT STREET: '.
                    07          COL 43  PIC X(25)   USING WS-STU-STREET
                                                    REQUIRED.
                05  SCRN-STU-ZIP.
-                   07  LINE 09 COL 25              VALUE
+                   07  LINE 11 COL 25              VALUE
                                                    'STUDENT ZIP   : '.
                    07          COL 43  PIC XXXXX   USING WS-STU-ZIP
                                                    AUTO REQUIRED.
                05  SCRN-STU-CITY-ST.
-                   07  LINE 10 COL 35              VALUE 'CITY: '.
+                   07  LINE 13 COL 35              VALUE 'CITY: '.
                    07          COL 43  PIC X(30)   FROM ZIP-CITY.
                    
-                   07  LINE 11 COL 35              VALUE 'ST  : '.
+                   07  LINE 14 COL 35              VALUE 'ST  : '.
                    07          COL 43  PIC XX      FROM ZIP-STATE.
                    
            03  SCRN-STU-PHONE.
-               05  LINE 12     COL 25              VALUE
+               05  LINE 16     COL 25              VALUE
                                                    'STUDENT PHONE : '.
                05              COL 43  PIC XXX     USING WS-STU-PHONE-1
                                                    AUTO REQUIRED.
@@ -118,8 +118,8 @@
                05              COL 50              VALUE '-'.
                05              COL 51  PIC XXXX    USING WS-STU-PHONE-3
                                                    AUTO REQUIRED.
-           03  SCRN-SAVE.
-               05  LINE 14     COL 32              VALUE 'SAVE (Y/N)'.
+       01  SCRN-SAVE.
+               05  LINE 18     COL 32              VALUE 'SAVE (Y/N)'.
                05              COL 30  PIC X       TO WS-SAVE
                                                    AUTO.
        01  SCRN-WRITE-ERR.
@@ -183,8 +183,6 @@
                ACCEPT SCRN-STU-ZIP
                PERFORM 400-GET-CITY-ST
                ACCEPT SCRN-STU-PHONE
-               
-               
                DISPLAY SCRN-SAVE
                ACCEPT  SCRN-SAVE
                    
