@@ -29,7 +29,7 @@
        01  WS-EOF                      PIC X       VALUE 'N'.
            88  EOF                                 VALUE 'Y'.
        
-       SCREEN SECTION
+       SCREEN SECTION.
        COPY SCR-HEADER.
        01  HEADER-2.
            03  LINE 03 COL 37  VALUE 'STUDENT LISTING'.
