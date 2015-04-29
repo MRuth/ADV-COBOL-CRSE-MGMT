@@ -27,6 +27,7 @@
            03  FILLER              PIC X(3).
            03  OPEN-SEATS-I        PIC X(2).
        WORKING-STORAGE SECTION.
+       COPY WS-DATE-TIME.
        01  MISC-VARS.
            03  WS-RESP             PIC X   VALUE SPACE.
            03  WS-STAT             PIC 99.
@@ -38,7 +39,7 @@
            03  FILLER              PIC X(15) VALUE 'PRESS ENTER TO '.
            03  FILLER              PIC X(16) VALUE 'DISPLAY 10 MORE '.
            03  FILLER              PIC X(49) VALUE 'RECORDS'.
-       01  WS-HEADER.
+       01  WS-COLUMNS.
            03  FILLER              PIC X(13) VALUE 'SCHEDULE ID'.
            03  FILLER              PIC X(10) VALUE 'COURSE ID'.
            03  FILLER              PIC X(21)  VALUE 'TIME        DAYS'.
@@ -47,17 +48,20 @@
            03  FILLER              PIC X(5) VALUE 'SEATS'. 
 
        SCREEN SECTION.
+       COPY SCR-HEADER.
        01  BLNK-SCREEN.
            03  BLANK SCREEN.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
            OPEN INPUT IN-FILE.
-           
+           DISPLAY BLNK-SCREEN
+           ACCEPT WS-DATE FROM DATE 
+           ACCEPT WS-TIME FROM TIME
+           DISPLAY HEADER
            MOVE 'N' TO WS-EOF.
            MOVE 0 TO WS-COUNTER.
-           DISPLAY BLNK-SCREEN.
-           DISPLAY WS-HEADER.
+           DISPLAY WS-COLUMNS.
            DISPLAY WS-BLNK-LN.
            PERFORM UNTIL EOF
                READ IN-FILE 
@@ -65,14 +69,14 @@
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
                            DISPLAY IN-REC
-                           DISPLAY WS-BLNK-LN
-                           ADD 1 TO WS-COUNTER
-                           IF WS-COUNTER = 10
+                           ADD 1 TO WS-COUNTER 
+                           IF WS-COUNTER = 15
                                THEN
+                                   DISPLAY WS-BLNK-LN
                                    DISPLAY WS-PG-BREAK
                                    ACCEPT WS-RESP
-                                   DISPLAY BLNK-SCREEN
-                                   DISPLAY WS-HEADER
+                                   DISPLAY HEADER
+                                   DISPLAY WS-COLUMNS
                                    DISPLAY WS-BLNK-LN
                                    MOVE 0 TO WS-COUNTER
                            END-IF           

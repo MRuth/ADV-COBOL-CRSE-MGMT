@@ -45,3 +45,26 @@
        01  INST-REC.
            03  INST-ID    PIC 9999.
            03  INST-NAME  PIC X(22).
+       FD  REG-MASTER.
+       01  REG-REC.
+           03  REG-KEY.
+               05  REG-STU-ID          PIC 9(4).
+               05  REG-YEAR            PIC 9999.
+               05  REG-SEM             PIC 99.
+           03  FIRST-CRN           PIC 9(4).
+           03  SECOND-CRN          PIC 9(4).
+           03  THIRD-CRN           PIC 9(4).
+           03  FOURTH-CRN          PIC 9(4).
+           03  FIFTH-CRN           PIC 9(4).
+       
+       FD  STU-MST.
+           01  STU-REC.
+               03  STU-ID           PIC 9999.
+               03  STU-NAME.
+                   05  STU-L-NAME       PIC X(15).
+                   05  STU-F-NAME       PIC X(15).
+               03  STU-ADDR.
+                   05  STU-STREET       PIC X(25).
+                   05  STU-ZIP          PIC XXXXX.
+               03  STU-PHONE            PIC X(10).
+               03  STU-STATUS           PIC X.

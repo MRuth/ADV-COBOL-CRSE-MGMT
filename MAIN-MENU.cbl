@@ -114,12 +114,12 @@
        01 DEB-MENU.
           03  DEBMENU.
                05  LINE 03 COL 39 VALUE "DEBUG MENU".
-               05  LINE 05 COL 25 VALUE " 1) BUILD STUDENT".
-               05  LINE 06 COL 50 VALUE " 2) BUILD COURSE".
-               05  LINE 07 COL 25 VALUE " 3) BUILD INSTRUCTOR".
-               05  LINE 08 COL 50 VALUE " 4) BUILD SCHEDULE".
-               05  LINE 09 COL 25 VALUE " 5) BUILD BUILDING".
-               05  LINE 10 COL 50 VALUE " 6) BUILD ZIP".
+               05  LINE 05 COL 32 VALUE " 1) BUILD STUDENT".
+               05  LINE 06 COL 32 VALUE " 2) BUILD COURSE".
+               05  LINE 07 COL 32 VALUE " 3) BUILD INSTRUCTOR".
+               05  LINE 08 COL 32 VALUE " 4) BUILD SCHEDULE".
+               05  LINE 09 COL 32 VALUE " 5) BUILD BUILDING".
+               05  LINE 10 COL 32 VALUE " 6) BUILD ZIP".
                05  LINE 11 COL 32 VALUE " 7) BUILD MASTER CONTROL".
                05  LINE 12 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 14 COL 37 VALUE "Selection".

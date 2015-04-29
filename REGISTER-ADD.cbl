@@ -71,9 +71,9 @@
            03  WS-EOF              PIC X   VALUE 'N'.
                88  EOF                     VALUE 'Y'.
            03  WS-SAVE             PIC X   VALUE SPACE.
-               88  SAVE                    VALUE 'Y'.
+               88  SAVE                    VALUE 'Y' 'y'.
            03  WS-ANOTHER          PIC X   VALUE 'Y'.
-               88  ANOTHER                 VALUE 'N'.
+               88  ANOTHER                 VALUE 'N' 'n'.
            03  WS-STU-NAME         PIC X(20).
            03  WS-SPACE            PIC X VALUE SPACE.
            03  WS-YEAR             PIC 9999.

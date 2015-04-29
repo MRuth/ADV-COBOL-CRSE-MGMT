@@ -17,7 +17,7 @@
                                        "../Files/MST-CTRL-LST.DAT"
                                ORGANIZATION IS RELATIVE
                                ACCESS IS RANDOM
-                               RELATIVE KEY IS WS-MST-REC-KEY
+                               RELATIVE KEY IS WS-MST-REC-KEY 
                                FILE STATUS IS WS-STAT.
        SELECT CRSE-MASTER  ASSIGN  TO 
                                        '../FILES/COURSE-MASTER-SORT.DAT'
@@ -34,3 +34,18 @@
                                RECORD KEY    IS INST-ID
                                ALTERNATE KEY IS INST-NAME
                                FILE STATUS   IS WS-STAT.
+                               
+       SELECT REG-MASTER   ASSIGN        TO 
+                               '../FILES/REGISTER-MASTER.DAT'   
+                               ORGANIZATION  IS INDEXED
+                               ACCESS        IS SEQUENTIAL
+                               RECORD KEY    IS REG-KEY
+                               FILE STATUS   IS WS-STAT.
+
+       SELECT STU-MST         ASSIGN TO 
+                                   '../FILES/STUDENT-MASTER.DAT'
+                                   ORGANIZATION    IS INDEXED
+                                   ACCESS          IS RANDOM
+                                   RECORD KEY      IS STU-ID
+                                   ALTERNATE KEY   IS STU-NAME
+                                   FILE STATUS     IS WS-STAT.

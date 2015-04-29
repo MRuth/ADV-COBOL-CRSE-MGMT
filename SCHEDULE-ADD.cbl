@@ -15,21 +15,8 @@
 
        
        WORKING-STORAGE SECTION.
-       COPY WS-DATE-TIME.
-       01  MISC-VARS.
-           03  WS-RESP             PIC X   VALUE SPACE.
-           03  WS-STAT             PIC 99.
-           03  WS-EOF              PIC X   VALUE 'N'.
-               88  EOF                     VALUE 'Y'.
-           03  WS-SAVE             PIC X   VALUE SPACE.
-               88  SAVE                    VALUE 'Y'.
-               88  NOSAVE                  VALUE 'N'.
-           03  WS-ANOTHER          PIC X   VALUE 'Y'.
-               88  ANOTHER                 VALUE 'N'.
-           03  WS-VALIDATE         PIC X   VALUE 'N'.
-               88 VALIDATED                VALUE 'Y'.
-           03  WS-MST-REC-KEY      PIC 9.
-           03  WS-STATUS           PIC X(60). 
+       COPY WS-COMMON.
+       
            
        01  WS-REC.
            03  WS-SCHED-ID.
@@ -105,6 +92,13 @@
            03  SCRN-SAVE.
                05  LINE 18  COL 32  VALUE   'SAVE (Y/N)'.
                05          COL 30  PIC X     TO WS-SAVE.
+           03  SCRN-SAVED.
+               05  LINE 18  COL 32  VALUE   'COURSE ADDED TO SCHEDULE'.
+           03  SCRN-CANCEL.
+               05  LINE 18  COL 32  VALUE   
+                                       'COURSE NOT ADDED TO SCHEDULE'.
+               
+               
        01  SCRN-ANOTHER.
            03  LINE 20  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
            03          COL 30  PIC X TO WS-ANOTHER
@@ -112,6 +106,7 @@
        01  SCRN-STATUS. 
            03  LINE 24 COL 1  FROM WS-STATUS.
            03          COL 75 USING WS-RESP.
+       
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -249,6 +244,7 @@
                                ACCEPT  SCRN-ANOTHER
                            NOT INVALID KEY 
                                MOVE SCHED-REC TO WS-STATUS
+                               DISPLAY SCRN-SAVED
                                DISPLAY SCRN-STATUS
                                DISPLAY SCRN-ANOTHER
                                ACCEPT  SCRN-ANOTHER
@@ -256,5 +252,9 @@
                                    GIVING MST-NEXT-CRN-CRN                      
                                REWRITE MST-NEXT-CRNS
                       END-WRITE
+                   ELSE 
+                       DISPLAY SCRN-CANCEL
+                       DISPLAY SCRN-ANOTHER
+                       ACCEPT  SCRN-ANOTHER
                    END-IF
               END-PERFORM.

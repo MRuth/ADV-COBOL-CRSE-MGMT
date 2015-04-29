@@ -22,52 +22,39 @@
            03  CRSE-CREDIT    PIC X(4).
            03  CRSE-STAT      PIC X.
        WORKING-STORAGE SECTION.
-       01  MISC-VARS.
-           03  WS-RESP             PIC X   VALUE SPACE.
-           03  WS-STAT             PIC 99.
-           03  WS-EOF              PIC X   VALUE 'N'.
-               88  EOF                     VALUE 'Y'.
-           03  WS-SAVE             PIC X   VALUE SPACE.
-               88  SAVE                    VALUE 'Y'.
-           03  WS-ANOTHER          PIC X   VALUE 'Y'.
-               88  ANOTHER                 VALUE 'N'.
-           03  WS-VALIDATE         PIC X.     
+       COPY WS-COMMON.   
        01  WS-DTL-LN.
            03  WS-COURSE-ID        PIC X(9).
            03  WS-COURSE-NAME      PIC X(35).
+           03  FILLER              PIC X VALUE SPACE.
            03  WS-COURSE-CREDIT    PIC X(4).
            03  WS-COURSE-STAT      PIC X.
       *-----------------------------------------------------------------
        SCREEN SECTION.
-       01  BLNK-SCRN.
-           03  BLANK SCREEN.
+       COPY SCR-COMMON.
        01  SCRN-TITLE.
-           03  LINE 3  COL 30  VALUE 'ADD COURSE'.
-       01  SCRN-DATA.
+           03  LINE 3  COL 47  VALUE 'ADD COURSE'.
+       01  SCRN-DATA. 
            03  SCRN-CRSE-ID.
-               05  LINE 5  COL 25  VALUE   'COURSE NUMBER:'.
-               05          COL 40  PIC X(9) USING WS-COURSE-ID          
+               05  LINE 7  COL 25  VALUE   'COURSE ID:'.
+               05          COL 45  PIC X(9) USING WS-COURSE-ID          
                                             AUTO REQUIRED.
            03  SCRN-CRSE-NAME.
-               05  LINE 6  COL 25  VALUE   'COURSE NAME  :'.
-               05          COL 40  PIC X(35) USING WS-COURSE-NAME 
-                                             AUTO REQUIRED.
-           03  SCRN-CRSE-CREDIT.
-               05  LINE 7  COL 25  VALUE   'COURSE CREDIT:'.
-               05          COL 40  PIC X(4) USING WS-COURSE-CREDIT 
+               05  LINE 9  COL 25  VALUE   'COURSE DESCRIPTION:'.
+               05          COL 45  PIC X(35) USING WS-COURSE-NAME 
                                             AUTO REQUIRED.
-           03  SCRN-SAVE.
-               05  LINE 9  COL 32  VALUE   'SAVE (Y/N)'.
-               05          COL 30  PIC X     TO WS-SAVE.
+           03  SCRN-CRSE-CREDIT. 
+               05  LINE 11  COL 25  VALUE   'COURSE CREDIT:'.
+               05          COL 45  PIC X(4) USING WS-COURSE-CREDIT 
+                                            AUTO REQUIRED.
+
        01  SCRN-WRITE-ERR.
            03  LINE 5  COL 30  VALUE 'COURSE IS ALREADY EXIST'.
        01  SCRN-WRITE-SUC.
            03  LINE 5  COL 30  VALUE 'COURSE IS ADDED'.
        01  SCRN-WRITE-NOT-SAVE.
            03  LINE 5  COL 30  VALUE 'COURSE IS NOT ADDED'.           
-       01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'ADD ANOTHER COURSE? (Y/N)'.
-           03          COL 30  PIC X TO WS-ANOTHER.
+
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -81,7 +68,9 @@
                MOVE SPACES TO WS-COURSE-CREDIT
                MOVE SPACE TO WS-SAVE
                PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
-                   DISPLAY BLNK-SCRN
+                   ACCEPT WS-DATE FROM DATE
+                   ACCEPT WS-TIME FROM TIME
+                   DISPLAY HEADER
                    DISPLAY SCRN-TITLE
                    DISPLAY SCRN-DATA
                    
@@ -100,18 +89,16 @@
                            MOVE 'A' TO CRSE-STAT
                            WRITE CRSE-REC
                                INVALID KEY
-                                   DISPLAY BLNK-SCRN
-                                   DISPLAY SCRN-WRITE-ERR
+                                   DISPLAY SCRN-SAVE-ERROR
                                    DISPLAY SCRN-ANOTHER
                                    ACCEPT  SCRN-ANOTHER
                                NOT INVALID KEY
-                                   DISPLAY BLNK-SCRN
-                                   DISPLAY SCRN-WRITE-SUC
+                                   DISPLAY SCRN-SAVED
                                    DISPLAY SCRN-ANOTHER
                                    ACCEPT  SCRN-ANOTHER
                    ELSE 
-                       DISPLAY BLNK-SCRN
-                       DISPLAY SCRN-WRITE-NOT-SAVE
+
+                       DISPLAY SCRN-CANCEL
                        DISPLAY SCRN-ANOTHER
                        ACCEPT SCRN-ANOTHER
                    END-IF

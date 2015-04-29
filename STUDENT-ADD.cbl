@@ -49,8 +49,8 @@
        01  WS-EOF                  PIC X       VALUE 'N'.
            88  EOF                             VALUE 'Y'.
        01  WS-SAVE                 PIC X       VALUE SPACES.
-           88  SAVE                            VALUE 'Y'.
-           88  NO-SAVE                         VALUE 'N'.
+           88  SAVE                            VALUE 'Y' 'y'.
+           88  NO-SAVE                         VALUE 'N' 'n'.
        01  WS-ANOTHER              PIC X       VALUE SPACES.
            88  ANOTHER                         VALUE 'Y'.
            88  NONE                            VALUE 'N'.

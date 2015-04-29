@@ -69,7 +69,7 @@
        01  BLNK-SCRN.
            03  BLANK SCREEN.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'SCHEDULE BY DEPARTMENT'.
+           03  LINE 3  COL 30  VALUE 'SCHEDULE BY DEPARTMENT'.
        01  SCRN-DISPLAY.
            03  LINE 3  COL 20  VALUE 'YEAR:'.
            03          COL 30  PIC 9999 USING WS-YEAR
