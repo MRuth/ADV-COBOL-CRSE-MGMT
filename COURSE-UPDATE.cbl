@@ -22,15 +22,7 @@
            03  CRSE-CREDIT    PIC X(4).
            03  CRSE-STAT      PIC X.
        WORKING-STORAGE SECTION.
-       01  MISC-VARS.
-           03  WS-RESP             PIC X   VALUE SPACE.
-           03  WS-STAT             PIC 99.
-           03  WS-ANOTHER          PIC X   VALUE 'Y'.
-               88  ANOTHER                 VALUE 'N'.
-           03  WS-EOF              PIC X   VALUE 'N'.
-               88  EOF                     VALUE 'Y'.
-           03  WS-SAVE             PIC X   VALUE SPACE.
-               88  SAVE                    VALUE 'Y'.
+       COPY WS-COMMON.
            03  WS-OLD-NAME         PIC X(35).
            03  WS-OLD-CREDIT       PIC X(4).
            03  WS-OLD-STAT         PIC X.
@@ -41,10 +33,9 @@
            03  WS-CRSE-STAT        PIC X.
       *-----------------------------------------------------------------
        SCREEN SECTION.
-       01  BLNK-SCRN.
-           03  BLANK SCREEN.
+       COPY SCR-COMMON.
        01  SCRN-TITLE.
-           03  LINE 3  COL 30  VALUE 'COURSE UPDATE'.
+           03  LINE 3  COL 38  VALUE 'COURSE UPDATE'.
        01  SCRN-ID.
             05  LINE 5  COL 25  VALUE        'COURSE NUMBER:'.
             05          COL 41  PIC X(9)     TO WS-CRSE-ID          
@@ -60,21 +51,11 @@
                05  LINE 8  COL 25  VALUE     'COURSE CREDIT:'.
                05          COL 41  PIC X(4)  USING WS-CRSE-CREDIT
                                              AUTO REQUIRED.
-       01  SCRN-STATUS.
+       01  SCR-STATUS.
            03  SCRN-CRSE-STAT.
                05  LINE 9  COL 25  VALUE     'COURSE STATUS:'.
                05          COL 41  PIC X     USING WS-CRSE-STAT
                                              AUTO REQUIRED.
-       01  SCRN-SAVE.
-           03  LINE 11  COL 32  VALUE   'SAVE (Y/N)'.
-           03           COL 30  PIC X    TO WS-SAVE.
-       01  SCRN-CONFIRM1.
-           03  LINE 5  COL 30  VALUE 'RECORD IS UPDATED'.
-       01  SCRN-CONFIRM2.
-           03  LINE 5  COL 30  VALUE 'RECORD IS NOT UPDATED'.                                                                              
-       01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'UPDATE ANOTHER? (Y/N)'.
-           03          COL 30  PIC X TO WS-ANOTHER.
        01  SCRN-ERR.
            03  LINE 5  COL 30  VALUE 'RECORD NOT FOUND'.    
       *-----------------------------------------------------------------
@@ -84,17 +65,16 @@
            
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
-           
-                   DISPLAY BLNK-SCRN
+                   ACCEPT WS-TIME FROM TIME
+                   ACCEPT WS-DATE FROM DATE
+                   DISPLAY HEADER
                    DISPLAY SCRN-TITLE
                    DISPLAY SCRN-ID
                    ACCEPT  SCRN-ID
-                   
                    MOVE WS-CRSE-ID TO CRSE-ID
                    
                    READ CRSE-MASTER
                        INVALID KEY
-                           DISPLAY BLNK-SCRN
                            DISPLAY SCRN-ERR
                            DISPLAY SCRN-ANOTHER
                            ACCEPT SCRN-ANOTHER
@@ -108,7 +88,7 @@
                                ACCEPT SCRN-CRSE-NAME
                                DISPLAY SCRN-CREDIT
                                ACCEPT SCRN-CRSE-CREDIT
-                               DISPLAY SCRN-STATUS
+                               DISPLAY SCR-STATUS
                                ACCEPT SCRN-CRSE-STAT
                                DISPLAY SCRN-SAVE
                                ACCEPT SCRN-SAVE
@@ -118,13 +98,11 @@
                                IF SAVE
                                    THEN
                                        REWRITE CRSE-REC
-                                       DISPLAY BLNK-SCRN
-                                       DISPLAY SCRN-CONFIRM1
+                                       DISPLAY SCRN-SAVED
                                        DISPLAY SCRN-ANOTHER
                                        ACCEPT SCRN-ANOTHER
                                ELSE
-                                   DISPLAY BLNK-SCRN
-                                   DISPLAY SCRN-CONFIRM2
+                                   DISPLAY SCRN-CANCEL
                                    DISPLAY SCRN-ANOTHER
                                    ACCEPT SCRN-ANOTHER
                                END-IF

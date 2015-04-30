@@ -16,20 +16,14 @@
        FD  IN-FILE.
        01  IN-REC.
            03  I-COURSE-ID        PIC X(9).
-           03  I-COURSE-NAME      PIC X(35).
+           03  I-COURSE-NAME      PIC X(35). 
            03  I-COURSE-CREDIT    PIC X(4).
            03  I-COURSE-STAT      PIC X.
        WORKING-STORAGE SECTION.
-       01  MISC-VARS.
-           03  WS-RESP             PIC X   VALUE SPACE.
-           03  WS-STAT             PIC 99.
-           03  WS-EOF              PIC X   VALUE 'N'.
-               88  EOF                     VALUE 'Y'.
-           03  WS-COUNTER          PIC 99 VALUE 0.
-           03  WS-BLNK-LN          PIC X(80) VALUE SPACES.
+       COPY WS-COMMON.
        01  WS-PG-BREAK.
            03  FILLER              PIC X(15) VALUE 'PRESS ENTER TO '.
-           03  FILLER              PIC X(16) VALUE 'DISPLAY 10 MORE '.
+           03  FILLER              PIC X(13) VALUE 'DISPLAY MORE '.
            03  FILLER              PIC X(49) VALUE 'RECORDS'.
        01  WS-HEADER.
            03  FILLER              PIC X(11) VALUE 'COURSE ID'.
@@ -44,10 +38,11 @@
            03  WS-COURSE-CREDIT    PIC X(4).
            03  FILLER              PIC X(5).
            03  WS-COURSE-STAT      PIC X.
-           03  FILLER              PIC X(24).
+           03  FILLER              PIC X(20).
        SCREEN SECTION.
-       01  BLNK-SCREEN.
-           03  BLANK SCREEN.
+       COPY SCR-COMMON.
+       01  SCRN-TITLE.
+           03  LINE 3  COL 38  VALUE 'COURSE LIST'.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -55,7 +50,11 @@
            
            MOVE 'N' TO WS-EOF.
            MOVE 0 TO WS-COUNTER.
-           DISPLAY BLNK-SCREEN.
+           ACCEPT WS-TIME FROM TIME.
+           ACCEPT WS-DATE FROM DATE.
+           DISPLAY HEADER.
+           DISPLAY SCRN-TITLE.
+           DISPLAY WS-BLNK-LN
            DISPLAY WS-HEADER.
            DISPLAY WS-BLNK-LN.
            PERFORM UNTIL EOF
@@ -69,11 +68,14 @@
                            MOVE I-COURSE-STAT   TO WS-COURSE-STAT
                            DISPLAY WS-DTL-LN
                            ADD 1 TO WS-COUNTER
-                           IF WS-COUNTER = 10
+                           IF WS-COUNTER = 15
                                THEN
+                                   DISPLAY WS-BLNK-LN
                                    DISPLAY WS-PG-BREAK
                                    ACCEPT WS-RESP
-                                   DISPLAY BLNK-SCREEN
+                                   DISPLAY HEADER
+                                   DISPLAY SCRN-TITLE
+                                   DISPLAY WS-BLNK-LN
                                    DISPLAY WS-HEADER
                                    DISPLAY WS-BLNK-LN
                                    MOVE 0 TO WS-COUNTER
