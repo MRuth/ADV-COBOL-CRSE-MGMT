@@ -62,14 +62,14 @@
        01  SCRN-TITLE.
            03  LINE 3  COL 35  VALUE 'SCHEDULE BY DEPARTMENT'.
        01  SCRN-DISPLAY.
-           03  LINE 5  COL 10  VALUE 'YEAR:'.
-           03          COL 20  PIC 9999 USING WS-YEAR
+           03  LINE 5  COL 15  VALUE 'YEAR:'.
+           03          COL 25  PIC 9999 USING WS-YEAR
                                        AUTO REQUIRED.
-           03  LINE 5  COL 30  VALUE 'SEMESTER'.
-           03          COL 40  PIC 99 USING WS-SEM
+           03  LINE 5  COL 35  VALUE 'SEMESTER'.
+           03          COL 45  PIC 99 USING WS-SEM
                                        AUTO REQUIRED.
-           03  LINE 5  COL 50  VALUE 'DEPT'.
-           03          COL 60  PIC XXXX USING WS-COURSE-DEPT
+           03  LINE 5  COL 55  VALUE 'DEPT'.
+           03          COL 65  PIC XXXX USING WS-COURSE-DEPT
                                        AUTO REQUIRED.
 
       *----------------------------------------------------------------- 
@@ -78,7 +78,7 @@
            PERFORM UNTIL ANOTHER
                MOVE ZEROS TO WS-YEAR,WS-SEM
                MOVE SPACES TO WS-COURSE-DEPT
-               ACCEPT WS-TIME FROM TIME
+               ACCEPT WS-TIME FROM TIME 
                ACCEPT WS-DATE FROM DATE
                DISPLAY HEADER
                DISPLAY SCRN-TITLE, SCRN-DISPLAY
