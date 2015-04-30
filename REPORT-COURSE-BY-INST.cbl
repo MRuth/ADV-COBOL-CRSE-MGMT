@@ -67,7 +67,8 @@
                                        AUTO REQUIRED.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
-       000-MAIN. 
+       000-MAIN.
+           MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
                ACCEPT WS-DATE FROM DATE
                ACCEPT WS-TIME FROM TIME

@@ -57,7 +57,7 @@
                                             AUTO REQUIRED FULL.
                05          COL 54  VALUE   'SEMESTER: '.
                05          COL 64  PIC 99   USING WS-SEM
-                                             AUTO REQUIRED FULL.   
+                                             AUTO REQUIRED FULL.    
            03  SCRN-CRSE-NAME.
                05  LINE 7  COL 20   VALUE   'COURSE NAME: '.
                05          COL 35  PIC X(35) FROM WS-CRSE-NAME. 
@@ -70,7 +70,7 @@
        000-MAIN.
            OPEN INPUT REG-MASTER.
            OPEN INPUT STU-MST.
-           
+           MOVE ZEROS TO WS-CRN,WS-SEM,WS-YEAR.
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            DISPLAY HEADER.

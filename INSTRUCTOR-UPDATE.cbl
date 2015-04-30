@@ -76,8 +76,9 @@
                        PERFORM UNTIL WS-SAVE = 'Y' OR WS-SAVE = 'N'
                            DISPLAY SCRN-DATA
                            ACCEPT SCRN-INSTR-NEW-NAME
+                           DISPLAY SCRN-SAVE 
                            ACCEPT SCRN-SAVE
-                       END-PERFORM
+                       END-PERFORM 
                        IF SAVE
                            THEN                                         
                                MOVE WS-INSTR-NAME TO INSTR-NAME

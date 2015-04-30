@@ -154,7 +154,7 @@
                        WHEN '6' PERFORM 260-ZIPCODE
                        WHEN '7' PERFORM 270-REPORTS
                        WHEN '8' PERFORM 280-DEBUG
-                       WHEN 'X' MOVE 'Y' TO WS-EXIT
+                       WHEN 'X' MOVE 'Y' TO WS-SEL
            END-EVALUATE.
                    
                    

@@ -111,8 +111,8 @@
            OPEN I-O MST-CTRL-LIST. 
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM 100-ADD-TO-SCHED.
-           CLOSE CRSE-MASTER.
            CLOSE SCHED-MST.
+           CLOSE MST-CTRL-LIST.
            EXIT PROGRAM.
       *-----------------------------------------------------------------     
            
@@ -178,6 +178,7 @@
                            MOVE 'Y' TO WS-VALIDATE
                    END-READ
                END-PERFORM.
+               CLOSE CRSE-MASTER.
                ACCEPT  SCRN-TIME.
       *-----------------------------------------------------------------         
                
