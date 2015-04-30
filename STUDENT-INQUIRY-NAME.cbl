@@ -54,11 +54,6 @@
                05  LINE 05 COL 25              VALUE                        
                                                'STUDENT L-NAME'.        
                05          COL 43  PIC X(15)   TO WS-STU-L-NAME. 
-           03  SCRN-STU-F-NAME.
-               05  LINE 06 COL 25              VALUE
-                                               'STUDENT F-NAME'.
-               05          COL 43  PIC X(15)   TO WS-STU-F-NAME.
-       
        01  SCRN-LIST.
            
        01  SCRN-ANOTHER.
@@ -82,7 +77,6 @@
                PERFORM 999-DISP-HEADERS
                DISPLAY SCRN-NAME
                ACCEPT  SCRN-STU-L-NAME
-               ACCEPT  SCRN-STU-F-NAME
                PERFORM 200-SEARCH-STUDENTS
                
                IF NOT NO-CONTINUE THEN
@@ -109,7 +103,8 @@
                    MOVE 1 TO WS-CTR
                    PERFORM 999-DISP-HEADERS
                    DISPLAY HEADER-3
-                   DISPLAY SPACES                                       
+                   DISPLAY SPACES
+                   DISPLAY SPACES
                    PERFORM 300-DISPLAY-STUDENTS UNTIL EOF OR NO-CONTINUE
            END-START.
        300-DISPLAY-STUDENTS.
