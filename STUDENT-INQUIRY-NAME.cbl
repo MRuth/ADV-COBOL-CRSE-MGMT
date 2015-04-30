@@ -37,6 +37,8 @@
            88  NO-CONTINUE                     VALUE 'X'.
        01  WS-EOF                  PIC X       VALUE 'N'.
            88  EOF                             VALUE 'Y'.
+       01  WS-ERROR                PIC X       VALUE 'N'.
+           88  IS-ERROR                        VALUE 'Y'.
        SCREEN SECTION.
        COPY SCR-HEADER.
        01  HEADER-2.
@@ -54,18 +56,17 @@
                05  LINE 05 COL 25              VALUE                        
                                                'STUDENT L-NAME'.        
                05          COL 43  PIC X(15)   TO WS-STU-L-NAME. 
-           03  SCRN-STU-F-NAME.
-               05  LINE 06 COL 25              VALUE
-                                               'STUDENT F-NAME'.
-               05          COL 43  PIC X(15)   TO WS-STU-F-NAME.
-       
        01  SCRN-LIST.
            
        01  SCRN-ANOTHER.
-           03      LINE 14 COL 35                  VALUE
+           03      LINE 14 COL 35              VALUE
                                        'PERFORM ANOTHER INQUIRY (Y/N)'.
            03              COL 33      PIC X       TO  WS-RESP
                                                    AUTO REQUIRED.
+       01  SCRN-ERROR.
+           03      LINE 12 COL 35              VALUE 
+                                       'NO STUDENT RECORD FOUND'.
+           
 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -78,14 +79,14 @@
                MOVE SPACES TO WS-STU-NAME
                MOVE SPACES TO WS-EOF
                MOVE SPACES TO WS-RESP-2
+               MOVE SPACES TO WS-ERROR
                
                PERFORM 999-DISP-HEADERS
                DISPLAY SCRN-NAME
                ACCEPT  SCRN-STU-L-NAME
-               ACCEPT  SCRN-STU-F-NAME
                PERFORM 200-SEARCH-STUDENTS
                
-               IF NOT NO-CONTINUE THEN
+               IF NOT NO-CONTINUE AND NOT IS-ERROR THEN
                    DISPLAY SPACES
                    DISPLAY 'PRESS ENTER TO CONTINUE'
                    ACCEPT WS-RESP-2
@@ -93,6 +94,9 @@
                
                PERFORM UNTIL ANOTHER OR NOT-ANOTHER
                    PERFORM 999-DISP-HEADERS
+                   IF IS-ERROR THEN
+                       DISPLAY SCRN-ERROR
+                   END-IF
                    DISPLAY SCRN-ANOTHER
                    ACCEPT  SCRN-ANOTHER
                END-PERFORM
@@ -105,11 +109,14 @@
        200-SEARCH-STUDENTS.
            MOVE WS-STU-NAME TO STU-NAME.
            START STU-MST KEY NOT LESS THAN STU-NAME
+               INVALID KEY
+                   MOVE 'Y' TO WS-ERROR
                NOT INVALID KEY
                    MOVE 1 TO WS-CTR
                    PERFORM 999-DISP-HEADERS
                    DISPLAY HEADER-3
-                   DISPLAY SPACES                                       
+                   DISPLAY SPACES
+                   DISPLAY SPACES
                    PERFORM 300-DISPLAY-STUDENTS UNTIL EOF OR NO-CONTINUE
            END-START.
        300-DISPLAY-STUDENTS.
