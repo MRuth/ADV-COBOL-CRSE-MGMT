@@ -32,26 +32,13 @@
        01  WS-MISC.
            03  WS-ZIP-STAT           PIC XX.
            03  WS-ZIP                PIC X(5) VALUE SPACES.
-       01  WS-DATE.
-           03  WS-SYS-DATE.
-               05  WS-SYS-YR           PIC 99.
-               05  WS-SYS-MO           PIC 99.
-               05  WS-SYS-DAY          PIC 99.
-           03  WS-FMT-DATE.
-               05  WS-FMT-MO           PIC 99.
-               05  FILLER              PIC X   VALUE "/".
-               05  WS-FMT-DAY          PIC 99.
-               05  FILLER              PIC X   VALUE "/".
-               05  WS-FMT-YR           PIC 99.
+       COPY WS-COMMON.
       *-----------------------------------------------------------------
        SCREEN SECTION.
+       COPY SCR-COMMON.
        01  SCRN-START.
-           03  BLANK SCREEN.
-           03  LINE 01 COL 01 VALUE "ZIPB-INQNUM".
-           03  LINE 01 COL 73 PIC X(8) FROM WS-FMT-DATE.
-           03  LINE 06 COL 36 VALUE "ZIP CODE SYSTEM".
-           03  LINE 08 COL 36 VALUE "  ZIP INQUIRY".
-       01  SCRN-ENTRY.
+           03  LINE 03 COL 36 VALUE "  ZIP INQUIRY".
+       01  SCRN-ENTRY. 
            03  LINE 10 COL 32 VALUE "ENTER ZIP".
            03  LINE 10 COL 42 PIC X(5)  TO   WS-ZIP AUTO.
            03  LINE 12 COL 32 VALUE "ZIP CODE".
@@ -64,14 +51,12 @@
            03  LINE 15 COL 42 PIC XX    FROM ZIP-STATE.
            03  LINE 17 COL 32 VALUE "ENTER ZIP OR X TO EXIT".
       *-----------------------------------------------------------------
-       PROCEDURE DIVISION.
+       PROCEDURE DIVISION. 
        100-MAIN.
            OPEN INPUT ZIP-MST.
-           ACCEPT WS-SYS-DATE FROM DATE.
-           MOVE   WS-SYS-MO    TO  WS-FMT-MO.
-           MOVE   WS-SYS-DAY   TO  WS-FMT-DAY.
-           MOVE   WS-SYS-YR    TO  WS-FMT-YR.
-           DISPLAY SCRN-START.
+           ACCEPT WS-TIME FROM TIME.
+           ACCEPT WS-DATE FROM DATE.
+           DISPLAY HEADER, SCRN-START.
            MOVE SPACES TO WS-ZIP
                           ZIP-REC.
            DISPLAY SCRN-ENTRY.
