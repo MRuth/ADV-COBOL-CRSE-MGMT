@@ -16,8 +16,6 @@
        
        WORKING-STORAGE SECTION.
        COPY WS-COMMON.
-       
-           
        01  WS-REC.
            03  WS-SCHED-ID.
                05 WS-YEAR          PIC 9(4) VALUE 2015.
@@ -41,8 +39,7 @@
       *-----------------------------------------------------------------
        SCREEN SECTION.
        COPY SCR-HEADER.
-       01  BLNK-SCRN.
-           03  BLANK SCREEN.
+
        01  SCRN-TITLE. 
            03  LINE 1  COL 30  VALUE 'ADD CLASS TO SCHEDULE'.
        01  SCRN-DATA.
@@ -123,7 +120,6 @@
            PERFORM UNTIL ANOTHER
                MOVE SPACES TO WS-SAVE, WS-REC, INST-REC
                MOVE 2015 TO WS-YEAR
-               DISPLAY BLNK-SCRN
                ACCEPT WS-DATE FROM DATE 
                ACCEPT WS-TIME FROM TIME
                DISPLAY HEADER
