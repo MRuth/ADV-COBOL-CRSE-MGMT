@@ -46,8 +46,9 @@
                05  LINE 06 COL 32 VALUE " 2) ADD STUDENT".
                05  LINE 07 COL 32 VALUE " 3) UPDATE STUDENT".
                05  LINE 08 COL 32 VALUE " 4) INQUIRE BY ID".
-               05  LINE 09 COL 32 VALUE " 5) REGISTER CLASS". 
-               05  LINE 10 COL 32 VALUE " 6) DROP CLASS".
+               05  LINE 08 COL 32 VALUE " 5) INQUIRE BY NAME".
+               05  LINE 09 COL 32 VALUE " 6) REGISTER CLASS". 
+               05  LINE 10 COL 32 VALUE " 7) DROP CLASS".
                05  LINE 11 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 13 COL 37 VALUE "Selection".
                05  LINE 13 COL 35 PIC X TO WS-SEL AUTO.
@@ -168,8 +169,9 @@
                        WHEN '2' CALL 'STUDENT-ADD'
                        WHEN '3' CALL 'STUDENT-UPDATE'
                        WHEN '4' CALL 'STUDENT-INQUIRY'
-                       WHEN '5' CALL 'REGISTER-ADD'
-                       WHEN '6' CALL 'REGISTER-DROP'
+                       WHEN '5' CALL 'STUDENT-INQUIRY-NAME'
+                       WHEN '6' CALL 'REGISTER-ADD'
+                       WHEN '7' CALL 'REGISTER-DROP'
                    END-EVALUATE
               END-PERFORM.
            
