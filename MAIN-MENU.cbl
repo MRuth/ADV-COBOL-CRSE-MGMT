@@ -108,8 +108,8 @@
                05  LINE 03 COL 39 VALUE "REPORT MENU".
                05  LINE 05 COL 32 VALUE " 1) COURSES BY INSTRUCTOR".
                05  LINE 06 COL 32 VALUE " 2) CLASS ROLL".
-
-               05  LINE 07 COL 32 VALUE " R) RETURN TO MAIN MENU".
+               05  LINE 07 COL 32 VALUE " 3) STUDENT SCHEDULE".
+               05  LINE 08 COL 32 VALUE " R) RETURN TO MAIN MENU".
                05  LINE 09 COL 37 VALUE "Selection".
                05  LINE 09 COL 35 PIC X TO WS-SEL AUTO.
        01 DEB-MENU.
@@ -250,11 +250,12 @@
            ACCEPT WS-DATE FROM DATE.
            ACCEPT WS-TIME FROM TIME.
            PERFORM UNTIL WS-SEL = "R"
-               DISPLAY HEADER, RPT-MENU
+               DISPLAY HEADER, RPT-MENU 
                ACCEPT RPT-MENU
                EVALUATE WS-SEL
                        WHEN '1' CALL 'REPORT-COURSE-BY-INST'
                        WHEN '2' CALL 'CLASS-ROLL'
+                       WHEN '3' CALL 'STUDENT-SCHEDULE'
                END-EVALUATE
            END-PERFORM.
                            

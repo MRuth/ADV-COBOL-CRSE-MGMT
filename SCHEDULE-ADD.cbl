@@ -38,10 +38,10 @@
            03  WS-SEATS            PIC 99.
       *-----------------------------------------------------------------
        SCREEN SECTION.
-       COPY SCR-HEADER.
+       COPY SCR-COMMON.
 
        01  SCRN-TITLE. 
-           03  LINE 1  COL 30  VALUE 'ADD CLASS TO SCHEDULE'.
+           03  LINE 3  COL 30  VALUE 'ADD CLASS TO SCHEDULE'.
        01  SCRN-DATA.
            03  SCRN-YEAR.
                05  LINE 6  COL 10  VALUE   'YEAR:'.
@@ -85,24 +85,8 @@
                05          COL 45  PIC 99   USING WS-SEATS 
                                             AUTO REQUIRED.
           
-       01  SCRN-SV.
-           03  SCRN-SAVE.
-               05  LINE 18  COL 32  VALUE   'SAVE (Y/N)'.
-               05          COL 30  PIC X     TO WS-SAVE.
-           03  SCRN-SAVED.
-               05  LINE 18  COL 32  VALUE   'COURSE ADDED TO SCHEDULE'.
-           03  SCRN-CANCEL.
-               05  LINE 18  COL 32  VALUE   
-                                       'COURSE NOT ADDED TO SCHEDULE'.
-               
-               
-       01  SCRN-ANOTHER.
-           03  LINE 20  COL 32  VALUE 'ADD ANOTHER? (Y/N)'.
-           03          COL 30  PIC X TO WS-ANOTHER
-                                            AUTO.
-       01  SCRN-STATUS. 
-           03  LINE 24 COL 1  FROM WS-STATUS.
-           03          COL 75 USING WS-RESP.
+
+
        
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.

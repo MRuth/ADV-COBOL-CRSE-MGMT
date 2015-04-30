@@ -15,7 +15,7 @@
                                ORGANIZATION  IS INDEXED
                                ACCESS        IS RANDOM
                                RECORD KEY    IS STU-ID
-                               ALTERNATE KEY IS STU-NAME
+                               ALTERNATE KEY IS STU-NAME 
                                    WITH DUPLICATES
                                FILE STATUS   IS WS-STAT.
            SELECT CRSE-MASTER  ASSIGN        TO 
@@ -77,9 +77,7 @@
            03  INSTR-ID    PIC 9999.
            03  INSTR-NAME  PIC X(22).
        WORKING-STORAGE SECTION.
-       01  MISC-VARS.
-           03  WS-RESP             PIC X   VALUE SPACE.
-           03  WS-STAT             PIC 99.
+       COPY WS-COMMON.
            03  WS-STU-NAME         PIC X(20).
            03  WS-SPACE            PIC X VALUE SPACE.
            03  WS-CRN              PIC 9999.
@@ -90,37 +88,36 @@
            03  WS-CRSE-D-T         PIC X(20).
            03  FILLER              PIC X VALUE SPACE.
            03  WS-INST-NAME        PIC X(22).
-       01  WS-BLNK-LN              PIC X(80) VALUE SPACES.
       *-----------------------------------------------------------------
        SCREEN SECTION.
-       01  BLNK-SCRN.
-           03  BLANK SCREEN.
+       COPY SCR-COMMON.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'STUDENT SCHEDULE'.
+           03  LINE 3  COL 37  VALUE 'STUDENT SCHEDULE'.
        01  SCRN-DATA.
            03  SCRN-STU-ID.
-               05  LINE 3  COL 1   VALUE   'STUDENT ID  : '.
-               05          COL 17  PIC 9(4) TO WS-STU-ID          
+               05  LINE 5  COL 10   VALUE   'STUDENT ID  : '.
+               05          COL 27  PIC 9(4) TO WS-STU-ID          
                                             AUTO REQUIRED.
-               05          COL 25  VALUE   'YEAR: '.
-               05          COL 31  PIC ZZZ9 TO REG-YEAR
+               05          COL 35  VALUE   'YEAR: '.
+               05          COL 41  PIC 9999 TO REG-YEAR
                                             AUTO REQUIRED FULL.
-               05          COL 37  VALUE   'SEMESTER: '.
-               05          COL 47  PIC Z9   TO REG-SEM
+               05          COL 47  VALUE   'SEMESTER: '.
+               05          COL 57  PIC 99   TO REG-SEM
                                             AUTO REQUIRED. 
            03  SCRN-STU-NAME.
-               05  LINE 5  COL 1  VALUE   'STUDENT NAME: '.
+               05  LINE 7  COL 1  VALUE   'STUDENT NAME: '.
                05          COL 17  PIC X(20) FROM WS-STU-NAME.
        01  SCRN-CRSE.    
-           03  LINE 7  COL 1   VALUE 'COURSE NAME'.
+           03  LINE 9  COL 1   VALUE 'COURSE NAME'.
            03          COL 37  VALUE 'DATE AND TIME'.
            03          COL 58  VALUE 'INSTRUCTOR'.
        01  SCRN-ERR1.
-           03  LINE 8  COL 30  VALUE 'STUDENT CANNOT BE FOUND'.
+           03  LINE 22  COL 30  VALUE 'STUDENT CANNOT BE FOUND'.
        01  SCRN-ERR2.
-           03  LINE 8  COL 30  VALUE 'STUDENT HAS NOT REGISTERED CLASS'.
+           03  LINE 22  COL 30  VALUE 'STUDENT HAS NOT REGISTERED'.
+         
       *-----------------------------------------------------------------
-       PROCEDURE DIVISION.
+       PROCEDURE DIVISION. 
        000-MAIN.
            OPEN I-O REG-MASTER.
            OPEN INPUT STU-MST.
@@ -128,7 +125,9 @@
            OPEN INPUT CRSE-MASTER.
            OPEN INPUT INSTR-MASTER.
            
-           DISPLAY BLNK-SCRN.
+           ACCEPT WS-TIME FROM TIME.
+           ACCEPT WS-DATE FROM DATE.
+           DISPLAY HEADER.
            DISPLAY SCRN-TITLE.
            DISPLAY SCRN-STU-ID.
            ACCEPT  SCRN-STU-ID.
@@ -136,7 +135,6 @@
            MOVE WS-STU-ID TO STU-ID.
            READ STU-MST
                INVALID KEY
-                   DISPLAY BLNK-SCRN
                    DISPLAY SCRN-ERR1
                    ACCEPT WS-RESP
                    EXIT PROGRAM
@@ -144,7 +142,6 @@
                    MOVE WS-STU-ID TO REG-STU-ID
                    READ REG-MASTER
                        INVALID KEY
-                           DISPLAY BLNK-SCRN
                            DISPLAY SCRN-ERR2
                            ACCEPT WS-RESP
                            EXIT PROGRAM
