@@ -17,7 +17,7 @@
                                        ORGANIZATION  IS RELATIVE
                                        ACCESS IS RANDOM
                                        RELATIVE KEY  IS WS-MST-REC-KEY
-                                       FILE STATUS   IS WS-MST-STAT.                        
+                                       FILE STATUS   IS WS-STAT.                        
       *-----------------------------------------------------------------
        DATA DIVISION.
       *-----------------------------------------------------------------
@@ -28,52 +28,41 @@
            03  INSTR-ID    PIC 9999.
            03  INSTR-NAME  PIC X(22).
        WORKING-STORAGE SECTION.
-       01  MISC-VARS.
-           03  WS-RESP             PIC X   VALUE SPACE.
-           03  WS-STAT             PIC 99.
-           03  WS-EOF              PIC X   VALUE 'N'.
-               88  EOF                     VALUE 'Y'.
-           03  WS-SAVE             PIC X   VALUE SPACE.
-               88  SAVE                    VALUE 'Y'.
-           03  WS-ANOTHER          PIC X   VALUE 'Y'.
-               88  ANOTHER                 VALUE 'N'.
-           03  WS-MST-REC-KEY      PIC 9999.
-           03  WS-MST-STAT         PIC XX.
+       COPY WS-COMMON.
+       
            03  WS-CURR-INSTR-ID    PIC 9999.
        01  WS-DTL-LN.
            03  WS-INSTR-ID         PIC 9999.
            03  WS-INSTR-NAME       PIC X(22).
+
       *-----------------------------------------------------------------
        SCREEN SECTION.
-       01  BLNK-SCRN.
-           03  BLANK SCREEN.
+       COPY SCR-COMMON.
        01  SCRN-TITLE.
-           03  LINE 3  COL 30  VALUE 'ADD INSTRUCTOR'.
+           03  LINE 3  COL 38  VALUE 'ADD INSTRUCTOR'.
        01  SCRN-INSTR-ID.
-           03  LINE 5  COL 25  VALUE   'INSTRUCTOR ID: '.
+           03  LINE 7  COL 25  VALUE   'INSTRUCTOR ID: '.
            03          COL 43  PIC 9999 FROM WS-INSTR-ID.
        01  SCRN-INSTR-NAME.
-           03  LINE 6  COL 25  VALUE     'INSTRUCTOR NAME: '.
+           03  LINE 9  COL 25  VALUE     'INSTRUCTOR NAME: '.
            03          COL 43  PIC X(35) USING WS-INSTR-NAME 
                                          AUTO REQUIRED.
-       01  SCRN-SAVE.
-           03  LINE 8  COL 32  VALUE   'SAVE (Y/N)'.
-           03          COL 30  PIC X    TO WS-SAVE.
+       
        01  SCRN-WRITE-ERR.
-           03  LINE 5  COL 30  VALUE 'INSTRUCTOR IS ALREADY EXIST'.
+           03  LINE 22  COL 30  VALUE '   INSTRUCTOR ALREADY EXISTS'.
        01  SCRN-WRITE-SUC.
-           03  LINE 5  COL 30  VALUE 'INSTRUCTOR IS ADDED'.
+           03  LINE 22  COL 30  VALUE '      INSTRUCTOR ADDED'.
        01  SCRN-WRITE-NOT-SAVE.
-           03  LINE 5  COL 30  VALUE 'INSTRUCTOR IS NOT ADDED'.         
-       01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'ADD ANOTHER INSTRUCTOR? (Y/N)'.
-           03          COL 30  PIC X TO WS-ANOTHER.
+           03  LINE 22  COL 30  VALUE '     INSTRUCTOR NOT ADDED'.      
+       
       *-----------------------------------------------------------------
        PROCEDURE DIVISION.
        000-MAIN.
        
            OPEN I-O INSTR-MASTER.
            OPEN I-O MST-CTRL-LIST.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
            
            MOVE 5 TO WS-MST-REC-KEY.
            READ MST-CTRL-LIST
@@ -83,7 +72,8 @@
 
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
-               DISPLAY BLNK-SCRN
+               
+               DISPLAY HEADER
                DISPLAY SCRN-TITLE
                DISPLAY SCRN-INSTR-ID
                MOVE SPACE TO WS-SAVE
@@ -101,26 +91,22 @@
                        MOVE WS-INSTR-NAME TO INSTR-NAME
                        WRITE INSTR-REC
                            INVALID KEY
-                               DISPLAY BLNK-SCRN
                                DISPLAY SCRN-WRITE-ERR
                                DISPLAY SCRN-ANOTHER
                                ACCEPT  SCRN-ANOTHER
                            NOT INVALID KEY
                                ADD 1 TO WS-INSTR-ID
-                               DISPLAY BLNK-SCRN
+                               MOVE WS-INSTR-ID TO MST-INST-ID
+                               REWRITE MST-NEXT-INST
                                DISPLAY SCRN-WRITE-SUC
                                DISPLAY SCRN-ANOTHER
                                ACCEPT  SCRN-ANOTHER
-               ELSE 
-                   DISPLAY BLNK-SCRN
+               ELSE
                    DISPLAY SCRN-WRITE-NOT-SAVE
                    DISPLAY SCRN-ANOTHER
                    ACCEPT SCRN-ANOTHER
                END-IF
            END-PERFORM.
-           
-           MOVE WS-INSTR-ID TO MST-INST-ID
-           REWRITE MST-NEXT-INST.
            
            CLOSE INSTR-MASTER.
            CLOSE MST-CTRL-LIST.

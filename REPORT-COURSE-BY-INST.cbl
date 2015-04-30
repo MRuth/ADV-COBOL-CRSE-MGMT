@@ -35,22 +35,13 @@
            03  FILLER              PIC X(3).
            03  OPEN-SEATS-I        PIC X(2).
        WORKING-STORAGE SECTION.
-       COPY WS-DATE-TIME.
-       01  MISC-VARS.
-           03  WS-RESP             PIC X     VALUE SPACE.
-           03  WS-STAT             PIC 99.
-           03  WS-EOF              PIC X     VALUE 'N'.
-               88  EOF                       VALUE 'Y'.
-           03  WS-COUNTER          PIC 99    VALUE 0.
-           03  WS-BLNK-LN          PIC X(80) VALUE SPACES.
-           03  WS-ANOTHER          PIC X     VALUE 'Y'.
-               88  ANOTHER                   VALUE 'N'.
+       COPY WS-COMMON.
            03  WS-INST-ID          PIC 9(4).
            03  WS-YEAR             PIC 9(4).
            03  WS-SEM              PIC 99.
        01  WS-PG-BREAK.
            03  FILLER              PIC X(15) VALUE 'PRESS ENTER TO '.
-           03  FILLER              PIC X(16) VALUE 'DISPLAY 10 MORE '.
+           03  FILLER              PIC X(13) VALUE 'DISPLAY MORE '.
            03  FILLER              PIC X(49) VALUE 'RECORDS'.
        01  WS-HEADER.
            03  FILLER              PIC X(13) VALUE 'YEAR SEM CRN '. 
@@ -61,25 +52,19 @@
            03  FILLER              PIC X(5)  VALUE 'SEATS'. 
 
        SCREEN SECTION.
-       COPY SCR-HEADER.
-       01  BLNK-SCRN.
-           03  BLANK SCREEN.
+       COPY SCR-COMMON.
        01  SCRN-TITLE.
-           03  LINE 1  COL 30  VALUE 'SCHEDULE BY DEPARTMENT'.
+           03  LINE 3  COL 36  VALUE 'SCHEDULE BY DEPARTMENT'.
        01  SCRN-DISPLAY.
-           03  LINE 3  COL 20  VALUE 'YEAR:'.
-           03          COL 30  PIC 9999 USING WS-YEAR
+           03  LINE 5  COL 30  VALUE 'YEAR:'.
+           03          COL 40  PIC 9999 USING WS-YEAR
                                        AUTO REQUIRED.
-           03  LINE 5  COL 20  VALUE 'SEMESTER'.
-           03          COL 30  PIC 99 USING WS-SEM
+           03  LINE 6  COL 30  VALUE 'SEMESTER'.
+           03          COL 40  PIC 99 USING WS-SEM
                                        AUTO REQUIRED.
-           03  LINE 7  COL 20  VALUE 'INST-ID'.
-           03          COL 30  PIC XXXX USING WS-INST-ID
+           03  LINE 7  COL 30  VALUE 'INST-ID'.
+           03          COL 40  PIC XXXX USING WS-INST-ID
                                        AUTO REQUIRED.
-       
-       01  SCRN-ANOTHER.
-           03  LINE 7  COL 32  VALUE 'LOOK UP ANOTHER? (Y/N)'.
-           03          COL 30  PIC X TO WS-ANOTHER.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN. 
@@ -87,15 +72,13 @@
                ACCEPT WS-DATE FROM DATE
                ACCEPT WS-TIME FROM TIME
                MOVE ZEROS TO WS-YEAR,WS-SEM,WS-INST-ID
-               DISPLAY BLNK-SCRN 
                DISPLAY HEADER,SCRN-DISPLAY
                ACCEPT  SCRN-DISPLAY
                PERFORM 100-LIST
+               DISPLAY WS-BLNK-LN
                DISPLAY 'PRESS ENTER TO GO BACK TO MENU'
                ACCEPT WS-RESP
-               DISPLAY BLNK-SCRN
-               
-               DISPLAY HEADER,SCRN-ANOTHER
+               DISPLAY SCRN-ANOTHER
                ACCEPT  SCRN-ANOTHER
               
            END-PERFORM.
@@ -108,7 +91,7 @@
            OPEN INPUT IN-FILE
            MOVE 'N' TO WS-EOF.
            MOVE 0 TO WS-COUNTER.
-           DISPLAY BLNK-SCRN.
+           DISPLAY WS-BLNK-LN.
            DISPLAY WS-HEADER.
            DISPLAY WS-BLNK-LN.
            PERFORM UNTIL EOF
@@ -117,17 +100,16 @@
                        MOVE 'Y' TO WS-EOF
                    NOT AT END
                        IF SCHEDULE-YEAR EQUALS WS-YEAR
-                           AND SCHEDULE-SEM  EQUALS WS-SEM
+                           AND SCHEDULE-SEM  EQUALS WS-SEM 
                            AND INSTRUCTOR-ID-I EQUALS WS-INST-ID
                        THEN
                            DISPLAY IN-REC
-                           DISPLAY WS-BLNK-LN
                            ADD 1 TO WS-COUNTER
-                           IF WS-COUNTER = 10 THEN
+                           IF WS-COUNTER = 15 THEN
+                               DISPLAY WS-BLNK-LN
                                DISPLAY WS-PG-BREAK
                                ACCEPT WS-RESP
-                               DISPLAY BLNK-SCRN
-                               DISPLAY WS-HEADER
+                               DISPLAY HEADER, WS-HEADER
                                DISPLAY WS-BLNK-LN
                                MOVE 0 TO WS-COUNTER
                            END-IF

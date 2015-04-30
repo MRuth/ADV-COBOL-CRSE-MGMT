@@ -37,17 +37,26 @@
            03  WS-INSTR-ID         PIC 9999.
            03  FILLER              PIC X(11) VALUE SPACES.
            03  WS-INSTR-NAME       PIC X(65).
+       COPY WS-DATE-TIME.
        SCREEN SECTION.
-       01  BLNK-SCREEN.
+       COPY SCR-HEADER.
+       01  BLNK-SCRN.
            03  BLANK SCREEN.
+       01  SCRN-TITLE.
+           03  LINE 3  COL 37  VALUE 'LIST INSTRUCTOR'.
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN.
            OPEN INPUT INSTR-MASTER.
+           ACCEPT WS-DATE FROM DATE.
+           ACCEPT WS-TIME FROM TIME.
            
            MOVE 'N' TO WS-EOF.
            MOVE 0 TO WS-COUNTER.
-           DISPLAY BLNK-SCREEN.
+           DISPLAY BLNK-SCRN.
+           DISPLAY HEADER.
+           DISPLAY SCRN-TITLE.
+           DISPLAY WS-BLNK-LN.
            DISPLAY WS-HEADER.
            DISPLAY WS-BLNK-LN.
            PERFORM UNTIL EOF
@@ -58,13 +67,16 @@
                            MOVE INSTR-ID     TO WS-INSTR-ID
                            MOVE INSTR-NAME   TO WS-INSTR-NAME
                            DISPLAY WS-DTL-LN
-                           DISPLAY WS-BLNK-LN
                            ADD 1 TO WS-COUNTER
                            IF WS-COUNTER = 10
                                THEN
+                                   DISPLAY WS-BLNK-LN
                                    DISPLAY WS-PG-BREAK
                                    ACCEPT WS-RESP
-                                   DISPLAY BLNK-SCREEN
+                                   DISPLAY BLNK-SCRN
+                                   DISPLAY HEADER
+                                   DISPLAY SCRN-TITLE
+                                   DISPLAY WS-BLNK-LN
                                    DISPLAY WS-HEADER
                                    DISPLAY WS-BLNK-LN
                                    MOVE 0 TO WS-COUNTER
@@ -72,6 +84,7 @@
                END-READ
            END-PERFORM.
            
+           DISPLAY WS-BLNK-LN.
            DISPLAY 'PRESS ENTER TO GO BACK TO MENU'
            ACCEPT WS-RESP.
            CLOSE INSTR-MASTER.

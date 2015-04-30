@@ -21,44 +21,40 @@
            03  INSTR-ID    PIC 9999.
            03  INSTR-NAME  PIC X(22).
        WORKING-STORAGE SECTION.
-       01  MISC-VARS.
-           03  WS-RESP             PIC X   VALUE SPACE.
-           03  WS-STAT             PIC 99.
-           03  WS-ANOTHER          PIC X   VALUE 'Y'.
-               88  ANOTHER                 VALUE 'N'.
-           03  WS-EOF              PIC X   VALUE 'N'.
-               88  EOF                     VALUE 'Y'.     
+       COPY WS-COMMON.
+             
        01  WS-DTL.
            03  WS-INSTR-ID         PIC 9999.
            03  WS-INSTR-NAME       PIC X(22).
+
       *-----------------------------------------------------------------
        SCREEN SECTION.
-       01  BLNK-SCRN.
-           03  BLANK SCREEN.
+       COPY SCR-COMMON.
        01  SCRN-TITLE.
-           03  LINE 3  COL 30  VALUE 'INSTRUCTOR INQUIRY'.
+           03  LINE 3  COL 36  VALUE 'INSTRUCTOR INQUIRY'.
        01  SCRN-ID.
-            05  LINE 5  COL 25  VALUE   'INSTRUCTOR ID  :'.
-            05          COL 43  PIC ZZZZ TO WS-INSTR-ID          
+            05  LINE 7  COL 33  VALUE   'INSTRUCTOR ID  :'.
+            05          COL 51  PIC ZZZZ TO WS-INSTR-ID          
                                          AUTO REQUIRED.       
        01  SCRN-DATA.
            03  SCRN-INSTR-NAME.
-               05  LINE 6  COL 25  VALUE   'INSTRUCTOR NAME:'.
-               05          COL 43  PIC X(35) FROM WS-INSTR-NAME.
-       01  SCRN-ANOTHER.
-           03  LINE 8  COL 32  VALUE 'LOOK UP ANOTHER? (Y/N)'.
-           03          COL 30  PIC X TO WS-ANOTHER.
+               05  LINE 9  COL 33  VALUE   'INSTRUCTOR NAME:'.
+               05          COL 51  PIC X(35) FROM WS-INSTR-NAME.
+
        01  SCRN-ERR.
-           03  LINE 6  COL 30  VALUE 'INSTRUCTOR NOT FOUND'.    
+           03  LINE 22  COL 30  VALUE 'INSTRUCTOR NOT FOUND'.    
       *----------------------------------------------------------------- 
        PROCEDURE DIVISION.
        000-MAIN. 
            OPEN INPUT INSTR-MASTER.
            
+           
            MOVE 'Y' TO WS-ANOTHER.
            PERFORM UNTIL ANOTHER
            
-               DISPLAY BLNK-SCRN
+               ACCEPT WS-DATE FROM DATE
+               ACCEPT WS-TIME FROM TIME
+               DISPLAY HEADER
                DISPLAY SCRN-TITLE
                DISPLAY SCRN-ID
                ACCEPT  SCRN-ID
@@ -67,7 +63,6 @@
                
                READ INSTR-MASTER
                    INVALID KEY
-                       DISPLAY BLNK-SCRN
                        DISPLAY SCRN-ERR
                        DISPLAY SCRN-ANOTHER
                        ACCEPT  SCRN-ANOTHER

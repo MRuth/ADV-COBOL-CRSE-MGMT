@@ -24,16 +24,23 @@
            03  WS-INSTR-NAME       PIC X(20).
             
        01  WS-HEADER.
+           03  FILLER              PIC X(26) VALUE SPACES.
            03  FILLER              PIC X(25) VALUE 'NAME'.
-           03  FILLER              PIC X(55) VALUE 'CLASS ROLE'.
+           03  FILLER              PIC X(29) VALUE 'CLASS ROLE'.
        01  WS-DTL-LN.
+           03  FILLER              PIC X(26) VALUE SPACES.
            03  WS-NAME             PIC X(20).
-           03  FILLER              PIC X(5) VALUE SPACES.
+           03  FILLER              PIC X(5)  VALUE SPACES.
            03  WS-ROLE             PIC X(10).
        01  WS-PG-BREAK.
+           03  FILLER              PIC X(26) VALUE SPACES.
            03  FILLER              PIC X(15) VALUE 'PRESS ENTER TO '.
            03  FILLER              PIC X(16) VALUE 'DISPLAY 07 MORE '.
-           03  FILLER              PIC X(49) VALUE 'STUDENTS'.
+           03  FILLER              PIC X(23) VALUE 'STUDENTS'.
+       01  WS-ENDING.
+           03  FILLER   PIC X(26) VALUE SPACES.
+           03  FILLER   PIC X(29) VALUE "PRESS ENTER TO RETURN TO MAIN".
+           03  FILLER   PIC X(25) VALUE "MENU".
       *-----------------------------------------------------------------
        SCREEN SECTION.
        COPY SCR-COMMON. 
@@ -101,7 +108,7 @@
            PERFORM 400-GET-INSTRUCTOR-NAME.
            DISPLAY WS-DTL-LN.
            DISPLAY WS-BLNK-LN.
-           DISPLAY 'PRESS ENTER TO RETURN TO MENU'.
+           DISPLAY WS-ENDING.
            ACCEPT WS-RESP.
            CLOSE REG-MASTER.
            CLOSE STU-MST.
