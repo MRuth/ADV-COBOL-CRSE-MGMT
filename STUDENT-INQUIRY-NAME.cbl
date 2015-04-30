@@ -37,6 +37,8 @@
            88  NO-CONTINUE                     VALUE 'X'.
        01  WS-EOF                  PIC X       VALUE 'N'.
            88  EOF                             VALUE 'Y'.
+       01  WS-ERROR                PIC X       VALUE 'N'.
+           88  IS-ERROR                        VALUE 'Y'.
        SCREEN SECTION.
        COPY SCR-HEADER.
        01  HEADER-2.
@@ -57,10 +59,14 @@
        01  SCRN-LIST.
            
        01  SCRN-ANOTHER.
-           03      LINE 14 COL 35                  VALUE
+           03      LINE 14 COL 35              VALUE
                                        'PERFORM ANOTHER INQUIRY (Y/N)'.
            03              COL 33      PIC X       TO  WS-RESP
                                                    AUTO REQUIRED.
+       01  SCRN-ERROR.
+           03      LINE 12 COL 35              VALUE 
+                                       'NO STUDENT RECORD FOUND'.
+           
 
        PROCEDURE DIVISION.
        000-MAIN.
@@ -73,13 +79,14 @@
                MOVE SPACES TO WS-STU-NAME
                MOVE SPACES TO WS-EOF
                MOVE SPACES TO WS-RESP-2
+               MOVE SPACES TO WS-ERROR
                
                PERFORM 999-DISP-HEADERS
                DISPLAY SCRN-NAME
                ACCEPT  SCRN-STU-L-NAME
                PERFORM 200-SEARCH-STUDENTS
                
-               IF NOT NO-CONTINUE THEN
+               IF NOT NO-CONTINUE AND NOT IS-ERROR THEN
                    DISPLAY SPACES
                    DISPLAY 'PRESS ENTER TO CONTINUE'
                    ACCEPT WS-RESP-2
@@ -87,6 +94,9 @@
                
                PERFORM UNTIL ANOTHER OR NOT-ANOTHER
                    PERFORM 999-DISP-HEADERS
+                   IF IS-ERROR THEN
+                       DISPLAY SCRN-ERROR
+                   END-IF
                    DISPLAY SCRN-ANOTHER
                    ACCEPT  SCRN-ANOTHER
                END-PERFORM
@@ -99,6 +109,8 @@
        200-SEARCH-STUDENTS.
            MOVE WS-STU-NAME TO STU-NAME.
            START STU-MST KEY NOT LESS THAN STU-NAME
+               INVALID KEY
+                   MOVE 'Y' TO WS-ERROR
                NOT INVALID KEY
                    MOVE 1 TO WS-CTR
                    PERFORM 999-DISP-HEADERS
