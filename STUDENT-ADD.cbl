@@ -17,6 +17,7 @@
                                    ACCESS          IS RANDOM
                                    RECORD KEY      IS STU-ID
                                    ALTERNATE KEY   IS STU-NAME
+                                       WITH DUPLICATES
                                    FILE STATUS     IS WS-STAT.
                                
            SELECT MST-CTRL-LIST    ASSIGN TO 
@@ -196,12 +197,13 @@
            END-IF.
            
        300-SAVE-STU-INFO.
-           MOVE WS-STU-ID          TO STU-ID
-           MOVE WS-STU-NAME        TO STU-NAME
-           MOVE WS-STU-ADDR        TO STU-ADDR
-           MOVE WS-STU-PHONE       TO STU-PHONE
-           MOVE 'A'                TO STU-STATUS
-                   
+           MOVE WS-STU-ID          TO STU-ID.
+           MOVE WS-STU-NAME        TO STU-NAME.
+           MOVE WS-STU-ADDR        TO STU-ADDR.
+           MOVE WS-STU-PHONE       TO STU-PHONE.
+           MOVE 'A'                TO STU-STATUS.
+           MOVE FUNCTION UPPER-CASE(STU-REC) TO STU-REC.
+           
            WRITE STU-REC
                INVALID KEY
                    PERFORM 999-DISP-HEADERS

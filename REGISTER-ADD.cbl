@@ -16,6 +16,7 @@
                                ACCESS          IS RANDOM
                                RECORD KEY      IS STU-ID
                                ALTERNATE   KEY IS STU-NAME
+                                   WITH DUPLICATES
                                FILE STATUS     IS WS-STAT.
            SELECT SCHE-MST     ASSIGN TO
                                '../FILES/SCHEDULE-MST.DAT'

@@ -12,16 +12,19 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
        
-           SELECT IN-FILE ASSIGN TO '../FILES/STUDENT-STARTER.TXT'
-               ORGANIZATION IS LINE SEQUENTIAL.
+           SELECT IN-FILE          ASSIGN TO 
+                       '../FILES/student-starter-zips-fixed-Apr25.txt'
+                                   ORGANIZATION IS LINE SEQUENTIAL.
                
-           SELECT STU-MST ASSIGN TO'../FILES/STUDENT-MASTER.DAT'
-               ORGANIZATION    IS INDEXED
-               ACCESS          IS SEQUENTIAL
-               RECORD      KEY IS STU-ID
-               ALTERNATE   KEY IS STU-NAME.
+           SELECT STU-MST          ASSIGN TO
+                                   '../FILES/STUDENT-MASTER.DAT'
+                                   ORGANIZATION    IS INDEXED
+                                   ACCESS          IS SEQUENTIAL
+                                   RECORD      KEY IS STU-ID
+                                   ALTERNATE   KEY IS STU-NAME
+                                       WITH DUPLICATES.
            
-       SELECT MST-CTRL-LIST    ASSIGN TO 
+           SELECT MST-CTRL-LIST    ASSIGN TO 
                                        "../Files/MST-CTRL-LST.DAT"
                                        ORGANIZATION    IS RELATIVE
                                        ACCESS          IS RANDOM
@@ -135,6 +138,7 @@
                        MOVE SRT-PHONE  TO STU-PHONE
                        MOVE WS-STATUS  TO STU-STATUS
                        ADD 1           TO WS-CURR-ID
+                       MOVE FUNCTION UPPER-CASE(STU-REC) TO STU-REC
                        WRITE STU-REC
                        PERFORM 300-DISPLAY
                END-RETURN

@@ -15,6 +15,7 @@
                                ACCESS          IS DYNAMIC
                                RECORD      KEY IS STU-ID
                                ALTERNATE   KEY IS STU-NAME
+                                   WITH DUPLICATES
                                FILE STATUS     IS WS-STU-STAT.
                                            
            SELECT ZIP-MST      ASSIGN TO "../FILES/ZIPMASTER.DAT"

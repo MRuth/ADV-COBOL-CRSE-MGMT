@@ -16,6 +16,7 @@
                                    ACCESS          IS DYNAMIC
                                    RECORD      KEY IS STU-ID
                                    ALTERNATE   KEY IS STU-NAME
+                                       WITH DUPLICATES
                                    FILE STATUS     IS WS-STAT.
                                    
            SELECT ZIP-MST      ASSIGN TO "../FILES/ZIPMASTER.DAT"
@@ -194,7 +195,7 @@
            IF SAVE THEN
                MOVE WS-STU-REC TO STU-REC
                MOVE 'A' TO STU-STATUS
-               
+               MOVE FUNCTION UPPER-CASE(STU-REC) TO STU-REC
                REWRITE STU-REC
                    NOT INVALID KEY
                        PERFORM 999-DISP-HEADERS

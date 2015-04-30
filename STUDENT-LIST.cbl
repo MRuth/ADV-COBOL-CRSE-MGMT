@@ -15,7 +15,8 @@
                ORGANIZATION IS INDEXED
                ACCESS          IS SEQUENTIAL
                RECORD      KEY IS STU-ID
-               ALTERNATE   KEY IS STU-NAME.
+               ALTERNATE   KEY IS STU-NAME
+                   WITH DUPLICATES.
    
        DATA DIVISION.
        FILE SECTION. 

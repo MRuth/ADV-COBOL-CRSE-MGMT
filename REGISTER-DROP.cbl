@@ -16,6 +16,7 @@
                                ACCESS          IS RANDOM
                                RECORD KEY      IS STU-ID
                                ALTERNATE   KEY IS STU-NAME
+                                   WITH DUPLICATES
                                FILE STATUS     IS WS-STAT.
            SELECT CRSE-MASTER  ASSIGN        TO 
                                '../FILES/COURSE-MASTER-SORT.DAT'
